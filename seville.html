@@ -29,7 +29,7 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
 <details class="details"><summary>Adventuring · Azioni comuni</summary><div class="detailbody"><div class="data-row"><span>Climbing</span><strong>8+</strong></div><div class="data-row"><span>Dungeonbashing · FOR −1</span><strong>22+</strong></div><div class="data-row"><span>Listening · bonus Bardo</span><strong>14+</strong></div><div class="data-row"><span>Searching</span><strong>18+</strong></div><div class="data-row"><span>Trapbreaking</span><strong>18+</strong></div><p>Le azioni di esplorazione richiedono il tempo indicato nelle regole. Dungeonbashing risente del modificatore di Forza.</p></div></details>
 <div class="section">ALTRE PROFICIENCIES</div>
 <details class="details"><summary>Alchemy · Alchimia</summary><div class="detailbody"><p>Conoscenze e attività alchemiche, con preparazioni, strumenti e tempi stabiliti dalla proficiency e dal Master. Non equivale alla capacità di lanciare incantesimi.</p></div></details>
-<details class="details"><summary>Swashbuckling · Scherma acrobatica</summary><div class="detailbody"><p>Competenza di stile combattivo basata su mobilità e agilità. Applicare i benefici solo nelle condizioni e con gli equipaggiamenti ammessi dalla proficiency.</p></div></details>
+<details class="details"><summary>Swashbuckling · Scherma acrobatica</summary><div class="detailbody"><p><strong>Effetto (ACKS II Revised):</strong> quando Seville indossa un’armatura leggera (CA dell’armatura +2 o inferiore) oppure non indossa armatura, e trasporta <strong>non più di 5 stone</strong> complessive, ottiene <strong>+1 alla Classe Armatura</strong> al livello 1. Il bonus diventa +2 dal livello 7 e +3 dal livello 13. <strong>Le 5 stone includono armatura, scudo, armi e altri oggetti trasportati</strong>; gli oggetti lasciati sul mulo non contano. Se indossa armatura media o pesante, oppure supera 5 stone, il bonus non si applica. Il bonus riguarda solo la CA: <strong>non modifica il tiro per colpire né i danni</strong>. La scheda aggiorna automaticamente il bonus quando cambi equipaggiamento o carico.</p></div></details>
 <details class="details"><summary>Bargaining · Contrattazione</summary><div class="detailbody"><p>Abilità nella negoziazione di prezzi e condizioni commerciali. I modificatori dipendono dal contesto e dalle regole della proficiency.</p></div></details>
 <div class="section">LINGUE E NOTE</div><div class="card"><p class="muted">Lingue e ulteriori dettagli possono essere annotati qui, senza alterare le regole.</p><textarea class="field" id="abilityNotes" rows="4" placeholder="Lingue, dettagli sulle proficiencies, note del Master…"></textarea></div>
 </section>
@@ -282,9 +282,14 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     el('xpdisplay').textContent=data.xp;
     var c=current(), armor=armorCurrent();
     var shieldEffective=Boolean(data.shield && data.shieldLocation==='carried' && !(c && c.hands));
-    var ac=(armor?armor.a.ac+Number(armor.o.magic||0):0)+1+(shieldEffective?1:0);
+    var wt=weights();
+    // Swashbuckling (ACKS II Revised): light/no armor and <= 5 stone carried.
+    // Armor category is determined by its base AC, not reduced magical weight.
+    var swashEligible=(!armor || armor.a.ac<=2) && wt.total<=5+0.0000001;
+    var swashBonus=swashEligible?1:0; // Seville is level 1.
+    var ac=(armor?armor.a.ac+Number(armor.o.magic||0):0)+1+(shieldEffective?1:0)+swashBonus;
     el('ac').textContent=ac;
-    el('acnote').textContent=(armor?armor.a.name:'Senza armatura')+(shieldEffective?' + scudo':'');
+    el('acnote').textContent=(armor?armor.a.name:'Senza armatura')+(shieldEffective?' + scudo':'')+' · Swashbuckling '+(swashEligible?'+1 attivo':'+0 non attivo ('+(wt.total>5+0.0000001?'carico > 5 st':'armatura non leggera')+')');
     el('equippedarmor').textContent=armor?armor.a.name+(armor.o.magic?' +'+armor.o.magic:''):'Nessuna armatura';
     el('armordetail').textContent=armor?'CA base '+armor.a.ac+' · '+weightString(armorWeight(armor.o)):'CA base 0';
     el('equippedname').textContent=c?c.w.name+(c.mag?' +'+c.mag:''):'Nessuna arma equipaggiata';
@@ -313,7 +318,6 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     el('armorcatalog').innerHTML=A.map(function(a){return '<option value="'+a.id+'">'+safe(a.name)+' · CA '+a.ac+' · '+weightString(a.weight)+'</option>';}).join('');
     if(A.some(function(a){return a.id===oldArmor;}))el('armorcatalog').value=oldArmor;
     renderLists();
-    var wt=weights();
     el('armorweight').textContent=weightString(wt.armor);
     el('shieldweight').textContent=weightString(wt.shield);
     el('weaponweight').textContent=weightString(wt.weapons);
