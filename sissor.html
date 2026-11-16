@@ -13,6 +13,13 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
 .ux-proficiencies details{margin:8px 0;padding:9px 11px;border:1px solid rgba(180,150,100,.25);border-radius:9px}
 .ux-proficiencies summary{cursor:pointer;line-height:1.5}
 .ux-proficiencies details p{margin:9px 0 2px;line-height:1.55}
+
+/* Sissor v0.2.7: vincoli armatura sulle capacità furtive */
+.stealth-armor-warning{padding:12px 14px;margin:10px 0;border:1px solid #ae6e54;border-radius:10px;background:rgba(135,55,43,.16);line-height:1.5}
+.stealth-armor-warning[hidden]{display:none!important}
+.stealth-power.stealth-disabled{opacity:.48;border-color:rgba(174,110,84,.45)}
+.stealth-power.stealth-disabled summary{cursor:not-allowed}
+.stealth-power.stealth-disabled summary::after{content:' · NON DISPONIBILE';font-size:.72em;color:#dc9d88}
 </style><style>
 :root{--bg:#131a1c;--panel:#222b2e;--card:#263034;--gold:#c7a67b;--accent:#c7a67b}
 body{background:#111719}
@@ -21,15 +28,16 @@ body{background:#111719}
 </style></head><body><noscript><div class="noscript">JavaScript &egrave; disattivato in questo visualizzatore: apri la scheda da un sito HTTPS in Safari per usare i pulsanti.</div></noscript><main class="app"><header class="top"><div><div class="eyebrow">ACKS II &middot; CHARACTER SHEET</div><div class="name">SISSOR</div><div class="muted">Assassino &middot; Assassin-for-Hire</div></div><div class="tag">LIVELLO 1</div></header>
 <section class="panel active" id="scheda"><div class="hero"><div class="stack"><div class="statcard hp"><div class="small">&hearts; PUNTI FERITA</div><div class="big"><span id="hp">5</span><span style="font-size:14px;color:#bbd3c4"> / 5</span></div><div class="control"><button aria-label="Riduci HP" data-act="hpminus" type="button">&minus;</button><button aria-label="Aumenta HP" data-act="hpplus" type="button">+</button></div><div class="meter"><div class="fill" id="hpfill" style="width:100%"></div></div></div><div class="statcard ac"><div class="small">⬡ ARMOUR CLASS</div><div class="big" id="ac">4</div><div class="muted" id="acnote">Armatura di cuoio + DES</div></div><div class="statcard"><div class="small">INIZIATIVA</div><div class="big">+2</div><div class="muted">DES 16</div></div></div><div class="portrait-stage" id="portraitStage"><img alt="Ritratto di Sissor" class="portrait" id="portraitFallback" src="sissor_portrait.jpg"/></div></div>
 <div class="section">CARATTERISTICHE</div><div class="abilities"><div class="ability"><div class="small">FOR</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">DES</div><strong>16</strong><span>+2</span></div><div class="ability"><div class="small">COS</div><strong>9</strong><span>0</span></div><div class="ability"><div class="small">INT</div><strong>8</strong><span>−1</span></div><div class="ability"><div class="small">VOL</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">CAR</div><strong>13</strong><span>+1</span></div></div>
-<div class="section">COMBATTIMENTO</div><div class="card"><div class="row"><strong class="gold" id="weaponname">BALESTRA PESANTE · A DISTANZA</strong><span class="pill">Equipaggiata</span></div><hr class="line"/><div class="twocol"><div><div class="small">ATTACK THROW</div><div class="value" id="attack">8+</div><div class="muted" id="attacknote">10+ base · DES +2</div></div><div><div class="small">DANNI</div><div class="value" id="damage">1d8+1</div><div class="muted" id="damagenote">classe +1</div></div></div><div class="notice" id="weapontraits">Cleave 2, Handy, Slow</div><div class="row"><span class="muted">Danni in carica (se applicabile)</span><strong id="chargedamage">—</strong></div><button class="btn secondary" data-act="openinventory" type="button">⚔ Cambia arma / equipaggiamento</button><p class="muted" style="font-size:12px">Il cambio d'arma in combattimento segue le regole del Master. Le armi a distanza usano DES per colpire, non per i danni. Backstabbing: +4 al tiro e +1 dado di danno contro bersagli vulnerabili a gittata corta.</p></div>
+<div class="section">COMBATTIMENTO</div><div class="card"><div class="row"><strong class="gold" id="weaponname">BALESTRA PESANTE · A DISTANZA</strong><span class="pill">Equipaggiata</span></div><hr class="line"/><div class="twocol"><div><div class="small">ATTACK THROW</div><div class="value" id="attack">8+</div><div class="muted" id="attacknote">10+ base · DES +2</div></div><div><div class="small">DANNI</div><div class="value" id="damage">1d8+1</div><div class="muted" id="damagenote">classe +1</div></div></div><div class="notice" id="weapontraits">Cleave 2, Handy, Slow</div><div class="row"><span class="muted">Danni in carica (se applicabile)</span><strong id="chargedamage">—</strong></div><button class="btn secondary" data-act="openinventory" type="button">⚔ Cambia arma / equipaggiamento</button><p class="muted" style="font-size:12px">Il cambio d'arma in combattimento segue le regole del Master. Le armi a distanza usano DES per colpire, non per i danni. Backstabbing: +4 al tiro e +1 dado di danno contro bersagli vulnerabili a gittata corta, solo con armatura leggera o inferiore.</p></div>
 <div class="twocol"><div class="card"><div class="small">MOVIMENTO</div><div class="value" id="summaryspeedcombat">40′</div><div class="muted">per round</div></div><div class="card"><div class="small">INGOMBRO</div><div class="value" id="summaryweight">6⅓ st</div><div class="muted">equipaggiamento trasportato</div></div></div><div class="card"><div class="row"><div><div class="small">ESPERIENZA</div><strong><span id="xpdisplay">105</span> / 1.750 XP</strong></div><button class="btn secondary" data-act="xp" type="button">Modifica</button></div></div></section>
 <section class="panel" id="capacita">
 <div class="section">TIRI SALVEZZA · ASSASSINO LIVELLO 1</div><div class="card">
 <div class="data-row"><span>Morte / Death</span><strong>14+</strong></div><div class="data-row"><span>Paralisi / Paralysis</span><strong>13+</strong></div><div class="data-row"><span>Soffio / Blast</span><strong>15+</strong></div><div class="data-row"><span>Oggetti / Implements</span><strong>16+</strong></div><div class="data-row"><span>Incantesimi / Spells</span><strong>17+</strong></div></div>
 <div class="section">POTERI INNATI DELL'ASSASSINO</div>
-<details class="details" open><summary>Backstabbing · Attacco a tradimento</summary><div class="detailbody"><p>Contro un avversario <b>vulnerabile</b>, ottiene <b>+4 al tiro per colpire</b> e <b>+1 dado di danno</b> se colpisce. Funziona in mischia oppure con un'arma a distanza <b>alla gittata corta</b>, non a gittata media o lunga. Richiede armatura leggera o inferiore.</p></div></details>
-<details class="details"><summary>Hiding · Nascondersi · 19+</summary><div class="detailbody"><p>Può nascondersi come azione di combattimento in copertura, luce fioca oppure oscurità. Il Judge tira segretamente. Se riesce, gli avversari non hanno linea di vista sul personaggio. Anche se fallisce, restando immobile e occultato impone <b>−2 ai tiri di sorpresa</b>. L'occultamento termina quando si muove o attacca.</p></div></details>
-<details class="details"><summary>Sneaking · Muoversi in silenzio · 17+</summary><div class="detailbody"><p>Può iniziare a muoversi silenziosamente come azione di movimento. A velocità di esplorazione o fino a metà movimento in combattimento nessuna penalità; oltre metà movimento <b>−5</b>, correndo <b>−10</b>. Il tiro è segreto: con successo non produce alcun rumore. Fuori dalla linea di vista, i nemici subiscono <b>−2 alla sorpresa</b> anche se il tiro fallisce.</p></div></details>
+<div id="stealtharmorwarning" class="stealth-armor-warning" role="status" aria-live="polite" hidden></div>
+<details class="details stealth-power" data-stealth-power="Backstabbing" open><summary>Backstabbing · Attacco a tradimento</summary><div class="detailbody"><p>Contro un avversario <b>vulnerabile</b>, ottiene <b>+4 al tiro per colpire</b> e <b>+1 dado di danno</b> se colpisce. Funziona in mischia oppure con un'arma a distanza <b>alla gittata corta</b>, non a gittata media o lunga. Richiede armatura leggera o inferiore.</p></div></details>
+<details class="details stealth-power" data-stealth-power="Hiding"><summary>Hiding · Nascondersi · 19+</summary><div class="detailbody"><p>Può nascondersi come azione di combattimento in copertura, luce fioca oppure oscurità. Il Judge tira segretamente. Se riesce, gli avversari non hanno linea di vista sul personaggio. Anche se fallisce, restando immobile e occultato impone <b>−2 ai tiri di sorpresa</b>. L'occultamento termina quando si muove o attacca.</p></div></details>
+<details class="details stealth-power" data-stealth-power="Sneaking"><summary>Sneaking · Muoversi in silenzio · 17+</summary><div class="detailbody"><p>Può iniziare a muoversi silenziosamente come azione di movimento. A velocità di esplorazione o fino a metà movimento in combattimento nessuna penalità; oltre metà movimento <b>−5</b>, correndo <b>−10</b>. Il tiro è segreto: con successo non produce alcun rumore. Fuori dalla linea di vista, i nemici subiscono <b>−2 alla sorpresa</b> anche se il tiro fallisce.</p></div></details>
 <details class="details"><summary>Shadowy Senses · Sensi nell'ombra</summary><div class="detailbody"><p>Percepisce l'ambiente entro <b>30 piedi</b> come in luce fioca quando si muove a velocità di esplorazione o combattimento. Non distingue colori, volti, scritte o immagini piatte. Non funziona correndo, caricando, se assordato, nell'oscurità o nel silenzio magici.</p></div></details>
 <details class="details"><summary>Streetwise · Malavita · 11+</summary><div class="detailbody"><p>Riconosce automaticamente i segni, il gergo e i territori delle organizzazioni criminali nella propria città. Per altre città, tiro normalmente <b>11+</b>. È equivalente a un grado di Streetwise.</p></div></details>
 <details class="details"><summary>Cleave · Attacco aggiuntivo</summary><div class="detailbody"><p>Può effettuare fino a <b>1 attacco aggiuntivo per round</b> dopo aver abbattuto un avversario, nel rispetto delle regole di Cleaving.</p></div></details>
@@ -420,6 +428,18 @@ body{background:#111719}
     el('coins').textContent=data.coins;
     el('xpdisplay').textContent=data.xp;
     var c=current(), armor=armorCurrent();
+    // La categoria dipende dalla CA BASE dell'armatura, non dal bonus magico.
+    // Nessuna/leggera (CA 0–2): capacità disponibili; media/pesante (CA 3+): bloccate.
+    var stealthAllowed=!armor || armor.a.ac<=2;
+    var stealthWarning=el('stealtharmorwarning');
+    stealthWarning.hidden=stealthAllowed;
+    stealthWarning.textContent=stealthAllowed?'':
+      'Capacità furtive non disponibili: '+armor.a.name+' (armatura media o pesante). Backstabbing (+4 a colpire e +1 dado danno), Hiding e Sneaking sono sospesi finché Sissor non indossa un’armatura leggera o inferiore.';
+    document.querySelectorAll('[data-stealth-power]').forEach(function(power){
+      power.classList.toggle('stealth-disabled',!stealthAllowed);
+      power.setAttribute('aria-disabled',String(!stealthAllowed));
+      if(!stealthAllowed)power.open=false;
+    });
     var shieldEffective=Boolean(data.shield && data.shieldLocation==='carried' && !(c && (c.hands||c.offhand)));
     var wt=weights();
     // Swashbuckling (ACKS II Revised): light/no armor and <= 5 stone carried.
@@ -603,4 +623,13 @@ body{background:#111719}
   catch(err){el('status').textContent='Errore di avvio: '+err.message;}
 })();
 
+
+  document.querySelectorAll('[data-stealth-power] > summary').forEach(function(summary){
+    summary.addEventListener('click',function(event){
+      if(summary.parentElement.classList.contains('stealth-disabled'))event.preventDefault();
+    });
+    summary.addEventListener('keydown',function(event){
+      if(summary.parentElement.classList.contains('stealth-disabled') && (event.key==='Enter'||event.key===' '))event.preventDefault();
+    });
+  });
 </script></body></html>
