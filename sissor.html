@@ -1,83 +1,448 @@
-<!doctype html>
-<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#15191c">
-<title>ACKS II · Sissor v0.1.0</title>
-<style>
-:root{--bg:#14191c;--panel:#20282c;--panel2:#283238;--border:#48565a;--ink:#ede9df;--muted:#aeb9b8;--accent:#c5a57b;--green:#7eaa99;--red:#b87d76}
-*{box-sizing:border-box}body{margin:0;background:#0d1113;color:var(--ink);font:15px system-ui,-apple-system,Segoe UI,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer;touch-action:manipulation}button:active{opacity:.8}.app{max-width:540px;margin:auto;min-height:100dvh;padding:18px 15px 100px;background:var(--bg)}header{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:14px}.eyebrow{font-size:10px;letter-spacing:2px;color:var(--accent)}h1{font:700 29px Georgia,serif;letter-spacing:2px;margin:3px 0}.muted{font-size:12px;color:var(--muted);line-height:1.55}.pill{font-size:11px;border:1px solid #74634f;color:#e6c8a2;border-radius:30px;padding:8px;white-space:nowrap}.hero{display:grid;grid-template-columns:55% 1fr;gap:11px}.portrait{position:relative;min-height:290px;overflow:hidden;border:1px solid #655c50;border-radius:12px;background:#101315}.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 15%;display:block}.portrait:after{content:"ASSASSIN · LV 1";position:absolute;bottom:0;left:0;right:0;padding:28px 9px 10px;font-size:10px;letter-spacing:1.6px;background:linear-gradient(transparent,#111b1ee8)}.stack{display:flex;flex-direction:column;gap:9px}.stat{background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:12px;flex:1}.stat.hp{background:#26372f}.stat.ac{background:#29313d}.lbl{font-size:10px;letter-spacing:1px;color:var(--muted)}.number{font-size:28px;font-weight:800}.controls{display:flex;gap:8px;margin-top:7px}.controls button{flex:1;border:1px solid #65776f;background:#425b51;color:white;border-radius:8px;min-height:37px;font-size:20px}.section{font-size:11px;letter-spacing:1.5px;color:var(--accent);font-weight:800;margin:19px 0 9px}.abilities{display:grid;grid-template-columns:repeat(6,1fr);gap:5px}.ability{background:var(--panel2);border-radius:9px;padding:10px 2px;text-align:center}.ability strong{font-size:19px;display:block}.ability small{font-size:10px;color:var(--green)}.card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:13px;margin:9px 0}.row{display:flex;justify-content:space-between;align-items:center;gap:12px}.row+.row{margin-top:10px}.value{font-size:20px;font-weight:800;color:#f2dfc3}.line{border:0;border-top:1px solid var(--border);margin:11px 0}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:9px}.detail{background:var(--panel);border:1px solid var(--border);border-radius:11px;margin:9px 0;overflow:hidden}.detail summary{padding:15px;cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between}.detail summary:after{content:"⌄";color:var(--accent)}.detail[open] summary:after{content:"⌃"}.detail .inside{border-top:1px solid var(--border);padding:13px;font-size:13px;line-height:1.65;color:#d8dedc}.inside p{margin:0 0 9px}.inside p:last-child{margin:0}.kv{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #3c474c;padding:9px 0}.kv:last-child{border-bottom:0}.kv strong{color:#dfc5a0;text-align:right}.field{background:#121a1e;border:1px solid #56646b;border-radius:8px;color:white;width:100%;padding:11px;min-height:43px}.field:focus{outline:2px solid var(--accent)}textarea.field{resize:vertical;min-height:85px}.btn{background:#554838;border:1px solid #a88b67;color:#fff1d9;padding:11px 13px;border-radius:9px;min-height:44px}.btn.secondary{background:#2d3940;border-color:#56646b;color:white}.buttons{display:flex;flex-wrap:wrap;gap:9px}.buttons>*{flex:1}.hint{background:#2b2924;border-left:3px solid var(--accent);padding:11px;font-size:12px;line-height:1.5;color:#ddd2c1;border-radius:5px}.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);max-width:540px;width:100%;display:grid;grid-template-columns:repeat(4,1fr);background:#1c2429;border-top:1px solid #4b555a;padding:8px 5px calc(8px + env(safe-area-inset-bottom));z-index:10}.tabs button{background:transparent;color:#aeb9b8;border:0;padding:8px 1px;font-size:11px;min-height:43px}.tabs button.active{color:#efd3a8;background:#323b3d;border-radius:8px}.tabs span{display:block;font-size:19px}.panel{display:none}.panel.active{display:block}.tiny{font-size:11px;color:var(--muted)}.weapon{padding:12px;border:1px solid var(--border);border-radius:10px;background:#283137;margin-bottom:9px}.weapon b{color:#ead6b8}.weapon .muted{margin-top:5px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.grid3 .stat{text-align:center;padding:10px 4px}.grid3 .value{font-size:18px}@media(max-width:360px){.hero{grid-template-columns:51% 1fr}.portrait{min-height:250px}.abilities{gap:3px}.ability strong{font-size:17px}}
-</style></head>
-<body><main class="app"><header><div><div class="eyebrow">ACKS II REVISED · CHARACTER SHEET</div><h1>SISSOR</h1><div class="muted">Assassino · Thug · Assassin-for-Hire</div></div><div class="pill">LIVELLO 1</div></header>
-<section class="panel active" id="scheda">
-<div class="hero"><div class="portrait"><img src="sissor_portrait.jpg" alt="Sissor, assassino incappucciato con balestra pesante e due spade corte"></div><div class="stack">
-<div class="stat hp"><div class="lbl">PUNTI FERITA</div><div class="number"><span id="hp">5</span><span class="muted"> / <span id="hpmax">5</span></span></div><div class="controls"><button data-hp="-1" aria-label="Perdi un punto ferita">−</button><button data-hp="1" aria-label="Recupera un punto ferita">+</button></div></div>
-<div class="stat ac"><div class="lbl">CLASSE ARMATURA</div><div class="number">4</div><div class="muted">Cuoio · DES +2</div></div>
-<div class="stat"><div class="lbl">INIZIATIVA</div><div class="number">+2</div><div class="muted">DES 16</div></div></div></div>
-<div class="section">CARATTERISTICHE</div><div class="abilities"><div class="ability"><small>FOR</small><strong>12</strong><small>+0</small></div><div class="ability"><small>INT</small><strong>8</strong><small>−1</small></div><div class="ability"><small>DES</small><strong>16</strong><small>+2</small></div><div class="ability"><small>COS</small><strong>9</strong><small>+0</small></div><div class="ability"><small>VOL</small><strong>12</strong><small>+0</small></div><div class="ability"><small>CAR</small><strong>13</strong><small>+1</small></div></div>
-<div class="section">ATTACCHI · VALORI DELLA SCHEDA CARTACEA</div>
-<div class="weapon"><div class="row"><b>⚙ Balestra pesante · Arbalest</b><strong class="value">8+</strong></div><div class="row"><span>Danno <b>1d8+1</b></span><span class="tiny">A distanza · Slow</span></div><div class="muted">Attack Throw riportato sul foglio. Arma confermata dal template ufficiale.</div></div>
-<div class="weapon"><div class="row"><b>⚔ Due spade corte</b><strong class="value">10+</strong></div><div class="row"><span>Danno <b>1d6+1</b> ciascuna</span><span class="tiny">Stile a due armi</span></div></div>
-<div class="grid3"><div class="stat"><div class="lbl">BACKSTAB</div><div class="value">+4</div><div class="tiny">al tiro per colpire</div></div><div class="stat"><div class="lbl">DANNO EXTRA</div><div class="value">+1 dado</div><div class="tiny">contro vulnerabili</div></div><div class="stat"><div class="lbl">CLEAVE</div><div class="value">1</div><div class="tiny">max / round</div></div></div>
-<div class="section">PROGRESSIONE</div><div class="card"><div class="row"><span>Esperienza</span><strong><span id="xpdisplay">105</span> / 1.750 PE</strong></div><input class="field" id="xp" type="number" min="0" step="1" value="105" aria-label="Punti esperienza" style="margin-top:10px"><div class="muted" style="margin-top:8px">Livello successivo: Enforcer (2°)</div></div>
-<div class="section">MOVIMENTO E CONDIZIONI</div><div class="card"><div class="kv"><span>Esplorazione</span><strong>120 piedi / turno</strong></div><div class="kv"><span>Combattimento</span><strong>40 piedi / round</strong></div><div class="kv"><span>Carica / corsa</span><strong>120 piedi / round</strong></div><div class="kv"><span>Viaggio</span><strong>24 miglia / giorno</strong></div></div>
-</section>
+<!DOCTYPE html>
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171c23" name="theme-color"/><title>ACKS &middot; Sissor 0.1.3</title><style>
+*{box-sizing:border-box}body{margin:0;background:#171016;color:#f6e9dc;font:15px -apple-system,BlinkMacSystemFont,system-ui,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}button:active{transform:scale(.97)}.app{max-width:520px;margin:auto;min-height:100dvh;background:#211820;padding:15px 14px 100px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.eyebrow{font-size:10px;letter-spacing:2px;color:#d7bc84}.name{font-family:Georgia,serif;font-size:26px;font-weight:bold;letter-spacing:.5px}.tag{border:1px solid #736445;border-radius:18px;padding:7px 10px;color:#e8d1a0;font-size:12px}.hero{display:grid;grid-template-columns:43% 57%;gap:10px;align-items:stretch}.portrait{width:100%;height:auto;display:block;object-fit:contain;border:1px solid #655437;border-radius:12px;background:#10141b}.stack{display:flex;flex-direction:column;gap:8px}.statcard{background:#303b45;border:1px solid #48515b;border-radius:12px;padding:10px;flex:1;display:flex;flex-direction:column;justify-content:center}.statcard.hp{background:#293f36}.statcard.ac{background:#2e384b}.small{font-size:10px;color:#c4cbd3;letter-spacing:.6px}.big{font-size:29px;font-weight:800;line-height:1.2}.control{display:flex;gap:7px;margin-top:8px}.control button{border:1px solid #768476;background:#425a4d;color:#fff;border-radius:9px;min-height:40px;flex:1;font-size:22px}.meter{height:6px;border-radius:10px;background:#506256;overflow:hidden;margin-top:7px}.fill{height:100%;background:#a7d6b2}.section{font-size:12px;letter-spacing:1.3px;color:#e2c58d;margin:17px 0 9px;font-weight:700}.abilities{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}.ability{text-align:center;background:#303844;border-radius:9px;padding:10px 1px}.ability strong{font-size:21px;display:block}.ability span{font-size:11px;color:#b5d4bd}.card{background:#2b323d;border:1px solid #424b59;border-radius:13px;padding:13px;margin-bottom:10px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}.value{font-size:25px;font-weight:750}.muted{color:#b9c1cb;font-size:12px;line-height:1.5}.gold{color:#e4c88e}.line{border:0;border-top:1px solid #454d58;margin:12px 0}.details{border:1px solid #46505e;border-radius:12px;background:#2b323d;margin:8px 0;overflow:hidden}.details summary{padding:15px;cursor:pointer;font-weight:650;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:50px}.details summary:after{content:'⌄';color:#e4c88e}.details[open] summary:after{content:'⌃'}.detailbody{border-top:1px solid #46505e;padding:12px;font-size:13px;line-height:1.6;color:#e2e5e9}.detailbody p{margin:0 0 9px}.detailbody ul{padding-left:18px;margin:6px 0}.data-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #46505e}.data-row:last-child{border-bottom:0}.data-row strong{color:#e7cd95}.btn{background:#524734;border:1px solid #b39965;color:#fff2d4;border-radius:9px;padding:11px 13px;min-height:44px}.btn.secondary{background:#343e4b;border-color:#566170;color:#fff}.field{background:#1e2630;color:white;border:1px solid #596474;border-radius:9px;padding:11px;width:100%;margin-top:8px;min-height:42px}.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);background:#141a22;border-top:1px solid #4c5460;padding:7px 6px max(9px,env(safe-area-inset-bottom));z-index:20}.tabs button{background:transparent;color:#b6bdc7;border:0;padding:8px 2px;font-size:10px;border-radius:9px;min-height:53px}.tabs button.active{background:#353e4b;color:#f0d393}.tabs .ico{display:block;font-size:21px;margin-bottom:2px}.panel{display:none}.panel.active{display:block}.notice{background:#42382b;border-radius:9px;padding:11px;color:#e8cfa2;font-size:12px;line-height:1.5}.debug{font-size:11px;color:#aeb5c1;margin-top:12px}.weaponoption{width:100%;display:block;text-align:left;margin:7px 0}.pill{font-size:10px;color:#f1dcae;border:1px solid #88734d;padding:4px 7px;border-radius:20px}.buttonbar{display:flex;gap:8px}.buttonbar button{flex:1}.noscript{padding:20px;background:#642c2c;color:#fff} @media(max-width:360px){.app{padding-left:10px;padding-right:10px}.big{font-size:25px}.ability strong{font-size:18px}.statcard{padding:8px}.hero{grid-template-columns:45% 55%}}
+
+/* Modulo equipaggiamento v0.2.0 */
+.equipped-info{border:1px solid #74664c;background:#252b31;padding:13px 12px;margin:12px 0;border-radius:10px;display:flex;flex-direction:column;gap:4px}.equipped-info strong{color:#f1dcad;font-size:16px;line-height:1.5}.spaced{display:block;margin-top:15px}.modes{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0 13px}.mode{font-size:13px;min-height:42px;border:1px solid #566270;border-radius:9px;background:#202a35;color:#d5dce5;padding:9px 13px;flex:1 0 auto}.mode.active{background:#584732;border-color:#d6b875;color:#ffe4ac;font-weight:bold}.shieldrow{justify-content:space-between;gap:8px;margin:14px 0}.shieldrow label{font-size:14px}.shieldrow input{width:26px;height:26px;accent-color:#d7bc84;flex-shrink:0}.shieldrow .muted{max-width:43%;text-align:right}.compact{margin-top:10px;gap:8px}.compact .field{margin-top:0}.shortfield{width:79px;flex:0 0 79px}.weightfield{width:78px;flex:0 0 78px;text-align:center}.compact .btn{padding:8px 10px;white-space:nowrap}.inventory-entry{padding:11px 0;border-bottom:1px solid #444e5a}.inventory-entry:last-child{border-bottom:none}.entrytop{display:flex;gap:6px;justify-content:space-between;align-items:flex-start}.entrytop .entryname{font-size:14px;line-height:1.4;flex:1;min-width:0;overflow-wrap:anywhere}.entrytop .entryweight{font-size:12px;white-space:nowrap;color:#e7cd95}.entryactions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.entryactions .btn{font-size:12px;min-height:34px;padding:5px 9px}.tagmule{font-size:10px;color:#b2c3d5}.totalrow{font-size:16px}.weightbar{height:9px;background:#1f2832;border-radius:9px;margin:13px 0 9px;overflow:hidden}.weightbar div{height:100%;background:#dfbe7f;border-radius:9px;transition:width .2s}.weightbar .over{background:#e98d82}.speedtable{margin-top:10px;overflow:hidden;border-radius:8px;border:1px solid #526070}.speedr{display:grid;grid-template-columns:1.5fr repeat(4,1fr);font-size:11px;align-items:center;gap:2px;min-height:37px;padding:5px 3px;border-bottom:1px solid #414a57;text-align:center}.speedr:last-child{border:0}.speedr span:first-child{text-align:left;padding-left:4px}.speedr.speedhead{color:#b9c1cb;background:#222b35;font-size:10px}.speedr.active{background:#594a35;color:#ffe2a7;font-weight:750}.notice{overflow-wrap:anywhere}.field:focus-visible,.btn:focus-visible,.mode:focus-visible{outline:2px solid #e5c987;outline-offset:2px}@media(max-width:370px){.entryactions .btn{font-size:11px;padding:4px 7px}.compact{flex-wrap:wrap}.compact .btn{flex:1}}
+.portrait-stage{position:relative;align-self:stretch;min-width:0;overflow:hidden;border-radius:12px;background:#10141b;cursor:pointer}.portrait-stage .portrait{width:100%;height:100%;object-fit:contain}.portrait-video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;pointer-events:none;transition:opacity .12s ease}.portrait-video.show{opacity:1}.portrait-tap{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer;z-index:3}.portrait-tap:focus-visible{outline:3px solid #e2c58d;outline-offset:-4px}.value[id="speedcombat"],.value[id="speedrun"],.value[id="summaryspeedcombat"]{font-size:clamp(19px,4.5vw,30px);line-height:1.3;overflow-wrap:normal;word-break:normal} body{background:#101019;color:#e6e1ec}.top,.card,.statcard,.ability,.details{border-color:#494055}.card{background:#262331}.statcard{background:#2b2739}.statcard.hp{background:#292a39}.statcard.ac{background:#33283e}.ability{background:#302b3d}.section,.gold{color:#c9a7e4}.pill,.tag{border-color:#86679c;color:#d9b5f2}.tabs{background:#17141f}.tabs button.active{background:#42304f;color:#e9d5ff}.notice{background:#342b40;color:#e6c5f0}.portrait{border-color:#6e527c}.portrait-stage{background:#191623} 
+/* Sissor: tonalità viola/antracite, nessuna modifica ai dati persistenti */
+.app{background:#1b1b28}.tabs{background:#161521}.tabs button.active{background:#393044;color:#e6c8f5}.section{color:#c7a3df}.card,.details{background:#292635;border-color:#4e455d}.statcard{background:#302c40;border-color:#51475f}.details summary:after,.data-row strong{color:#d6b5e9}.btn{background:#514061;border-color:#9d7bb2;color:#f4e5fc}.notice{background:#3b3046;color:#e4c9ed}.eyebrow,.gold{color:#d7b3e8}
+
+/* Sissor: velluto bordeaux e oro antico */
+body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{background:#30222c;border-color:#59404b}.section,.gold,.eyebrow{color:#e0b377}.btn{border-color:#785467}.btn.active,.mode.active{background:#6c3046;border-color:#d5a66d}.portrait-stage{background:#20141d}
+</style><style>
+:root{--bg:#131a1c;--panel:#222b2e;--card:#263034;--gold:#c7a67b;--accent:#c7a67b}
+body{background:#111719}
+</style></head><body><noscript><div class="noscript">JavaScript &egrave; disattivato in questo visualizzatore: apri la scheda da un sito HTTPS in Safari per usare i pulsanti.</div></noscript><main class="app"><header class="top"><div><div class="eyebrow">ACKS II &middot; CHARACTER SHEET</div><div class="name">SISSOR</div><div class="muted">Assassino &middot; Reciter (Transmogrifier)</div></div><div class="tag">LIVELLO 1</div></header>
+<section class="panel active" id="scheda"><div class="hero"><div class="stack"><div class="statcard hp"><div class="small">&hearts; PUNTI FERITA</div><div class="big"><span id="hp">5</span><span style="font-size:14px;color:#bbd3c4"> / 5</span></div><div class="control"><button aria-label="Riduci HP" data-act="hpminus" type="button">&minus;</button><button aria-label="Aumenta HP" data-act="hpplus" type="button">+</button></div><div class="meter"><div class="fill" id="hpfill" style="width:100%"></div></div></div><div class="statcard ac"><div class="small">⬡ ARMOUR CLASS</div><div class="big" id="ac">4</div><div class="muted" id="acnote">Armatura di cuoio + DES</div></div><div class="statcard"><div class="small">INIZIATIVA</div><div class="big">+2</div><div class="muted">DES 16</div></div></div><div class="portrait-stage" id="portraitStage"><img alt="Ritratto di Sissor" class="portrait" id="portraitFallback" src="sissor_portrait.jpg"/></div></div>
+<div class="section">CARATTERISTICHE</div><div class="abilities"><div class="ability"><div class="small">FOR</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">DES</div><strong>16</strong><span>+2</span></div><div class="ability"><div class="small">COS</div><strong>9</strong><span>0</span></div><div class="ability"><div class="small">INT</div><strong>8</strong><span>−1</span></div><div class="ability"><div class="small">VOL</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">CAR</div><strong>13</strong><span>+1</span></div></div>
+<div class="section">COMBATTIMENTO</div><div class="card"><div class="row"><strong class="gold" id="weaponname">BALESTRA PESANTE · A DISTANZA</strong><span class="pill">Equipaggiata</span></div><hr class="line"/><div class="twocol"><div><div class="small">ATTACK THROW</div><div class="value" id="attack">8+</div><div class="muted" id="attacknote">10+ base · DES +2</div></div><div><div class="small">DANNI</div><div class="value" id="damage">1d8+1</div><div class="muted" id="damagenote">classe +1</div></div></div><div class="notice" id="weapontraits">Cleave 2, Handy, Slow</div><div class="row"><span class="muted">Danni in carica (se applicabile)</span><strong id="chargedamage">—</strong></div><button class="btn secondary" data-act="openinventory" type="button">⚔ Cambia arma / equipaggiamento</button><p class="muted" style="font-size:12px">Il cambio d'arma in combattimento segue le regole del Master. Le armi a distanza usano DES per colpire, non per i danni. Backstabbing: +4 al tiro e +1 dado di danno contro bersagli vulnerabili a gittata corta.</p></div>
+<div class="twocol"><div class="card"><div class="small">MOVIMENTO</div><div class="value" id="summaryspeedcombat">40′</div><div class="muted">per round</div></div><div class="card"><div class="small">INGOMBRO</div><div class="value" id="summaryweight">6⅓ st</div><div class="muted">equipaggiamento trasportato</div></div></div><div class="card"><div class="row"><div><div class="small">ESPERIENZA</div><strong><span id="xpdisplay">105</span> / 1.750 XP</strong></div><button class="btn secondary" data-act="xp" type="button">Modifica</button></div></div></section>
 <section class="panel" id="capacita">
-<div class="section">TIRI SALVEZZA · ASSASSIN LIVELLO 1</div><div class="card"><div class="kv"><span>Paralisi</span><strong>13+</strong></div><div class="kv"><span>Morte</span><strong>14+</strong></div><div class="kv"><span>Blast</span><strong>15+</strong></div><div class="kv"><span>Implements</span><strong>16+</strong></div><div class="kv"><span>Incantesimi</span><strong>17+</strong></div></div>
-<div class="section">POTERI DI CLASSE · ASSASSIN</div>
-<details class="detail" open><summary>🗡 Backstabbing · Attacco alle spalle</summary><div class="inside"><p>Contro un bersaglio <b>vulnerabile</b>, Sissor ottiene <b>+4 al tiro per colpire</b> e infligge <b>un dado di danno aggiuntivo</b> se colpisce.</p><p>Funziona in mischia e con armi a distanza <b>solo a gittata corta</b>. Non funziona a gittata media o lunga. Il dado aggiuntivo aumenta ai livelli previsti dalla progressione di classe.</p><p>Richiede armatura leggera o inferiore.</p></div></details>
-<details class="detail"><summary>🌑 Hiding · Nascondersi (19+)</summary><div class="inside"><p>Può iniziare a nascondersi come azione di combattimento se dispone di copertura, luce fioca o oscurità. Il Judge effettua il tiro segretamente.</p><p>Se riesce, i nemici non hanno linea di vista su Sissor. Se fallisce, Sissor non sa necessariamente di essere stato scoperto. Restando fermo e occultato, gli avversari subiscono comunque −2 ai tiri di sorpresa.</p><p>La condizione termina se si muove o attacca, oppure se perde l'occultamento. Richiede armatura leggera o inferiore.</p></div></details>
-<details class="detail"><summary>👣 Sneaking · Muoversi silenziosamente (17+)</summary><div class="inside"><p>Può iniziare a muoversi furtivamente come azione di movimento. Nessuna penalità a velocità di esplorazione o fino a metà velocità di combattimento; <b>−5</b> al tiro oltre metà velocità; <b>−10</b> se corre.</p><p>Il Judge tira segretamente. Se riesce, Sissor si muove senza produrre alcun rumore. Fuori dalla linea di vista, gli avversari hanno −2 ai tiri di sorpresa anche quando il tiro fallisce.</p><p>Richiede armatura leggera o inferiore.</p></div></details>
-<details class="detail"><summary>👁 Shadowy Senses · Sensi nell'ombra</summary><div class="inside"><p>Muovendosi a velocità di esplorazione o combattimento, percepisce l'ambiente come se disponesse di una fonte di luce fioca entro <b>30 piedi</b>, anche nell'oscurità ordinaria.</p><p>Non distingue colori, volti, scritte o immagini piatte. Non funziona mentre carica o corre, se assordato, nell'oscurità magica o nel silenzio magico.</p></div></details>
-<details class="detail"><summary>🏙 Streetwise · Conoscenza della malavita</summary><div class="inside"><p>Riconosce automaticamente gesti, segni, gergo e territori delle organizzazioni criminali della propria città. In altri centri urbani è normalmente richiesto un tiro di competenza <b>11+</b>, modificabile dal Judge.</p><p>Equivale a un grado della proficiency Streetwise.</p></div></details>
-<div class="section">TEMPLATE · ASSASSIN-FOR-HIRE</div><div class="hint">Identificato nella tabella «Assassin Templates» del manuale ACKS II Revised, p. 46 (pagina stampata). Il template conferisce le due competenze seguenti.</div>
-<details class="detail" open><summary>🎯 Precise Shooting · Classe</summary><div class="inside"><p>Competenza di classe del template, associata alla precisione con le armi a distanza. Il testo meccanico completo è da verificare prima di indicare modificatori numerici specifici.</p></div></details>
-<details class="detail" open><summary>⚖ Bargaining · Generale</summary><div class="inside"><p>Competenza generale del template, utilizzata nelle contrattazioni e negoziazioni. Il testo meccanico completo è da verificare prima di indicare modificatori numerici specifici.</p></div></details>
-<div class="section">COMPETENZE DI COMBATTIMENTO</div><div class="card"><div class="kv"><span>Armi</span><strong>Tutte</strong></div><div class="kv"><span>Armature</span><strong>Molto leggere, leggere, medie</strong></div><div class="kv"><span>Stili</span><strong>Due armi, due mani, arma e scudo</strong></div><div class="muted" style="margin-top:10px">Le capacità Backstabbing, Hiding e Sneaking non funzionano con armatura media.</div></div>
+<div class="section">TIRI SALVEZZA · ASSASSINO LIVELLO 1</div><div class="card">
+<div class="data-row"><span>Morte / Death</span><strong>14+</strong></div><div class="data-row"><span>Paralisi / Paralysis</span><strong>13+</strong></div><div class="data-row"><span>Soffio / Blast</span><strong>15+</strong></div><div class="data-row"><span>Oggetti / Implements</span><strong>16+</strong></div><div class="data-row"><span>Incantesimi / Spells</span><strong>17+</strong></div></div>
+<div class="section">POTERI INNATI DELL'ASSASSINO</div>
+<details class="details" open><summary>Backstabbing · Attacco a tradimento</summary><div class="detailbody"><p>Contro un avversario <b>vulnerabile</b>, ottiene <b>+4 al tiro per colpire</b> e <b>+1 dado di danno</b> se colpisce. Funziona in mischia oppure con un'arma a distanza <b>alla gittata corta</b>, non a gittata media o lunga. Richiede armatura leggera o inferiore.</p></div></details>
+<details class="details"><summary>Hiding · Nascondersi · 19+</summary><div class="detailbody"><p>Può nascondersi come azione di combattimento in copertura, luce fioca oppure oscurità. Il Judge tira segretamente. Se riesce, gli avversari non hanno linea di vista sul personaggio. Anche se fallisce, restando immobile e occultato impone <b>−2 ai tiri di sorpresa</b>. L'occultamento termina quando si muove o attacca.</p></div></details>
+<details class="details"><summary>Sneaking · Muoversi in silenzio · 17+</summary><div class="detailbody"><p>Può iniziare a muoversi silenziosamente come azione di movimento. A velocità di esplorazione o fino a metà movimento in combattimento nessuna penalità; oltre metà movimento <b>−5</b>, correndo <b>−10</b>. Il tiro è segreto: con successo non produce alcun rumore. Fuori dalla linea di vista, i nemici subiscono <b>−2 alla sorpresa</b> anche se il tiro fallisce.</p></div></details>
+<details class="details"><summary>Shadowy Senses · Sensi nell'ombra</summary><div class="detailbody"><p>Percepisce l'ambiente entro <b>30 piedi</b> come in luce fioca quando si muove a velocità di esplorazione o combattimento. Non distingue colori, volti, scritte o immagini piatte. Non funziona correndo, caricando, se assordato, nell'oscurità o nel silenzio magici.</p></div></details>
+<details class="details"><summary>Streetwise · Malavita · 11+</summary><div class="detailbody"><p>Riconosce automaticamente i segni, il gergo e i territori delle organizzazioni criminali nella propria città. Per altre città, tiro normalmente <b>11+</b>. È equivalente a un grado di Streetwise.</p></div></details>
+<details class="details"><summary>Cleave · Attacco aggiuntivo</summary><div class="detailbody"><p>Può effettuare fino a <b>1 attacco aggiuntivo per round</b> dopo aver abbattuto un avversario, nel rispetto delle regole di Cleaving.</p></div></details>
+<div class="section">TEMPLATE · ASSASSIN-FOR-HIRE</div>
+<div class="card"><div class="gold"><strong>Sissor · Assassino a pagamento</strong></div><p class="muted">Template ufficiale ACKS II Revised, pagina stampata 46. Le due proficiency seguenti derivano dal template; le capacità precedenti derivano dalla classe.</p></div>
+<details class="details" open><summary>Precise Shooting · Tiro preciso</summary><div class="detailbody"><p>Competenza di classe del template. Permette di migliorare l'efficacia del tiro a distanza; i dettagli numerici saranno completati dopo verifica puntuale della voce del manuale.</p></div></details>
+<details class="details" open><summary>Bargaining · Contrattazione</summary><div class="detailbody"><p>Competenza generale del template, utile per negoziare prezzi e accordi. Dettagli numerici da verificare nella voce specifica del manuale.</p></div></details>
+<div class="section">PROFICIENCIES · AVVENTURA</div>
+<details class="details"><summary>Adventuring · Azioni comuni</summary><div class="detailbody"><div class="data-row"><span>Climbing</span><strong>8+</strong></div><div class="data-row"><span>Dungeonbashing</span><strong>18+</strong></div><div class="data-row"><span>Listening</span><strong>18+</strong></div><div class="data-row"><span>Searching</span><strong>18+</strong></div><div class="data-row"><span>Trapbreaking</span><strong>18+</strong></div><p>Verificare gli eventuali modificatori situazionali con il Judge.</p></div></details>
+<div class="section">ANNOTAZIONI</div><textarea class="field" id="abilityNotes" rows="4" placeholder="Note sulle capacità e condizioni..."></textarea>
 </section>
 <section class="panel" id="inventario">
-<div class="section">EQUIPAGGIAMENTO · TEMPLATE INIZIALE</div><div class="hint">Inventario di partenza del template ufficiale. Gli oggetti realmente posseduti potrebbero essere cambiati durante la campagna: modifica le quantità e le note qui sotto.</div>
-<div class="card" id="inventoryRows"></div>
-<div class="section">DENARO</div><div class="twocol"><div class="card"><label class="lbl" for="gp">MONETE D'ORO (MO)</label><input class="field" id="gp" type="number" min="0" value="15"></div><div class="card"><label class="lbl" for="ammo">QUADRELLI</label><input class="field" id="ammo" type="number" min="0" value="20"></div></div>
-<div class="section">NOTE DI INVENTARIO</div><textarea class="field" id="notes" placeholder="Oggetti acquisiti, perduti, depositati, bottino…"></textarea>
-<div class="section">PESO E INGOMBRO</div><div class="card"><p class="muted">Il template ufficiale parte con un ingombro totale di <b>6⅓ stone</b>. Il peso attuale dipende dalle modifiche fatte in gioco; il conteggio automatico sarà aggiunto dopo la conferma dell'inventario reale.</p></div>
+<div class="section">ARMI E SCUDO · INVENTARIO DINAMICO</div>
+<div class="card">
+  <div class="notice">Armi consentite all’Assassino: tutte le armi, incluse le armi grandi. Aggiungere un'arma significa portarla con sé: il suo peso viene conteggiato immediatamente.</div>
+  <label class="small" for="catalog">AGGIUNGI ARMA DAL MANUALE</label><select class="field" id="catalog"></select>
+  <div class="row compact"><label class="small" for="newmagic">BONUS MAGICO</label><select class="field shortfield" id="newmagic"><option value="0">+0</option><option value="1">+1</option><option value="2">+2</option><option value="3">+3</option><option value="4">+4</option><option value="5">+5</option></select><button class="btn" data-act="addweapon" type="button">+ Aggiungi</button></div>
+  <hr class="line"><div class="small">ARMI POSSEDUTE</div><div id="ownedweapons"></div>
+  <hr class="line"><div class="small">CONFIGURAZIONE ATTUALE</div>
+  <div class="equipped-info"><div class="small">ARMA EQUIPAGGIATA</div><strong id="equippedname">—</strong></div>
+  <div class="small spaced">MODALITÀ DI UTILIZZO</div><div class="modes" id="gripmodes" role="group" aria-label="Modalità di utilizzo dell'arma"></div>
+  <div class="row shieldrow"><label for="shieldon">Scudo impugnato</label><input id="shieldon" type="checkbox"><span class="muted" id="shieldhint">Scudo +1 CA</span></div>
+  <div class="row compact"><button class="btn secondary" type="button" data-act="moveshield">Sposta scudo: inventario ↔ deposito</button></div><div class="notice" id="equipmentsummary"></div>
+</div>
+<div class="section">ARMATURE · RESTRIZIONI DI CLASSE</div><div class="notice">L’Assassino è competente nelle armature leggere e medie e può utilizzare lo scudo. La CA tiene conto di armatura, DES e scudo effettivamente impugnato.</div>
+<div class="card">
+  <label class="small" for="armorcatalog">AGGIUNGI ARMATURA DAL MANUALE</label><select class="field" id="armorcatalog"></select>
+  <div class="row compact"><label class="small" for="armormagic">BONUS MAGICO</label><select class="field shortfield" id="armormagic"><option value="0">+0</option><option value="1">+1</option><option value="2">+2</option><option value="3">+3</option><option value="4">+4</option><option value="5">+5</option></select><button class="btn" type="button" data-act="addarmor">+ Aggiungi</button></div>
+  <hr class="line"><div class="small">ARMATURE POSSEDUTE</div><div id="ownedarmors"></div>
+  <div class="equipped-info"><div class="small">ARMATURA INDOSSATA</div><strong id="equippedarmor">—</strong><span class="muted" id="armordetail"></span></div>
+</div>
+<div class="section">ALTRO EQUIPAGGIAMENTO</div>
+<div class="card"><div class="muted">Inserisci liberamente oggetti e peso in stone: ad esempio <b>1/6</b>, <b>1/2</b>, <b>1</b> oppure <b>0,25</b>. Gli oggetti vengono aggiunti al carico personale.</div>
+  <label class="small spaced" for="itemname">NOME OGGETTO</label><input class="field" id="itemname" type="text" placeholder="Es. corda, torcia, pozione…" maxlength="90">
+  <div class="row compact"><label class="small" for="itemweight">PESO (ST)</label><input class="field weightfield" id="itemweight" type="text" inputmode="decimal" value="1/6" placeholder="1/6"><button class="btn" type="button" data-act="additem">+ Aggiungi</button></div>
+  <div id="owneditems"></div>
+</div>
+<div class="section">EQUIPAGGIAMENTO E INGOMBRO</div>
+<div class="card">
+  <div class="data-row"><span>Armature trasportate</span><strong id="armorweight">—</strong></div>
+  <div class="data-row"><span>Scudo trasportato</span><strong id="shieldweight">—</strong></div>
+  <div class="data-row"><span>Armi trasportate</span><strong id="weaponweight">—</strong></div>
+  <div class="data-row"><span>Altro equipaggiamento</span><strong id="itemstotalweight">—</strong></div>
+  <div class="data-row totalrow"><b>TOTALE TRASPORTATO</b><strong id="totalweight">—</strong></div>
+  <div class="row"><div class="muted" id="weightdetail"></div><strong class="gold" id="weightstatus"></strong></div>
+  <div class="weightbar"><div id="weightfill"></div></div>
+  <p class="muted">Il carico comprende tutto ciò che hai addosso, anche le armi non impugnate. Gli oggetti nel deposito sono esclusi dal carico personale.</p>
+</div>
+<div class="section">MOVIMENTO</div>
+<div class="twocol"><div class="card"><div class="small">ESPLORAZIONE</div><div class="value" id="speedexplore">90′</div><div class="muted">per turno</div></div>
+<div class="card"><div class="small">COMBATTIMENTO</div><div class="value" id="speedcombat">30′</div><div class="muted">per round</div></div>
+<div class="card"><div class="small">CORSA</div><div class="value" id="speedrun">90′</div><div class="muted">per round</div></div>
+<div class="card"><div class="small">VIAGGIO</div><div class="value" id="speedtravel">18</div><div class="muted">miglia/giorno</div></div></div>
+<div class="card"><div class="small">TABELLA DI RIFERIMENTO · ACKS II REVISED</div>
+<div class="speedtable" role="table" aria-label="Velocità per fasce di ingombro">
+<div class="speedr speedhead" role="row"><span>Carico</span><span>Espl.</span><span>Comb.</span><span>Corsa</span><span>Viaggio</span></div>
+<div class="speedr" id="speedr0" role="row"><span>≤ 5 st</span><span>120′</span><span>40′</span><span>120′</span><span>24 mi</span></div>
+<div class="speedr" id="speedr1" role="row"><span>≤ 7 st</span><span>90′</span><span>30′</span><span>90′</span><span>18 mi</span></div>
+<div class="speedr" id="speedr2" role="row"><span>≤ 10 st</span><span>60′</span><span>20′</span><span>60′</span><span>12 mi</span></div>
+<div class="speedr" id="speedr3" role="row"><span>≤ 19 st*</span><span>30′</span><span>10′</span><span>30′</span><span>6 mi</span></div>
+</div><p class="muted">* Capacità massima attuale: 20 + modificatore di FOR (−1) = 19 st. Oltre questo limite non puoi trasportare normalmente il carico.</p></div>
+<div class="section">DENARO PERSONALE</div><div class="card"><div class="small">DENARO PERSONALE · modificabile</div><div class="row"><div class="value gold"><span id="coins">9</span> MO</div><div class="buttonbar"><button class="btn secondary" data-act="coinminus" type="button">−</button><button class="btn secondary" data-act="coinplus" type="button">+</button></div></div><div class="muted">Registra qui le monete d’oro; le altre denominazioni possono essere annotate nelle note inventario.</div></div>
+<div class="section">DEPOSITO · MATERIALE NON TRASPORTATO</div><div class="card">
+  <div class="muted">Oggetti e armi nel deposito non appesantiscono Sissor. Usa <b>Prendi</b> per trasferirli nel suo inventario: il movimento si aggiornerà subito.</div>
+  <div id="muleitems"></div><div class="row compact"><input class="field" id="mulename" type="text" maxlength="90" placeholder="Nuovo oggetto nel deposito"><input class="field weightfield" id="muleweight" type="text" inputmode="decimal" value="1/6" placeholder="st"><button class="btn" data-act="addmule" type="button">+ Aggiungi</button></div>
+  <div class="data-row"><span>Carico del deposito registrato</span><strong id="muleweighttotal">0 st</strong></div><p class="muted">Peso merce trasportata dal deposito, escluso dalla velocità del personaggio. Le monete e gli oggetti elencati solo nelle note non sono quantificati qui.</p>
+  <label class="small spaced" for="muleNotes">NOTE SUL DEPOSITO</label><textarea class="field" id="muleNotes" rows="3" placeholder="Annotazioni libere…"></textarea>
+</div>
+<div class="section">NOTE INVENTARIO</div><textarea class="field" id="inventoryNotes" rows="4" placeholder="Oggetti trovati, tesori, promemoria…"></textarea>
 </section>
-<section class="panel" id="backup">
-<div class="section">SALVATAGGIO LOCALE</div><div class="card"><p class="muted">La scheda salva le modifiche sul dispositivo. Puoi esportare un file JSON e importarlo su un altro browser o iPad.</p><div class="buttons"><button class="btn" id="export">Esporta JSON</button><button class="btn secondary" id="import">Importa JSON</button></div><input id="importFile" type="file" accept=".json,application/json" hidden><hr class="line"><button class="btn secondary" id="reset">Ripristina valori iniziali</button><p class="tiny" id="status" role="status"></p></div>
-<div class="section">NOTE SULLE FONTI</div><div class="card"><p class="muted">Caratteristiche e combattimento: fotografie della scheda cartacea di Sissor. Classe, poteri e template: ACKS II Revised, pp. 44–46 stampate. Equipaggiamento iniziale da template, non inventario attuale verificato. Versione 0.1.0, senza video animati.</p></div>
-</section>
-</main>
-<nav class="tabs" aria-label="Navigazione scheda"><button class="active" data-tab="scheda"><span>⚔</span>Scheda</button><button data-tab="capacita"><span>✦</span>Capacità</button><button data-tab="inventario"><span>▣</span>Inventario</button><button data-tab="backup"><span>⚙</span>Backup</button></nav>
+<section class="panel" id="backup"><div class="section">BACKUP E DIAGNOSTICA</div><div class="card"><p class="muted">Le modifiche vengono salvate nel browser quando il salvataggio locale &egrave; disponibile. Conserva anche un backup JSON.</p><div class="buttonbar"><button class="btn" data-act="export" type="button">Esporta JSON</button><button class="btn secondary" data-act="import" type="button">Importa JSON</button></div><input accept=".json,application/json" id="importfile" style="display:none" type="file"/><hr class="line"/><button class="btn secondary" data-act="reset" type="button">Ripristina valori iniziali</button><p class="debug" id="status">Verifica pulsanti: in attesa...</p></div><div class="notice">Versione 0.1.0 &middot; Per la massima compatibilit&agrave; su iPhone apri il file da un normale sito HTTPS in Safari. Le anteprime di file HTML locali possono bloccare gli script.</div></section>
+</main><nav aria-label="Navigazione" class="tabs"><button class="active" data-tab="scheda" type="button"><span class="ico">⚔</span>Scheda</button><button data-tab="capacita" type="button"><span class="ico">✦</span>Capacit&agrave;</button><button data-tab="inventario" type="button"><span class="ico">▣</span>Inventario</button><button data-tab="backup" type="button"><span class="ico">⚙</span>Backup</button></nav>
 <script>
-(function(){
-'use strict';
-const KEY='acks-sissor-v010';
-const initialItems=[
-['Balestra pesante (Arbalest)',1],['Spada corta',2],['Armatura di cuoio',1],['Mantello scuro con cappuccio',1],
-['Tunica e pantaloni neri',1],['Stivali bassi',1],['Cintura di cuoio',1],['Piccolo sacco',1],
-['Fiasca di olio militare',2],['Acciarino',1],['Corda da 50 piedi',1],['Otre',1],['Razioni di ferro (settimana)',1]
-];
-const defaults={hp:5,xp:105,gp:15,ammo:20,notes:'',items:initialItems.map(x=>x[1])};
-let state;
-try{state={...defaults,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){state={...defaults}}
-if(!Array.isArray(state.items)||state.items.length!==initialItems.length)state.items=[...defaults.items];
-const $=id=>document.getElementById(id);
-function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){$('status').textContent='Salvataggio locale non disponibile: usa Esporta JSON.'}}
-function render(){
- $('hp').textContent=state.hp;$('xp').value=state.xp;$('xpdisplay').textContent=Number(state.xp).toLocaleString('it-IT');
- $('gp').value=state.gp;$('ammo').value=state.ammo;$('notes').value=state.notes;
- $('inventoryRows').innerHTML=initialItems.map((x,i)=>'<div class="kv"><label for="item'+i+'">'+x[0]+'</label><input id="item'+i+'" type="number" min="0" max="999" value="'+state.items[i]+'" aria-label="Quantità '+x[0]+'" style="width:65px;background:#121a1e;color:white;border:1px solid #58676c;border-radius:7px;padding:6px;text-align:center"></div>').join('');
- document.querySelectorAll('#inventoryRows input').forEach((el,i)=>el.addEventListener('change',()=>{state.items[i]=Math.max(0,Number(el.value)||0);save()}));
-}
-document.querySelectorAll('.tabs button').forEach(btn=>btn.addEventListener('click',()=>{
- document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('active',b===btn));
- document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===btn.dataset.tab));
- window.scrollTo({top:0,behavior:'instant'});
-}));
-document.querySelectorAll('[data-hp]').forEach(b=>b.addEventListener('click',()=>{state.hp=Math.max(0,Math.min(5,state.hp+Number(b.dataset.hp)));save();render()}));
-['xp','gp','ammo'].forEach(id=>$(id).addEventListener('change',()=>{state[id]=Math.max(0,Number($(id).value)||0);save();render()}));
-$('notes').addEventListener('input',()=>{state.notes=$('notes').value;save()});
-$('export').addEventListener('click',()=>{const blob=new Blob([JSON.stringify({character:'Sissor',version:'0.1.0',...state},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='Sissor_backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('status').textContent='Backup creato.'});
-$('import').addEventListener('click',()=>$('importFile').click());
-$('importFile').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{const data=JSON.parse(await file.text());if(data.character!=='Sissor')throw Error('Il backup non appartiene a Sissor');state={...defaults,...data};if(!Array.isArray(state.items)||state.items.length!==initialItems.length)state.items=[...defaults.items];save();render();$('status').textContent='Backup importato.'}catch(err){$('status').textContent='Errore importazione: '+err.message}e.target.value=''});
-$('reset').addEventListener('click',()=>{if(confirm('Ripristinare i dati iniziali di Sissor?')){state={...defaults,items:[...defaults.items]};save();render();$('status').textContent='Dati iniziali ripristinati.'}});
-render();
+(function () {
+  'use strict';
+  var KEY = 'acks-sissor-v020', LEGACY = 'acks-sissor-no-legacy', OLD = 'acks-sissor-no-legacy2';
+  // ACKS II Revised, Equipment tables, pp. 126-128. Class exclusions retained from v0.3.2.
+  // Each weight is in stone. Small/medium weapons generally 1/6 st; heavy 1 st.
+  var W = [
+    ['arbalest','Balestra pesante (Arbalest)','missile','1d8',null,'Cleave 2, Handy, Slow',1],
+    ['crossbow','Balestra','missile','1d6',null,'Cleave 2, Handy, Slow',1/6],
+    ['composite','Arco composito','missile','1d6',null,'Cleave 3 + FOR',1],
+    ['shortbow','Arco corto','missile','1d6',null,'',1/6],
+    ['battleaxe','Ascia da battaglia','medium','1d6','1d8','',1/6],
+    ['greataxe','Ascia a due mani','large','1d10',null,'',1],
+    ['handaxe','Ascia da lancio','small','1d6',null,'Thrown',1/6],
+    ['club','Randello','tiny','1d4',null,'',1/6],
+    ['flail','Flagello','medium','1d6','1d8','',1/6],
+    ['mace','Mazza','medium','1d6','1d8','',1/6],
+    ['morningstar','Mazza pesante','large','1d10',null,'',1],
+    ['warhammer','Martello da guerra','small','1d6',null,'Thrown',1/6],
+    ['knife','Coltello','tiny','1d3',null,'Thrown',1/6],
+    ['dagger','Pugnale','tiny','1d4',null,'Thrown',1/6],
+    ['silverdagger','Pugnale argentato','tiny','1d4',null,'Silver, Thrown',1/6],
+    ['shortsword','Spada corta','small','1d6',null,'',1/6],
+    ['sword','Spada','medium','1d6','1d8','',1/6],
+    ['dart','Dardi (5)','missile','1d4',null,'Thrown',1/6],
+    ['javelin','Giavellotto','small','1d6',null,'Thrown',1/6],
+    ['lance','Lancia da cavalleria','large','1d10',null,'Impact, Long, Mounted',1],
+    ['polearm','Arma inastata','large','1d10',null,'Impact, Long',1],
+    ['spear','Lancia','medium','1d6','1d8','Impact, Long, Thrown',1],
+    ['bola','Bola','missile','1d2',null,'Entangling, Thrown',1/6],
+    ['oil','Olio militare','missile','1d8',null,'Thrown',1/6],
+    ['cestus','Cestus','small','1d3',null,'',1/6],
+    ['net','Rete','medium',null,null,'Entangling, Thrown',1],
+    ['rock','Pietra','medium','1d3',null,'Thrown',1/6],
+    ['sap','Manganello','tiny','1d4',null,'Incapacitating',1/6],
+    ['sling','Fionda','missile','1d4',null,'Handy',1/6],
+    ['staffsling','Fionda a bastone','medium','1d4','1d6','',1],
+    ['staff','Bastone','medium','1d4','1d6','',1],
+    ['whip','Frusta','small','1d2',null,'Flexible',1/6]
+  ].map(function(a){return {id:a[0],name:a[1],type:a[2],die:a[3],two:a[4],traits:a[5],weight:a[6]};});
+  var A = [
+    ['hide','Armatura di pelliccia e pelle',1],['padded','Armatura imbottita',1],
+    ['leather','Armatura di cuoio',2],['lightarena','Armatura da arena leggera',2],
+    ['ring','Cotta ad anelli',3],['scale','Armatura a scaglie',3],
+    ['chain','Cotta di maglia',4],['linen','Lino laminato',4],
+    ['heavyarena','Armatura da arena pesante',4],['banded','Banded Plate Armor (corazza a bande)',5],
+    ['lamellar','Armatura lamellare',5],['plate','Armatura a piastre',6]
+  ].filter(function(a){return a[2]<=4;}).map(function(a){return {id:a[0],name:a[1],ac:a[2],weight:a[2]};});
+  var SPEEDS = [
+    {max:5,explore:120,combat:40,run:120,travel:24},
+    {max:7,explore:90,combat:30,run:90,travel:18},
+    {max:10,explore:60,combat:20,run:60,travel:12},
+    {max:19,explore:30,combat:10,run:30,travel:6}
+  ];
+  function initial() {return {
+    hp:5,coins:15,silver:0,xp:105,abilityNotes:'',muleNotes:'',inventoryNotes:'Inventario iniziale da template Assassin-for-Hire; verificare con la scheda cartacea le quantità attuali.',
+    weapons:[{uid:1,id:'arbalest',magic:0,location:'carried'},{uid:3,id:'shortsword',magic:0,location:'carried'},{uid:4,id:'shortsword',magic:0,location:'carried'}],
+    equipped:1,grip:'ranged',shield:false,shieldLocation:'mule',
+    armors:[{uid:2,id:'leather',magic:0,location:'carried'}],equippedArmor:2,
+    items:[
+      {uid:5,name:'20 quadrelli (astuccio)',weight:1/6,location:'carried'},
+      {uid:6,name:'Mantello scuro con cappuccio',weight:1/6,location:'carried'},
+      {uid:7,name:'Tunica e pantaloni neri',weight:1/6,location:'carried'},
+      {uid:8,name:'Stivali bassi',weight:1/6,location:'carried'},
+      {uid:9,name:'Cintura di cuoio',weight:1/6,location:'carried'},
+      {uid:10,name:'Sacco piccolo',weight:1/6,location:'carried'},
+      {uid:11,name:'2 fiasche di olio militare',weight:1/3,location:'carried'},
+      {uid:12,name:'Acciarino',weight:0,location:'carried'},
+      {uid:13,name:'Corda 50 piedi',weight:1,location:'carried'},
+      {uid:14,name:'Otre',weight:1/6,location:'carried'},
+      {uid:15,name:'Razioni di ferro, 1 settimana',weight:1,location:'carried'}
+    ]
+  };}
+  var data = initial();
+  function el(id){return document.getElementById(id);}
+  function fw(id){return W.find(function(w){return w.id===id;});}
+  function fa(id){return A.find(function(a){return a.id===id;});}
+  function safe(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function bonus(n){return n>0?'+'+n:n<0?String(n):'';}
+  function loc(o){return o.location==='mule'?'mule':'carried';}
+  function weightString(w){
+    var rounded = Math.round(w*6), remaining = w*6-rounded;
+    if(Math.abs(remaining)<0.000001){var whole=Math.floor(rounded/6),num=rounded%6;
+      var f=['','⅙','⅓','½','⅔','⅚'][num];return (whole?whole+(num?' ':''): (num?'':'0'))+f+' st';}
+    return w.toLocaleString('it-IT',{maximumFractionDigits:2})+' st';
+  }
+  function parsedWeight(value){
+    var s=String(value).replace(/\s+/g,'').replace(',','.');
+    if(!s)return NaN;
+    var f=s.match(/^(\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/);
+    var n=f?Number(f[1])/Number(f[2]):Number(s);
+    return Number.isFinite(n)&&n>=0&&n<=100?n:NaN;
+  }
+  function nextUID(){var u=Date.now(); while(data.weapons.concat(data.armors,data.items).some(function(x){return String(x.uid)===String(u);}))u++;return u;}
+  function getOwnedWeapon(){return data.weapons.find(function(x){return String(x.uid)===String(data.equipped)&&loc(x)==='carried';})||data.weapons.find(function(x){return loc(x)==='carried';})||null;}
+  function getOwnedArmor(){return data.armors.find(function(x){return String(x.uid)===String(data.equippedArmor)&&loc(x)==='carried';})||data.armors.find(function(x){return loc(x)==='carried';})||null;}
+  function hasThrown(w){return w.traits.indexOf('Thrown')>=0;}
+  function hasHandy(w){return w.traits.indexOf('Handy')>=0;}
+  function modes(w){
+    var opts=[];
+    if(w.type==='medium'){
+      opts.push(['one','1 mano']);
+      if(w.two)opts.push(['two','2 mani']);
+    }else if(w.type==='large'){
+      opts.push(['two','2 mani']);
+      if(w.traits.indexOf('Mounted')>=0)opts.push(['mounted','A cavallo']);
+    }else if(w.type==='missile')opts.push(['ranged','A distanza']);
+    else opts.push(['one','1 mano']);
+    if(hasThrown(w)&&w.type!=='missile')opts.push(['throw','Lancio']);
+    return opts;
+  }
+  function twoHands(w,g){return g==='two'||(w.type==='large'&&g!=='mounted')||(w.type==='missile'&&!hasHandy(w));}
+  function current(){
+    var o=getOwnedWeapon(); if(!o)return null;
+    var w=fw(o.id); if(!w)return null;
+    data.equipped=o.uid;
+    var opts=modes(w);
+    if(!opts.some(function(x){return x[0]===data.grip;}))data.grip=opts[0][0];
+    var ranged=w.type==='missile'||data.grip==='throw';
+    var hands=twoHands(w,data.grip),mag=Number(o.magic)||0;
+    var die=data.grip==='two'&&w.two?w.two:w.die;
+    if(w.id==='lance'&&data.grip==='two')die='1d8';
+    if(w.id==='staffsling'&&data.grip==='ranged')die='1d6';
+    var damageBonus=(ranged?0:0)+1+mag,attackMod=(ranged?2:0)+mag;
+    var chargedmg=(!ranged&&w.traits.indexOf('Impact')>=0&&die)?die.replace(/^1d/,'2d')+bonus(damageBonus):'—';
+    return {o:o,w:w,hands:hands,ranged:ranged,die:die,mag:mag,damage:die?die+bonus(damageBonus):'—',attack:10-attackMod,charge:chargedmg};
+  }
+  function armorCurrent(){var o=getOwnedArmor();if(!o)return null;var a=fa(o.id);if(!a)return null;data.equippedArmor=o.uid;return {o:o,a:a};}
+  function armorWeight(o){var a=fa(o.id);return a?Math.max(0,a.weight-(Number(o.magic)||0)):0;}
+  function weights(){
+    var carried=function(o){return loc(o)==='carried';};
+    var aw=data.armors.filter(carried).reduce(function(s,o){return s+armorWeight(o);},0);
+    var sw=data.shieldLocation==='carried'?1:0;
+    var ww=data.weapons.filter(carried).reduce(function(s,o){var w=fw(o.id);return s+(w?w.weight:0);},0);
+    var iw=data.items.filter(carried).reduce(function(s,o){return s+(Number(o.weight)||0);},0);
+    var mw=data.armors.filter(function(x){return loc(x)==='mule';}).reduce(function(s,o){return s+armorWeight(o);},0)
+        + data.weapons.filter(function(x){return loc(x)==='mule';}).reduce(function(s,o){var w=fw(o.id);return s+(w?w.weight:0);},0)
+        + data.items.filter(function(x){return loc(x)==='mule';}).reduce(function(s,o){return s+(Number(o.weight)||0);},0)
+        + 0;
+    return {armor:aw,shield:sw,weapons:ww,items:iw,total:aw+sw+ww+iw,mule:mw};
+  }
+  function speedIndex(total){for(var i=0;i<SPEEDS.length;i++)if(total<=SPEEDS[i].max+0.0000001)return i;return -1;}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){}}
+  function normalize(){
+    if(!Array.isArray(data.weapons))data.weapons=[];
+    if(!Array.isArray(data.armors))data.armors=[];
+    if(!Array.isArray(data.items))data.items=[];
+    data.weapons=data.weapons.filter(function(x){return x&&fw(x.id);}).map(function(x){return {uid:x.uid,id:x.id,magic:Math.max(0,Math.min(5,Number(x.magic)||0)),location:loc(x)};});
+    data.armors=data.armors.filter(function(x){return x&&fa(x.id);}).map(function(x){return {uid:x.uid,id:x.id,magic:Math.max(0,Math.min(5,Number(x.magic)||0)),location:loc(x)};});
+    data.items=data.items.filter(function(x){return x&&typeof x.name==='string'&&Number.isFinite(Number(x.weight));}).map(function(x){return {uid:x.uid,name:x.name.slice(0,90),weight:Math.max(0,Number(x.weight)),location:loc(x)};});
+    data.shieldLocation=data.shieldLocation==='mule'?'mule':'carried';
+    data.shield=data.shield!==false;
+    if(!Number.isFinite(Number(data.hp)))data.hp=5;
+    data.hp=Math.max(0,Math.min(5,Number(data.hp)));
+    data.coins=Math.max(0,Number(data.coins)||0);
+    data.xp=Math.max(0,Number(data.xp)||0);
+  }
+  function load(){
+    try{
+      var raw=localStorage.getItem(KEY);
+      if(raw){var parsed=JSON.parse(raw);if(parsed&&typeof parsed==='object')Object.keys(data).forEach(function(k){if(parsed[k]!==undefined)data[k]=parsed[k];});normalize();return;}
+      var old=JSON.parse(localStorage.getItem(LEGACY)||'null');
+      if(old&&typeof old==='object'){
+        ['hp','coins','xp','abilityNotes','muleNotes','inventoryNotes','equipped','grip','shield'].forEach(function(k){if(old[k]!==undefined)data[k]=old[k];});
+        if(Array.isArray(old.weapons))data.weapons=old.weapons.filter(function(x){return x&&fw(x.id);}).map(function(x){
+          return {uid:x.uid,id:x.id,magic:Number(x.magic)||0,location:(String(x.uid)==='2'&&x.id==='warhammer'&&String(old.equipped)!=='2')?'mule':'carried'};
+        });
+        normalize();save();return;
+      }
+      var v02=JSON.parse(localStorage.getItem(OLD)||'null');
+      if(v02){['hp','coins','xp','abilityNotes','muleNotes','inventoryNotes'].forEach(function(k){if(v02[k]!==undefined)data[k]=v02[k];});if(v02.weapon==='speartwo')data.grip='two';}
+    }catch(e){ /* an unreadable backup must not prevent startup */ }
+    normalize();
+  }
+  function optionHTML(list,prev){var html=list.map(function(v){return '<option value="'+safe(v.id)+'">'+safe(v.name)+'</option>';}).join('');return html;}
+  function itemButtons(type,o,location){
+    var uid=safe(o.uid),buttons='';
+    if(location==='carried'&&(type==='weapon'||type==='armor'))buttons+='<button type="button" class="btn" data-equip-type="'+type+'" data-equip-id="'+uid+'">Equipaggia</button>';
+    buttons+='<button type="button" class="btn secondary" data-move-type="'+type+'" data-move-id="'+uid+'">'+(location==='mule'?'Prendi':'Nel deposito')+'</button>';
+    buttons+='<button type="button" class="btn secondary" data-remove-type="'+type+'" data-remove-id="'+uid+'">Rimuovi</button>';
+    return '<div class="entryactions">'+buttons+'</div>';
+  }
+  function renderLists(){
+    var weaponList=data.weapons.filter(function(o){return loc(o)==='carried';});
+    el('ownedweapons').innerHTML=weaponList.length?weaponList.map(function(o){var w=fw(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(w.name)+(o.magic?' +'+o.magic:'')+(String(data.equipped)===String(o.uid)?' · <b class="gold">Equipaggiata</b>':'')+'</span><span class="entryweight">'+weightString(w.weight)+'</span></div>'+itemButtons('weapon',o,'carried')+'</div>';}).join(''):'<p class="muted">Nessuna arma trasportata. Puoi prenderne una dal deposito.</p>';
+    var armorList=data.armors.filter(function(o){return loc(o)==='carried';});
+    el('ownedarmors').innerHTML=armorList.length?armorList.map(function(o){var a=fa(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+(String(data.equippedArmor)===String(o.uid)?' · <b class="gold">Indossata</b>':'')+'</span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o,'carried')+'</div>';}).join(''):'<p class="muted">Nessuna armatura trasportata.</p>';
+    var items=data.items.filter(function(o){return loc(o)==='carried';});
+    el('owneditems').innerHTML=items.length?'<hr class="line"><div class="small">OGGETTI TRASPORTATI</div>'+items.map(function(o){return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o,'carried')+'</div>';}).join(''):'<p class="muted">Nessun altro oggetto registrato.</p>';
+    var mule=[];
+    data.weapons.filter(function(o){return loc(o)==='mule';}).forEach(function(o){var w=fw(o.id);mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(w.name)+(o.magic?' +'+o.magic:'')+' <span class="tagmule">· Arma</span></span><span class="entryweight">'+weightString(w.weight)+'</span></div>'+itemButtons('weapon',o,'mule')+'</div>');});
+    data.armors.filter(function(o){return loc(o)==='mule';}).forEach(function(o){var a=fa(o.id);mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+' <span class="tagmule">· Armatura</span></span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o,'mule')+'</div>');});
+    data.items.filter(function(o){return loc(o)==='mule';}).forEach(function(o){mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o,'mule')+'</div>');});
+    el('muleitems').innerHTML=mule.join('');
+  }
+  function render(){
+    el('hp').textContent=data.hp;
+    el('hpfill').style.width=(100*data.hp/5)+'%';
+    el('coins').textContent=data.coins;
+    el('xpdisplay').textContent=data.xp;
+    var c=current(), armor=armorCurrent();
+    var shieldEffective=Boolean(data.shield && data.shieldLocation==='carried' && !(c && c.hands));
+    var wt=weights();
+    // Swashbuckling (ACKS II Revised): light/no armor and <= 5 stone carried.
+    // Armor category is determined by its base AC, not reduced magical weight.
+    var swashEligible=(!armor || armor.a.ac<=2) && wt.total<=5+0.0000001;
+    var swashBonus=0; // Sissor non possiede Swashbuckling.
+    var ac=(armor?armor.a.ac+Number(armor.o.magic||0):0)+2+(shieldEffective?1:0);
+    el('ac').textContent=ac;
+    el('acnote').textContent=(armor?armor.a.name:'Senza armatura')+(shieldEffective?' + scudo':'')+' · DES +2';
+    el('equippedarmor').textContent=armor?armor.a.name+(armor.o.magic?' +'+armor.o.magic:''):'Nessuna armatura';
+    el('armordetail').textContent=armor?'CA base '+armor.a.ac+' · '+weightString(armorWeight(armor.o)):'CA base 0';
+    el('equippedname').textContent=c?c.w.name+(c.mag?' +'+c.mag:''):'Nessuna arma equipaggiata';
+    if(c){
+      el('damage').textContent=c.damage;
+      el('weaponname').textContent=(c.w.name+(c.mag?' +'+c.mag:'')+' · '+(c.ranged?'Distanza':c.hands?'2 mani':'1 mano')).toUpperCase();
+      el('attack').textContent=c.attack+'+';
+      el('attacknote').textContent='10+ base · '+(c.ranged?'DES +2':'FOR +0')+(c.mag?' · magia +'+c.mag:'');
+      el('damagenote').textContent='Classe +1'+(c.ranged?'':' · FOR +0')+(c.mag?' · magia +'+c.mag:'');
+      el('weapontraits').textContent=c.w.traits||'Nessuna proprietà speciale';
+      el('chargedamage').textContent=c.charge;
+    }else{
+      el('damage').textContent='—';el('weaponname').textContent='NESSUNA ARMA';
+      el('attack').textContent='—';el('attacknote').textContent='Nessuna arma impugnata';
+      el('damagenote').textContent='—';el('weapontraits').textContent='Seleziona un’arma posseduta';el('chargedamage').textContent='—';
+    }
+    var shieldToggle=el('shieldon');
+    shieldToggle.disabled=Boolean(c&&c.hands);
+    shieldToggle.checked=shieldEffective;
+    el('shieldhint').textContent=(c&&c.hands?'Non utilizzabile a 2 mani':'Scudo +1 CA');
+    el('equipmentsummary').textContent='CA '+ac+' · '+(c?c.w.name+' · '+c.damage+' danni'+(c.charge!=='—'?' · carica '+c.charge:''):'nessuna arma')+(c&&c.hands?' · scudo non impugnabile':'');
+    el('gripmodes').innerHTML=c?modes(c.w).map(function(option){return '<button class="mode'+(data.grip===option[0]?' active':'')+'" data-grip="'+option[0]+'" aria-pressed="'+(data.grip===option[0]?'true':'false')+'" type="button">'+option[1]+'</button>';}).join(''):'<span class="muted">Aggiungi o prendi un’arma per scegliere la modalità.</span>';
+    var oldWeapon=el('catalog').value,oldArmor=el('armorcatalog').value;
+    el('catalog').innerHTML=W.map(function(w){return '<option value="'+w.id+'">'+safe(w.name)+' · '+(w.die||'speciale')+' · '+weightString(w.weight)+'</option>';}).join('');
+    if(W.some(function(w){return w.id===oldWeapon;}))el('catalog').value=oldWeapon;
+    el('armorcatalog').innerHTML=A.map(function(a){return '<option value="'+a.id+'">'+safe(a.name)+' · CA '+a.ac+' · '+weightString(a.weight)+'</option>';}).join('');
+    if(A.some(function(a){return a.id===oldArmor;}))el('armorcatalog').value=oldArmor;
+    renderLists();
+    el('armorweight').textContent=weightString(wt.armor);
+    el('shieldweight').textContent=weightString(wt.shield);
+    el('weaponweight').textContent=weightString(wt.weapons);
+    el('itemstotalweight').textContent=weightString(wt.items);
+    el('totalweight').textContent=weightString(wt.total);
+    el('muleweighttotal').textContent=weightString(wt.mule);
+    el('weightdetail').textContent='Capacità massima 19 st';
+    el('weightfill').style.width=Math.min(100,Math.max(0,wt.total/19*100))+'%';
+    el('weightfill').classList.toggle('over',wt.total>19+0.0000001);
+    var idx=speedIndex(wt.total),sp=idx<0?{explore:0,combat:0,run:0,travel:0}:SPEEDS[idx];
+    el('speedexplore').textContent=sp.explore+'′';
+    el('speedcombat').textContent=sp.combat+'′ ('+(sp.combat/5)+' quadretti)';
+    el('summaryspeedcombat').textContent=sp.combat+'′ ('+(sp.combat/5)+' quadretti)';
+    el('summaryweight').textContent=weightString(wt.total);
+    el('speedrun').textContent=sp.run+'′ ('+(sp.run/5)+' quadretti)';
+    el('speedtravel').textContent=sp.travel;
+    el('weightstatus').textContent=idx<0?'Sovraccarico':idx===0?'Leggero':idx===1?'Normale':idx===2?'Appesantito':'Molto pesante';
+    for(var i=0;i<4;i++)el('speedr'+i).classList.toggle('active',i===idx);
+    ['abilityNotes','muleNotes','inventoryNotes'].forEach(function(id){if(document.activeElement!==el(id))el(id).value=data[id]||'';});
+    save();
+  }
+  function tab(name){document.querySelectorAll('.panel').forEach(function(x){x.classList.toggle('active',x.id===name);});document.querySelectorAll('[data-tab]').forEach(function(x){x.classList.toggle('active',x.getAttribute('data-tab')===name);});window.scrollTo(0,0);}
+  function entry(type,uid){var list=type==='weapon'?data.weapons:type==='armor'?data.armors:data.items;return list.find(function(o){return String(o.uid)===String(uid);});}
+  function itemAction(type,uid,act){
+    var o=entry(type,uid);if(!o)return;
+    if(act==='equip'){
+      if(loc(o)==='mule')return;
+      if(type==='weapon'){data.equipped=o.uid;data.grip='one';}
+      if(type==='armor')data.equippedArmor=o.uid;
+    }
+    if(act==='move'){
+      o.location=loc(o)==='carried'?'mule':'carried';
+      if(loc(o)==='carried'){if(type==='weapon'){data.equipped=o.uid;data.grip='one';}if(type==='armor')data.equippedArmor=o.uid;}
+    }
+    if(act==='remove'){
+      if(!confirm('Rimuovere definitivamente questo oggetto?'))return;
+      var list=type==='weapon'?data.weapons:type==='armor'?data.armors:data.items;
+      var index=list.indexOf(o);if(index>=0)list.splice(index,1);
+    }
+    save();render();
+  }
+  function addItem(onMule){
+    var nameEl=el(onMule?'mulename':'itemname'),weightEl=el(onMule?'muleweight':'itemweight');
+    var name=nameEl.value.trim(),weight=parsedWeight(weightEl.value);
+    if(!name){alert('Inserisci il nome dell’oggetto.');nameEl.focus();return;}
+    if(!Number.isFinite(weight)){alert('Peso non valido. Usa ad esempio 1/6, 1/2, 1, 2 oppure 0,25.');weightEl.focus();return;}
+    data.items.push({uid:nextUID(),name:name.slice(0,90),weight:weight,location:onMule?'mule':'carried'});
+    nameEl.value='';weightEl.value='1/6';save();render();
+  }
+  function download(){
+    var b=new Blob([JSON.stringify({character:'Sissor',version:'0.1.0',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
+    a.href=url;a.download='Sissor-backup-v010.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('[data-tab]');if(t){tab(t.getAttribute('data-tab'));return;}
+    var mode=e.target.closest('[data-grip]');if(mode){data.grip=mode.getAttribute('data-grip');save();render();return;}
+    var eq=e.target.closest('[data-equip-id]');if(eq){itemAction(eq.getAttribute('data-equip-type'),eq.getAttribute('data-equip-id'),'equip');return;}
+    var mv=e.target.closest('[data-move-id]');if(mv){itemAction(mv.getAttribute('data-move-type'),mv.getAttribute('data-move-id'),'move');return;}
+    var rem=e.target.closest('[data-remove-id]');if(rem){itemAction(rem.getAttribute('data-remove-type'),rem.getAttribute('data-remove-id'),'remove');return;}
+    var b=e.target.closest('[data-act]');if(!b)return;
+    var act=b.getAttribute('data-act');
+    if(act==='openinventory'){tab('inventario');return;}
+    if(act==='addweapon'){
+      var id=el('catalog').value,mag=Number(el('newmagic').value)||0;
+      if(!fw(id))return;
+      var uid=nextUID();data.weapons.push({uid:uid,id:id,magic:mag,location:'carried'});data.equipped=uid;data.grip='one';save();render();return;
+    }
+    if(act==='addarmor'){
+      var armorId=el('armorcatalog').value,armorMag=Number(el('armormagic').value)||0;
+      if(!fa(armorId))return;
+      var armorUid=nextUID();data.armors.push({uid:armorUid,id:armorId,magic:armorMag,location:'carried'});data.equippedArmor=armorUid;save();render();return;
+    }
+    if(act==='additem'){addItem(false);return;}
+    if(act==='addmule'){addItem(true);return;}
+    if(act==='moveshield'){data.shieldLocation=data.shieldLocation==='carried'?'mule':'carried';if(data.shieldLocation==='mule')data.shield=false;save();render();return;}
+    if(act==='hpminus')data.hp=Math.max(0,data.hp-1);
+    if(act==='hpplus')data.hp=Math.min(5,data.hp+1);
+    if(act==='coinminus')data.coins=Math.max(0,data.coins-1);
+    if(act==='coinplus')data.coins++;
+    if(act==='xp'){var v=prompt('Punti esperienza attuali',data.xp);if(v!==null&&v.trim()!==''&&!isNaN(Number(v)))data.xp=Math.max(0,Math.floor(Number(v)));}
+    if(act==='export'){download();return;}
+    if(act==='import'){el('importfile').click();return;}
+    if(act==='reset'){
+      if(!confirm('Ripristinare HP, XP, denaro, armi, armature, inventario e note?'))return;
+      localStorage.removeItem(KEY);data=initial();save();render();return;
+    }
+    save();render();
+  });
+  el('shieldon').addEventListener('change',function(){data.shield=this.checked;save();render();});
+  ['abilityNotes','muleNotes','inventoryNotes'].forEach(function(id){el(id).addEventListener('input',function(){data[id]=this.value;save();});});
+  el('importfile').addEventListener('change',function(e){
+    var f=e.target.files[0];if(!f)return;
+    var reader=new FileReader();reader.onload=function(){
+      try{
+        var v=JSON.parse(reader.result);if(v.character!=='Sissor'||!v.data)throw new Error('Backup non valido');
+        if(!confirm('Sostituire i dati con il backup?'))return;
+        data=initial();Object.keys(data).forEach(function(k){if(v.data[k]!==undefined)data[k]=v.data[k];});
+        if(!v.data.armors)data.armors=initial().armors;
+        if(Array.isArray(v.data.weapons)&&!v.data.weapons.some(function(x){return x.location;})){
+          data.weapons=v.data.weapons.map(function(x){return Object.assign({},x,{location:String(x.uid)==='2'&&x.id==='warhammer'&&String(v.data.equipped)!=='2'?'mule':'carried'});});
+        }
+        normalize();save();render();alert('Backup importato correttamente.');
+      }catch(err){alert('Errore: '+err.message);}
+    };
+    reader.readAsText(f);e.target.value='';
+  });
+  try{load();render();el('status').textContent='v0.2.0 · scheda Sissor indipendente · dati locali';}
+  catch(err){el('status').textContent='Errore di avvio: '+err.message;}
 })();
+
 </script></body></html>
