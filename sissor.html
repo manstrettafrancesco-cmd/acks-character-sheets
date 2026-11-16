@@ -13,6 +13,8 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
 </style><style>
 :root{--bg:#131a1c;--panel:#222b2e;--card:#263034;--gold:#c7a67b;--accent:#c7a67b}
 body{background:#111719}
+</style><style>
+.follower-hero{display:grid;grid-template-columns:43% 57%;gap:10px;align-items:stretch}.follower-portrait{width:100%;height:100%;max-height:335px;object-fit:cover;object-position:48% 24%;border-radius:12px;border:1px solid #7d6245;background:#16191a}.follower-stats{display:flex;flex-direction:column;gap:8px}.follower-stats .statcard{min-height:88px}.follower-stats .big{font-size:27px}.ux-coin{display:flex;align-items:center;gap:11px}.ux-coin button{background:#524734;border:1px solid #a38c65;color:#fff;border-radius:8px;min-width:38px;min-height:38px;font-size:20px}.ux-coin strong{font-size:21px}.ux-item{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid #454d58}.ux-item label{flex:1;min-width:0;font-size:12px}.ux-item input{width:67px;background:#1e2630;border:1px solid #596474;border-radius:7px;color:#fff;padding:7px;text-align:center}.ux-item button{background:#343e4b;color:#fff;border:1px solid #596474;border-radius:7px;min-height:34px;min-width:34px}.ux-item .small{font-size:11px}.spaced{display:block;margin-top:13px}.tabs button{font-size:10px}@media(max-width:370px){.follower-hero{grid-template-columns:42% 58%}.follower-stats .big{font-size:23px}.follower-stats .statcard{padding:8px}}
 </style></head><body><noscript><div class="noscript">JavaScript &egrave; disattivato in questo visualizzatore: apri la scheda da un sito HTTPS in Safari per usare i pulsanti.</div></noscript><main class="app"><header class="top"><div><div class="eyebrow">ACKS II &middot; CHARACTER SHEET</div><div class="name">SISSOR</div><div class="muted">Assassino &middot; Reciter (Transmogrifier)</div></div><div class="tag">LIVELLO 1</div></header>
 <section class="panel active" id="scheda"><div class="hero"><div class="stack"><div class="statcard hp"><div class="small">&hearts; PUNTI FERITA</div><div class="big"><span id="hp">5</span><span style="font-size:14px;color:#bbd3c4"> / 5</span></div><div class="control"><button aria-label="Riduci HP" data-act="hpminus" type="button">&minus;</button><button aria-label="Aumenta HP" data-act="hpplus" type="button">+</button></div><div class="meter"><div class="fill" id="hpfill" style="width:100%"></div></div></div><div class="statcard ac"><div class="small">⬡ ARMOUR CLASS</div><div class="big" id="ac">4</div><div class="muted" id="acnote">Armatura di cuoio + DES</div></div><div class="statcard"><div class="small">INIZIATIVA</div><div class="big">+2</div><div class="muted">DES 16</div></div></div><div class="portrait-stage" id="portraitStage"><img alt="Ritratto di Sissor" class="portrait" id="portraitFallback" src="sissor_portrait.jpg"/></div></div>
 <div class="section">CARATTERISTICHE</div><div class="abilities"><div class="ability"><div class="small">FOR</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">DES</div><strong>16</strong><span>+2</span></div><div class="ability"><div class="small">COS</div><strong>9</strong><span>0</span></div><div class="ability"><div class="small">INT</div><strong>8</strong><span>−1</span></div><div class="ability"><div class="small">VOL</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">CAR</div><strong>13</strong><span>+1</span></div></div>
@@ -99,7 +101,48 @@ body{background:#111719}
 <div class="section">NOTE INVENTARIO</div><textarea class="field" id="inventoryNotes" rows="4" placeholder="Oggetti trovati, tesori, promemoria…"></textarea>
 </section>
 <section class="panel" id="backup"><div class="section">BACKUP E DIAGNOSTICA</div><div class="card"><p class="muted">Le modifiche vengono salvate nel browser quando il salvataggio locale &egrave; disponibile. Conserva anche un backup JSON.</p><div class="buttonbar"><button class="btn" data-act="export" type="button">Esporta JSON</button><button class="btn secondary" data-act="import" type="button">Importa JSON</button></div><input accept=".json,application/json" id="importfile" style="display:none" type="file"/><hr class="line"/><button class="btn secondary" data-act="reset" type="button">Ripristina valori iniziali</button><p class="debug" id="status"></p></div><div class="notice"></div></section>
-</main><nav aria-label="Navigazione" class="tabs"><button class="active" data-tab="scheda" type="button"><span class="ico">⚔</span>Scheda</button><button data-tab="capacita" type="button"><span class="ico">✦</span>Capacit&agrave;</button><button data-tab="inventario" type="button"><span class="ico">▣</span>Inventario</button><button data-tab="backup" type="button"><span class="ico">⚙</span>Backup</button></nav>
+
+<section class="panel" id="uxentio">
+ <div class="section">GREGARIO · TRAGHETTATORE · NEUTRALE</div>
+ <div class="follower-hero">
+  <img class="follower-portrait" src="uxentio_portrait.jpg" alt="Uxentio, traghettatore con un remo nella taverna" loading="lazy">
+  <div class="follower-stats">
+   <div class="statcard hp"><div class="small">♥ PUNTI FERITA</div><div class="big"><span id="uxhp">3</span><span class="muted"> / 3</span></div><div class="control"><button type="button" data-ux="hpminus" aria-label="Riduci HP Uxentio">−</button><button type="button" data-ux="hpplus" aria-label="Aumenta HP Uxentio">+</button></div></div>
+   <div class="statcard ac"><div class="small">⬡ CLASSE ARMATURA</div><div class="big" id="uxac">1</div><div class="muted" id="uxacnote">Senza armatura · DES +1</div></div>
+   <div class="statcard"><div class="small">ATTACK THROW</div><div class="big" id="uxattack">12+</div><div class="muted" id="uxattacknote">Base · corpo a corpo</div></div>
+  </div>
+ </div>
+ <div class="section">CARATTERISTICHE</div>
+ <div class="abilities">
+  <div class="ability"><div class="small">FOR</div><strong>10</strong><span>+0</span></div>
+  <div class="ability"><div class="small">INT</div><strong>5</strong><span>−2</span></div>
+  <div class="ability"><div class="small">VOL</div><strong>12</strong><span>+0</span></div>
+  <div class="ability"><div class="small">DES</div><strong>14</strong><span>+1</span></div>
+  <div class="ability"><div class="small">COS</div><strong>15</strong><span>+1</span></div>
+  <div class="ability"><div class="small">CAR</div><strong>10</strong><span>+0</span></div>
+ </div>
+ <div class="section">COMBATTIMENTO E ATTREZZATURA</div>
+ <div class="card">
+  <div class="row"><strong class="gold" id="uxweaponname">Accetta</strong><strong class="value" id="uxdamage">1d6</strong></div>
+  <div class="muted" id="uxweaponnote">Attacco 12+ · 1 mano</div>
+  <label class="small spaced" for="uxweapon">ARMA IMPUGNATA</label><select class="field" id="uxweapon"></select>
+  <label class="small spaced" for="uxarmor">ARMATURA INDOSSATA</label><select class="field" id="uxarmor"></select>
+  <label class="small spaced" for="uxshield">SCUDO</label><select class="field" id="uxshield"><option value="0">Nessuno</option><option value="1">Equipaggiato (+1 CA · 1 st)</option></select>
+  <div class="muted" style="margin-top:10px">Le armi selezionabili sono quelle annotate sul foglio: randello, accetta, rete e bastone. L'uso di nuove armature o dello scudo deve essere autorizzato dal Master.</div>
+ </div>
+ <div class="card"><div class="row"><span>Ingombro trasportato</span><strong class="gold" id="uxweight">3½ st</strong></div><div class="muted" id="uxspeed">Movimento da ingombro: 120 piedi / turno</div><div class="row" style="margin-top:10px"><span>Monete d'oro</span><div class="ux-coin"><button type="button" data-ux="coinminus" aria-label="Riduci monete Uxentio">−</button><strong id="uxcoins">21</strong><button type="button" data-ux="coinplus" aria-label="Aumenta monete Uxentio">+</button></div></div></div>
+ <details class="details"><summary>Inventario · modifica oggetti e pesi</summary><div class="detailbody"><div id="uxitems"></div>
+ <div class="row compact"><input class="field" id="uxnewname" type="text" maxlength="90" placeholder="Nuovo oggetto" aria-label="Nuovo oggetto Uxentio"><input class="field weightfield" id="uxnewweight" type="text" inputmode="decimal" value="1/6" aria-label="Peso in stone"><button class="btn" type="button" data-ux="additem">+ Aggiungi</button></div>
+ <div class="muted">Peso in stone: puoi scrivere 1/6, 1/2, 1 ecc. Gli abiti ordinari indossati non vengono elencati.</div></div></details>
+ <details class="details"><summary>Competenze, tiri salvezza e note</summary><div class="detailbody">
+  <p><strong>Professione:</strong> traghettatore · livello 0 · neutrale. <strong>Morale:</strong> 0.</p>
+  <p><strong>Competenze:</strong> Seafaring, Survival, Navigation. <strong>Armi:</strong> randello, accetta, rete, bastone. <strong>INT 5:</strong> analfabeta.</p>
+  <div class="data-row"><span>Tiri salvezza</span><strong>14+ / 15+ / 16+ / 17+ / 18+</strong></div>
+  <p class="muted">Nell'ordine: Morte, Paralisi, Soffio, Oggetti, Incantesimi, come annotato sul foglio.</p>
+  <label class="small" for="uxnotes">NOTE DEL GREGARIO</label><textarea class="field" id="uxnotes" rows="3" placeholder="Eventi, ferite, equipaggiamento, ordini..."></textarea>
+ </div></details>
+</section>
+</main><nav aria-label="Navigazione" class="tabs"><button class="active" data-tab="scheda" type="button"><span class="ico">⚔</span>Scheda</button><button data-tab="capacita" type="button"><span class="ico">✦</span>Capacit&agrave;</button><button data-tab="inventario" type="button"><span class="ico">▣</span>Inventario</button><button data-tab="uxentio" type="button"><span class="ico">⚓</span>Uxentio</button><button data-tab="backup" type="button"><span class="ico">⚙</span>Backup</button></nav>
 <script>
 (function () {
   'use strict';
@@ -154,8 +197,19 @@ body{background:#111719}
     {max:10,explore:60,combat:20,run:60,travel:12},
     {max:19,explore:30,combat:10,run:30,travel:6}
   ];
+  function initialUxentio(){return {
+    hp:3,coins:21,weapon:'handaxe',armor:'none',shield:false,notes:'',
+    items:[
+      {uid:'u1',name:'Rete',weight:1},
+      {uid:'u2',name:'Asta / remo da traghetto',weight:1},
+      {uid:'u3',name:'Accetta',weight:1/6},
+      {uid:'u4',name:'Cintura con scarsella',weight:1/6},
+      {uid:'u5',name:'Otre',weight:1/6},
+      {uid:'u6',name:'Corda da 50 piedi',weight:1}
+    ]
+  };}
   function initial() {return {
-    hp:5,coins:15,silver:0,xp:105,abilityNotes:'',muleNotes:'',inventoryNotes:'',
+    hp:5,coins:15,silver:0,xp:105,abilityNotes:'',muleNotes:'',inventoryNotes:'',uxentio:initialUxentio(),
     weapons:[{uid:1,id:'arbalest',magic:0,location:'carried'},{uid:3,id:'shortsword',magic:0,location:'carried'},{uid:4,id:'shortsword',magic:0,location:'carried'}],
     equipped:1,offhand:null,grip:'ranged',shield:false,shieldLocation:'mule',
     armors:[{uid:2,id:'leather',magic:0,location:'carried'}],equippedArmor:2,
@@ -247,7 +301,22 @@ body{background:#111719}
   }
   function speedIndex(total){for(var i=0;i<SPEEDS.length;i++)if(total<=SPEEDS[i].max+0.0000001)return i;return -1;}
   function save(){try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){}}
+  function normalizeUxentio(){
+    var d=initialUxentio(),u=data.uxentio;
+    if(!u||typeof u!=='object')u={};
+    data.uxentio=Object.assign(d,u);
+    u=data.uxentio;
+    u.hp=Math.max(0,Math.min(3,Number(u.hp)||0));
+    u.coins=Math.max(0,Math.floor(Number(u.coins)||0));
+    if(!['club','handaxe','net','staff'].includes(u.weapon))u.weapon='handaxe';
+    if(!['none','padded','leather'].includes(u.armor))u.armor='none';
+    u.shield=Boolean(u.shield);
+    u.notes=String(u.notes||'').slice(0,2000);
+    if(!Array.isArray(u.items))u.items=initialUxentio().items;
+    u.items=u.items.filter(function(x){return x&&typeof x.name==='string'&&Number.isFinite(Number(x.weight));}).map(function(x){return {uid:String(x.uid),name:x.name.slice(0,90),weight:Math.max(0,Number(x.weight))};});
+  }
   function normalize(){
+    normalizeUxentio();
     if(!Array.isArray(data.weapons))data.weapons=[];
     if(!Array.isArray(data.armors))data.armors=[];
     if(!Array.isArray(data.items))data.items=[];
@@ -302,7 +371,35 @@ body{background:#111719}
     data.items.filter(function(o){return loc(o)==='mule';}).forEach(function(o){mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o,'mule')+'</div>');});
     el('muleitems').innerHTML=mule.join('');
   }
+  function uxWeight(){
+    var u=data.uxentio;
+    var sum=u.items.reduce(function(a,x){return a+x.weight;},0);
+    return sum+(u.armor==='padded'?1:u.armor==='leather'?2:0)+(u.shield?1:0)+u.coins/1000;
+  }
+  function renderUxentio(){
+    var u=data.uxentio;
+    el('uxhp').textContent=u.hp;
+    var armorAC=u.armor==='padded'?1:u.armor==='leather'?2:0;
+    el('uxac').textContent=1+armorAC+(u.shield?1:0);
+    el('uxacnote').textContent=(u.armor==='none'?'Senza armatura':u.armor==='padded'?'Imbottita':'Cuoio')+' · DES +1'+(u.shield?' · scudo':'');
+    var w=fw(u.weapon),ranged=u.weapon==='net';
+    el('uxattack').textContent=(12-(ranged?1:0))+'+';
+    el('uxattacknote').textContent='Base 12+ · '+(ranged?'DES +1':'FOR +0');
+    el('uxweaponname').textContent=w?w.name:'Nessuna arma';
+    el('uxdamage').textContent=w&&w.die?w.die:'Speciale';
+    el('uxweaponnote').textContent=(ranged?'Rete · Entangling, Thrown':'Attacco in mischia')+' · '+(12-(ranged?1:0))+'+';
+    var wc=el('uxweapon');wc.innerHTML=['handaxe','club','net','staff'].map(function(id){var a=fw(id);return '<option value="'+id+'">'+safe(a.name)+'</option>';}).join('');wc.value=u.weapon;
+    el('uxarmor').innerHTML='<option value="none">Nessuna armatura</option><option value="padded">Imbottita · +1 CA · 1 st</option><option value="leather">Cuoio · +2 CA · 2 st</option>';
+    el('uxarmor').value=u.armor;el('uxshield').value=u.shield?'1':'0';
+    el('uxcoins').textContent=u.coins;
+    var wt=uxWeight();el('uxweight').textContent=weightString(wt);
+    var ix=speedIndex(wt),sp=ix<0?null:SPEEDS[ix];
+    el('uxspeed').textContent='Movimento da ingombro: '+(sp?sp.explore+' piedi/turno · '+sp.combat+' piedi/round':'sovraccarico');
+    el('uxitems').innerHTML=u.items.map(function(o){return '<div class="ux-item"><label for="uxw'+safe(o.uid)+'">'+safe(o.name)+'</label><input type="text" inputmode="decimal" id="uxw'+safe(o.uid)+'" data-ux-weight="'+safe(o.uid)+'" value="'+safe(o.weight)+'" aria-label="Peso '+safe(o.name)+' in stone"><span class="small">st</span><button type="button" data-ux-remove="'+safe(o.uid)+'" aria-label="Rimuovi '+safe(o.name)+'">×</button></div>';}).join('');
+    if(document.activeElement!==el('uxnotes'))el('uxnotes').value=u.notes;
+  }
   function render(){
+    renderUxentio();
     el('hp').textContent=data.hp;
     el('hpfill').style.width=(100*data.hp/5)+'%';
     el('coins').textContent=data.coins;
@@ -405,11 +502,36 @@ body{background:#111719}
     nameEl.value='';weightEl.value='1/6';save();render();
   }
   function download(){
-    var b=new Blob([JSON.stringify({character:'Sissor',version:'0.2.2',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
-    a.href=url;a.download='Sissor-backup-v023.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
+    var b=new Blob([JSON.stringify({character:'Sissor',version:'0.2.4',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
+    a.href=url;a.download='Sissor-backup-v024.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
   }
-  el('offhand').addEventListener('change',function(){data.offhand=this.value||null;save();render();});
+  el('uxweapon').addEventListener('change',function(){data.uxentio.weapon=this.value;save();render();});
+  el('uxarmor').addEventListener('change',function(){data.uxentio.armor=this.value;save();render();});
+  el('uxshield').addEventListener('change',function(){data.uxentio.shield=this.value==='1';save();render();});
+  el('uxnotes').addEventListener('input',function(){data.uxentio.notes=this.value;save();});
+  el('uxitems').addEventListener('change',function(e){var inp=e.target.closest('[data-ux-weight]');if(!inp)return;
+    var w=parsedWeight(inp.value);if(!Number.isFinite(w)){alert('Peso non valido');render();return;}
+    var item=data.uxentio.items.find(function(x){return x.uid===inp.getAttribute('data-ux-weight');});
+    if(item){item.weight=w;save();render();}
+  });
+  el('offhand').addEventListener('change' ,function(){data.offhand=this.value||null;save();render();});
   document.addEventListener('click',function(e){
+    var uxremove=e.target.closest('[data-ux-remove]');
+    if(uxremove){var id=uxremove.getAttribute('data-ux-remove');data.uxentio.items=data.uxentio.items.filter(function(x){return x.uid!==id;});save();render();return;}
+    var ub=e.target.closest('[data-ux]');
+    if(ub){var ua=ub.getAttribute('data-ux'),u=data.uxentio;
+      if(ua==='hpminus')u.hp=Math.max(0,u.hp-1);
+      if(ua==='hpplus')u.hp=Math.min(3,u.hp+1);
+      if(ua==='coinminus')u.coins=Math.max(0,u.coins-1);
+      if(ua==='coinplus')u.coins++;
+      if(ua==='additem'){
+        var nm=el('uxnewname').value.trim(),ww=parsedWeight(el('uxnewweight').value);
+        if(!nm||!Number.isFinite(ww)){alert('Inserisci nome e peso valido (es. 1/6).');return;}
+        u.items.push({uid:'u'+Date.now(),name:nm.slice(0,90),weight:ww});
+        el('uxnewname').value='';el('uxnewweight').value='1/6';
+      }
+      save();render();return;
+    }
     var t=e.target.closest('[data-tab]');if(t){tab(t.getAttribute('data-tab'));return;}
     var mode=e.target.closest('[data-grip]');if(mode){data.grip=mode.getAttribute('data-grip');save();render();return;}
     var eq=e.target.closest('[data-equip-id]');if(eq){itemAction(eq.getAttribute('data-equip-type'),eq.getAttribute('data-equip-id'),'equip');return;}
@@ -462,7 +584,7 @@ body{background:#111719}
     };
     reader.readAsText(f);e.target.value='';
   });
-  try{load();render();el('status').textContent='v0.2.3 · scheda Sissor indipendente · dati locali';}
+  try{load();render();el('status').textContent='v0.2.4 · Sissor e Uxentio · dati locali';}
   catch(err){el('status').textContent='Errore di avvio: '+err.message;}
 })();
 
