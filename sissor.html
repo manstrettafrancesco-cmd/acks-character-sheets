@@ -10,6 +10,9 @@
 
 /* Sissor: velluto bordeaux e oro antico */
 body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{background:#30222c;border-color:#59404b}.section,.gold,.eyebrow{color:#e0b377}.btn{border-color:#785467}.btn.active,.mode.active{background:#6c3046;border-color:#d5a66d}.portrait-stage{background:#20141d}
+.ux-proficiencies details{margin:8px 0;padding:9px 11px;border:1px solid rgba(180,150,100,.25);border-radius:9px}
+.ux-proficiencies summary{cursor:pointer;line-height:1.5}
+.ux-proficiencies details p{margin:9px 0 2px;line-height:1.55}
 </style><style>
 :root{--bg:#131a1c;--panel:#222b2e;--card:#263034;--gold:#c7a67b;--accent:#c7a67b}
 body{background:#111719}
@@ -136,7 +139,19 @@ body{background:#111719}
  <div class="muted">Peso in stone: puoi scrivere 1/6, 1/2, 1 ecc. Gli abiti ordinari indossati non vengono elencati.</div></div></details>
  <details class="details"><summary>Competenze, tiri salvezza e note</summary><div class="detailbody">
   <p><strong>Professione:</strong> traghettatore · livello 0 · neutrale. <strong>Morale:</strong> 0.</p>
-  <p><strong>Competenze:</strong> Seafaring, Survival, Navigation. <strong>Armi:</strong> randello, accetta, rete, bastone. <strong>INT 5:</strong> analfabeta.</p>
+  <div class="ux-proficiencies">
+   <p><strong>Competenze di Uxentio</strong> <span class="muted">— ACKS II Revised, pp. 116–119</span></p>
+   <details><summary><strong>Seafaring (Rowing)</strong> · Navigazione a remi</summary>
+     <p>Sa remare e manovrare imbarcazioni a remi: usa remi, pagaie e timone a remo e contribuisce alla manutenzione dell’imbarcazione. Con <em>Navigation</em> può anche prestare servizio come navigatore su una nave. Ha un grado di Seafaring: non è automaticamente competente nella navigazione a vela né qualificato come capitano.</p>
+   </details>
+   <details><summary><strong>Survival</strong> · Sopravvivenza</summary>
+     <p>Può procurarsi automaticamente cibo sufficiente per sé stesso, anche mentre viaggia. Ottiene <strong>+4 ai tiri di foraggiamento</strong> per nutrire altri personaggi e <strong>+4 ai tiri per trovare acqua</strong>. Per queste ultime attività il tiro resta necessario.</p>
+   </details>
+   <details><summary><strong>Navigation</strong> · Orientamento</summary>
+     <p>Determina approssimativamente la propria posizione osservando sole e stelle. Ottiene <strong>+4 ai tiri per evitare di perdersi</strong> nelle terre selvagge. In combinazione con Seafaring può ricoprire il ruolo di navigatore marittimo.</p>
+   </details>
+   <p><strong>Armi:</strong> randello, accetta, rete, bastone. <strong>INT 5:</strong> analfabeta.</p>
+ </div>
   <div class="data-row"><span>Tiri salvezza</span><strong>14+ / 15+ / 16+ / 17+ / 18+</strong></div>
   <p class="muted">Nell'ordine: Morte, Paralisi, Soffio, Oggetti, Incantesimi, come annotato sul foglio.</p>
   <label class="small" for="uxnotes">NOTE DEL GREGARIO</label><textarea class="field" id="uxnotes" rows="3" placeholder="Eventi, ferite, equipaggiamento, ordini..."></textarea>
