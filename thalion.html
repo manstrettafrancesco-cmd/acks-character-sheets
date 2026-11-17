@@ -71,7 +71,7 @@ body{background:#0d1420;color:#f3f1ec}.app{background:#192331;max-width:520px}.e
 #basilio .basilio-heading{font-size:31px;letter-spacing:2px;font-family:Georgia,serif;text-align:center;color:#ecd9b7;margin:9px 0 3px}
 #basilio .basilio-subtitle{text-align:center;color:#b5c7d6;font-size:12px;margin:0 0 13px}
 #basilio .basilio-hero{display:grid;grid-template-columns:40% 1fr;gap:10px;align-items:stretch}
-#basilio .basilio-portrait{min-height:300px;border:1px solid #655b4c;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:linear-gradient(158deg,#23334a,#101b2a 58%,#172838);text-align:center;color:#d4c49e;padding:12px}
+#basilio .basilio-portrait{min-height:300px;border:1px solid #655b4c;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:linear-gradient(158deg,#23334a,#101b2a 58%,#172838);text-align:center;color:#d4c49e;padding:12px}#basilio .basilio-portrait img{width:100%;height:100%;display:block;object-fit:cover;border-radius:11px}
 #basilio .basilio-portrait .monogram{font-size:65px;line-height:1;font-family:Georgia,serif;color:#e2c98d;opacity:.82}
 #basilio .basilio-portrait .portraitcaption{font-size:12px;line-height:1.45;color:#c6cbcf}
 #basilio .basilio-summary{display:flex;flex-direction:column;gap:8px}
@@ -162,10 +162,7 @@ body{background:#0d1420;color:#f3f1ec}.app{background:#192331;max-width:520px}.e
  <div class="basilio-heading">BASILIO</div>
  <p class="basilio-subtitle">Livello 0 · 24 anni · Morale −1 · Lealtà +1</p>
  <div class="basilio-hero">
-   <div class="basilio-portrait" aria-label="Ritratto di Basilio non ancora fornito">
-    <span class="monogram" aria-hidden="true">B</span>
-    <span class="portraitcaption">Calzolaio<br>Ritratto da aggiungere</span>
-   </div>
+   <div class="basilio-portrait" aria-label="Ritratto di Basilio"><img src="basilio_portrait.jpg" alt="Basilio, giovane calzolaio mediterraneo segnato dal sole e dalle intemperie"></div>
    <div class="basilio-summary">
     <div class="statcard hp"><div class="small">♥ PUNTI FERITA</div><div class="big"><span id="basilioHP">4</span> <small>/ <span id="basilioHPMax">4</span></small></div><div class="control"><button type="button" data-basilio-action="hp-minus" aria-label="Basilio meno un punto ferita">−</button><button type="button" data-basilio-action="hp-plus" aria-label="Basilio più un punto ferita">+</button><button type="button" data-basilio-action="hp-max" aria-label="Modifica PF massimi di Basilio">Max</button></div></div>
     <div class="statcard ac"><div class="small">CLASSE ARMATURA</div><div class="big" id="basilioAC">1</div><div class="muted" id="basilioACNote">Senza armatura · DES +1</div></div>
