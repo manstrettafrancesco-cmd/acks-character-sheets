@@ -3,7 +3,7 @@
 *{box-sizing:border-box}body{margin:0;background:#171016;color:#f6e9dc;font:15px -apple-system,BlinkMacSystemFont,system-ui,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}button:active{transform:scale(.97)}.app{max-width:520px;margin:auto;min-height:100dvh;background:#211820;padding:15px 14px 100px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.eyebrow{font-size:10px;letter-spacing:2px;color:#d7bc84}.name{font-family:Georgia,serif;font-size:26px;font-weight:bold;letter-spacing:.5px}.tag{border:1px solid #736445;border-radius:18px;padding:7px 10px;color:#e8d1a0;font-size:12px}.hero{display:grid;grid-template-columns:43% 57%;gap:10px;align-items:stretch}.portrait{width:100%;height:auto;display:block;object-fit:contain;border:1px solid #655437;border-radius:12px;background:#10141b}.stack{display:flex;flex-direction:column;gap:8px}.statcard{background:#303b45;border:1px solid #48515b;border-radius:12px;padding:10px;flex:1;display:flex;flex-direction:column;justify-content:center}.statcard.hp{background:#293f36}.statcard.ac{background:#2e384b}.small{font-size:10px;color:#c4cbd3;letter-spacing:.6px}.big{font-size:29px;font-weight:800;line-height:1.2}.control{display:flex;gap:7px;margin-top:8px}.control button{border:1px solid #768476;background:#425a4d;color:#fff;border-radius:9px;min-height:40px;flex:1;font-size:22px}.meter{height:6px;border-radius:10px;background:#506256;overflow:hidden;margin-top:7px}.fill{height:100%;background:#a7d6b2}.section{font-size:12px;letter-spacing:1.3px;color:#e2c58d;margin:17px 0 9px;font-weight:700}.abilities{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}.ability{text-align:center;background:#303844;border-radius:9px;padding:10px 1px}.ability strong{font-size:21px;display:block}.ability span{font-size:11px;color:#b5d4bd}.card{background:#2b323d;border:1px solid #424b59;border-radius:13px;padding:13px;margin-bottom:10px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}.value{font-size:25px;font-weight:750}.muted{color:#b9c1cb;font-size:12px;line-height:1.5}.gold{color:#e4c88e}.line{border:0;border-top:1px solid #454d58;margin:12px 0}.details{border:1px solid #46505e;border-radius:12px;background:#2b323d;margin:8px 0;overflow:hidden}.details summary{padding:15px;cursor:pointer;font-weight:650;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:50px}.details summary:after{content:'⌄';color:#e4c88e}.details[open] summary:after{content:'⌃'}.detailbody{border-top:1px solid #46505e;padding:12px;font-size:13px;line-height:1.6;color:#e2e5e9}.detailbody p{margin:0 0 9px}.detailbody ul{padding-left:18px;margin:6px 0}.data-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #46505e}.data-row:last-child{border-bottom:0}.data-row strong{color:#e7cd95}.btn{background:#524734;border:1px solid #b39965;color:#fff2d4;border-radius:9px;padding:11px 13px;min-height:44px}.btn.secondary{background:#343e4b;border-color:#566170;color:#fff}.field{background:#1e2630;color:white;border:1px solid #596474;border-radius:9px;padding:11px;width:100%;margin-top:8px;min-height:42px}.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);background:#141a22;border-top:1px solid #4c5460;padding:7px 6px max(9px,env(safe-area-inset-bottom));z-index:20}.tabs button{background:transparent;color:#b6bdc7;border:0;padding:8px 2px;font-size:10px;border-radius:9px;min-height:53px}.tabs button.active{background:#353e4b;color:#f0d393}.tabs .ico{display:block;font-size:21px;margin-bottom:2px}.panel{display:none}.panel.active{display:block}.notice{background:#42382b;border-radius:9px;padding:11px;color:#e8cfa2;font-size:12px;line-height:1.5}.debug{font-size:11px;color:#aeb5c1;margin-top:12px}.weaponoption{width:100%;display:block;text-align:left;margin:7px 0}.pill{font-size:10px;color:#f1dcae;border:1px solid #88734d;padding:4px 7px;border-radius:20px}.buttonbar{display:flex;gap:8px}.buttonbar button{flex:1}.noscript{padding:20px;background:#642c2c;color:#fff} @media(max-width:360px){.app{padding-left:10px;padding-right:10px}.big{font-size:25px}.ability strong{font-size:18px}.statcard{padding:8px}.hero{grid-template-columns:45% 55%}}
 
 /* Modulo equipaggiamento v0.1.0 */
-.equipped-info{border:1px solid #74664c;background:#252b31;padding:13px 12px;margin:12px 0;border-radius:10px;display:flex;flex-direction:column;gap:4px}.equipped-info strong{color:#f1dcad;font-size:16px;line-height:1.5}.spaced{display:block;margin-top:15px}.modes{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0 13px}.mode{font-size:13px;min-height:42px;border:1px solid #566270;border-radius:9px;background:#202a35;color:#d5dce5;padding:9px 13px;flex:1 0 auto}.mode.active{background:#584732;border-color:#d6b875;color:#ffe4ac;font-weight:bold}.shieldrow{justify-content:space-between;gap:8px;margin:14px 0}.shieldrow label{font-size:14px}.shieldrow input{width:26px;height:26px;accent-color:#d7bc84;flex-shrink:0}.shieldrow .muted{max-width:43%;text-align:right}.compact{margin-top:10px;gap:8px}.compact .field{margin-top:0}.shortfield{width:79px;flex:0 0 79px}.weightfield{width:78px;flex:0 0 78px;text-align:center}.compact .btn{padding:8px 10px;white-space:nowrap}.inventory-entry{padding:11px 0;border-bottom:1px solid #444e5a}.inventory-entry:last-child{border-bottom:none}.entrytop{display:flex;gap:6px;justify-content:space-between;align-items:flex-start}.entrytop .entryname{font-size:14px;line-height:1.4;flex:1;min-width:0;overflow-wrap:anywhere}.entrytop .entryweight{font-size:12px;white-space:nowrap;color:#e7cd95}.entryactions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.entryactions .btn{font-size:12px;min-height:34px;padding:5px 9px}.tagmule{font-size:10px;color:#b2c3d5}.totalrow{font-size:16px}.weightbar{height:9px;background:#1f2832;border-radius:9px;margin:13px 0 9px;overflow:hidden}.weightbar div{height:100%;background:#dfbe7f;border-radius:9px;transition:width .2s}.weightbar .over{background:#e98d82}.speedtable{margin-top:10px;overflow:hidden;border-radius:8px;border:1px solid #526070}.speedr{display:grid;grid-template-columns:1.5fr repeat(4,1fr);font-size:11px;align-items:center;gap:2px;min-height:37px;padding:5px 3px;border-bottom:1px solid #414a57;text-align:center}.speedr:last-child{border:0}.speedr span:first-child{text-align:left;padding-left:4px}.speedr.speedhead{color:#b9c1cb;background:#222b35;font-size:10px}.speedr.active{background:#594a35;color:#ffe2a7;font-weight:750}.notice{overflow-wrap:anywhere}.field:focus-visible,.btn:focus-visible,.mode:focus-visible{outline:2px solid #e5c987;outline-offset:2px}@media(max-width:370px){.entryactions .btn{font-size:11px;padding:4px 7px}.compact{flex-wrap:wrap}.compact .btn{flex:1}}
+.equipped-info{border:1px solid #74664c;background:#252b31;padding:13px 12px;margin:12px 0;border-radius:10px;display:flex;flex-direction:column;gap:4px}.equipped-info strong{color:#f1dcad;font-size:16px;line-height:1.5}.spaced{display:block;margin-top:15px}.modes{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0 13px}.mode{font-size:13px;min-height:42px;border:1px solid #566270;border-radius:9px;background:#202a35;color:#d5dce5;padding:9px 13px;flex:1 0 auto}.mode.active{background:#584732;border-color:#d6b875;color:#ffe4ac;font-weight:bold}.shieldrow{justify-content:space-between;gap:8px;margin:14px 0}.shieldrow label{font-size:14px}.shieldrow input{width:26px;height:26px;accent-color:#d7bc84;flex-shrink:0}.shieldrow .muted{max-width:43%;text-align:right}.compact{margin-top:10px;gap:8px}.compact .field{margin-top:0}.shortfield{width:79px;flex:0 0 79px}.weightfield{width:78px;flex:0 0 78px;text-align:center}.compact .btn{padding:8px 10px;white-space:nowrap}.inventory-entry{padding:11px 0;border-bottom:1px solid #444e5a}.inventory-entry:last-child{border-bottom:none}.entrytop{display:flex;gap:6px;justify-content:space-between;align-items:flex-start}.entrytop .entryname{font-size:14px;line-height:1.4;flex:1;min-width:0;overflow-wrap:anywhere}.entrytop .entryweight{font-size:12px;white-space:nowrap;color:#e7cd95}.entryactions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.entryactions .btn{font-size:12px;min-height:34px;padding:5px 9px}.carried-choice{display:inline-flex;align-items:center;gap:9px;cursor:pointer;font-size:13px;color:#e7cd95;padding:7px 0}.carried-choice input{accent-color:#dfbe7f;width:19px;height:19px;flex-shrink:0}.notcarried-badge{font-size:11px;color:#c4c8d2;font-weight:500;display:inline-block;margin-left:6px}.totalrow{font-size:16px}.weightbar{height:9px;background:#1f2832;border-radius:9px;margin:13px 0 9px;overflow:hidden}.weightbar div{height:100%;background:#dfbe7f;border-radius:9px;transition:width .2s}.weightbar .over{background:#e98d82}.speedtable{margin-top:10px;overflow:hidden;border-radius:8px;border:1px solid #526070}.speedr{display:grid;grid-template-columns:1.5fr repeat(4,1fr);font-size:11px;align-items:center;gap:2px;min-height:37px;padding:5px 3px;border-bottom:1px solid #414a57;text-align:center}.speedr:last-child{border:0}.speedr span:first-child{text-align:left;padding-left:4px}.speedr.speedhead{color:#b9c1cb;background:#222b35;font-size:10px}.speedr.active{background:#594a35;color:#ffe2a7;font-weight:750}.notice{overflow-wrap:anywhere}.field:focus-visible,.btn:focus-visible,.mode:focus-visible{outline:2px solid #e5c987;outline-offset:2px}@media(max-width:370px){.entryactions .btn{font-size:11px;padding:4px 7px}.compact{flex-wrap:wrap}.compact .btn{flex:1}}
 .portrait-stage{position:relative;align-self:stretch;min-width:0;overflow:hidden;border-radius:12px;background:#10141b;cursor:pointer}.portrait-stage .portrait{width:100%;height:100%;object-fit:contain}.portrait-video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;pointer-events:none;transition:opacity .12s ease}.portrait-video.show{opacity:1}.portrait-tap{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer;z-index:3}.portrait-tap:focus-visible{outline:3px solid #e2c58d;outline-offset:-4px}.value[id="speedcombat"],.value[id="speedrun"],.value[id="summaryspeedcombat"]{font-size:clamp(19px,4.5vw,30px);line-height:1.3;overflow-wrap:normal;word-break:normal} body{background:#101019;color:#e6e1ec}.top,.card,.statcard,.ability,.details{border-color:#494055}.card{background:#262331}.statcard{background:#2b2739}.statcard.hp{background:#292a39}.statcard.ac{background:#33283e}.ability{background:#302b3d}.section,.gold{color:#c9a7e4}.pill,.tag{border-color:#86679c;color:#d9b5f2}.tabs{background:#17141f}.tabs button.active{background:#42304f;color:#e9d5ff}.notice{background:#342b40;color:#e6c5f0}.portrait{border-color:#6e527c}.portrait-stage{background:#191623} 
 /* Seville: tonalità viola/antracite, nessuna modifica ai dati persistenti */
 .app{background:#1b1b28}.tabs{background:#161521}.tabs button.active{background:#393044;color:#e6c8f5}.section{color:#c7a3df}.card,.details{background:#292635;border-color:#4e455d}.statcard{background:#302c40;border-color:#51475f}.details summary:after,.data-row strong{color:#d6b5e9}.btn{background:#514061;border-color:#9d7bb2;color:#f4e5fc}.notice{background:#3b3046;color:#e4c9ed}.eyebrow,.gold{color:#d7b3e8}
@@ -17,11 +17,11 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
 <button type="button" class="portrait-tap" id="sevilleTap" aria-label="Tocca Seville per vedere il suo spettacolo di magia" title="Tocca per la prestidigitazione"></button>
 </div></div>
 <div class="section">CARATTERISTICHE</div><div class="abilities"><div class="ability"><div class="small">FOR</div><strong>8</strong><span>−1</span></div><div class="ability"><div class="small">DES</div><strong>13</strong><span>+1</span></div><div class="ability"><div class="small">COS</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">INT</div><strong>8</strong><span>−1</span></div><div class="ability"><div class="small">VOL</div><strong>11</strong><span>0</span></div><div class="ability"><div class="small">CAR</div><strong>14</strong><span>+1</span></div></div>
-<div class="section">COMBATTIMENTO</div><div class="card"><div class="row"><strong class="gold" id="weaponname">BASTONE · 1 MANO</strong><span class="pill">Equipaggiata</span></div><hr class="line"/><div class="twocol"><div><div class="small">ATTACK THROW</div><div class="value" id="attack">11+</div><div class="muted" id="attacknote">10+ base · FOR −1</div></div><div><div class="small">DANNI</div><div class="value" id="damage">1d4</div><div class="muted" id="damagenote">FOR −1 · classe +1</div></div></div><div class="notice" id="weapontraits">Bastone</div><div class="row"><span class="muted">Danni in carica (se applicabile)</span><strong id="chargedamage">—</strong></div><button class="btn secondary" data-act="openinventory" type="button">⚔ Cambia arma / equipaggiamento</button><p class="muted" style="font-size:12px">Il cambio d'arma in combattimento segue le regole del Master. Le armi a distanza usano DES per colpire, non per i danni.</p></div>
+<div class="section">COMBATTIMENTO</div><div class="card"><div class="row"><strong class="gold" id="weaponname">BASTONE · 1 MANO</strong><span class="pill">Equipaggiata</span></div><hr class="line"/><div class="twocol"><div><div class="small">ATTACK THROW</div><div class="value" id="attack">11+</div><div class="muted" id="attacknote">10+ base · FOR −1</div></div><div><div class="small">DANNI</div><div class="value" id="damage">1d4</div><div class="muted" id="damagenote">FOR −1 · classe +1</div></div></div><div class="notice" id="weapontraits">Bastone</div><div class="row"><span class="muted">Danni in carica (se applicabile)</span><strong id="chargedamage">—</strong></div><button class="btn secondary" data-act="openinventory" type="button">⚔ Cambia arma / equipaggiamento</button></div>
 <div class="twocol"><div class="card"><div class="small">MOVIMENTO</div><div class="value" id="summaryspeedcombat">40′</div><div class="muted">per round</div></div><div class="card"><div class="small">INGOMBRO</div><div class="value" id="summaryweight">4 st</div><div class="muted">equipaggiamento trasportato</div></div></div><div class="card"><div class="row"><div><div class="small">ESPERIENZA</div><strong><span id="xpdisplay">0</span> / 1.750 XP</strong></div><button class="btn secondary" data-act="xp" type="button">Modifica</button></div></div></section>
 <section class="panel" id="capacita">
 <div class="section">TIRI SALVEZZA · BARDO LIVELLO 1</div><div class="card">
-<div class="data-row"><span>Morte / Death</span><strong>14+</strong></div><div class="data-row"><span>Paralisi / Paralysis</span><strong>13+</strong></div><div class="data-row"><span>Soffio / Blast</span><strong>15+</strong></div><div class="data-row"><span>Oggetti / Implements</span><strong>16+</strong></div><div class="data-row"><span>Incantesimi / Spells</span><strong>17+</strong></div><p class="muted">Valori di classe al livello 1, prima di eventuali bonus situazionali.</p></div>
+<div class="data-row"><span>Morte / Death</span><strong>14+</strong></div><div class="data-row"><span>Paralisi / Paralysis</span><strong>13+</strong></div><div class="data-row"><span>Soffio / Blast</span><strong>15+</strong></div><div class="data-row"><span>Oggetti / Implements</span><strong>16+</strong></div><div class="data-row"><span>Incantesimi / Spells</span><strong>17+</strong></div></div>
 <div class="section">ABILITÀ BARDICHE</div>
 <details class="details" open><summary>Inspire Courage · Ispirare coraggio</summary><div class="detailbody"><p><b>1 volta al giorno.</b> Con un'esibizione incoraggiante, Seville ispira fino a <b>30 alleati entro 50 piedi</b>, purché non siano già impegnati in combattimento. Per <b>10 minuti</b> ricevono <b>+1 ai tiri per colpire, +1 alla CA, +1 al morale e +1 ai tiri salvezza contro la paura magica</b>. Richiede che gli alleati possano percepire l'esibizione.</p></div></details>
 <details class="details"><summary>Arcane Dabbling · 4+</summary><div class="detailbody"><p><b>Tiro 4+</b> per attivare oggetti magici arcani consentiti dalla capacità. Non equivale a lanciare liberamente incantesimi né conferisce slot giornalieri.</p></div></details>
@@ -33,15 +33,14 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
 <div class="section">PROFICIENCIES · AVVENTURA</div>
 <details class="details"><summary>Adventuring · Azioni comuni</summary><div class="detailbody"><div class="data-row"><span>Climbing</span><strong>8+</strong></div><div class="data-row"><span>Dungeonbashing · FOR −1</span><strong>22+</strong></div><div class="data-row"><span>Listening · bonus Bardo</span><strong>14+</strong></div><div class="data-row"><span>Searching</span><strong>18+</strong></div><div class="data-row"><span>Trapbreaking</span><strong>18+</strong></div><p>Le azioni di esplorazione richiedono il tempo indicato nelle regole. Dungeonbashing risente del modificatore di Forza.</p></div></details>
 <div class="section">TEMPLATE · HEDGE MAGICIAN (MAGO DI CAMPAGNA)</div>
-<div class="card"><div class="gold"><strong>Seville · Bardo livello 1</strong></div>
-<p class="muted">Il template Hedge Magician conferisce Prestidigitation, Alchemy e Performance (oration). La scelta di Jack of All Trades di livello 1 è <b>Soothsaying</b>, descritta nella sezione seguente. Le abilità bardiche innate, inclusa Multilingual, sono elencate sopra (ACKS II Revised, pp. 53–55).</p></div>
+
 <details class="details" open><summary>Prestidigitation · Prestidigitazione · A volontà</summary><div class="detailbody"><p>Può realizzare <b>a volontà</b> piccoli effetti magici e trucchi di destrezza manuale, ad esempio accendere una candela o mescolare carte, purché possa compiere fisicamente il gesto e sia libero di <b>parlare e gesticolare</b>.</p><p>Può anche <b>borseggiare magicamente</b> come un ladro di metà del proprio livello di classe, arrotondata per eccesso: <b>al livello 1, come un ladro di livello 1</b>. Non conferisce incantesimi da mago.</p></div></details>
 <details class="details"><summary>Alchemy · Alchimia · 11+ / 14+</summary><div class="detailbody"><p>Riconosce sostanze alchemiche comuni (pozioni, oli, veleni) in <b>1 turno (10 minuti), tiro 11+</b>; individua componenti speciali in un mostro con <b>14+</b>. Può estrarre automaticamente componenti speciali dalle melme.</p><p>Può estrarre tossine da piante velenose con un giorno di lavoro e tiro <b>20+ (piante fresche)</b> o <b>24+ (secche)</b>; un 1 naturale comporta rischio di avvelenamento e tiro salvezza contro Morte. Conta come <b>mago di livello 1 per la preparazione di pozioni</b>, secondo le regole di ricerca magica; non ottiene slot o incantesimi.</p></div></details>
 <details class="details"><summary>Performance (oration) · Oratoria · 11+</summary><div class="detailbody"><p>Competenza nelle <b>esibizioni oratorie</b>: recitare, declamare e intrattenere un pubblico. Il manuale prevede per il primo rango la possibilità di guadagnare <b>10 MO al mese</b> con esibizioni dedicate e di riconoscere artisti celebri, opere e strumenti rari con un tiro <b>11+</b>.</p><p>Il Bardo possiede anche una capacità di classe chiamata Performance; questa voce specifica l'arte scelta dal template. Eventuali sovrapposizioni di ranghi vanno gestite secondo la creazione del personaggio.</p></div></details>
 <div class="section">JACK OF ALL TRADES · SCELTA LIVELLO 1</div>
-<div class="card"><p class="muted"><b>Scelta del livello 1:</b> Soothsaying (Lettura dei presagi), acquisita tramite Jack of All Trades. È una sola competenza, non una seconda copia del template Hedge Magician.</p></div>
+
 <details class="details" open><summary>Soothsaying · Lettura dei presagi · Augury 1 ogni 8 ore</summary><div class="detailbody"><p>Seville interpreta i presagi nei piccoli eventi quotidiani, come il lancio dei dadi, il volo degli uccelli o le foglie del tè. Grazie a questa proficiency può lanciare <b>Augury (Augurio) una volta ogni 8 ore</b>. <b>Tempo di lancio: 1 round (10 secondi).</b></p><p><b>Augury — Divino di livello 2 (individuazione, esoterico).</b> Gittata: <b>sé stesso</b>. Durata: <b>istantanea</b>. Il presagio indica se <b>una specifica azione contemplata</b> porterà probabilmente risultati <b>favorevoli o sfavorevoli</b>.</p><p><b>Orizzonte temporale: 3 turni (30 minuti).</b> Il responso valuta soltanto ciò che potrebbe accadere in questo intervallo: ignora conseguenze successive, anche molto gravi.</p><p><b>Affidabilità: il Master tira segretamente.</b> Effettua un tiro di <b>ricerca magica</b> per determinare se il presagio è affidabile. Un <b>risultato naturale di 7 o più</b> riesce sempre. Se il tiro riesce, la previsione è <b>vera e affidabile</b>; se fallisce, è <b>falsa e fuorviante</b>. Seville non conosce l'esito del tiro.</p><p><b>Esempio:</b> «Aprire questo forziere ci porterà fortuna?» Se contiene oro e non è protetto da trappole, il responso veritiero sarà favorevole, anche se il proprietario potrebbe vendicarsi domani: quell'evento è fuori dai 30 minuti previsti.</p><p class="muted">Riferimento: ACKS II Revised, Soothsaying (p. 119) e incantesimo Augury (p. 195).</p></div></details>
-<div class="section">LINGUE E NOTE</div><div class="card"><p class="muted">Lingue e ulteriori dettagli possono essere annotati qui, senza alterare le regole.</p><textarea class="field" id="abilityNotes" rows="4" placeholder="Lingue, dettagli sulle proficiencies, note del Master…"></textarea></div>
+<div class="section">LINGUE E NOTE</div><div class="card"><textarea class="field" id="abilityNotes" rows="4" placeholder="Lingue, dettagli sulle proficiencies, note del Master…"></textarea></div>
 </section>
 <section class="panel" id="inventario">
 <div class="section">ARMI E SCUDO · INVENTARIO DINAMICO</div>
@@ -54,7 +53,7 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
   <div class="equipped-info"><div class="small">ARMA EQUIPAGGIATA</div><strong id="equippedname">—</strong></div>
   <div class="small spaced">MODALITÀ DI UTILIZZO</div><div class="modes" id="gripmodes" role="group" aria-label="Modalità di utilizzo dell'arma"></div>
   <div class="row shieldrow"><label for="shieldon">Scudo impugnato</label><input id="shieldon" type="checkbox"><span class="muted" id="shieldhint">Scudo +1 CA</span></div>
-  <div class="row compact"><button class="btn secondary" type="button" data-act="moveshield">Sposta scudo: inventario ↔ deposito</button></div><div class="notice" id="equipmentsummary"></div>
+  <div class="row compact"><label class="carried-choice"><input type="checkbox" id="shieldcarried"> Scudo trasportato</label></div><div class="notice" id="equipmentsummary"></div>
 </div>
 <div class="section">ARMATURE · RESTRIZIONI DI CLASSE</div><div class="notice">Il Bardo è competente nelle armature leggere e medie e può utilizzare lo scudo. La CA tiene conto di armatura, DES e scudo effettivamente impugnato.</div>
 <div class="card">
@@ -78,7 +77,7 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
   <div class="data-row totalrow"><b>TOTALE TRASPORTATO</b><strong id="totalweight">—</strong></div>
   <div class="row"><div class="muted" id="weightdetail"></div><strong class="gold" id="weightstatus"></strong></div>
   <div class="weightbar"><div id="weightfill"></div></div>
-  <p class="muted">Il carico comprende tutto ciò che hai addosso, anche le armi non impugnate. Gli oggetti nel deposito sono esclusi dal carico personale.</p>
+  <p class="muted">Il carico comprende tutto ciò che trasporti, anche le armi non impugnate.</p>
 </div>
 <div class="section">MOVIMENTO</div>
 <div class="twocol"><div class="card"><div class="small">ESPLORAZIONE</div><div class="value" id="speedexplore">90′</div><div class="muted">per turno</div></div>
@@ -94,15 +93,9 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
 <div class="speedr" id="speedr3" role="row"><span>≤ 19 st*</span><span>30′</span><span>10′</span><span>30′</span><span>6 mi</span></div>
 </div><p class="muted">* Capacità massima attuale: 20 + modificatore di FOR (−1) = 19 st. Oltre questo limite non puoi trasportare normalmente il carico.</p></div>
 <div class="section">DENARO PERSONALE</div><div class="card"><div class="small">DENARO PERSONALE · modificabile</div><div class="row"><div class="value gold"><span id="coins">9</span> MO</div><div class="buttonbar"><button class="btn secondary" data-act="coinminus" type="button">−</button><button class="btn secondary" data-act="coinplus" type="button">+</button></div></div><div class="muted">Registra qui le monete d’oro; le altre denominazioni possono essere annotate nelle note inventario.</div></div>
-<div class="section">DEPOSITO · MATERIALE NON TRASPORTATO</div><div class="card">
-  <div class="muted">Oggetti e armi nel deposito non appesantiscono Seville. Usa <b>Prendi</b> per trasferirli nel suo inventario: il movimento si aggiornerà subito.</div>
-  <div id="muleitems"></div><div class="row compact"><input class="field" id="mulename" type="text" maxlength="90" placeholder="Nuovo oggetto nel deposito"><input class="field weightfield" id="muleweight" type="text" inputmode="decimal" value="1/6" placeholder="st"><button class="btn" data-act="addmule" type="button">+ Aggiungi</button></div>
-  <div class="data-row"><span>Carico del deposito registrato</span><strong id="muleweighttotal">0 st</strong></div><p class="muted">Peso merce trasportata dal deposito, escluso dalla velocità del personaggio. Le monete e gli oggetti elencati solo nelle note non sono quantificati qui.</p>
-  <label class="small spaced" for="muleNotes">NOTE SUL DEPOSITO</label><textarea class="field" id="muleNotes" rows="3" placeholder="Annotazioni libere…"></textarea>
-</div>
 <div class="section">NOTE INVENTARIO</div><textarea class="field" id="inventoryNotes" rows="4" placeholder="Oggetti trovati, tesori, promemoria…"></textarea>
 </section>
-<section class="panel" id="backup"><div class="section">BACKUP E DIAGNOSTICA</div><div class="card"><p class="muted">Le modifiche vengono salvate nel browser quando il salvataggio locale &egrave; disponibile. Conserva anche un backup JSON.</p><div class="buttonbar"><button class="btn" data-act="export" type="button">Esporta JSON</button><button class="btn secondary" data-act="import" type="button">Importa JSON</button></div><input accept=".json,application/json" id="importfile" style="display:none" type="file"/><hr class="line"/><button class="btn secondary" data-act="reset" type="button">Ripristina valori iniziali</button><p class="debug" id="status">Verifica pulsanti: in attesa...</p></div><div class="notice">Versione 0.1.0 &middot; Per la massima compatibilit&agrave; su iPhone apri il file da un normale sito HTTPS in Safari. Le anteprime di file HTML locali possono bloccare gli script.</div></section>
+<section class="panel" id="backup"><div class="section">BACKUP E DIAGNOSTICA</div><div class="card"><p class="muted">Le modifiche vengono salvate nel browser quando il salvataggio locale &egrave; disponibile. Conserva anche un backup JSON.</p><div class="buttonbar"><button class="btn" data-act="export" type="button">Esporta JSON</button><button class="btn secondary" data-act="import" type="button">Importa JSON</button></div><input accept=".json,application/json" id="importfile" style="display:none" type="file"/><hr class="line"/><button class="btn secondary" data-act="reset" type="button">Ripristina valori iniziali</button><p class="debug" id="status">Verifica pulsanti: in attesa...</p></div><div class="notice">Versione 0.1.9 &middot; Per la massima compatibilit&agrave; su iPhone apri il file da un normale sito HTTPS in Safari. Le anteprime di file HTML locali possono bloccare gli script.</div></section>
 </main><nav aria-label="Navigazione" class="tabs"><button class="active" data-tab="scheda" type="button"><span class="ico">⚔</span>Scheda</button><button data-tab="capacita" type="button"><span class="ico">✦</span>Capacit&agrave;</button><button data-tab="inventario" type="button"><span class="ico">▣</span>Inventario</button><button data-tab="backup" type="button"><span class="ico">⚙</span>Backup</button></nav>
 <script>
 (function () {
@@ -159,7 +152,7 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     {max:19,explore:30,combat:10,run:30,travel:6}
   ];
   function initial() {return {
-    hp:4,coins:2,silver:1,xp:0,abilityNotes:'',muleNotes:'',inventoryNotes:'Inventario iniziale: bastone, armatura di cuoio e scudo. Altri oggetti da aggiungere dopo verifica.',
+    hp:4,coins:2,silver:1,xp:0,abilityNotes:'',inventoryNotes:'',
     weapons:[{uid:1,id:'staff',magic:0,location:'carried'}],equipped:1,grip:'one',shield:true,shieldLocation:'carried',
     armors:[{uid:2,id:'leather',magic:0,location:'carried'}],equippedArmor:2,items:[]
   };}
@@ -169,7 +162,7 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
   function fa(id){return A.find(function(a){return a.id===id;});}
   function safe(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
   function bonus(n){return n>0?'+'+n:n<0?String(n):'';}
-  function loc(o){return o.location==='mule'?'mule':'carried';}
+  function loc(o){return o.location==='mule'||o.location==='notcarried'||o.carried===false?'notcarried':'carried';}
   function weightString(w){
     var rounded = Math.round(w*6), remaining = w*6-rounded;
     if(Math.abs(remaining)<0.000001){var whole=Math.floor(rounded/6),num=rounded%6;
@@ -225,11 +218,7 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     var sw=data.shieldLocation==='carried'?1:0;
     var ww=data.weapons.filter(carried).reduce(function(s,o){var w=fw(o.id);return s+(w?w.weight:0);},0);
     var iw=data.items.filter(carried).reduce(function(s,o){return s+(Number(o.weight)||0);},0);
-    var mw=data.armors.filter(function(x){return loc(x)==='mule';}).reduce(function(s,o){return s+armorWeight(o);},0)
-        + data.weapons.filter(function(x){return loc(x)==='mule';}).reduce(function(s,o){var w=fw(o.id);return s+(w?w.weight:0);},0)
-        + data.items.filter(function(x){return loc(x)==='mule';}).reduce(function(s,o){return s+(Number(o.weight)||0);},0)
-        + 0;
-    return {armor:aw,shield:sw,weapons:ww,items:iw,total:aw+sw+ww+iw,mule:mw};
+    return {armor:aw,shield:sw,weapons:ww,items:iw,total:aw+sw+ww+iw};
   }
   function speedIndex(total){for(var i=0;i<SPEEDS.length;i++)if(total<=SPEEDS[i].max+0.0000001)return i;return -1;}
   function save(){try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){}}
@@ -240,8 +229,10 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     data.weapons=data.weapons.filter(function(x){return x&&fw(x.id);}).map(function(x){return {uid:x.uid,id:x.id,magic:Math.max(0,Math.min(5,Number(x.magic)||0)),location:loc(x)};});
     data.armors=data.armors.filter(function(x){return x&&fa(x.id);}).map(function(x){return {uid:x.uid,id:x.id,magic:Math.max(0,Math.min(5,Number(x.magic)||0)),location:loc(x)};});
     data.items=data.items.filter(function(x){return x&&typeof x.name==='string'&&Number.isFinite(Number(x.weight));}).map(function(x){return {uid:x.uid,name:x.name.slice(0,90),weight:Math.max(0,Number(x.weight)),location:loc(x)};});
-    data.shieldLocation=data.shieldLocation==='mule'?'mule':'carried';
-    data.shield=data.shield!==false;
+    data.shieldLocation=data.shieldLocation==='mule'||data.shieldLocation==='notcarried'?'notcarried':'carried';
+    data.shield=data.shield!==false && data.shieldLocation==='carried';
+    // Strip the earlier editorial default from existing local backups without touching custom notes.
+    if(typeof data.inventoryNotes==='string')data.inventoryNotes=data.inventoryNotes.replace('Inventario iniziale: bastone, armatura di cuoio e scudo. Altri oggetti da aggiungere dopo verifica.','').trim();
     if(!Number.isFinite(Number(data.hp)))data.hp=4;
     data.hp=Math.max(0,Math.min(4,Number(data.hp)));
     data.coins=Math.max(0,Number(data.coins)||0);
@@ -253,14 +244,14 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
       if(raw){var parsed=JSON.parse(raw);if(parsed&&typeof parsed==='object')Object.keys(data).forEach(function(k){if(parsed[k]!==undefined)data[k]=parsed[k];});normalize();return;}
       var old=JSON.parse(localStorage.getItem(LEGACY)||'null');
       if(old&&typeof old==='object'){
-        ['hp','coins','xp','abilityNotes','muleNotes','inventoryNotes','equipped','grip','shield'].forEach(function(k){if(old[k]!==undefined)data[k]=old[k];});
+        ['hp','coins','xp','abilityNotes','inventoryNotes','equipped','grip','shield'].forEach(function(k){if(old[k]!==undefined)data[k]=old[k];});
         if(Array.isArray(old.weapons))data.weapons=old.weapons.filter(function(x){return x&&fw(x.id);}).map(function(x){
           return {uid:x.uid,id:x.id,magic:Number(x.magic)||0,location:(String(x.uid)==='2'&&x.id==='warhammer'&&String(old.equipped)!=='2')?'mule':'carried'};
         });
         normalize();save();return;
       }
       var v02=JSON.parse(localStorage.getItem(OLD)||'null');
-      if(v02){['hp','coins','xp','abilityNotes','muleNotes','inventoryNotes'].forEach(function(k){if(v02[k]!==undefined)data[k]=v02[k];});if(v02.weapon==='speartwo')data.grip='two';}
+      if(v02){['hp','coins','xp','abilityNotes','inventoryNotes'].forEach(function(k){if(v02[k]!==undefined)data[k]=v02[k];});if(v02.weapon==='speartwo')data.grip='two';}
     }catch(e){ /* an unreadable backup must not prevent startup */ }
     normalize();
   }
@@ -268,22 +259,18 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
   function itemButtons(type,o,location){
     var uid=safe(o.uid),buttons='';
     if(location==='carried'&&(type==='weapon'||type==='armor'))buttons+='<button type="button" class="btn" data-equip-type="'+type+'" data-equip-id="'+uid+'">Equipaggia</button>';
-    buttons+='<button type="button" class="btn secondary" data-move-type="'+type+'" data-move-id="'+uid+'">'+(location==='mule'?'Prendi':'Nel deposito')+'</button>';
+    buttons+='<label class="carried-choice"><input type="checkbox" data-carried-type="'+type+'" data-carried-id="'+uid+'" '+(location==='carried'?'checked':'')+'> Trasportato</label>';
     buttons+='<button type="button" class="btn secondary" data-remove-type="'+type+'" data-remove-id="'+uid+'">Rimuovi</button>';
     return '<div class="entryactions">'+buttons+'</div>';
   }
   function renderLists(){
-    var weaponList=data.weapons.filter(function(o){return loc(o)==='carried';});
-    el('ownedweapons').innerHTML=weaponList.length?weaponList.map(function(o){var w=fw(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(w.name)+(o.magic?' +'+o.magic:'')+(String(data.equipped)===String(o.uid)?' · <b class="gold">Equipaggiata</b>':'')+'</span><span class="entryweight">'+weightString(w.weight)+'</span></div>'+itemButtons('weapon',o,'carried')+'</div>';}).join(''):'<p class="muted">Nessuna arma trasportata. Puoi prenderne una dal deposito.</p>';
-    var armorList=data.armors.filter(function(o){return loc(o)==='carried';});
-    el('ownedarmors').innerHTML=armorList.length?armorList.map(function(o){var a=fa(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+(String(data.equippedArmor)===String(o.uid)?' · <b class="gold">Indossata</b>':'')+'</span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o,'carried')+'</div>';}).join(''):'<p class="muted">Nessuna armatura trasportata.</p>';
-    var items=data.items.filter(function(o){return loc(o)==='carried';});
-    el('owneditems').innerHTML=items.length?'<hr class="line"><div class="small">OGGETTI TRASPORTATI</div>'+items.map(function(o){return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o,'carried')+'</div>';}).join(''):'<p class="muted">Nessun altro oggetto registrato.</p>';
-    var mule=[];
-    data.weapons.filter(function(o){return loc(o)==='mule';}).forEach(function(o){var w=fw(o.id);mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(w.name)+(o.magic?' +'+o.magic:'')+' <span class="tagmule">· Arma</span></span><span class="entryweight">'+weightString(w.weight)+'</span></div>'+itemButtons('weapon',o,'mule')+'</div>');});
-    data.armors.filter(function(o){return loc(o)==='mule';}).forEach(function(o){var a=fa(o.id);mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+' <span class="tagmule">· Armatura</span></span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o,'mule')+'</div>');});
-    data.items.filter(function(o){return loc(o)==='mule';}).forEach(function(o){mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o,'mule')+'</div>');});
-    el('muleitems').innerHTML=mule.join('');
+    function badge(o){return loc(o)==='carried'?'':' <span class="notcarried-badge">· Non trasportato</span>';}
+    var weapons=data.weapons;
+    el('ownedweapons').innerHTML=weapons.length?weapons.map(function(o){var w=fw(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(w.name)+(o.magic?' +'+o.magic:'')+(loc(o)==='carried'&&String(data.equipped)===String(o.uid)?' · <b class="gold">Equipaggiata</b>':'')+badge(o)+'</span><span class="entryweight">'+weightString(w.weight)+'</span></div>'+itemButtons('weapon',o,loc(o))+'</div>';}).join(''):'<p class="muted">Nessuna arma registrata.</p>';
+    var armors=data.armors;
+    el('ownedarmors').innerHTML=armors.length?armors.map(function(o){var a=fa(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+(loc(o)==='carried'&&String(data.equippedArmor)===String(o.uid)?' · <b class="gold">Indossata</b>':'')+badge(o)+'</span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o,loc(o))+'</div>';}).join(''):'<p class="muted">Nessuna armatura registrata.</p>';
+    var items=data.items;
+    el('owneditems').innerHTML=items.length?'<hr class="line"><div class="small">OGGETTI POSSEDUTI</div>'+items.map(function(o){return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+badge(o)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o,loc(o))+'</div>';}).join(''):'<p class="muted">Nessun altro oggetto registrato.</p>';
   }
   function render(){
     el('hp').textContent=data.hp;
@@ -311,14 +298,15 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     }else{
       el('damage').textContent='—';el('weaponname').textContent='NESSUNA ARMA';
       el('attack').textContent='—';el('attacknote').textContent='Nessuna arma impugnata';
-      el('damagenote').textContent='—';el('weapontraits').textContent='Seleziona un’arma posseduta';el('chargedamage').textContent='—';
+      el('damagenote').textContent='—';el('weapontraits').textContent='Seleziona un’arma trasportata';el('chargedamage').textContent='—';
     }
     var shieldToggle=el('shieldon');
-    shieldToggle.disabled=Boolean(c&&c.hands);
+    shieldToggle.disabled=Boolean(c&&c.hands)||data.shieldLocation!=='carried';
+    el('shieldcarried').checked=data.shieldLocation==='carried';
     shieldToggle.checked=shieldEffective;
-    el('shieldhint').textContent=(c&&c.hands?'Non utilizzabile a 2 mani':'Scudo +1 CA');
+    el('shieldhint').textContent=data.shieldLocation!=='carried'?'Scudo non trasportato':(c&&c.hands?'Non utilizzabile a 2 mani':'Scudo +1 CA');
     el('equipmentsummary').textContent='CA '+ac+' · '+(c?c.w.name+' · '+c.damage+' danni'+(c.charge!=='—'?' · carica '+c.charge:''):'nessuna arma')+(c&&c.hands?' · scudo non impugnabile':'');
-    el('gripmodes').innerHTML=c?modes(c.w).map(function(option){return '<button class="mode'+(data.grip===option[0]?' active':'')+'" data-grip="'+option[0]+'" aria-pressed="'+(data.grip===option[0]?'true':'false')+'" type="button">'+option[1]+'</button>';}).join(''):'<span class="muted">Aggiungi o prendi un’arma per scegliere la modalità.</span>';
+    el('gripmodes').innerHTML=c?modes(c.w).map(function(option){return '<button class="mode'+(data.grip===option[0]?' active':'')+'" data-grip="'+option[0]+'" aria-pressed="'+(data.grip===option[0]?'true':'false')+'" type="button">'+option[1]+'</button>';}).join(''):'<span class="muted">Trasporta un’arma per scegliere la modalità.</span>';
     var oldWeapon=el('catalog').value,oldArmor=el('armorcatalog').value;
     el('catalog').innerHTML=W.map(function(w){return '<option value="'+w.id+'">'+safe(w.name)+' · '+(w.die||'speciale')+' · '+weightString(w.weight)+'</option>';}).join('');
     if(W.some(function(w){return w.id===oldWeapon;}))el('catalog').value=oldWeapon;
@@ -330,7 +318,6 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     el('weaponweight').textContent=weightString(wt.weapons);
     el('itemstotalweight').textContent=weightString(wt.items);
     el('totalweight').textContent=weightString(wt.total);
-    el('muleweighttotal').textContent=weightString(wt.mule);
     el('weightdetail').textContent='Capacità massima 19 st';
     el('weightfill').style.width=Math.min(100,Math.max(0,wt.total/19*100))+'%';
     el('weightfill').classList.toggle('over',wt.total>19+0.0000001);
@@ -343,7 +330,7 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     el('speedtravel').textContent=sp.travel;
     el('weightstatus').textContent=idx<0?'Sovraccarico':idx===0?'Leggero':idx===1?'Normale':idx===2?'Appesantito':'Molto pesante';
     for(var i=0;i<4;i++)el('speedr'+i).classList.toggle('active',i===idx);
-    ['abilityNotes','muleNotes','inventoryNotes'].forEach(function(id){if(document.activeElement!==el(id))el(id).value=data[id]||'';});
+    ['abilityNotes','inventoryNotes'].forEach(function(id){if(document.activeElement!==el(id))el(id).value=data[id]||'';});
     save();
   }
   function tab(name){document.querySelectorAll('.panel').forEach(function(x){x.classList.toggle('active',x.id===name);});document.querySelectorAll('[data-tab]').forEach(function(x){x.classList.toggle('active',x.getAttribute('data-tab')===name);});window.scrollTo(0,0);}
@@ -351,13 +338,9 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
   function itemAction(type,uid,act){
     var o=entry(type,uid);if(!o)return;
     if(act==='equip'){
-      if(loc(o)==='mule')return;
+      if(loc(o)!=='carried')return;
       if(type==='weapon'){data.equipped=o.uid;data.grip='one';}
       if(type==='armor')data.equippedArmor=o.uid;
-    }
-    if(act==='move'){
-      o.location=loc(o)==='carried'?'mule':'carried';
-      if(loc(o)==='carried'){if(type==='weapon'){data.equipped=o.uid;data.grip='one';}if(type==='armor')data.equippedArmor=o.uid;}
     }
     if(act==='remove'){
       if(!confirm('Rimuovere definitivamente questo oggetto?'))return;
@@ -366,23 +349,22 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     }
     save();render();
   }
-  function addItem(onMule){
-    var nameEl=el(onMule?'mulename':'itemname'),weightEl=el(onMule?'muleweight':'itemweight');
+  function addItem(){
+    var nameEl=el('itemname'),weightEl=el('itemweight');
     var name=nameEl.value.trim(),weight=parsedWeight(weightEl.value);
     if(!name){alert('Inserisci il nome dell’oggetto.');nameEl.focus();return;}
     if(!Number.isFinite(weight)){alert('Peso non valido. Usa ad esempio 1/6, 1/2, 1, 2 oppure 0,25.');weightEl.focus();return;}
-    data.items.push({uid:nextUID(),name:name.slice(0,90),weight:weight,location:onMule?'mule':'carried'});
+    data.items.push({uid:nextUID(),name:name.slice(0,90),weight:weight,location:'carried'});
     nameEl.value='';weightEl.value='1/6';save();render();
   }
   function download(){
-    var b=new Blob([JSON.stringify({character:'Seville',version:'0.1.0',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
-    a.href=url;a.download='Seville-backup-v010.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
+    var b=new Blob([JSON.stringify({character:'Seville',version:'0.1.9',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
+    a.href=url;a.download='Seville-backup-v019.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
   }
   document.addEventListener('click',function(e){
     var t=e.target.closest('[data-tab]');if(t){tab(t.getAttribute('data-tab'));return;}
     var mode=e.target.closest('[data-grip]');if(mode){data.grip=mode.getAttribute('data-grip');save();render();return;}
     var eq=e.target.closest('[data-equip-id]');if(eq){itemAction(eq.getAttribute('data-equip-type'),eq.getAttribute('data-equip-id'),'equip');return;}
-    var mv=e.target.closest('[data-move-id]');if(mv){itemAction(mv.getAttribute('data-move-type'),mv.getAttribute('data-move-id'),'move');return;}
     var rem=e.target.closest('[data-remove-id]');if(rem){itemAction(rem.getAttribute('data-remove-type'),rem.getAttribute('data-remove-id'),'remove');return;}
     var b=e.target.closest('[data-act]');if(!b)return;
     var act=b.getAttribute('data-act');
@@ -397,9 +379,7 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
       if(!fa(armorId))return;
       var armorUid=nextUID();data.armors.push({uid:armorUid,id:armorId,magic:armorMag,location:'carried'});data.equippedArmor=armorUid;save();render();return;
     }
-    if(act==='additem'){addItem(false);return;}
-    if(act==='addmule'){addItem(true);return;}
-    if(act==='moveshield'){data.shieldLocation=data.shieldLocation==='carried'?'mule':'carried';if(data.shieldLocation==='mule')data.shield=false;save();render();return;}
+    if(act==='additem'){addItem();return;}
     if(act==='hpminus')data.hp=Math.max(0,data.hp-1);
     if(act==='hpplus')data.hp=Math.min(4,data.hp+1);
     if(act==='coinminus')data.coins=Math.max(0,data.coins-1);
@@ -413,8 +393,10 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     }
     save();render();
   });
-  el('shieldon').addEventListener('change',function(){data.shield=this.checked;save();render();});
-  ['abilityNotes','muleNotes','inventoryNotes'].forEach(function(id){el(id).addEventListener('input',function(){data[id]=this.value;save();});});
+  el('shieldon').addEventListener('change',function(){data.shield=this.checked&&data.shieldLocation==='carried';save();render();});
+  el('shieldcarried').addEventListener('change',function(){data.shieldLocation=this.checked?'carried':'notcarried';if(!this.checked)data.shield=false;save();render();});
+  document.addEventListener('change',function(e){var x=e.target.closest('[data-carried-id]');if(x){var o=entry(x.getAttribute('data-carried-type'),x.getAttribute('data-carried-id'));if(!o)return;o.location=x.checked?'carried':'notcarried';if(x.checked){if(x.getAttribute('data-carried-type')==='weapon'){data.equipped=o.uid;data.grip='one';}if(x.getAttribute('data-carried-type')==='armor')data.equippedArmor=o.uid;}save();render();}});
+  ['abilityNotes','inventoryNotes'].forEach(function(id){el(id).addEventListener('input',function(){data[id]=this.value;save();});});
   el('importfile').addEventListener('change',function(e){
     var f=e.target.files[0];if(!f)return;
     var reader=new FileReader();reader.onload=function(){
@@ -424,14 +406,14 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
         data=initial();Object.keys(data).forEach(function(k){if(v.data[k]!==undefined)data[k]=v.data[k];});
         if(!v.data.armors)data.armors=initial().armors;
         if(Array.isArray(v.data.weapons)&&!v.data.weapons.some(function(x){return x.location;})){
-          data.weapons=v.data.weapons.map(function(x){return Object.assign({},x,{location:String(x.uid)==='2'&&x.id==='warhammer'&&String(v.data.equipped)!=='2'?'mule':'carried'});});
+          data.weapons=v.data.weapons.map(function(x){return Object.assign({},x,{location:'carried'});});
         }
         normalize();save();render();alert('Backup importato correttamente.');
       }catch(err){alert('Errore: '+err.message);}
     };
     reader.readAsText(f);e.target.value='';
   });
-  try{load();render();el('status').textContent='v0.1.8 · dati locali';}
+  try{load();render();el('status').textContent='v0.1.9 · dati locali';}
   catch(err){el('status').textContent='Errore di avvio: '+err.message;}
 })();
 
