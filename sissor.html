@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171c23" name="theme-color"/><title>ACKS &middot; Sissor 0.3.0</title><style>
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171c23" name="theme-color"/><title>ACKS &middot; Sissor 0.3.1</title><style>
 *{box-sizing:border-box}body{margin:0;background:#171016;color:#f6e9dc;font:15px -apple-system,BlinkMacSystemFont,system-ui,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}button:active{transform:scale(.97)}.app{max-width:520px;margin:auto;min-height:100dvh;background:#211820;padding:15px 14px 100px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.eyebrow{font-size:10px;letter-spacing:2px;color:#d7bc84}.name{font-family:Georgia,serif;font-size:26px;font-weight:bold;letter-spacing:.5px}.tag{border:1px solid #736445;border-radius:18px;padding:7px 10px;color:#e8d1a0;font-size:12px}.hero{display:grid;grid-template-columns:43% 57%;gap:10px;align-items:stretch}.portrait{width:100%;height:auto;display:block;object-fit:contain;border:1px solid #655437;border-radius:12px;background:#10141b}.stack{display:flex;flex-direction:column;gap:8px}.statcard{background:#303b45;border:1px solid #48515b;border-radius:12px;padding:10px;flex:1;display:flex;flex-direction:column;justify-content:center}.statcard.hp{background:#293f36}.statcard.ac{background:#2e384b}.small{font-size:10px;color:#c4cbd3;letter-spacing:.6px}.big{font-size:29px;font-weight:800;line-height:1.2}.control{display:flex;gap:7px;margin-top:8px}.control button{border:1px solid #768476;background:#425a4d;color:#fff;border-radius:9px;min-height:40px;flex:1;font-size:22px}.meter{height:6px;border-radius:10px;background:#506256;overflow:hidden;margin-top:7px}.fill{height:100%;background:#a7d6b2}.section{font-size:12px;letter-spacing:1.3px;color:#e2c58d;margin:17px 0 9px;font-weight:700}.abilities{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}.ability{text-align:center;background:#303844;border-radius:9px;padding:10px 1px}.ability strong{font-size:21px;display:block}.ability span{font-size:11px;color:#b5d4bd}.card{background:#2b323d;border:1px solid #424b59;border-radius:13px;padding:13px;margin-bottom:10px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}.value{font-size:25px;font-weight:750}.muted{color:#b9c1cb;font-size:12px;line-height:1.5}.gold{color:#e4c88e}.line{border:0;border-top:1px solid #454d58;margin:12px 0}.details{border:1px solid #46505e;border-radius:12px;background:#2b323d;margin:8px 0;overflow:hidden}.details summary{padding:15px;cursor:pointer;font-weight:650;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:50px}.details summary:after{content:'⌄';color:#e4c88e}.details[open] summary:after{content:'⌃'}.detailbody{border-top:1px solid #46505e;padding:12px;font-size:13px;line-height:1.6;color:#e2e5e9}.detailbody p{margin:0 0 9px}.detailbody ul{padding-left:18px;margin:6px 0}.data-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #46505e}.data-row:last-child{border-bottom:0}.data-row strong{color:#e7cd95}.btn{background:#524734;border:1px solid #b39965;color:#fff2d4;border-radius:9px;padding:11px 13px;min-height:44px}.btn.secondary{background:#343e4b;border-color:#566170;color:#fff}.field{background:#1e2630;color:white;border:1px solid #596474;border-radius:9px;padding:11px;width:100%;margin-top:8px;min-height:42px}.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);background:#141a22;border-top:1px solid #4c5460;padding:7px 6px max(9px,env(safe-area-inset-bottom));z-index:20}.tabs button{background:transparent;color:#b6bdc7;border:0;padding:8px 2px;font-size:10px;border-radius:9px;min-height:53px}.tabs button.active{background:#353e4b;color:#f0d393}.tabs .ico{display:block;font-size:21px;margin-bottom:2px}.panel{display:none}.panel.active{display:block}.notice{background:#42382b;border-radius:9px;padding:11px;color:#e8cfa2;font-size:12px;line-height:1.5}.debug{font-size:11px;color:#aeb5c1;margin-top:12px}.weaponoption{width:100%;display:block;text-align:left;margin:7px 0}.pill{font-size:10px;color:#f1dcae;border:1px solid #88734d;padding:4px 7px;border-radius:20px}.buttonbar{display:flex;gap:8px}.buttonbar button{flex:1}.noscript{padding:20px;background:#642c2c;color:#fff} @media(max-width:360px){.app{padding-left:10px;padding-right:10px}.big{font-size:25px}.ability strong{font-size:18px}.statcard{padding:8px}.hero{grid-template-columns:45% 55%}}
 
 /* Modulo equipaggiamento v0.2.3 */
@@ -30,6 +30,10 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
 .xp-card-auto .xp-actions{display:grid;grid-template-columns:1.5fr 1fr;gap:8px;margin-top:12px}
 .xp-card-auto .xp-actions .btn{width:100%;min-height:44px}
 @media(max-width:330px){.xp-card-auto .xp-actions{grid-template-columns:1fr}}
+
+.carried-choice{display:inline-flex;align-items:center;gap:7px;padding:6px 9px;border:1px solid #72596e;border-radius:8px;font-size:13px;cursor:pointer}
+.carried-choice input{width:19px;height:19px;accent-color:#c9aa6a}
+.notcarried-badge{font-size:12px;color:#dfbc89}
 </style><style>
 :root{--bg:#131a1c;--panel:#222b2e;--card:#263034;--gold:#c7a67b;--accent:#c7a67b}
 body{background:#111719}
@@ -80,7 +84,8 @@ body{background:#111719}
   <select class="field" id="offhand" aria-label="Arma nella mano secondaria"></select>
   <div class="muted" id="offhandhint">Due armi: +1 al tiro per colpire in mischia, non un secondo attacco.</div>
   <div class="row shieldrow"><label for="shieldon">Scudo impugnato</label><input id="shieldon" type="checkbox"><span class="muted" id="shieldhint">Scudo +1 CA</span></div>
-  <div class="row compact"><button class="btn secondary" type="button" data-act="moveshield">Sposta scudo: inventario ↔ deposito</button></div><div class="notice" id="equipmentsummary"></div>
+  <div class="row shieldrow"><label for="shieldcarried">Scudo trasportato</label><input id="shieldcarried" type="checkbox"><span class="muted">Conteggiato nel carico se selezionato</span></div>
+  <div class="notice" id="equipmentsummary"></div>
 </div>
 <div class="section">ARMATURE · RESTRIZIONI DI CLASSE</div><div class="notice">L’Assassino è competente nelle armature leggere e medie e può utilizzare lo scudo. La CA tiene conto di armatura, DES e scudo effettivamente impugnato.</div>
 <div class="card">
@@ -104,7 +109,7 @@ body{background:#111719}
   <div class="data-row totalrow"><b>TOTALE TRASPORTATO</b><strong id="totalweight">—</strong></div>
   <div class="row"><div class="muted" id="weightdetail"></div><strong class="gold" id="weightstatus"></strong></div>
   <div class="weightbar"><div id="weightfill"></div></div>
-  <p class="muted">Il carico comprende tutto ciò che hai addosso, anche le armi non impugnate. Gli oggetti nel deposito sono esclusi dal carico personale.</p>
+  <p class="muted">Il carico comprende gli oggetti contrassegnati come Trasportati, incluse le armi non impugnate. Gli altri oggetti rimangono registrati, ma non incidono sul peso.</p>
 </div>
 <div class="section">MOVIMENTO</div>
 <div class="twocol"><div class="card"><div class="small">ESPLORAZIONE</div><div class="value" id="speedexplore">90′</div><div class="muted">per turno</div></div>
@@ -120,12 +125,6 @@ body{background:#111719}
 <div class="speedr" id="speedr3" role="row"><span>≤ 19 st*</span><span>30′</span><span>10′</span><span>30′</span><span>6 mi</span></div>
 </div><p class="muted">* Capacità massima attuale: 20 + modificatore di FOR (−1) = 19 st. Oltre questo limite non puoi trasportare normalmente il carico.</p></div>
 <div class="section">DENARO PERSONALE</div><div class="card"><div class="small">DENARO PERSONALE · modificabile</div><div class="row"><div class="value gold"><span id="coins">9</span> MO</div><div class="buttonbar"><button class="btn secondary" data-act="coinminus" type="button">−</button><button class="btn secondary" data-act="coinplus" type="button">+</button></div></div><div class="muted">Registra qui le monete d’oro; le altre denominazioni possono essere annotate nelle note inventario.</div></div>
-<div class="section">DEPOSITO · MATERIALE NON TRASPORTATO</div><div class="card">
-  <div class="muted">Oggetti e armi nel deposito non appesantiscono Sissor. Usa <b>Prendi</b> per trasferirli nel suo inventario: il movimento si aggiornerà subito.</div>
-  <div id="muleitems"></div><div class="row compact"><input class="field" id="mulename" type="text" maxlength="90" placeholder="Nuovo oggetto nel deposito"><input class="field weightfield" id="muleweight" type="text" inputmode="decimal" value="1/6" placeholder="st"><button class="btn" data-act="addmule" type="button">+ Aggiungi</button></div>
-  <div class="data-row"><span>Carico del deposito registrato</span><strong id="muleweighttotal">0 st</strong></div><p class="muted">Peso merce trasportata dal deposito, escluso dalla velocità del personaggio. Le monete e gli oggetti elencati solo nelle note non sono quantificati qui.</p>
-  <label class="small spaced" for="muleNotes">NOTE SUL DEPOSITO</label><textarea class="field" id="muleNotes" rows="3" placeholder="Annotazioni libere…"></textarea>
-</div>
 <div class="section">NOTE INVENTARIO</div><textarea class="field" id="inventoryNotes" rows="4" placeholder="Oggetti trovati, tesori, promemoria…"></textarea>
 </section>
 <section class="panel" id="backup"><div class="section">BACKUP E DIAGNOSTICA</div><div class="card"><p class="muted">Le modifiche vengono salvate nel browser quando il salvataggio locale &egrave; disponibile. Conserva anche un backup JSON.</p><div class="buttonbar"><button class="btn" data-act="export" type="button">Esporta JSON</button><button class="btn secondary" data-act="import" type="button">Importa JSON</button></div><input accept=".json,application/json" id="importfile" style="display:none" type="file"/><hr class="line"/><button class="btn secondary" data-act="reset" type="button">Ripristina valori iniziali</button><p class="debug" id="status"></p></div><div class="notice"></div></section>
@@ -250,9 +249,9 @@ body{background:#111719}
     ]
   };}
   function initial() {return {
-    hp:5,coins:15,silver:0,xp:105,xpBase:null,xpBonusGained:null,abilityNotes:'',muleNotes:'',inventoryNotes:'',uxentio:initialUxentio(),
+    hp:5,coins:15,silver:0,xp:105,xpBase:null,xpBonusGained:null,abilityNotes:'',inventoryNotes:'',uxentio:initialUxentio(),
     weapons:[{uid:1,id:'arbalest',magic:0,location:'carried'},{uid:3,id:'shortsword',magic:0,location:'carried'},{uid:4,id:'shortsword',magic:0,location:'carried'}],
-    equipped:1,offhand:null,grip:'ranged',shield:false,shieldLocation:'mule',
+    equipped:1,offhand:null,grip:'ranged',shield:false,shieldLocation:'notcarried',
     armors:[{uid:2,id:'leather',magic:0,location:'carried'}],equippedArmor:2,
     items:[
       {uid:5,name:'20 quadrelli (astuccio)',weight:1/6,location:'carried'},
@@ -270,7 +269,7 @@ body{background:#111719}
   function fa(id){return A.find(function(a){return a.id===id;});}
   function safe(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
   function bonus(n){return n>0?'+'+n:n<0?String(n):'';}
-  function loc(o){return o.location==='mule'?'mule':'carried';}
+  function loc(o){return o.location==='mule'||o.location==='notcarried'||o.carried===false?'notcarried':'carried';}
   function weightString(w){
     var rounded = Math.round(w*6), remaining = w*6-rounded;
     if(Math.abs(remaining)<0.000001){var whole=Math.floor(rounded/6),num=rounded%6;
@@ -334,11 +333,7 @@ body{background:#111719}
     var sw=data.shieldLocation==='carried'?1:0;
     var ww=data.weapons.filter(carried).reduce(function(s,o){var w=fw(o.id);return s+(w?w.weight:0);},0);
     var iw=data.items.filter(carried).reduce(function(s,o){return s+(Number(o.weight)||0);},0);
-    var mw=data.armors.filter(function(x){return loc(x)==='mule';}).reduce(function(s,o){return s+armorWeight(o);},0)
-        + data.weapons.filter(function(x){return loc(x)==='mule';}).reduce(function(s,o){var w=fw(o.id);return s+(w?w.weight:0);},0)
-        + data.items.filter(function(x){return loc(x)==='mule';}).reduce(function(s,o){return s+(Number(o.weight)||0);},0)
-        + 0;
-    return {armor:aw,shield:sw,weapons:ww,items:iw,total:aw+sw+ww+iw,mule:mw};
+    return {armor:aw,shield:sw,weapons:ww,items:iw,total:aw+sw+ww+iw};
   }
   function speedIndex(total){for(var i=0;i<SPEEDS.length;i++)if(total<=SPEEDS[i].max+0.0000001)return i;return -1;}
   var XP_BONUS_RATE=5;
@@ -421,8 +416,15 @@ body{background:#111719}
     data.items=data.items.filter(function(x){return x&&typeof x.name==='string'&&Number.isFinite(Number(x.weight));}).map(function(x){return {uid:x.uid,name:x.name.slice(0,90),weight:Math.max(0,Number(x.weight)),location:loc(x)};});
     // Elimina i soli quattro indumenti del vecchio template, anche dai salvataggi precedenti.
     data.items=data.items.filter(function(x){return !(['Mantello scuro con cappuccio','Tunica e pantaloni neri','Stivali bassi','Cintura di cuoio'].indexOf(x.name)>=0 && [6,7,8,9].indexOf(Number(x.uid))>=0);});
-    data.shieldLocation=data.shieldLocation==='mule'?'mule':'carried';
-    data.shield=data.shield!==false;
+    // Preserve formerly deposited objects/notes without maintaining a second inventory.
+    data.shieldLocation=data.shieldLocation==='mule'||data.shieldLocation==='notcarried'?'notcarried':'carried';
+    data.shield=data.shield!==false&&data.shieldLocation==='carried';
+    if(typeof data.muleNotes==='string'&&data.muleNotes.trim()){
+      var priorNotes=data.muleNotes.trim();
+      if(typeof data.inventoryNotes!=='string')data.inventoryNotes='';
+      if(data.inventoryNotes.indexOf(priorNotes)===-1)data.inventoryNotes=(data.inventoryNotes.trim()?data.inventoryNotes.trim()+'\n':'')+priorNotes;
+    }
+    delete data.muleNotes;
     if(data.offhand===undefined)data.offhand=null;
     if(!Number.isFinite(Number(data.hp)))data.hp=5;
     data.hp=Math.max(0,Math.min(5,Number(data.hp)));
@@ -432,7 +434,7 @@ body{background:#111719}
   function load(){
     try{
       var raw=localStorage.getItem(KEY);
-      if(raw){var parsed=JSON.parse(raw);if(parsed&&typeof parsed==='object')Object.keys(data).forEach(function(k){if(parsed[k]!==undefined)data[k]=parsed[k];});normalize();save();return;}
+      if(raw){var parsed=JSON.parse(raw);if(parsed&&typeof parsed==='object'){Object.keys(data).forEach(function(k){if(parsed[k]!==undefined)data[k]=parsed[k];});if(typeof parsed.muleNotes==='string')data.muleNotes=parsed.muleNotes;}normalize();save();return;}
       var old=JSON.parse(localStorage.getItem(LEGACY)||'null');
       if(old&&typeof old==='object'){
         ['hp','coins','xp','abilityNotes','muleNotes','inventoryNotes','equipped','grip','shield'].forEach(function(k){if(old[k]!==undefined)data[k]=old[k];});
@@ -450,22 +452,18 @@ body{background:#111719}
   function itemButtons(type,o,location){
     var uid=safe(o.uid),buttons='';
     if(location==='carried'&&(type==='weapon'||type==='armor'))buttons+='<button type="button" class="btn" data-equip-type="'+type+'" data-equip-id="'+uid+'">Equipaggia</button>';
-    buttons+='<button type="button" class="btn secondary" data-move-type="'+type+'" data-move-id="'+uid+'">'+(location==='mule'?'Prendi':'Nel deposito')+'</button>';
+    buttons+='<label class="carried-choice"><input type="checkbox" data-carried-type="'+type+'" data-carried-id="'+uid+'" '+(location==='carried'?'checked':'')+'> Trasportato</label>';
     buttons+='<button type="button" class="btn secondary" data-remove-type="'+type+'" data-remove-id="'+uid+'">Rimuovi</button>';
     return '<div class="entryactions">'+buttons+'</div>';
   }
   function renderLists(){
-    var weaponList=data.weapons.filter(function(o){return loc(o)==='carried';});
-    el('ownedweapons').innerHTML=weaponList.length?weaponList.map(function(o){var w=fw(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(w.name)+(o.magic?' +'+o.magic:'')+(String(data.equipped)===String(o.uid)?' · <b class="gold">Equipaggiata</b>':'')+'</span><span class="entryweight">'+weightString(w.weight)+'</span></div>'+itemButtons('weapon',o,'carried')+'</div>';}).join(''):'<p class="muted">Nessuna arma trasportata. Puoi prenderne una dal deposito.</p>';
-    var armorList=data.armors.filter(function(o){return loc(o)==='carried';});
-    el('ownedarmors').innerHTML=armorList.length?armorList.map(function(o){var a=fa(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+(String(data.equippedArmor)===String(o.uid)?' · <b class="gold">Indossata</b>':'')+'</span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o,'carried')+'</div>';}).join(''):'<p class="muted">Nessuna armatura trasportata.</p>';
-    var items=data.items.filter(function(o){return loc(o)==='carried';});
-    el('owneditems').innerHTML=items.length?'<hr class="line"><div class="small">OGGETTI TRASPORTATI</div>'+items.map(function(o){return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o,'carried')+'</div>';}).join(''):'<p class="muted">Nessun altro oggetto registrato.</p>';
-    var mule=[];
-    data.weapons.filter(function(o){return loc(o)==='mule';}).forEach(function(o){var w=fw(o.id);mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(w.name)+(o.magic?' +'+o.magic:'')+' <span class="tagmule">· Arma</span></span><span class="entryweight">'+weightString(w.weight)+'</span></div>'+itemButtons('weapon',o,'mule')+'</div>');});
-    data.armors.filter(function(o){return loc(o)==='mule';}).forEach(function(o){var a=fa(o.id);mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+' <span class="tagmule">· Armatura</span></span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o,'mule')+'</div>');});
-    data.items.filter(function(o){return loc(o)==='mule';}).forEach(function(o){mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o,'mule')+'</div>');});
-    el('muleitems').innerHTML=mule.join('');
+    function badge(o){return loc(o)==='carried'?'':' <span class="notcarried-badge">· Non trasportato</span>';}
+    var weapons=data.weapons;
+    el('ownedweapons').innerHTML=weapons.length?weapons.map(function(o){var w=fw(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(w.name)+(o.magic?' +'+o.magic:'')+(loc(o)==='carried'&&String(data.equipped)===String(o.uid)?' · <b class="gold">Equipaggiata</b>':'')+badge(o)+'</span><span class="entryweight">'+weightString(w.weight)+'</span></div>'+itemButtons('weapon',o,loc(o))+'</div>';}).join(''):'<p class="muted">Nessuna arma registrata.</p>';
+    var armors=data.armors;
+    el('ownedarmors').innerHTML=armors.length?armors.map(function(o){var a=fa(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+(loc(o)==='carried'&&String(data.equippedArmor)===String(o.uid)?' · <b class="gold">Indossata</b>':'')+badge(o)+'</span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o,loc(o))+'</div>';}).join(''):'<p class="muted">Nessuna armatura registrata.</p>';
+    var items=data.items;
+    el('owneditems').innerHTML=items.length?'<hr class="line"><div class="small">OGGETTI REGISTRATI</div>'+items.map(function(o){return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+badge(o)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o,loc(o))+'</div>';}).join(''):'<p class="muted">Nessun altro oggetto registrato.</p>';
   }
   function uxWeight(){
     var u=data.uxentio;
@@ -542,11 +540,12 @@ body{background:#111719}
       el('damagenote').textContent='—';el('weapontraits').textContent='Seleziona un’arma posseduta';el('chargedamage').textContent='—';
     }
     var shieldToggle=el('shieldon');
-    shieldToggle.disabled=Boolean(c&&(c.hands||c.offhand));
+    shieldToggle.disabled=Boolean(c&&(c.hands||c.offhand))||data.shieldLocation!=='carried';
     shieldToggle.checked=shieldEffective;
-    el('shieldhint').textContent=(c&&c.offhand?'Non utilizzabile con due armi':c&&c.hands?'Non utilizzabile a 2 mani':'Scudo +1 CA');
+    el('shieldcarried').checked=data.shieldLocation==='carried';
+    el('shieldhint').textContent=data.shieldLocation!=='carried'?'Scudo non trasportato':(c&&c.offhand?'Non utilizzabile con due armi':c&&c.hands?'Non utilizzabile a 2 mani':'Scudo +1 CA');
     el('equipmentsummary').textContent='CA '+ac+' · '+(c?c.w.name+' · '+c.damage+' danni'+(c.charge!=='—'?' · carica '+c.charge:''):'nessuna arma')+(c&&c.offhand?' · due armi (+1 colpire) · scudo non impugnabile':c&&c.hands?' · scudo non impugnabile':'');
-    el('gripmodes').innerHTML=c?modes(c.w).map(function(option){return '<button class="mode'+(data.grip===option[0]?' active':'')+'" data-grip="'+option[0]+'" aria-pressed="'+(data.grip===option[0]?'true':'false')+'" type="button">'+option[1]+'</button>';}).join(''):'<span class="muted">Aggiungi o prendi un’arma per scegliere la modalità.</span>';
+    el('gripmodes').innerHTML=c?modes(c.w).map(function(option){return '<button class="mode'+(data.grip===option[0]?' active':'')+'" data-grip="'+option[0]+'" aria-pressed="'+(data.grip===option[0]?'true':'false')+'" type="button">'+option[1]+'</button>';}).join(''):'<span class="muted">Trasporta un’arma per scegliere la modalità.</span>';
     var offSelect=el('offhand');
     var candidates=c&&!c.ranged&&!c.hands?data.weapons.filter(function(o){
       var w=fw(o.id);return loc(o)==='carried'&&String(o.uid)!==String(c.o.uid)&&w&&w.type!=='large'&&w.type!=='missile';
@@ -568,7 +567,6 @@ body{background:#111719}
     el('weaponweight').textContent=weightString(wt.weapons);
     el('itemstotalweight').textContent=weightString(wt.items);
     el('totalweight').textContent=weightString(wt.total);
-    el('muleweighttotal').textContent=weightString(wt.mule);
     el('weightdetail').textContent='Capacità massima 19 st';
     el('weightfill').style.width=Math.min(100,Math.max(0,wt.total/19*100))+'%';
     el('weightfill').classList.toggle('over',wt.total>19+0.0000001);
@@ -581,7 +579,7 @@ body{background:#111719}
     el('speedtravel').textContent=sp.travel;
     el('weightstatus').textContent=idx<0?'Sovraccarico':idx===0?'Leggero':idx===1?'Normale':idx===2?'Appesantito':'Molto pesante';
     for(var i=0;i<4;i++)el('speedr'+i).classList.toggle('active',i===idx);
-    ['abilityNotes','muleNotes','inventoryNotes'].forEach(function(id){if(document.activeElement!==el(id))el(id).value=data[id]||'';});
+    ['abilityNotes','inventoryNotes'].forEach(function(id){if(document.activeElement!==el(id))el(id).value=data[id]||'';});
     save();
   }
   function tab(name){document.querySelectorAll('.panel').forEach(function(x){x.classList.toggle('active',x.id===name);});document.querySelectorAll('[data-tab]').forEach(function(x){x.classList.toggle('active',x.getAttribute('data-tab')===name);});window.scrollTo(0,0);}
@@ -589,13 +587,9 @@ body{background:#111719}
   function itemAction(type,uid,act){
     var o=entry(type,uid);if(!o)return;
     if(act==='equip'){
-      if(loc(o)==='mule')return;
+      if(loc(o)!=='carried')return;
       if(type==='weapon'){data.equipped=o.uid;data.grip='one';if(String(data.offhand)===String(o.uid))data.offhand=null;}
       if(type==='armor')data.equippedArmor=o.uid;
-    }
-    if(act==='move'){
-      o.location=loc(o)==='carried'?'mule':'carried';
-      if(loc(o)==='carried'){if(type==='weapon'){data.equipped=o.uid;data.grip='one';}if(type==='armor')data.equippedArmor=o.uid;}
     }
     if(act==='remove'){
       if(!confirm('Rimuovere definitivamente questo oggetto?'))return;
@@ -604,17 +598,17 @@ body{background:#111719}
     }
     save();render();
   }
-  function addItem(onMule){
-    var nameEl=el(onMule?'mulename':'itemname'),weightEl=el(onMule?'muleweight':'itemweight');
+  function addItem(){
+    var nameEl=el('itemname'),weightEl=el('itemweight');
     var name=nameEl.value.trim(),weight=parsedWeight(weightEl.value);
     if(!name){alert('Inserisci il nome dell’oggetto.');nameEl.focus();return;}
     if(!Number.isFinite(weight)){alert('Peso non valido. Usa ad esempio 1/6, 1/2, 1, 2 oppure 0,25.');weightEl.focus();return;}
-    data.items.push({uid:nextUID(),name:name.slice(0,90),weight:weight,location:onMule?'mule':'carried'});
+    data.items.push({uid:nextUID(),name:name.slice(0,90),weight:weight,location:'carried'});
     nameEl.value='';weightEl.value='1/6';save();render();
   }
   function download(){
-    var b=new Blob([JSON.stringify({character:'Sissor',version:'0.2.4',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
-    a.href=url;a.download='Sissor-backup-v024.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
+    var b=new Blob([JSON.stringify({character:'Sissor',version:'0.3.1',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
+    a.href=url;a.download='Sissor-backup-v031.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
   }
   el('uxweapon').addEventListener('change',function(){data.uxentio.weapon=this.value;save();render();});
   el('uxarmor').addEventListener('change',function(){data.uxentio.armor=this.value;save();render();});
@@ -646,7 +640,6 @@ body{background:#111719}
     var t=e.target.closest('[data-tab]');if(t){tab(t.getAttribute('data-tab'));return;}
     var mode=e.target.closest('[data-grip]');if(mode){data.grip=mode.getAttribute('data-grip');save();render();return;}
     var eq=e.target.closest('[data-equip-id]');if(eq){itemAction(eq.getAttribute('data-equip-type'),eq.getAttribute('data-equip-id'),'equip');return;}
-    var mv=e.target.closest('[data-move-id]');if(mv){itemAction(mv.getAttribute('data-move-type'),mv.getAttribute('data-move-id'),'move');return;}
     var rem=e.target.closest('[data-remove-id]');if(rem){itemAction(rem.getAttribute('data-remove-type'),rem.getAttribute('data-remove-id'),'remove');return;}
     var b=e.target.closest('[data-act]');if(!b)return;
     var act=b.getAttribute('data-act');
@@ -661,9 +654,7 @@ body{background:#111719}
       if(!fa(armorId))return;
       var armorUid=nextUID();data.armors.push({uid:armorUid,id:armorId,magic:armorMag,location:'carried'});data.equippedArmor=armorUid;save();render();return;
     }
-    if(act==='additem'){addItem(false);return;}
-    if(act==='addmule'){addItem(true);return;}
-    if(act==='moveshield'){data.shieldLocation=data.shieldLocation==='carried'?'mule':'carried';if(data.shieldLocation==='mule')data.shield=false;save();render();return;}
+    if(act==='additem'){addItem();return;}
     if(act==='hpminus')data.hp=Math.max(0,data.hp-1);
     if(act==='hpplus')data.hp=Math.min(5,data.hp+1);
     if(act==='coinminus')data.coins=Math.max(0,data.coins-1);
@@ -678,15 +669,23 @@ body{background:#111719}
     }
     save();render();
   });
-  el('shieldon').addEventListener('change',function(){data.shield=this.checked;save();render();});
-  ['abilityNotes','muleNotes','inventoryNotes'].forEach(function(id){el(id).addEventListener('input',function(){data[id]=this.value;save();});});
+  el('shieldon').addEventListener('change',function(){data.shield=this.checked&&data.shieldLocation==='carried';save();render();});
+  el('shieldcarried').addEventListener('change',function(){data.shieldLocation=this.checked?'carried':'notcarried';if(!this.checked)data.shield=false;save();render();});
+  document.addEventListener('change',function(e){
+    var x=e.target.closest('[data-carried-id]');if(!x)return;
+    var o=entry(x.getAttribute('data-carried-type'),x.getAttribute('data-carried-id'));if(!o)return;
+    o.location=x.checked?'carried':'notcarried';
+    if(x.checked){if(x.getAttribute('data-carried-type')==='weapon'){data.equipped=o.uid;data.grip='one';}if(x.getAttribute('data-carried-type')==='armor')data.equippedArmor=o.uid;}
+    save();render();
+  });
+  ['abilityNotes','inventoryNotes'].forEach(function(id){el(id).addEventListener('input',function(){data[id]=this.value;save();});});
   el('importfile').addEventListener('change',function(e){
     var f=e.target.files[0];if(!f)return;
     var reader=new FileReader();reader.onload=function(){
       try{
         var v=JSON.parse(reader.result);if(v.character!=='Sissor'||!v.data)throw new Error('Backup non valido');
         if(!confirm('Sostituire i dati con il backup?'))return;
-        data=initial();Object.keys(data).forEach(function(k){if(v.data[k]!==undefined)data[k]=v.data[k];});
+        data=initial();Object.keys(data).forEach(function(k){if(v.data[k]!==undefined)data[k]=v.data[k];});if(typeof v.data.muleNotes==='string')data.muleNotes=v.data.muleNotes;
         if(!v.data.armors)data.armors=initial().armors;
         if(Array.isArray(v.data.weapons)&&!v.data.weapons.some(function(x){return x.location;})){
           data.weapons=v.data.weapons.map(function(x){return Object.assign({},x,{location:String(x.uid)==='2'&&x.id==='warhammer'&&String(v.data.equipped)!=='2'?'mule':'carried'});});
@@ -696,7 +695,7 @@ body{background:#111719}
     };
     reader.readAsText(f);e.target.value='';
   });
-  try{load();render();el('status').textContent='v0.3.0 · Sissor e Uxentio · dati locali';}
+  try{load();render();el('status').textContent='v0.3.1 · Sissor e Uxentio · dati locali';}
   catch(err){el('status').textContent='Errore di avvio: '+err.message;}
 })();
 
