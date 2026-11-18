@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171c23" name="theme-color"/><title>ACKS &middot; Esperya 0.1.6</title><style>
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171c23" name="theme-color"/><title>ACKS &middot; Esperya 0.1.7</title><style>
 *{box-sizing:border-box}body{margin:0;background:#10141b;color:#f3f0e8;font:15px -apple-system,BlinkMacSystemFont,system-ui,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}button:active{transform:scale(.97)}.app{max-width:520px;margin:auto;min-height:100dvh;background:#191f29;padding:15px 14px 100px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.eyebrow{font-size:10px;letter-spacing:2px;color:#d7bc84}.name{font-family:Georgia,serif;font-size:26px;font-weight:bold;letter-spacing:.5px}.tag{border:1px solid #736445;border-radius:18px;padding:7px 10px;color:#e8d1a0;font-size:12px}.hero{display:grid;grid-template-columns:43% 57%;gap:10px;align-items:stretch}.portrait{width:100%;height:auto;display:block;object-fit:contain;border:1px solid #655437;border-radius:12px;background:#10141b}.stack{display:flex;flex-direction:column;gap:8px}.statcard{background:#303b45;border:1px solid #48515b;border-radius:12px;padding:10px;flex:1;display:flex;flex-direction:column;justify-content:center}.statcard.hp{background:#293f36}.statcard.ac{background:#2e384b}.small{font-size:10px;color:#c4cbd3;letter-spacing:.6px}.big{font-size:29px;font-weight:800;line-height:1.2}.control{display:flex;gap:7px;margin-top:8px}.control button{border:1px solid #768476;background:#425a4d;color:#fff;border-radius:9px;min-height:40px;flex:1;font-size:22px}.meter{height:6px;border-radius:10px;background:#506256;overflow:hidden;margin-top:7px}.fill{height:100%;background:#a7d6b2}.section{font-size:12px;letter-spacing:1.3px;color:#e2c58d;margin:17px 0 9px;font-weight:700}.abilities{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}.ability{text-align:center;background:#303844;border-radius:9px;padding:10px 1px}.ability strong{font-size:21px;display:block}.ability span{font-size:11px;color:#b5d4bd}.card{background:#2b323d;border:1px solid #424b59;border-radius:13px;padding:13px;margin-bottom:10px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}.value{font-size:25px;font-weight:750}.muted{color:#b9c1cb;font-size:12px;line-height:1.5}.gold{color:#e4c88e}.line{border:0;border-top:1px solid #454d58;margin:12px 0}.details{border:1px solid #46505e;border-radius:12px;background:#2b323d;margin:8px 0;overflow:hidden}.details summary{padding:15px;cursor:pointer;font-weight:650;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:50px}.details summary:after{content:'⌄';color:#e4c88e}.details[open] summary:after{content:'⌃'}.detailbody{border-top:1px solid #46505e;padding:12px;font-size:13px;line-height:1.6;color:#e2e5e9}.detailbody p{margin:0 0 9px}.detailbody ul{padding-left:18px;margin:6px 0}.data-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #46505e}.data-row:last-child{border-bottom:0}.data-row strong{color:#e7cd95}.btn{background:#524734;border:1px solid #b39965;color:#fff2d4;border-radius:9px;padding:11px 13px;min-height:44px}.btn.secondary{background:#343e4b;border-color:#566170;color:#fff}.field{background:#1e2630;color:white;border:1px solid #596474;border-radius:9px;padding:11px;width:100%;margin-top:8px;min-height:42px}.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);background:#141a22;border-top:1px solid #4c5460;padding:7px 6px max(9px,env(safe-area-inset-bottom));z-index:20}.tabs button{background:transparent;color:#b6bdc7;border:0;padding:8px 2px;font-size:10px;border-radius:9px;min-height:53px}.tabs button.active{background:#353e4b;color:#f0d393}.tabs .ico{display:block;font-size:21px;margin-bottom:2px}.panel{display:none}.panel.active{display:block}.notice{background:#42382b;border-radius:9px;padding:11px;color:#e8cfa2;font-size:12px;line-height:1.5}.debug{font-size:11px;color:#aeb5c1;margin-top:12px}.weaponoption{width:100%;display:block;text-align:left;margin:7px 0}.pill{font-size:10px;color:#f1dcae;border:1px solid #88734d;padding:4px 7px;border-radius:20px}.buttonbar{display:flex;gap:8px}.buttonbar button{flex:1}.noscript{padding:20px;background:#642c2c;color:#fff} @media(max-width:360px){.app{padding-left:10px;padding-right:10px}.big{font-size:25px}.ability strong{font-size:18px}.statcard{padding:8px}.hero{grid-template-columns:45% 55%}}
 
 /* Modulo equipaggiamento v0.1.1 */
-.equipped-info{border:1px solid #74664c;background:#252b31;padding:13px 12px;margin:12px 0;border-radius:10px;display:flex;flex-direction:column;gap:4px}.equipped-info strong{color:#f1dcad;font-size:16px;line-height:1.5}.spaced{display:block;margin-top:15px}.modes{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0 13px}.mode{font-size:13px;min-height:42px;border:1px solid #566270;border-radius:9px;background:#202a35;color:#d5dce5;padding:9px 13px;flex:1 0 auto}.mode.active{background:#584732;border-color:#d6b875;color:#ffe4ac;font-weight:bold}.shieldrow{justify-content:space-between;gap:8px;margin:14px 0}.shieldrow label{font-size:14px}.shieldrow input{width:26px;height:26px;accent-color:#d7bc84;flex-shrink:0}.shieldrow .muted{max-width:43%;text-align:right}.compact{margin-top:10px;gap:8px}.compact .field{margin-top:0}.shortfield{width:79px;flex:0 0 79px}.weightfield{width:78px;flex:0 0 78px;text-align:center}.compact .btn{padding:8px 10px;white-space:nowrap}.inventory-entry{padding:11px 0;border-bottom:1px solid #444e5a}.inventory-entry:last-child{border-bottom:none}.entrytop{display:flex;gap:6px;justify-content:space-between;align-items:flex-start}.entrytop .entryname{font-size:14px;line-height:1.4;flex:1;min-width:0;overflow-wrap:anywhere}.entrytop .entryweight{font-size:12px;white-space:nowrap;color:#e7cd95}.entryactions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.entryactions .btn{font-size:12px;min-height:34px;padding:5px 9px}.tagmule{font-size:10px;color:#b2c3d5}.totalrow{font-size:16px}.weightbar{height:9px;background:#1f2832;border-radius:9px;margin:13px 0 9px;overflow:hidden}.weightbar div{height:100%;background:#dfbe7f;border-radius:9px;transition:width .2s}.weightbar .over{background:#e98d82}.speedtable{margin-top:10px;overflow:hidden;border-radius:8px;border:1px solid #526070}.speedr{display:grid;grid-template-columns:1.5fr repeat(4,1fr);font-size:11px;align-items:center;gap:2px;min-height:37px;padding:5px 3px;border-bottom:1px solid #414a57;text-align:center}.speedr:last-child{border:0}.speedr span:first-child{text-align:left;padding-left:4px}.speedr.speedhead{color:#b9c1cb;background:#222b35;font-size:10px}.speedr.active{background:#594a35;color:#ffe2a7;font-weight:750}.notice{overflow-wrap:anywhere}.field:focus-visible,.btn:focus-visible,.mode:focus-visible{outline:2px solid #e5c987;outline-offset:2px}@media(max-width:370px){.entryactions .btn{font-size:11px;padding:4px 7px}.compact{flex-wrap:wrap}.compact .btn{flex:1}}
+.equipped-info{border:1px solid #74664c;background:#252b31;padding:13px 12px;margin:12px 0;border-radius:10px;display:flex;flex-direction:column;gap:4px}.equipped-info strong{color:#f1dcad;font-size:16px;line-height:1.5}.spaced{display:block;margin-top:15px}.modes{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0 13px}.mode{font-size:13px;min-height:42px;border:1px solid #566270;border-radius:9px;background:#202a35;color:#d5dce5;padding:9px 13px;flex:1 0 auto}.mode.active{background:#584732;border-color:#d6b875;color:#ffe4ac;font-weight:bold}.shieldrow{justify-content:space-between;gap:8px;margin:14px 0}.shieldrow label{font-size:14px}.shieldrow input{width:26px;height:26px;accent-color:#d7bc84;flex-shrink:0}.shieldrow .muted{max-width:43%;text-align:right}.compact{margin-top:10px;gap:8px}.compact .field{margin-top:0}.shortfield{width:79px;flex:0 0 79px}.weightfield{width:78px;flex:0 0 78px;text-align:center}.compact .btn{padding:8px 10px;white-space:nowrap}.inventory-entry{padding:11px 0;border-bottom:1px solid #444e5a}.inventory-entry:last-child{border-bottom:none}.entrytop{display:flex;gap:6px;justify-content:space-between;align-items:flex-start}.entrytop .entryname{font-size:14px;line-height:1.4;flex:1;min-width:0;overflow-wrap:anywhere}.entrytop .entryweight{font-size:12px;white-space:nowrap;color:#e7cd95}.entryactions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.entryactions .btn{font-size:12px;min-height:34px;padding:5px 9px}.carried-choice{display:inline-flex;align-items:center;gap:7px;padding:6px 9px;border:1px solid #586777;border-radius:8px;font-size:13px;cursor:pointer}.carried-choice input{width:19px;height:19px;accent-color:#dfbe7f}.notcarried-badge{font-size:12px;color:#dfbc89}.totalrow{font-size:16px}.weightbar{height:9px;background:#1f2832;border-radius:9px;margin:13px 0 9px;overflow:hidden}.weightbar div{height:100%;background:#dfbe7f;border-radius:9px;transition:width .2s}.weightbar .over{background:#e98d82}.speedtable{margin-top:10px;overflow:hidden;border-radius:8px;border:1px solid #526070}.speedr{display:grid;grid-template-columns:1.5fr repeat(4,1fr);font-size:11px;align-items:center;gap:2px;min-height:37px;padding:5px 3px;border-bottom:1px solid #414a57;text-align:center}.speedr:last-child{border:0}.speedr span:first-child{text-align:left;padding-left:4px}.speedr.speedhead{color:#b9c1cb;background:#222b35;font-size:10px}.speedr.active{background:#594a35;color:#ffe2a7;font-weight:750}.notice{overflow-wrap:anywhere}.field:focus-visible,.btn:focus-visible,.mode:focus-visible{outline:2px solid #e5c987;outline-offset:2px}@media(max-width:370px){.entryactions .btn{font-size:11px;padding:4px 7px}.compact{flex-wrap:wrap}.compact .btn{flex:1}}
 .portrait-stage{position:relative;align-self:stretch;min-width:0;overflow:hidden;border-radius:12px;background:#10141b;cursor:pointer}.portrait-stage .portrait{width:100%;height:100%;object-fit:contain}.portrait-video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;pointer-events:none;transition:opacity .12s ease}.portrait-video.show{opacity:1}.portrait-tap{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer;z-index:3}.portrait-tap:focus-visible{outline:3px solid #e2c58d;outline-offset:-4px}.value[id="speedcombat"],.value[id="speedrun"],.value[id="summaryspeedcombat"]{font-size:clamp(19px,4.5vw,30px);line-height:1.3;overflow-wrap:normal;word-break:normal} body{background:#101019;color:#e6e1ec}.top,.card,.statcard,.ability,.details{border-color:#494055}.card{background:#262331}.statcard{background:#2b2739}.statcard.hp{background:#292a39}.statcard.ac{background:#33283e}.ability{background:#302b3d}.section,.gold{color:#c9a7e4}.pill,.tag{border-color:#86679c;color:#d9b5f2}.tabs{background:#17141f}.tabs button.active{background:#42304f;color:#e9d5ff}.notice{background:#342b40;color:#e6c5f0}.portrait{border-color:#6e527c}.portrait-stage{background:#191623} 
 /* Esperya: tonalità viola/antracite, nessuna modifica ai dati persistenti */
 .app{background:#1b1b28}.tabs{background:#161521}.tabs button.active{background:#393044;color:#e6c8f5}.section{color:#c7a3df}.card,.details{background:#292635;border-color:#4e455d}.statcard{background:#302c40;border-color:#51475f}.details summary:after,.data-row strong{color:#d6b5e9}.btn{background:#514061;border-color:#9d7bb2;color:#f4e5fc}.notice{background:#3b3046;color:#e4c9ed}.eyebrow,.gold{color:#d7b3e8}
@@ -51,7 +51,7 @@
  <div class="ammo-header"><div><div class="small">DARDI · SCORTA PERSONALE</div><div class="ammo-hint">Uno per ogni lancio</div></div><div class="ammo-number" id="ammoMainCount" aria-live="polite">4</div></div>
  <div class="ammo-controls"><button class="btn secondary" type="button" data-act="dartminus" aria-label="Consuma un dardo">− 1 Lanciato</button><button class="btn secondary" type="button" data-act="dartplus" aria-label="Recupera un dardo">+ 1 Recuperato</button></div>
  <div id="ammoMainAlert" class="ammo-warning" hidden>Dardi esauriti: non puoi effettuare un lancio.</div>
-</div><button class="btn secondary" data-act="openinventory" type="button">⚔ Cambia arma / equipaggiamento</button><p class="muted" style="font-size:12px">Il cambio d'arma in combattimento segue le regole del Master. Le armi a distanza usano DES per colpire, non per i danni.</p></div>
+</div><button class="btn secondary" data-act="openinventory" type="button">⚔ Cambia arma / equipaggiamento</button></div>
 <div class="twocol"><div class="card"><div class="small">MOVIMENTO</div><div class="value" id="summaryspeedcombat">30′</div><div class="muted">per round</div></div><div class="card"><div class="small">INGOMBRO</div><div class="value" id="summaryweight">7 st</div><div class="muted">equipaggiamento trasportato</div></div></div><div class="card xp-card-auto"><div class="small">ESPERIENZA</div>
 <div class="xp-summary"><strong><span id="xpdisplay">100</span> / 2.500 XP</strong><strong class="gold" id="xpRate">+10% bonus</strong></div>
 <div class="muted xp-breakdown">XP assegnati: <span id="xpBase">100</span> · Bonus accumulato: <span id="xpBonus">+0</span></div>
@@ -64,7 +64,7 @@
 <div class="data-row"><span>Soffio / Blast</span><strong>15+</strong></div>
 <div class="data-row"><span>Oggetti / Implements</span><strong>11+</strong></div>
 <div class="data-row"><span>Incantesimi / Spells</span><strong>12+</strong></div>
-<p class="muted">Valori base per Warlock di livello 1; eventuali modificatori situazionali si applicano al tiro di d20.</p></div>
+</div>
 <div class="section">PROFICIENCIES · DOPPELGANGER</div>
 <details class="details" open><summary>Adventuring · capacità comuni di esplorazione</summary><div class="detailbody">
 <div class="data-row"><span>Climbing · scalare ostacoli facili</span><strong>8+</strong></div>
@@ -72,7 +72,6 @@
 <div class="data-row"><span>Listening · ascoltare (1 round)</span><strong>18+</strong></div>
 <div class="data-row"><span>Searching · cercare metodicamente (1 turno / 10 min)</span><strong>18+</strong></div>
 <div class="data-row"><span>Trapbreaking · disinnescare metodicamente (1 turno / 10 min)</span><strong>18+</strong></div>
-<p>Dungeonbashing è 18+ perché FOR 9 dà modificatore 0; il tiro varia di 4 punti per ogni punto di modificatore FOR. Queste azioni sono disponibili grazie ad Adventuring, posseduta da tutti i personaggi giocanti.</p>
 </div></details>
 <details class="details"><summary>Arcane Magic · magia arcana</summary><div class="detailbody">
 <p>La Warlock lancia incantesimi arcani. Al livello 1 ha <strong>1 lancio di 1° livello al giorno</strong>. Repertorio annotato: <strong>Chameleon</strong> e <strong>Slumber</strong>. INT 13 (+1) consente un incantesimo aggiuntivo nel repertorio. La pagina dedicata agli incantesimi sarà sviluppata separatamente.</p>
@@ -112,11 +111,11 @@
   <label class="small" for="catalog">AGGIUNGI ARMA DAL MANUALE</label><select class="field" id="catalog"></select>
   <div class="row compact"><label class="small" for="newmagic">BONUS MAGICO</label><select class="field shortfield" id="newmagic"><option value="0">+0</option><option value="1">+1</option><option value="2">+2</option><option value="3">+3</option><option value="4">+4</option><option value="5">+5</option></select><button class="btn" data-act="addweapon" type="button">+ Aggiungi</button></div>
 <div class="ammo-box" aria-label="Munizioni nell'inventario">
- <div class="ammo-header"><div><div class="small">DARDI TRASPORTATI</div><div class="ammo-hint">Nel deposito: <strong id="ammoDepotCount">0</strong></div></div><div class="ammo-number" id="ammoInvCount" aria-live="polite">4</div></div>
+ <div class="ammo-header"><div><div class="small">DARDI TRASPORTATI</div></div><div class="ammo-number" id="ammoInvCount" aria-live="polite">4</div></div>
  <div class="ammo-controls"><button class="btn secondary" type="button" data-act="dartminus">− 1</button><button class="btn secondary" type="button" data-act="dartplus">+ 1</button></div>
  <div class="ammo-set"><label class="small" for="ammoSetCount">IMPOSTA NUMERO ESATTO</label><input class="field" id="ammoSetCount" type="number" inputmode="numeric" min="0" max="9999" step="1" value="4"><button class="btn secondary" type="button" data-act="dartset">Salva quantità</button></div>
  <div id="ammoInvAlert" class="ammo-warning" hidden>Scorta esaurita: rifornisci i dardi prima di lanciarli.</div>
- <div class="ammo-hint">I pulsanti qui e nella Scheda modificano lo stesso numero. Spostando i dardi nel deposito, non risultano più pronti per l'uso.</div>
+ <div class="ammo-hint">I pulsanti qui e nella Scheda modificano lo stesso numero di dardi trasportati.</div>
 </div>  <hr class="line"><div class="small">ARMI POSSEDUTE</div><div id="ownedweapons"></div>
   <hr class="line"><div class="small">CONFIGURAZIONE ATTUALE</div>
   <div class="equipped-info"><div class="small">ARMA EQUIPAGGIATA</div><strong id="equippedname">—</strong></div>
@@ -146,7 +145,7 @@
   <div class="data-row totalrow"><b>TOTALE TRASPORTATO</b><strong id="totalweight">—</strong></div>
   <div class="row"><div class="muted" id="weightdetail"></div><strong class="gold" id="weightstatus"></strong></div>
   <div class="weightbar"><div id="weightfill"></div></div>
-  <p class="muted">Il carico comprende tutto ciò che hai addosso, anche le armi non impugnate. Gli oggetti nel deposito sono esclusi dal carico personale.</p>
+  <p class="muted">Nel carico rientrano solo gli oggetti segnati come Trasportati, comprese le armi non impugnate.</p>
 </div>
 <div class="section">MOVIMENTO</div>
 <div class="twocol"><div class="card"><div class="small">ESPLORAZIONE</div><div class="value" id="speedexplore">90′</div><div class="muted">per turno</div></div>
@@ -162,12 +161,6 @@
 <div class="speedr" id="speedr3" role="row"><span>≤ 20 st*</span><span>30′</span><span>10′</span><span>30′</span><span>6 mi</span></div>
 </div><p class="muted">* Capacità massima attuale: 20 + modificatore di FOR (+0) = 20 st. Oltre questo limite non puoi trasportare normalmente il carico.</p></div>
 <div class="section">DENARO PERSONALE</div><div class="card"><div class="small">DENARO PERSONALE · 9 MO E 7 MA INIZIALI</div><div class="row"><div class="value gold"><span id="coins">9</span> MO</div><div class="buttonbar"><button class="btn secondary" data-act="coinminus" type="button">−</button><button class="btn secondary" data-act="coinplus" type="button">+</button></div></div><div class="muted">Le 7 MA iniziali sono annotate ma non ancora gestite con pulsanti separati.</div></div>
-<div class="section">DEPOSITO · MATERIALE NON TRASPORTATO</div><div class="card">
-  <div class="muted">Oggetti e armi nel deposito non appesantiscono Esperya. Usa <b>Prendi</b> per trasferirli nel suo inventario: il movimento si aggiornerà subito.</div>
-  <div id="muleitems"></div><div class="row compact"><input class="field" id="mulename" type="text" maxlength="90" placeholder="Nuovo oggetto nel deposito"><input class="field weightfield" id="muleweight" type="text" inputmode="decimal" value="1/6" placeholder="st"><button class="btn" data-act="addmule" type="button">+ Aggiungi</button></div>
-  <div class="data-row"><span>Carico del deposito registrato</span><strong id="muleweighttotal">0 st</strong></div><p class="muted">Peso merce trasportata dal deposito, escluso dalla velocità del personaggio. Le monete e gli oggetti elencati solo nelle note non sono quantificati qui.</p>
-  <label class="small spaced" for="muleNotes">NOTE SUL MULO (VECCHIE ANNOTAZIONI)</label><textarea class="field" id="muleNotes" rows="3" placeholder="Annotazioni libere…"></textarea>
-</div>
 <div class="section">NOTE INVENTARIO</div><textarea class="field" id="inventoryNotes" rows="4" placeholder="Oggetti trovati, tesori, promemoria…"></textarea>
 </section>
 <section class="panel" id="incantesimi">
@@ -254,7 +247,7 @@
   function fa(id){return A.find(function(a){return a.id===id;});}
   function safe(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
   function bonus(n){return n>0?'+'+n:n<0?String(n):'';}
-  function loc(o){return o.location==='mule'?'mule':'carried';}
+  function loc(o){return o&&o.location==='carried'?'carried':'stored';}
   /* Each dart entry retains its own integer quantity and carried/deposit location.
      Legacy saves had one weapon entry per bundle: the original uid:1 is now 4
      because one of Esperya's five starting darts was already used. */
@@ -334,11 +327,7 @@
     var sw=0;
     var ww=data.weapons.filter(carried).reduce(function(s,o){return s+weaponWeight(o);},0);
     var iw=data.items.filter(carried).reduce(function(s,o){return s+(Number(o.weight)||0);},0);
-    var mw=data.armors.filter(function(x){return loc(x)==='mule';}).reduce(function(s,o){return s+armorWeight(o);},0)
-        + data.weapons.filter(function(x){return loc(x)==='mule';}).reduce(function(s,o){return s+weaponWeight(o);},0)
-        + data.items.filter(function(x){return loc(x)==='mule';}).reduce(function(s,o){return s+(Number(o.weight)||0);},0)
-        + 0;
-    return {armor:aw,shield:sw,weapons:ww,items:iw,total:aw+sw+ww+iw,mule:mw};
+    return {armor:aw,shield:sw,weapons:ww,items:iw,total:aw+sw+ww+iw};
   }
   function speedIndex(total){for(var i=0;i<SPEEDS.length;i++)if(total<=SPEEDS[i].max+0.0000001)return i;return -1;}
   var XP_BONUS_RATE=10;
@@ -404,11 +393,17 @@
     data.weapons=data.weapons.filter(function(x){return x&&fw(x.id);}).map(function(x){var y={uid:x.uid,id:x.id,magic:Math.max(0,Math.min(5,Number(x.magic)||0)),location:loc(x)};if(y.id==='dart')y.qty=Number.isFinite(Number(x.qty))&&x.qty!==null?Math.max(0,Math.min(9999,Math.floor(Number(x.qty)))):(String(x.uid)==='1'?4:5);return y;});
     data.armors=data.armors.filter(function(x){return x&&fa(x.id);}).map(function(x){return {uid:x.uid,id:x.id,magic:Math.max(0,Math.min(5,Number(x.magic)||0)),location:loc(x)};});
     data.items=data.items.filter(function(x){return x&&typeof x.name==='string'&&Number.isFinite(Number(x.weight));}).map(function(x){return {uid:x.uid,name:x.name.slice(0,90),weight:Math.max(0,Number(x.weight)),location:loc(x)};});
-    data.shieldLocation=data.shieldLocation==='mule'?'mule':'carried';
     data.shield=data.shield!==false;
     if(!Number.isFinite(Number(data.hp)))data.hp=4;
     data.hp=Math.max(0,Math.min(4,Number(data.hp)));
     data.coins=Math.max(0,Number(data.coins)||0);
+    // Preserve old depot notes as ordinary inventory notes (once only).
+    if(typeof data.muleNotes==='string'&&data.muleNotes.trim()){
+      var notes=data.muleNotes.trim();
+      if(typeof data.inventoryNotes!=='string')data.inventoryNotes='';
+      if(data.inventoryNotes.indexOf(notes)<0)data.inventoryNotes+=(data.inventoryNotes.trim()?'\n':'')+notes;
+      data.muleNotes='';
+    }
     normalizeXP();
   }
   function load(){
@@ -429,25 +424,21 @@
     normalize();
   }
   function optionHTML(list,prev){var html=list.map(function(v){return '<option value="'+safe(v.id)+'">'+safe(v.name)+'</option>';}).join('');return html;}
-  function itemButtons(type,o,location){
+  function itemButtons(type,o){
     var uid=safe(o.uid),buttons='';
-    if(location==='carried'&&(type==='weapon'||type==='armor'))buttons+='<button type="button" class="btn" data-equip-type="'+type+'" data-equip-id="'+uid+'">Equipaggia</button>';
-    buttons+='<button type="button" class="btn secondary" data-move-type="'+type+'" data-move-id="'+uid+'">'+(location==='mule'?'Prendi':'Nel deposito')+'</button>';
+    if(loc(o)==='carried'&&(type==='weapon'||type==='armor'))buttons+='<button type="button" class="btn" data-equip-type="'+type+'" data-equip-id="'+uid+'">Equipaggia</button>';
+    buttons+='<label class="carried-choice"><input type="checkbox" data-carried-type="'+type+'" data-carried-id="'+uid+'" '+(loc(o)==='carried'?'checked':'')+'> Trasportato</label>';
     buttons+='<button type="button" class="btn secondary" data-remove-type="'+type+'" data-remove-id="'+uid+'">Rimuovi</button>';
     return '<div class="entryactions">'+buttons+'</div>';
   }
   function renderLists(){
-    var weaponList=data.weapons.filter(function(o){return loc(o)==='carried';});
-    el('ownedweapons').innerHTML=weaponList.length?weaponList.map(function(o){var w=fw(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(weaponLabel(o))+(o.magic?' +'+o.magic:'')+(String(data.equipped)===String(o.uid)?' · <b class="gold">Equipaggiata</b>':'')+'</span><span class="entryweight">'+weightString(weaponWeight(o))+'</span></div>'+itemButtons('weapon',o,'carried')+'</div>';}).join(''):'<p class="muted">Nessuna arma trasportata. Puoi prenderne una dal deposito.</p>';
-    var armorList=data.armors.filter(function(o){return loc(o)==='carried';});
-    el('ownedarmors').innerHTML=armorList.length?armorList.map(function(o){var a=fa(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+(String(data.equippedArmor)===String(o.uid)?' · <b class="gold">Indossata</b>':'')+'</span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o,'carried')+'</div>';}).join(''):'<p class="muted">Nessuna armatura trasportata.</p>';
-    var items=data.items.filter(function(o){return loc(o)==='carried';});
-    el('owneditems').innerHTML=items.length?'<hr class="line"><div class="small">OGGETTI TRASPORTATI</div>'+items.map(function(o){return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o,'carried')+'</div>';}).join(''):'<p class="muted">Nessun altro oggetto registrato.</p>';
-    var mule=[];
-    data.weapons.filter(function(o){return loc(o)==='mule';}).forEach(function(o){var w=fw(o.id);mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(weaponLabel(o))+(o.magic?' +'+o.magic:'')+' <span class="tagmule">· Arma</span></span><span class="entryweight">'+weightString(weaponWeight(o))+'</span></div>'+itemButtons('weapon',o,'mule')+'</div>');});
-    data.armors.filter(function(o){return loc(o)==='mule';}).forEach(function(o){var a=fa(o.id);mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+' <span class="tagmule">· Armatura</span></span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o,'mule')+'</div>');});
-    data.items.filter(function(o){return loc(o)==='mule';}).forEach(function(o){mule.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o,'mule')+'</div>');});
-    el('muleitems').innerHTML=mule.join('');
+    function badge(o){return loc(o)==='carried'?'':' <span class="notcarried-badge">· Non trasportato</span>';}
+    var weapons=data.weapons;
+    el('ownedweapons').innerHTML=weapons.length?weapons.map(function(o){var w=fw(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(weaponLabel(o))+(o.magic?' +'+o.magic:'')+(loc(o)==='carried'&&String(data.equipped)===String(o.uid)?' · <b class="gold">Equipaggiata</b>':'')+badge(o)+'</span><span class="entryweight">'+weightString(weaponWeight(o))+'</span></div>'+itemButtons('weapon',o)+'</div>';}).join(''):'<p class="muted">Nessuna arma registrata.</p>';
+    var armors=data.armors;
+    el('ownedarmors').innerHTML=armors.length?armors.map(function(o){var a=fa(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+(loc(o)==='carried'&&String(data.equippedArmor)===String(o.uid)?' · <b class="gold">Indossata</b>':'')+badge(o)+'</span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o)+'</div>';}).join(''):'<p class="muted">Nessuna armatura registrata.</p>';
+    var items=data.items;
+    el('owneditems').innerHTML=items.length?'<hr class="line"><div class="small">OGGETTI</div>'+items.map(function(o){return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+badge(o)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o)+'</div>';}).join(''):'<p class="muted">Nessun altro oggetto registrato.</p>';
   }
   function render(){
     el('hp').textContent=data.hp;
@@ -457,10 +448,9 @@
     el('xpdisplay').textContent=data.xp.toLocaleString('it-IT');
     el('xpBase').textContent=data.xpBase.toLocaleString('it-IT');
     el('xpBonus').textContent='+'+data.xpBonusGained.toLocaleString('it-IT');
-    var carriedDarts=totalDarts('carried'),storedDarts=totalDarts('mule');
+    var carriedDarts=totalDarts('carried');
     el('ammoMainCount').textContent=carriedDarts;
     el('ammoInvCount').textContent=carriedDarts;
-    el('ammoDepotCount').textContent=storedDarts;
     if(document.activeElement!==el('ammoSetCount'))el('ammoSetCount').value=carriedDarts;
     el('ammoMainAlert').hidden=carriedDarts>0;
     el('ammoInvAlert').hidden=carriedDarts>0;
@@ -496,7 +486,7 @@
     shieldToggle.checked=shieldEffective;
     el('shieldhint').textContent='Non consentito al Warlock';
     el('equipmentsummary').textContent='CA '+ac+' · '+(c?(c.w.id==='dart'&&carriedDarts===0?'Dardi esauriti':weaponLabel(c.o)+' · '+c.damage+' danni'+(c.charge!=='—'?' · carica '+c.charge:'')):'nessuna arma')+(c&&c.hands?' · scudo non impugnabile':'');
-    el('gripmodes').innerHTML=c?modes(c.w).map(function(option){return '<button class="mode'+(data.grip===option[0]?' active':'')+'" data-grip="'+option[0]+'" aria-pressed="'+(data.grip===option[0]?'true':'false')+'" type="button">'+option[1]+'</button>';}).join(''):'<span class="muted">Aggiungi o prendi un’arma per scegliere la modalità.</span>';
+    el('gripmodes').innerHTML=c?modes(c.w).map(function(option){return '<button class="mode'+(data.grip===option[0]?' active':'')+'" data-grip="'+option[0]+'" aria-pressed="'+(data.grip===option[0]?'true':'false')+'" type="button">'+option[1]+'</button>';}).join(''):'<span class="muted">Aggiungi o contrassegna un’arma come Trasportata per scegliere la modalità.</span>';
     var oldWeapon=el('catalog').value,oldArmor=el('armorcatalog').value;
     el('catalog').innerHTML=W.map(function(w){return '<option value="'+w.id+'">'+safe(w.name)+' · '+(w.die||'speciale')+' · '+weightString(w.weight)+'</option>';}).join('');
     if(W.some(function(w){return w.id===oldWeapon;}))el('catalog').value=oldWeapon;
@@ -509,7 +499,6 @@
     el('weaponweight').textContent=weightString(wt.weapons);
     el('itemstotalweight').textContent=weightString(wt.items);
     el('totalweight').textContent=weightString(wt.total);
-    el('muleweighttotal').textContent=weightString(wt.mule);
     el('weightdetail').textContent='Capacità massima 20 st';
     el('weightfill').style.width=Math.min(100,Math.max(0,wt.total/20*100))+'%';
     el('weightfill').classList.toggle('over',wt.total>20+0.0000001);
@@ -522,7 +511,7 @@
     el('speedtravel').textContent=sp.travel;
     el('weightstatus').textContent=idx<0?'Sovraccarico':idx===0?'Leggero':idx===1?'Normale':idx===2?'Appesantito':'Molto pesante';
     for(var i=0;i<4;i++)el('speedr'+i).classList.toggle('active',i===idx);
-    ['abilityNotes','muleNotes','inventoryNotes'].forEach(function(id){if(document.activeElement!==el(id))el(id).value=data[id]||'';});
+    ['abilityNotes','inventoryNotes'].forEach(function(id){if(document.activeElement!==el(id))el(id).value=data[id]||'';});
     save();
   }
   function tab(name){document.querySelectorAll('.panel').forEach(function(x){x.classList.toggle('active',x.id===name);});document.querySelectorAll('[data-tab]').forEach(function(x){x.classList.toggle('active',x.getAttribute('data-tab')===name);});window.scrollTo(0,0);}
@@ -534,10 +523,6 @@
       if(type==='weapon'){data.equipped=o.uid;data.grip='one';}
       if(type==='armor')data.equippedArmor=o.uid;
     }
-    if(act==='move'){
-      o.location=loc(o)==='carried'?'mule':'carried';
-      if(loc(o)==='carried'){if(type==='weapon'){data.equipped=o.uid;data.grip='one';}if(type==='armor')data.equippedArmor=o.uid;}
-    }
     if(act==='remove'){
       if(!confirm('Rimuovere definitivamente questo oggetto?'))return;
       var list=type==='weapon'?data.weapons:type==='armor'?data.armors:data.items;
@@ -545,23 +530,22 @@
     }
     save();render();
   }
-  function addItem(onMule){
-    var nameEl=el(onMule?'mulename':'itemname'),weightEl=el(onMule?'muleweight':'itemweight');
+  function addItem(){
+    var nameEl=el('itemname'),weightEl=el('itemweight');
     var name=nameEl.value.trim(),weight=parsedWeight(weightEl.value);
     if(!name){alert('Inserisci il nome dell’oggetto.');nameEl.focus();return;}
     if(!Number.isFinite(weight)){alert('Peso non valido. Usa ad esempio 1/6, 1/2, 1, 2 oppure 0,25.');weightEl.focus();return;}
-    data.items.push({uid:nextUID(),name:name.slice(0,90),weight:weight,location:onMule?'mule':'carried'});
+    data.items.push({uid:nextUID(),name:name.slice(0,90),weight:weight,location:'carried'});
     nameEl.value='';weightEl.value='1/6';save();render();
   }
   function download(){
-    var b=new Blob([JSON.stringify({character:'Esperya',version:'0.1.6',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
-    a.href=url;a.download='Esperya-backup-v016.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
+    var b=new Blob([JSON.stringify({character:'Esperya',version:'0.1.7',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
+    a.href=url;a.download='Esperya-backup-v017.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
   }
   document.addEventListener('click',function(e){
     var t=e.target.closest('[data-tab]');if(t){tab(t.getAttribute('data-tab'));return;}
     var mode=e.target.closest('[data-grip]');if(mode){data.grip=mode.getAttribute('data-grip');save();render();return;}
     var eq=e.target.closest('[data-equip-id]');if(eq){itemAction(eq.getAttribute('data-equip-type'),eq.getAttribute('data-equip-id'),'equip');return;}
-    var mv=e.target.closest('[data-move-id]');if(mv){itemAction(mv.getAttribute('data-move-type'),mv.getAttribute('data-move-id'),'move');return;}
     var rem=e.target.closest('[data-remove-id]');if(rem){itemAction(rem.getAttribute('data-remove-type'),rem.getAttribute('data-remove-id'),'remove');return;}
     var b=e.target.closest('[data-act]');if(!b)return;
     var act=b.getAttribute('data-act');
@@ -579,8 +563,7 @@
       if(!fa(armorId))return;
       var armorUid=nextUID();data.armors.push({uid:armorUid,id:armorId,magic:armorMag,location:'carried'});data.equippedArmor=armorUid;save();render();return;
     }
-    if(act==='additem'){addItem(false);return;}
-    if(act==='addmule'){addItem(true);return;}
+    if(act==='additem'){addItem();return;}
     if(act==='moveshield'){return;}
     if(act==='hpminus')data.hp=Math.max(0,data.hp-1);
     if(act==='hpplus')data.hp=Math.min(4,data.hp+1);
@@ -596,8 +579,17 @@
     }
     save();render();
   });
+  // Checkbox toggles the weight of each item without moving it to a separate depot.
+  document.addEventListener('change',function(e){
+    var cb=e.target.closest('[data-carried-id]');if(!cb)return;
+    var type=cb.getAttribute('data-carried-type'),o=entry(type,cb.getAttribute('data-carried-id'));
+    if(!o)return;
+    o.location=cb.checked?'carried':'stored';
+    if(cb.checked){if(type==='weapon'){data.equipped=o.uid;data.grip='one';}if(type==='armor')data.equippedArmor=o.uid;}
+    save();render();
+  });
   el('shieldon').addEventListener('change',function(){data.shield=false;render();});
-  ['abilityNotes','muleNotes','inventoryNotes'].forEach(function(id){el(id).addEventListener('input',function(){data[id]=this.value;save();});});
+  ['abilityNotes','inventoryNotes'].forEach(function(id){el(id).addEventListener('input',function(){data[id]=this.value;save();});});
   el('importfile').addEventListener('change',function(e){
     var f=e.target.files[0];if(!f)return;
     var reader=new FileReader();reader.onload=function(){
@@ -614,7 +606,7 @@
     };
     reader.readAsText(f);e.target.value='';
   });
-  try{load();render();el('status').textContent='v0.1.5 · Esperya · dardi singoli · animazioni integrate · dati locali';}
+  try{load();render();el('status').textContent='v0.1.7 · Esperya · dardi singoli · animazioni integrate · dati locali';}
   catch(err){el('status').textContent='Errore di avvio: '+err.message;}
 })();
 
