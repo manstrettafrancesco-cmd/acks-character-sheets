@@ -46,7 +46,7 @@ body{background:#111719}
 <button type="button" class="portrait-tap" id="sissorTap" aria-label="Tocca Sissor per vedere il gesto minaccioso con il pugnale" title="Tocca per l'animazione speciale"></button>
 </div></div>
 <div class="section">CARATTERISTICHE</div><div class="abilities"><div class="ability"><div class="small">FOR</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">DES</div><strong>16</strong><span>+2</span></div><div class="ability"><div class="small">COS</div><strong>9</strong><span>0</span></div><div class="ability"><div class="small">INT</div><strong>8</strong><span>−1</span></div><div class="ability"><div class="small">VOL</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">CAR</div><strong>13</strong><span>+1</span></div></div>
-<div class="section">COMBATTIMENTO</div><div class="card"><div class="row"><strong class="gold" id="weaponname">BALESTRA PESANTE · A DISTANZA</strong><span class="pill">Equipaggiata</span></div><hr class="line"/><div class="twocol"><div><div class="small">ATTACK THROW</div><div class="value" id="attack">8+</div><div class="muted" id="attacknote">10+ base · DES +2</div></div><div><div class="small">DANNI</div><div class="value" id="damage">1d8+1</div><div class="muted" id="damagenote">classe +1</div></div></div><div class="notice" id="weapontraits">Cleave 2, Handy, Slow</div><div class="row"><span class="muted">Danni in carica (se applicabile)</span><strong id="chargedamage">—</strong></div><button class="btn secondary" data-act="openinventory" type="button">⚔ Cambia arma / equipaggiamento</button><p class="muted" style="font-size:12px">Il cambio d'arma in combattimento segue le regole del Master. Le armi a distanza usano DES per colpire, non per i danni. Backstabbing: +4 al tiro e +1 dado di danno contro bersagli vulnerabili a gittata corta, solo con armatura leggera o inferiore.</p></div>
+<div class="section">COMBATTIMENTO</div><div class="card"><div class="row"><strong class="gold" id="weaponname">BALESTRA PESANTE · A DISTANZA</strong><span class="pill">Equipaggiata</span></div><hr class="line"/><div class="twocol"><div><div class="small">ATTACK THROW</div><div class="value" id="attack">8+</div><div class="muted" id="attacknote">10+ base · DES +2</div></div><div><div class="small">DANNI</div><div class="value" id="damage">1d8+1</div><div class="muted" id="damagenote">classe +1</div></div></div><div class="notice" id="weapontraits">Cleave 2, Handy, Slow</div><div class="row"><span class="muted">Danni in carica (se applicabile)</span><strong id="chargedamage">—</strong></div><button class="btn secondary" data-act="openinventory" type="button">⚔ Cambia arma / equipaggiamento</button><p class="muted" style="font-size:12px">Backstabbing: +4 al tiro e +1 dado di danno contro bersagli vulnerabili a gittata corta, solo con armatura leggera o inferiore.</p></div>
 <div class="twocol"><div class="card"><div class="small">MOVIMENTO</div><div class="value" id="summaryspeedcombat">40′</div><div class="muted">per round</div></div><div class="card"><div class="small">INGOMBRO</div><div class="value" id="summaryweight">6⅓ st</div><div class="muted">equipaggiamento trasportato</div></div></div><div class="card xp-card-auto"><div class="small">ESPERIENZA</div>
 <div class="xp-summary"><strong><span id="xpdisplay">105</span> / 1.750 XP</strong><strong class="gold" id="xpRate">+5% bonus</strong></div>
 <div class="muted xp-breakdown">XP assegnati: <span id="xpBase">105</span> · Bonus accumulato: <span id="xpBonus">+0</span></div>
@@ -63,7 +63,6 @@ body{background:#111719}
 <details class="details"><summary>Streetwise · Malavita · 11+</summary><div class="detailbody"><p>Riconosce automaticamente i segni, il gergo e i territori delle organizzazioni criminali nella propria città. Per altre città, tiro normalmente <b>11+</b>. È equivalente a un grado di Streetwise.</p></div></details>
 <details class="details"><summary>Cleave · Attacco aggiuntivo</summary><div class="detailbody"><p>Può effettuare fino a <b>1 attacco aggiuntivo per round</b> dopo aver abbattuto un avversario, nel rispetto delle regole di Cleaving.</p></div></details>
 <div class="section">TEMPLATE · ASSASSIN-FOR-HIRE</div>
-<div class="card"><div class="gold"><strong>Sissor · Assassino a pagamento</strong></div><p class="muted">Template ufficiale ACKS II Revised, pagina stampata 46. Le due proficiency seguenti derivano dal template; le capacità precedenti derivano dalla classe.</p></div>
 <details class="details" open><summary>Precise Shooting · Tiro preciso</summary><div class="detailbody"><p>Può effettuare attacchi a distanza contro un nemico impegnato in mischia con un alleato, con <b>−4 al tiro per colpire</b> (normalmente non consentito). Può tirare contro un nemico non impegnato attraverso una mischia <b>senza la normale penalità di −4</b>. Ignora fino a <b>4 punti di penalità dovuta alla copertura</b>. Ogni ulteriore acquisizione della competenza riduce di 2 la penalità per colpire nemici impegnati in mischia.</p></div></details>
 <details class="details" open><summary>Bargaining · Contrattazione</summary><div class="detailbody"><p>Acquista beni, servizi e informazioni con uno <b>sconto del 10%</b> e vende oggetti a un prezzo <b>maggiorato del 10%</b> rispetto al listino. Se anche la controparte possiede Bargaining, entrambi effettuano un tiro di reazione contrapposto: chi ottiene il risultato più alto beneficia dello sconto. Ogni acquisizione ulteriore della competenza concede <b>+2 al tiro di reazione</b> nelle trattative con altri Bargainers.</p></div></details>
 <div class="section">PROFICIENCIES · AVVENTURA</div>
@@ -607,8 +606,8 @@ body{background:#111719}
     nameEl.value='';weightEl.value='1/6';save();render();
   }
   function download(){
-    var b=new Blob([JSON.stringify({character:'Sissor',version:'0.3.1',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
-    a.href=url;a.download='Sissor-backup-v031.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
+    var b=new Blob([JSON.stringify({character:'Sissor',version:'0.3.2',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
+    a.href=url;a.download='Sissor-backup-v032.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
   }
   el('uxweapon').addEventListener('change',function(){data.uxentio.weapon=this.value;save();render();});
   el('uxarmor').addEventListener('change',function(){data.uxentio.armor=this.value;save();render();});
@@ -695,7 +694,7 @@ body{background:#111719}
     };
     reader.readAsText(f);e.target.value='';
   });
-  try{load();render();el('status').textContent='v0.3.1 · Sissor e Uxentio · dati locali';}
+  try{load();render();el('status').textContent='v0.3.2 · Sissor e Uxentio · dati locali';}
   catch(err){el('status').textContent='Errore di avvio: '+err.message;}
 })();
 
