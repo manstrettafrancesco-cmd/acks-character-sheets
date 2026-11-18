@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171c23" name="theme-color"/><title>ACKS &middot; Seville 0.2.1</title><style>
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171c23" name="theme-color"/><title>ACKS &middot; Seville 0.2.2</title><style>
 *{box-sizing:border-box}body{margin:0;background:#171016;color:#f6e9dc;font:15px -apple-system,BlinkMacSystemFont,system-ui,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}button:active{transform:scale(.97)}.app{max-width:520px;margin:auto;min-height:100dvh;background:#211820;padding:15px 14px 100px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.eyebrow{font-size:10px;letter-spacing:2px;color:#d7bc84}.name{font-family:Georgia,serif;font-size:26px;font-weight:bold;letter-spacing:.5px}.tag{border:1px solid #736445;border-radius:18px;padding:7px 10px;color:#e8d1a0;font-size:12px}.hero{display:grid;grid-template-columns:43% 57%;gap:10px;align-items:stretch}.portrait{width:100%;height:auto;display:block;object-fit:contain;border:1px solid #655437;border-radius:12px;background:#10141b}.stack{display:flex;flex-direction:column;gap:8px}.statcard{background:#303b45;border:1px solid #48515b;border-radius:12px;padding:10px;flex:1;display:flex;flex-direction:column;justify-content:center}.statcard.hp{background:#293f36}.statcard.ac{background:#2e384b}.small{font-size:10px;color:#c4cbd3;letter-spacing:.6px}.big{font-size:29px;font-weight:800;line-height:1.2}.control{display:flex;gap:7px;margin-top:8px}.control button{border:1px solid #768476;background:#425a4d;color:#fff;border-radius:9px;min-height:40px;flex:1;font-size:22px}.meter{height:6px;border-radius:10px;background:#506256;overflow:hidden;margin-top:7px}.fill{height:100%;background:#a7d6b2}.section{font-size:12px;letter-spacing:1.3px;color:#e2c58d;margin:17px 0 9px;font-weight:700}.abilities{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}.ability{text-align:center;background:#303844;border-radius:9px;padding:10px 1px}.ability strong{font-size:21px;display:block}.ability span{font-size:11px;color:#b5d4bd}.card{background:#2b323d;border:1px solid #424b59;border-radius:13px;padding:13px;margin-bottom:10px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}.value{font-size:25px;font-weight:750}.muted{color:#b9c1cb;font-size:12px;line-height:1.5}.gold{color:#e4c88e}.line{border:0;border-top:1px solid #454d58;margin:12px 0}.details{border:1px solid #46505e;border-radius:12px;background:#2b323d;margin:8px 0;overflow:hidden}.details summary{padding:15px;cursor:pointer;font-weight:650;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:50px}.details summary:after{content:'⌄';color:#e4c88e}.details[open] summary:after{content:'⌃'}.detailbody{border-top:1px solid #46505e;padding:12px;font-size:13px;line-height:1.6;color:#e2e5e9}.detailbody p{margin:0 0 9px}.detailbody ul{padding-left:18px;margin:6px 0}.data-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #46505e}.data-row:last-child{border-bottom:0}.data-row strong{color:#e7cd95}.btn{background:#524734;border:1px solid #b39965;color:#fff2d4;border-radius:9px;padding:11px 13px;min-height:44px}.btn.secondary{background:#343e4b;border-color:#566170;color:#fff}.field{background:#1e2630;color:white;border:1px solid #596474;border-radius:9px;padding:11px;width:100%;margin-top:8px;min-height:42px}.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);background:#141a22;border-top:1px solid #4c5460;padding:7px 6px max(9px,env(safe-area-inset-bottom));z-index:20}.tabs button{background:transparent;color:#b6bdc7;border:0;padding:8px 2px;font-size:10px;border-radius:9px;min-height:53px}.tabs button.active{background:#353e4b;color:#f0d393}.tabs .ico{display:block;font-size:21px;margin-bottom:2px}.panel{display:none}.panel.active{display:block}.notice{background:#42382b;border-radius:9px;padding:11px;color:#e8cfa2;font-size:12px;line-height:1.5}.debug{font-size:11px;color:#aeb5c1;margin-top:12px}.weaponoption{width:100%;display:block;text-align:left;margin:7px 0}.pill{font-size:10px;color:#f1dcae;border:1px solid #88734d;padding:4px 7px;border-radius:20px}.buttonbar{display:flex;gap:8px}.buttonbar button{flex:1}.noscript{padding:20px;background:#642c2c;color:#fff} @media(max-width:360px){.app{padding-left:10px;padding-right:10px}.big{font-size:25px}.ability strong{font-size:18px}.statcard{padding:8px}.hero{grid-template-columns:45% 55%}}
 
 /* Modulo equipaggiamento v0.1.0 */
@@ -63,6 +63,9 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
   <hr class="line"><div class="small">CONFIGURAZIONE ATTUALE</div>
   <div class="equipped-info"><div class="small">ARMA EQUIPAGGIATA</div><strong id="equippedname">—</strong></div>
   <div class="small spaced">MODALITÀ DI UTILIZZO</div><div class="modes" id="gripmodes" role="group" aria-label="Modalità di utilizzo dell'arma"></div>
+  <div class="small spaced">ARMA NELLA MANO SECONDARIA</div>
+  <select aria-label="Arma nella mano secondaria" class="field" id="offhand"></select>
+  <div class="muted" id="offhandhint">Due armi: +1 a colpire in mischia, un solo attacco per round.</div>
   <div class="row shieldrow"><label for="shieldon">Scudo impugnato</label><input id="shieldon" type="checkbox"><span class="muted" id="shieldhint">Scudo +1 CA</span></div>
   <div class="row compact"><label class="carried-choice"><input type="checkbox" id="shieldcarried"> Scudo trasportato</label></div><div class="notice" id="equipmentsummary"></div>
 </div>
@@ -164,7 +167,7 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
   ];
   function initial() {return {
     hp:4,coins:2,silver:1,xp:0,xpBase:null,xpBonusGained:null,abilityNotes:'',inventoryNotes:'',
-    weapons:[{uid:1,id:'staff',magic:0,location:'carried'}],equipped:1,grip:'one',shield:true,shieldLocation:'carried',
+    weapons:[{uid:1,id:'staff',magic:0,location:'carried'}],equipped:1,offhand:null,grip:'one',shield:true,shieldLocation:'carried',
     armors:[{uid:2,id:'leather',magic:0,location:'carried'}],equippedArmor:2,items:[]
   };}
   var data = initial();
@@ -189,6 +192,13 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
   }
   function nextUID(){var u=Date.now(); while(data.weapons.concat(data.armors,data.items).some(function(x){return String(x.uid)===String(u);}))u++;return u;}
   function getOwnedWeapon(){return data.weapons.find(function(x){return String(x.uid)===String(data.equipped)&&loc(x)==='carried';})||data.weapons.find(function(x){return loc(x)==='carried';})||null;}
+  function getOffhand(main){
+    if(!main||main.ranged||main.hands||data.grip==='throw')return null;
+    var o=data.weapons.find(function(x){return String(x.uid)===String(data.offhand)&&loc(x)==='carried'&&String(x.uid)!==String(main.o.uid);});
+    if(!o)return null;
+    var w=fw(o.id);
+    return w&&['tiny','small','medium'].includes(w.type)&&w.id!=='staffsling'&&w.die?{o:o,w:w,mag:Number(o.magic)||0}:null;
+  }
   function getOwnedArmor(){return data.armors.find(function(x){return String(x.uid)===String(data.equippedArmor)&&loc(x)==='carried';})||data.armors.find(function(x){return loc(x)==='carried';})||null;}
   function hasThrown(w){return w.traits.indexOf('Thrown')>=0;}
   function hasHandy(w){return w.traits.indexOf('Handy')>=0;}
@@ -217,9 +227,12 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     var die=data.grip==='two'&&w.two?w.two:w.die;
     if(w.id==='lance'&&data.grip==='two')die='1d8';
     if(w.id==='staffsling'&&data.grip==='ranged')die='1d6';
-    var damageBonus=(ranged?0:-1)+1+mag,attackMod=(ranged?1:-1)+mag;
+    var offhand=(!ranged&&!hands)?getOffhand({o:o,ranged:ranged,hands:hands}):null;
+    // Class attributes: STR 8 (−1), DEX 13 (+1), damage bonus +1.
+    // Dual style: +1 to the melee attack, plus magic bonus of off-hand (if any).
+    var damageBonus=(ranged?0:-1)+1+mag,attackMod=(ranged?1:-1)+mag+(offhand?1+offhand.mag:0);
     var chargedmg=(!ranged&&w.traits.indexOf('Impact')>=0&&die)?die.replace(/^1d/,'2d')+bonus(damageBonus):'—';
-    return {o:o,w:w,hands:hands,ranged:ranged,die:die,mag:mag,damage:die?die+bonus(damageBonus):'—',attack:10-attackMod,charge:chargedmg};
+    return {o:o,w:w,hands:hands,ranged:ranged,die:die,mag:mag,offhand:offhand,damage:die?die+bonus(damageBonus):'—',attack:10-attackMod,charge:chargedmg};
   }
   function armorCurrent(){var o=getOwnedArmor();if(!o)return null;var a=fa(o.id);if(!a)return null;data.equippedArmor=o.uid;return {o:o,a:a};}
   function armorWeight(o){var a=fa(o.id);return a?Math.max(0,a.weight-(Number(o.magic)||0)):0;}
@@ -334,7 +347,7 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
   function renderLists(){
     function badge(o){return loc(o)==='carried'?'':' <span class="notcarried-badge">· Non trasportato</span>';}
     var weapons=data.weapons;
-    el('ownedweapons').innerHTML=weapons.length?weapons.map(function(o){var w=fw(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(w.name)+(o.magic?' +'+o.magic:'')+(loc(o)==='carried'&&String(data.equipped)===String(o.uid)?' · <b class="gold">Equipaggiata</b>':'')+badge(o)+'</span><span class="entryweight">'+weightString(w.weight)+'</span></div>'+itemButtons('weapon',o,loc(o))+'</div>';}).join(''):'<p class="muted">Nessuna arma registrata.</p>';
+    el('ownedweapons').innerHTML=weapons.length?weapons.map(function(o){var w=fw(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(w.name)+(o.magic?' +'+o.magic:'')+(loc(o)==='carried'&&String(data.equipped)===String(o.uid)?' · <b class="gold">Principale</b>':'')+(loc(o)==='carried'&&String(data.offhand)===String(o.uid)&&String(data.equipped)!==String(o.uid)?' · <b class="gold">Secondaria</b>':'')+badge(o)+'</span><span class="entryweight">'+weightString(w.weight)+'</span></div>'+itemButtons('weapon',o,loc(o))+'</div>';}).join(''):'<p class="muted">Nessuna arma registrata.</p>';
     var armors=data.armors;
     el('ownedarmors').innerHTML=armors.length?armors.map(function(o){var a=fa(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+(loc(o)==='carried'&&String(data.equippedArmor)===String(o.uid)?' · <b class="gold">Indossata</b>':'')+badge(o)+'</span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o,loc(o))+'</div>';}).join(''):'<p class="muted">Nessuna armatura registrata.</p>';
     var items=data.items;
@@ -349,7 +362,7 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     el('xpBase').textContent=data.xpBase.toLocaleString('it-IT');
     el('xpBonus').textContent='+'+data.xpBonusGained.toLocaleString('it-IT');
     var c=current(), armor=armorCurrent();
-    var shieldEffective=Boolean(data.shield && data.shieldLocation==='carried' && !(c && c.hands));
+    var shieldEffective=Boolean(data.shield && data.shieldLocation==='carried' && !(c && (c.hands||c.offhand)));
     var wt=weights();
     // AC: armatura + DES (+1) + scudo effettivamente utilizzabile.
     var ac=(armor?armor.a.ac+Number(armor.o.magic||0):0)+1+(shieldEffective?1:0);
@@ -357,12 +370,12 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     el('acnote').textContent=(armor?armor.a.name:'Senza armatura')+' · DES +1'+(shieldEffective?' · scudo +1':'')+(armor&&armor.o.magic?' · armatura magica +'+armor.o.magic:'');
     el('equippedarmor').textContent=armor?armor.a.name+(armor.o.magic?' +'+armor.o.magic:''):'Nessuna armatura';
     el('armordetail').textContent=armor?'CA base '+armor.a.ac+' · '+weightString(armorWeight(armor.o)):'CA base 0';
-    el('equippedname').textContent=c?c.w.name+(c.mag?' +'+c.mag:''):'Nessuna arma equipaggiata';
+    el('equippedname').textContent=c?c.w.name+(c.mag?' +'+c.mag:'')+(c.offhand?' + '+c.offhand.w.name+' (secondaria)':''):'Nessuna arma equipaggiata';
     if(c){
       el('damage').textContent=c.damage;
-      el('weaponname').textContent=(c.w.name+(c.mag?' +'+c.mag:'')+' · '+(c.ranged?'Distanza':c.hands?'2 mani':'1 mano')).toUpperCase();
+      el('weaponname').textContent=(c.w.name+(c.mag?' +'+c.mag:'')+(c.offhand?' + '+c.offhand.w.name:'')+' · '+(c.ranged?'Distanza':c.hands?'2 mani':c.offhand?'2 armi':'1 mano')).toUpperCase();
       el('attack').textContent=c.attack+'+';
-      el('attacknote').textContent='10+ base · '+(c.ranged?'DES +1':'FOR −1')+(c.mag?' · magia +'+c.mag:'');
+      el('attacknote').textContent='10+ base · '+(c.ranged?'DES +1':'FOR −1')+(c.mag?' · magia +'+c.mag:'')+(c.offhand?' · due armi +1'+(c.offhand.mag?' · magia secondaria +'+c.offhand.mag:''):'');
       el('damagenote').textContent='Classe +1'+(c.ranged?'':' · FOR −1')+(c.mag?' · magia +'+c.mag:'');
       el('weapontraits').textContent=c.w.traits||'Nessuna proprietà speciale';
       el('chargedamage').textContent=c.charge;
@@ -372,12 +385,23 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
       el('damagenote').textContent='—';el('weapontraits').textContent='Seleziona un’arma trasportata';el('chargedamage').textContent='—';
     }
     var shieldToggle=el('shieldon');
-    shieldToggle.disabled=Boolean(c&&c.hands)||data.shieldLocation!=='carried';
+    shieldToggle.disabled=Boolean(c&&(c.hands||c.offhand))||data.shieldLocation!=='carried';
     el('shieldcarried').checked=data.shieldLocation==='carried';
     shieldToggle.checked=shieldEffective;
-    el('shieldhint').textContent=data.shieldLocation!=='carried'?'Scudo non trasportato':(c&&c.hands?'Non utilizzabile a 2 mani':'Scudo +1 CA');
-    el('equipmentsummary').textContent='CA '+ac+' · '+(c?c.w.name+' · '+c.damage+' danni'+(c.charge!=='—'?' · carica '+c.charge:''):'nessuna arma')+(c&&c.hands?' · scudo non impugnabile':'');
+    el('shieldhint').textContent=data.shieldLocation!=='carried'?'Scudo non trasportato':c&&c.offhand?'Non utilizzabile con due armi':c&&c.hands?'Non utilizzabile a 2 mani':'Scudo +1 CA';
+    el('equipmentsummary').textContent='CA '+ac+' · '+(c?c.w.name+' · '+c.damage+' danni'+(c.charge!=='—'?' · carica '+c.charge:''):'nessuna arma')+(c&&c.offhand?' · due armi (+1 a colpire) · niente scudo':c&&c.hands?' · niente scudo':'');
     el('gripmodes').innerHTML=c?modes(c.w).map(function(option){return '<button class="mode'+(data.grip===option[0]?' active':'')+'" data-grip="'+option[0]+'" aria-pressed="'+(data.grip===option[0]?'true':'false')+'" type="button">'+option[1]+'</button>';}).join(''):'<span class="muted">Trasporta un’arma per scegliere la modalità.</span>';
+    var offSelect=el('offhand');
+    var candidates=c&&!c.ranged&&!c.hands?data.weapons.filter(function(o){
+      var w=fw(o.id);return loc(o)==='carried'&&String(o.uid)!==String(c.o.uid)&&w&&['tiny','small','medium'].includes(w.type)&&w.id!=='staffsling'&&w.die;
+    }):[];
+    offSelect.innerHTML='<option value="">Nessuna — una sola arma</option>'+candidates.map(function(o){
+      var w=fw(o.id);return '<option value="'+safe(o.uid)+'">'+safe(w.name)+(o.magic?' +'+o.magic:'')+'</option>';
+    }).join('');
+    offSelect.value=c&&c.offhand?String(c.offhand.o.uid):'';
+    offSelect.disabled=!candidates.length;
+    el('offhandhint').textContent=c&&c.offhand?'Due armi: +1 al tiro per colpire in mischia'+(c.offhand.mag?', bonus magico secondaria +'+c.offhand.mag:'')+'; un solo attacco per round.':c&&c.ranged?'Le armi a distanza non permettono lo stile con due armi.':c&&c.hands?'Libera la seconda mano scegliendo «1 mano».':'Scegli un’altra arma trasportata: +1 a colpire, senza attacchi aggiuntivi.';
+
     var oldWeapon=el('catalog').value,oldArmor=el('armorcatalog').value;
     el('catalog').innerHTML=W.map(function(w){return '<option value="'+w.id+'">'+safe(w.name)+' · '+(w.die||'speciale')+' · '+weightString(w.weight)+'</option>';}).join('');
     if(W.some(function(w){return w.id===oldWeapon;}))el('catalog').value=oldWeapon;
@@ -410,13 +434,14 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     var o=entry(type,uid);if(!o)return;
     if(act==='equip'){
       if(loc(o)!=='carried')return;
-      if(type==='weapon'){data.equipped=o.uid;data.grip='one';}
+      if(type==='weapon'){data.equipped=o.uid;data.grip='one';if(String(data.offhand)===String(o.uid))data.offhand=null;}
       if(type==='armor')data.equippedArmor=o.uid;
     }
     if(act==='remove'){
       if(!confirm('Rimuovere definitivamente questo oggetto?'))return;
       var list=type==='weapon'?data.weapons:type==='armor'?data.armors:data.items;
       var index=list.indexOf(o);if(index>=0)list.splice(index,1);
+      if(type==='weapon'&&String(data.offhand)===String(o.uid))data.offhand=null;
     }
     save();render();
   }
@@ -429,8 +454,8 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     nameEl.value='';weightEl.value='1/6';save();render();
   }
   function download(){
-    var b=new Blob([JSON.stringify({character:'Seville',version:'0.2.1',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
-    a.href=url;a.download='Seville-backup-v021.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
+    var b=new Blob([JSON.stringify({character:'Seville',version:'0.2.2',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
+    a.href=url;a.download='Seville-backup-v022.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
   }
   document.addEventListener('click',function(e){
     var t=e.target.closest('[data-tab]');if(t){tab(t.getAttribute('data-tab'));return;}
@@ -465,9 +490,20 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
     }
     save();render();
   });
+  el('offhand').addEventListener('change',function(){data.offhand=this.value||null;save();render();});
   el('shieldon').addEventListener('change',function(){data.shield=this.checked&&data.shieldLocation==='carried';save();render();});
   el('shieldcarried').addEventListener('change',function(){data.shieldLocation=this.checked?'carried':'notcarried';if(!this.checked)data.shield=false;save();render();});
-  document.addEventListener('change',function(e){var x=e.target.closest('[data-carried-id]');if(x){var o=entry(x.getAttribute('data-carried-type'),x.getAttribute('data-carried-id'));if(!o)return;o.location=x.checked?'carried':'notcarried';if(x.checked){if(x.getAttribute('data-carried-type')==='weapon'){data.equipped=o.uid;data.grip='one';}if(x.getAttribute('data-carried-type')==='armor')data.equippedArmor=o.uid;}save();render();}});
+  document.addEventListener('change',function(e){
+    var x=e.target.closest('[data-carried-id]');if(!x)return;
+    var type=x.getAttribute('data-carried-type'),o=entry(type,x.getAttribute('data-carried-id'));if(!o)return;
+    o.location=x.checked?'carried':'notcarried';
+    if(!x.checked&&type==='weapon'&&String(data.offhand)===String(o.uid))data.offhand=null;
+    if(x.checked){
+      if(type==='weapon'){data.equipped=o.uid;data.grip='one';if(String(data.offhand)===String(o.uid))data.offhand=null;}
+      if(type==='armor')data.equippedArmor=o.uid;
+    }
+    save();render();
+  });
   ['abilityNotes','inventoryNotes'].forEach(function(id){el(id).addEventListener('input',function(){data[id]=this.value;save();});});
   el('importfile').addEventListener('change',function(e){
     var f=e.target.files[0];if(!f)return;
