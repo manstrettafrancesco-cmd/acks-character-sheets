@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171c23" name="theme-color"/><title>ACKS &middot; Sissor 0.2.9</title><style>
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171c23" name="theme-color"/><title>ACKS &middot; Sissor 0.3.0</title><style>
 *{box-sizing:border-box}body{margin:0;background:#171016;color:#f6e9dc;font:15px -apple-system,BlinkMacSystemFont,system-ui,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}button:active{transform:scale(.97)}.app{max-width:520px;margin:auto;min-height:100dvh;background:#211820;padding:15px 14px 100px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.eyebrow{font-size:10px;letter-spacing:2px;color:#d7bc84}.name{font-family:Georgia,serif;font-size:26px;font-weight:bold;letter-spacing:.5px}.tag{border:1px solid #736445;border-radius:18px;padding:7px 10px;color:#e8d1a0;font-size:12px}.hero{display:grid;grid-template-columns:43% 57%;gap:10px;align-items:stretch}.portrait{width:100%;height:auto;display:block;object-fit:contain;border:1px solid #655437;border-radius:12px;background:#10141b}.stack{display:flex;flex-direction:column;gap:8px}.statcard{background:#303b45;border:1px solid #48515b;border-radius:12px;padding:10px;flex:1;display:flex;flex-direction:column;justify-content:center}.statcard.hp{background:#293f36}.statcard.ac{background:#2e384b}.small{font-size:10px;color:#c4cbd3;letter-spacing:.6px}.big{font-size:29px;font-weight:800;line-height:1.2}.control{display:flex;gap:7px;margin-top:8px}.control button{border:1px solid #768476;background:#425a4d;color:#fff;border-radius:9px;min-height:40px;flex:1;font-size:22px}.meter{height:6px;border-radius:10px;background:#506256;overflow:hidden;margin-top:7px}.fill{height:100%;background:#a7d6b2}.section{font-size:12px;letter-spacing:1.3px;color:#e2c58d;margin:17px 0 9px;font-weight:700}.abilities{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}.ability{text-align:center;background:#303844;border-radius:9px;padding:10px 1px}.ability strong{font-size:21px;display:block}.ability span{font-size:11px;color:#b5d4bd}.card{background:#2b323d;border:1px solid #424b59;border-radius:13px;padding:13px;margin-bottom:10px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}.value{font-size:25px;font-weight:750}.muted{color:#b9c1cb;font-size:12px;line-height:1.5}.gold{color:#e4c88e}.line{border:0;border-top:1px solid #454d58;margin:12px 0}.details{border:1px solid #46505e;border-radius:12px;background:#2b323d;margin:8px 0;overflow:hidden}.details summary{padding:15px;cursor:pointer;font-weight:650;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:50px}.details summary:after{content:'⌄';color:#e4c88e}.details[open] summary:after{content:'⌃'}.detailbody{border-top:1px solid #46505e;padding:12px;font-size:13px;line-height:1.6;color:#e2e5e9}.detailbody p{margin:0 0 9px}.detailbody ul{padding-left:18px;margin:6px 0}.data-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #46505e}.data-row:last-child{border-bottom:0}.data-row strong{color:#e7cd95}.btn{background:#524734;border:1px solid #b39965;color:#fff2d4;border-radius:9px;padding:11px 13px;min-height:44px}.btn.secondary{background:#343e4b;border-color:#566170;color:#fff}.field{background:#1e2630;color:white;border:1px solid #596474;border-radius:9px;padding:11px;width:100%;margin-top:8px;min-height:42px}.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);background:#141a22;border-top:1px solid #4c5460;padding:7px 6px max(9px,env(safe-area-inset-bottom));z-index:20}.tabs button{background:transparent;color:#b6bdc7;border:0;padding:8px 2px;font-size:10px;border-radius:9px;min-height:53px}.tabs button.active{background:#353e4b;color:#f0d393}.tabs .ico{display:block;font-size:21px;margin-bottom:2px}.panel{display:none}.panel.active{display:block}.notice{background:#42382b;border-radius:9px;padding:11px;color:#e8cfa2;font-size:12px;line-height:1.5}.debug{font-size:11px;color:#aeb5c1;margin-top:12px}.weaponoption{width:100%;display:block;text-align:left;margin:7px 0}.pill{font-size:10px;color:#f1dcae;border:1px solid #88734d;padding:4px 7px;border-radius:20px}.buttonbar{display:flex;gap:8px}.buttonbar button{flex:1}.noscript{padding:20px;background:#642c2c;color:#fff} @media(max-width:360px){.app{padding-left:10px;padding-right:10px}.big{font-size:25px}.ability strong{font-size:18px}.statcard{padding:8px}.hero{grid-template-columns:45% 55%}}
 
 /* Modulo equipaggiamento v0.2.3 */
@@ -21,6 +21,15 @@ body{background:#170f16;color:#f4e6d7}.app{background:#211820}.card,.statcard{ba
 .stealth-power.stealth-disabled summary{cursor:not-allowed}
 .stealth-power.stealth-disabled summary::after{content:' · NON DISPONIBILE';font-size:.72em;color:#dc9d88}
 .follower-name{font-size:clamp(26px,6vw,38px);font-weight:800;letter-spacing:.09em;color:#f4e6d7;margin:8px 0 14px;text-align:center}
+
+/* XP: bonus per singola sessione, con correzione diretta del totale */
+.xp-card-auto .xp-summary{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:5px 12px;margin:5px 0 8px}
+.xp-card-auto .xp-summary strong{font-size:17px}
+.xp-card-auto .xp-summary .gold{font-size:14px}
+.xp-card-auto .xp-breakdown{font-size:12px;line-height:1.5}
+.xp-card-auto .xp-actions{display:grid;grid-template-columns:1.5fr 1fr;gap:8px;margin-top:12px}
+.xp-card-auto .xp-actions .btn{width:100%;min-height:44px}
+@media(max-width:330px){.xp-card-auto .xp-actions{grid-template-columns:1fr}}
 </style><style>
 :root{--bg:#131a1c;--panel:#222b2e;--card:#263034;--gold:#c7a67b;--accent:#c7a67b}
 body{background:#111719}
@@ -34,7 +43,10 @@ body{background:#111719}
 </div></div>
 <div class="section">CARATTERISTICHE</div><div class="abilities"><div class="ability"><div class="small">FOR</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">DES</div><strong>16</strong><span>+2</span></div><div class="ability"><div class="small">COS</div><strong>9</strong><span>0</span></div><div class="ability"><div class="small">INT</div><strong>8</strong><span>−1</span></div><div class="ability"><div class="small">VOL</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">CAR</div><strong>13</strong><span>+1</span></div></div>
 <div class="section">COMBATTIMENTO</div><div class="card"><div class="row"><strong class="gold" id="weaponname">BALESTRA PESANTE · A DISTANZA</strong><span class="pill">Equipaggiata</span></div><hr class="line"/><div class="twocol"><div><div class="small">ATTACK THROW</div><div class="value" id="attack">8+</div><div class="muted" id="attacknote">10+ base · DES +2</div></div><div><div class="small">DANNI</div><div class="value" id="damage">1d8+1</div><div class="muted" id="damagenote">classe +1</div></div></div><div class="notice" id="weapontraits">Cleave 2, Handy, Slow</div><div class="row"><span class="muted">Danni in carica (se applicabile)</span><strong id="chargedamage">—</strong></div><button class="btn secondary" data-act="openinventory" type="button">⚔ Cambia arma / equipaggiamento</button><p class="muted" style="font-size:12px">Il cambio d'arma in combattimento segue le regole del Master. Le armi a distanza usano DES per colpire, non per i danni. Backstabbing: +4 al tiro e +1 dado di danno contro bersagli vulnerabili a gittata corta, solo con armatura leggera o inferiore.</p></div>
-<div class="twocol"><div class="card"><div class="small">MOVIMENTO</div><div class="value" id="summaryspeedcombat">40′</div><div class="muted">per round</div></div><div class="card"><div class="small">INGOMBRO</div><div class="value" id="summaryweight">6⅓ st</div><div class="muted">equipaggiamento trasportato</div></div></div><div class="card"><div class="row"><div><div class="small">ESPERIENZA</div><strong><span id="xpdisplay">105</span> / 1.750 XP</strong></div><button class="btn secondary" data-act="xp" type="button">Modifica</button></div></div></section>
+<div class="twocol"><div class="card"><div class="small">MOVIMENTO</div><div class="value" id="summaryspeedcombat">40′</div><div class="muted">per round</div></div><div class="card"><div class="small">INGOMBRO</div><div class="value" id="summaryweight">6⅓ st</div><div class="muted">equipaggiamento trasportato</div></div></div><div class="card xp-card-auto"><div class="small">ESPERIENZA</div>
+<div class="xp-summary"><strong><span id="xpdisplay">105</span> / 1.750 XP</strong><strong class="gold" id="xpRate">+5% bonus</strong></div>
+<div class="muted xp-breakdown">XP assegnati: <span id="xpBase">105</span> · Bonus accumulato: <span id="xpBonus">+0</span></div>
+<div class="xp-actions"><button class="btn" data-act="xpadd" type="button">＋ Aggiungi XP</button><button class="btn secondary" data-act="xpset" type="button">Set XP</button></div></div></section>
 <section class="panel" id="capacita">
 <div class="section">TIRI SALVEZZA · ASSASSINO LIVELLO 1</div><div class="card">
 <div class="data-row"><span>Morte / Death</span><strong>14+</strong></div><div class="data-row"><span>Paralisi / Paralysis</span><strong>13+</strong></div><div class="data-row"><span>Soffio / Blast</span><strong>15+</strong></div><div class="data-row"><span>Oggetti / Implements</span><strong>16+</strong></div><div class="data-row"><span>Incantesimi / Spells</span><strong>17+</strong></div></div>
@@ -238,7 +250,7 @@ body{background:#111719}
     ]
   };}
   function initial() {return {
-    hp:5,coins:15,silver:0,xp:105,abilityNotes:'',muleNotes:'',inventoryNotes:'',uxentio:initialUxentio(),
+    hp:5,coins:15,silver:0,xp:105,xpBase:null,xpBonusGained:null,abilityNotes:'',muleNotes:'',inventoryNotes:'',uxentio:initialUxentio(),
     weapons:[{uid:1,id:'arbalest',magic:0,location:'carried'},{uid:3,id:'shortsword',magic:0,location:'carried'},{uid:4,id:'shortsword',magic:0,location:'carried'}],
     equipped:1,offhand:null,grip:'ranged',shield:false,shieldLocation:'mule',
     armors:[{uid:2,id:'leather',magic:0,location:'carried'}],equippedArmor:2,
@@ -329,6 +341,61 @@ body{background:#111719}
     return {armor:aw,shield:sw,weapons:ww,items:iw,total:aw+sw+ww+iw,mule:mw};
   }
   function speedIndex(total){for(var i=0;i<SPEEDS.length;i++)if(total<=SPEEDS[i].max+0.0000001)return i;return -1;}
+  var XP_BONUS_RATE=5;
+  function earnedBonus(amount){return Math.floor(Math.max(0,Math.floor(Number(amount)||0))*XP_BONUS_RATE/100);}
+  function normalizeXP(){
+    // I vecchi salvataggi contengono solo xp: conservarli senza riapplicare il bonus.
+    var prior=Math.max(0,Math.floor(Number(data.xp)||0));
+    if(data.xpBase===undefined||data.xpBase===null||data.xpBase===''){
+      data.xpBase=prior;
+      data.xpBonusGained=0;
+    }else{
+      data.xpBase=Math.max(0,Math.floor(Number(data.xpBase)||0));
+      if(data.xpBonusGained===undefined||data.xpBonusGained===null||data.xpBonusGained===''){
+        if(prior<data.xpBase){data.xpBase=prior;data.xpBonusGained=0;}
+        else data.xpBonusGained=prior-data.xpBase;
+      }
+    }
+    data.xpBonusGained=Math.max(0,Math.floor(Number(data.xpBonusGained)||0));
+    data.xp=data.xpBase+data.xpBonusGained;
+  }
+  function parseXPAmount(raw,allowZero){
+    var cleaned=String(raw).trim().replace(/\s/g,'');
+    if(!/^\d+$/.test(cleaned))return null;
+    var amount=Number(cleaned);
+    return Number.isSafeInteger(amount)&&(allowZero?amount>=0:amount>0)?amount:null;
+  }
+  function awardXP(){
+    var raw=prompt('XP assegnati dal Master in questa sessione (senza bonus):','');
+    if(raw===null)return;
+    var earned=parseXPAmount(raw,false);
+    if(earned===null){alert('Inserisci una quantità intera di XP maggiore di zero.');return;}
+    var extra=earnedBonus(earned), total=earned+extra;
+    normalizeXP();
+    if(!Number.isSafeInteger(total)||!Number.isSafeInteger(data.xp+total)){
+      alert('Il totale XP supera il limite gestibile.');return;
+    }
+    var msg='Aggiungere '+earned.toLocaleString('it-IT')+' XP base?\nBonus +5%: +'+extra.toLocaleString('it-IT')+' XP\nTotale da aggiungere: +'+total.toLocaleString('it-IT')+' XP';
+    if(!confirm(msg))return;
+    data.xpBase+=earned;
+    data.xpBonusGained+=extra;
+    data.xp=data.xpBase+data.xpBonusGained;
+    save();render();
+  }
+  function setXP(){
+    normalizeXP();
+    var raw=prompt('Imposta gli XP TOTALI effettivi (bonus già incluso):',String(data.xp));
+    if(raw===null)return;
+    var amount=parseXPAmount(raw,true);
+    if(amount===null){alert('Inserisci un numero intero di XP maggiore o uguale a zero.');return;}
+    if(amount===data.xp)return;
+    var msg='Correggere gli XP totali da '+data.xp.toLocaleString('it-IT')+' a '+amount.toLocaleString('it-IT')+'?\n\nNon verrà applicato alcun bonus. Il nuovo valore diventerà il saldo di partenza per le prossime sessioni.';
+    if(!confirm(msg))return;
+    data.xp=amount;
+    data.xpBase=amount;
+    data.xpBonusGained=0;
+    save();render();
+  }
   function save(){try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){}}
   function normalizeUxentio(){
     var d=initialUxentio(),u=data.uxentio;
@@ -360,7 +427,7 @@ body{background:#111719}
     if(!Number.isFinite(Number(data.hp)))data.hp=5;
     data.hp=Math.max(0,Math.min(5,Number(data.hp)));
     data.coins=Math.max(0,Number(data.coins)||0);
-    data.xp=Math.max(0,Number(data.xp)||0);
+    normalizeXP();
   }
   function load(){
     try{
@@ -432,7 +499,10 @@ body{background:#111719}
     el('hp').textContent=data.hp;
     el('hpfill').style.width=(100*data.hp/5)+'%';
     el('coins').textContent=data.coins;
-    el('xpdisplay').textContent=data.xp;
+    normalizeXP();
+    el('xpdisplay').textContent=data.xp.toLocaleString('it-IT');
+    el('xpBase').textContent=data.xpBase.toLocaleString('it-IT');
+    el('xpBonus').textContent='+'+data.xpBonusGained.toLocaleString('it-IT');
     var c=current(), armor=armorCurrent();
     // La categoria dipende dalla CA BASE dell'armatura, non dal bonus magico.
     // Nessuna/leggera (CA 0–2): capacità disponibili; media/pesante (CA 3+): bloccate.
@@ -598,7 +668,8 @@ body{background:#111719}
     if(act==='hpplus')data.hp=Math.min(5,data.hp+1);
     if(act==='coinminus')data.coins=Math.max(0,data.coins-1);
     if(act==='coinplus')data.coins++;
-    if(act==='xp'){var v=prompt('Punti esperienza attuali',data.xp);if(v!==null&&v.trim()!==''&&!isNaN(Number(v)))data.xp=Math.max(0,Math.floor(Number(v)));}
+    if(act==='xpadd'){awardXP();return;}
+    if(act==='xpset'){setXP();return;}
     if(act==='export'){download();return;}
     if(act==='import'){el('importfile').click();return;}
     if(act==='reset'){
@@ -625,7 +696,7 @@ body{background:#111719}
     };
     reader.readAsText(f);e.target.value='';
   });
-  try{load();render();el('status').textContent='v0.2.9 · Sissor e Uxentio · dati locali';}
+  try{load();render();el('status').textContent='v0.3.0 · Sissor e Uxentio · dati locali';}
   catch(err){el('status').textContent='Errore di avvio: '+err.message;}
 })();
 
