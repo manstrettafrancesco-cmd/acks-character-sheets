@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171e2a" name="theme-color"/><title>ACKS · Thalion 0.5.5</title>
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171e2a" name="theme-color"/><title>ACKS · Thalion 0.6.0</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#10141b;color:#f3f0e8;font:15px -apple-system,BlinkMacSystemFont,system-ui,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}button:active{transform:scale(.97)}.app{max-width:520px;margin:auto;min-height:100dvh;background:#191f29;padding:15px 14px 100px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.eyebrow{font-size:10px;letter-spacing:2px;color:#d7bc84}.name{font-family:Georgia,serif;font-size:26px;font-weight:bold;letter-spacing:.5px}.tag{border:1px solid #736445;border-radius:18px;padding:7px 10px;color:#e8d1a0;font-size:12px}.hero{display:grid;grid-template-columns:43% 57%;gap:10px;align-items:stretch}.portrait{width:100%;height:auto;display:block;object-fit:contain;border:1px solid #655437;border-radius:12px;background:#10141b}.stack{display:flex;flex-direction:column;gap:8px}.statcard{background:#303b45;border:1px solid #48515b;border-radius:12px;padding:10px;flex:1;display:flex;flex-direction:column;justify-content:center}.statcard.hp{background:#293f36}.statcard.ac{background:#2e384b}.small{font-size:10px;color:#c4cbd3;letter-spacing:.6px}.big{font-size:29px;font-weight:800;line-height:1.2}.control{display:flex;gap:7px;margin-top:8px}.control button{border:1px solid #768476;background:#425a4d;color:#fff;border-radius:9px;min-height:40px;flex:1;font-size:22px}.meter{height:6px;border-radius:10px;background:#506256;overflow:hidden;margin-top:7px}.fill{height:100%;background:#a7d6b2}.section{font-size:12px;letter-spacing:1.3px;color:#e2c58d;margin:17px 0 9px;font-weight:700}.abilities{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}.ability{text-align:center;background:#303844;border-radius:9px;padding:10px 1px}.ability strong{font-size:21px;display:block}.ability span{font-size:11px;color:#b5d4bd}.card{background:#2b323d;border:1px solid #424b59;border-radius:13px;padding:13px;margin-bottom:10px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}.value{font-size:25px;font-weight:750}.muted{color:#b9c1cb;font-size:12px;line-height:1.5}.gold{color:#e4c88e}.line{border:0;border-top:1px solid #454d58;margin:12px 0}.details{border:1px solid #46505e;border-radius:12px;background:#2b323d;margin:8px 0;overflow:hidden}.details summary{padding:15px;cursor:pointer;font-weight:650;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:50px}.details summary:after{content:'⌄';color:#e4c88e}.details[open] summary:after{content:'⌃'}.detailbody{border-top:1px solid #46505e;padding:12px;font-size:13px;line-height:1.6;color:#e2e5e9}.detailbody p{margin:0 0 9px}.detailbody ul{padding-left:18px;margin:6px 0}.data-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #46505e}.data-row:last-child{border-bottom:0}.data-row strong{color:#e7cd95}.btn{background:#524734;border:1px solid #b39965;color:#fff2d4;border-radius:9px;padding:11px 13px;min-height:44px}.btn.secondary{background:#343e4b;border-color:#566170;color:#fff}.field{background:#1e2630;color:white;border:1px solid #596474;border-radius:9px;padding:11px;width:100%;margin-top:8px;min-height:42px}.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);background:#141a22;border-top:1px solid #4c5460;padding:7px 6px max(9px,env(safe-area-inset-bottom));z-index:20}.tabs button{background:transparent;color:#b6bdc7;border:0;padding:8px 2px;font-size:10px;border-radius:9px;min-height:53px}.tabs button.active{background:#353e4b;color:#f0d393}.tabs .ico{display:block;font-size:21px;margin-bottom:2px}.panel{display:none}.panel.active{display:block}.notice{background:#42382b;border-radius:9px;padding:11px;color:#e8cfa2;font-size:12px;line-height:1.5}.debug{font-size:11px;color:#aeb5c1;margin-top:12px}.weaponoption{width:100%;display:block;text-align:left;margin:7px 0}.pill{font-size:10px;color:#f1dcae;border:1px solid #88734d;padding:4px 7px;border-radius:20px}.buttonbar{display:flex;gap:8px}.buttonbar button{flex:1}.noscript{padding:20px;background:#642c2c;color:#fff} @media(max-width:360px){.app{padding-left:10px;padding-right:10px}.big{font-size:25px}.ability strong{font-size:18px}.statcard{padding:8px}.hero{grid-template-columns:45% 55%}}
 
@@ -134,15 +134,36 @@ body{background:#0d1420;color:#f3f1ec}.app{background:#192331;max-width:520px}.e
 #levelUpDialog .level-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 #levelUpDialog .level-nav .btn{flex:1 1 7rem}
 #levelIntro:not([hidden]){display:grid;place-content:center;gap:12px}
+
+/* Solo le sezioni di Thalion */
+#scheda .hero{grid-template-columns:minmax(0,4fr) minmax(0,5fr)}
+#scheda .combat-card{border-color:#7b694d;background:#293342}
+#scheda .combat-card .big{font-size:clamp(24px,6.5vw,34px)}
+#scheda .statcard .small,#scheda .combat-card .small{font-size:12px}
+#scheda .small,#scheda .big,#scheda #xpVal{font-variant-numeric:tabular-nums}
+#scheda .mode,#inventario .armor-line .btn,#inventory .inventoryRow .btn{min-height:44px}
+#capacityTable{width:100%;border-collapse:collapse;text-align:left}
+#capacityTable th,#capacityTable td{padding:8px 5px;border-bottom:1px solid #465064}
+#capacityTable td:nth-child(2){color:#e2c58d;font-weight:700}
+#thalionXP[hidden],#thalionHP[hidden],#thalionBackupExport[hidden]{display:none}
+#thalionXP,#thalionHP{margin-block:12px}
+#thalionXP input,#thalionHP input,#inventory .inventoryRow .field{font-size:16px}
+#inventory .inventoryRow{grid-template-columns:minmax(0,1fr) 45px 56px 40px}
+#thalionConfirm{width:min(90vw,30rem);max-height:85dvh;overflow:auto;background:#202936;color:#f2ede4;border:1px solid #7b694d;border-radius:12px;padding:18px}
+#thalionConfirm::backdrop{background:#090d14be}
+@media(max-width:380px){#scheda .abilities{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style></head><body><main class="app"><header class="top"><div><div class="eyebrow">ADVENTURER CONQUEROR KING SYSTEM II</div><div class="name">THALION</div><div class="muted">Elven Spellsword · <span class="gold">Swordmage</span><br/><span id="levelTitle">Arcanist-Guardian</span> · Neutral</div></div><div class="tag">LIVELLO <b id="lvlTop">1</b></div></header>
 <section aria-label="Scheda e combattimento" class="panel active" id="scheda"><div class="hero"><div class="stack"><div class="statcard hp hp"><div class="small">PUNTI FERITA</div><div class="big"><span id="hp">8</span> <small>/ <span id="hpmax">8</span></small></div><div class="control"><button onclick="adjustHP(-1)" type="button">−</button><button onclick="adjustHP(1)" type="button">+</button><button class="btn small" onclick="setHPMax()" title="Modifica PF massimi" type="button">Max</button></div></div><div class="statcard ac ac"><div class="small">CLASSE ARMATURA · ACKS II</div><div class="big" id="ac">4</div><div class="muted" id="acDetail">Banded plate, DES −1</div></div><div class="statcard"><div class="small">INIZIATIVA</div><div class="big" id="init">−1</div><div class="muted">1d6 + DES (house rule Master)</div></div></div><div class="portrait-stage" id="portraitStage">
 <img alt="Ritratto di Thalion" class="portrait" id="portraitFallback" src="thalion_portrait.jpg"/>
 <video id="thalionIdle" class="portrait-video" muted autoplay loop playsinline webkit-playsinline preload="metadata" aria-hidden="true"><source src="thalion_idle.mp4" type="video/mp4"/></video>
 <video id="thalionAction" class="portrait-video" muted playsinline webkit-playsinline preload="auto" aria-hidden="true"><source src="thalion_action.mp4" type="video/mp4"/></video>
 <button type="button" class="portrait-tap" id="thalionTap" aria-label="Tocca Thalion per vedere l'incantamento delle spade" title="Tocca per l'incantamento delle spade"></button>
-</div></div><div class="section">CARATTERISTICHE</div><div class="abilities" id="abilities"></div><div class="section">COMBATTIMENTO</div><div class="card stack"><label><div class="label">Arma / configurazione attiva</div><select class="field" id="weapon" onchange="update('weapon',this.value)"><option value="curved">Spada curva</option></select></label><div id="gripSection"><div class="label">Impugnatura dell’arma principale</div><div class="modes" id="gripModes" role="group" aria-label="Impugnatura arma"></div></div><label><div class="label">Mano secondaria · stile a due armi</div><select class="field" id="offhand" onchange="update('offhand',this.value)"><option value="">Nessuna (una sola arma)</option></select><div class="muted" id="offhandHint">Seleziona un'arma diversa dalla principale, presente nell'inventario.</div></label><div class="grid"><div><div class="small">ATTACK THROW</div><div class="big" id="attack">9+</div><div class="muted">contro CA 0</div></div><div><div class="small">DANNI</div><div class="big" id="damage" style="font-size:21px">1d6+2</div></div><div><div class="small">CLEAVES</div><div class="big" id="cleaves">1</div><div class="muted">max / round</div></div></div><div class="notice" id="combatNotice">Il valore Attack Throw include i modificatori dell'arma. Per colpire altre CA, aggiungere la CA bersaglio al valore da raggiungere.</div><div class="row wrap"><span class="muted">Armatura</span><select class="field" id="armor" onchange="update('armor',this.value)" style="width:auto;max-width:70%"><option value="banded">Banded plate</option></select></div><label class="row"><span class="muted">Scudo equipaggiato (se posseduto)</span><input checked="" id="shield" onchange="update('shield',this.checked)" style="width:22px;height:22px" type="checkbox"/></label></div><div class="section">MOVIMENTO E INGOMBRO</div><div class="twocol quick-resources"><div class="card summary-card"><div class="small">MOVIMENTO · COMBATTIMENTO</div><div class="big"><span id="moveQuick">20</span><small> ft</small></div><div class="muted" id="moveQuickSquares">4 quadretti / round</div><div class="quick-run"><div class="small">CORSA</div><div class="big"><span id="runQuick">60</span><small> ft</small></div><div class="muted" id="runQuickSquares">12 quadretti / round</div></div></div><div class="card"><div class="small">INGOMBRO</div><div class="big"><span id="enc">—</span><small> st</small></div><div class="muted" id="move">Movimento calcolato</div></div></div><div class="section">ESPERIENZA</div><div class="card xp-card xp-card-auto"><div class="small">ESPERIENZA</div><div class="xp-summary"><div class="big"><span id="xpVal">180</span><small> / <span id="xpNext">4000</span> XP</small></div><div class="xp-rate" id="xpRate">+20% bonus</div></div><div class="muted xp-breakdown">XP assegnati: <span id="xpBase">180</span> · Bonus accumulato: <span id="xpBonus">+0</span></div><div class="meter"><div class="fill" id="xpBar" style="width:5%"></div></div><div class="xp-actions"><button class="btn" type="button" onclick="awardXP()">＋ Aggiungi XP</button><button class="btn secondary" type="button" onclick="setXP()">Set XP</button></div>
+</div></div><form id="thalionHP" class="card" hidden onsubmit="applyHPMax(event)"><label for="thalionHPAmount">PF massimi</label><input class="field" id="thalionHPAmount" type="number" min="1" step="1" inputmode="numeric" required><button class="btn primary" type="submit">Salva</button> <button class="btn secondary" type="button" onclick="document.getElementById('thalionHP').hidden=true">Annulla</button></form><div class="section">COMBATTIMENTO</div><div class="card stack combat-card"><div class="grid"><div><div class="small">ATTACCO</div><div class="big" id="attack">9+</div><div class="muted">contro CA 0</div></div><div><div class="small">DANNI</div><div class="big" id="damage" style="font-size:21px">1d6+2</div></div><div><div class="small">CLEAVES</div><div class="big" id="cleaves">1</div><div class="muted">max / round</div></div></div><label><div class="label">Arma / configurazione attiva</div><select class="field" id="weapon" onchange="update('weapon',this.value)"><option value="curved">Spada curva</option></select></label><div id="gripSection"><div class="label">Impugnatura dell’arma principale</div><div class="modes" id="gripModes" role="group" aria-label="Impugnatura arma"></div></div><label><div class="label">Mano secondaria · stile a due armi</div><select class="field" id="offhand" onchange="update('offhand',this.value)"><option value="">Nessuna (una sola arma)</option></select><div class="muted" id="offhandHint">Seleziona un'arma diversa dalla principale, presente nell'inventario.</div></label><div class="notice" id="combatNotice">Il valore Attack Throw include i modificatori dell'arma. Per colpire altre CA, aggiungere la CA bersaglio al valore da raggiungere.</div><div class="row wrap"><span class="muted">Armatura</span><select class="field" id="armor" onchange="update('armor',this.value)" style="width:auto;max-width:70%"><option value="banded">Banded plate</option></select></div><label class="row"><span class="muted">Scudo equipaggiato (se posseduto)</span><input checked="" id="shield" onchange="update('shield',this.checked)" style="width:22px;height:22px" type="checkbox"/></label></div><div class="section">MOVIMENTO E INGOMBRO</div><div class="twocol quick-resources"><div class="card summary-card"><div class="small">MOVIMENTO · COMBATTIMENTO</div><div class="big"><span id="moveQuick">20</span><small> ft</small></div><div class="muted" id="moveQuickSquares">4 quadretti / round</div><div class="quick-run"><div class="small">CORSA</div><div class="big"><span id="runQuick">60</span><small> ft</small></div><div class="muted" id="runQuickSquares">12 quadretti / round</div></div></div><div class="card"><div class="small">INGOMBRO</div><div class="big"><span id="enc">—</span><small> st</small></div><div class="muted" id="move">Movimento calcolato</div></div></div><div class="section">CARATTERISTICHE</div><div class="abilities" id="abilities"></div><div class="section">ESPERIENZA</div><div class="card xp-card xp-card-auto"><div class="small">ESPERIENZA</div><div class="xp-summary"><div class="big"><span id="xpVal">180</span><small> / <span id="xpNext">4000</span> XP</small></div><div class="xp-rate" id="xpRate">+20% bonus</div></div><div class="muted xp-breakdown">XP assegnati: <span id="xpBase">180</span> · Bonus accumulato: <span id="xpBonus">+0</span></div><div class="meter"><div class="fill" id="xpBar" style="width:5%"></div></div><div class="xp-actions"><button class="btn" type="button" onclick="awardXP()">＋ Aggiungi XP</button><button class="btn secondary" type="button" onclick="setXP()">Set XP</button></div>
+<form id="thalionXP" hidden onsubmit="applyXP(event)">
+<label for="thalionXPAmount" id="thalionXPLabel">XP</label><input class="field" id="thalionXPAmount" inputmode="numeric" oninput="previewXP()">
+<p class="muted" id="thalionXPFeedback" role="status"></p><div class="xp-actions"><button class="btn primary" id="thalionXPSave" type="submit">Salva XP</button><button class="btn secondary" type="button" onclick="closeXP()">Annulla</button></div></form>
 <button class="btn" id="levelUpButton" data-act="levelup" type="button" disabled>LEVEL UP</button>
-<button class="btn secondary" id="setLevelOneButton" data-act="setlevelone" type="button" hidden>SET LEVEL 1</button>
+
 <p class="muted" id="levelUpHint"></p>
 <details id="levelHistory" class="details" hidden><summary>Cronologia avanzamenti</summary><div class="detailbody" id="levelHistoryEntry"></div></details>
 </div></section>
@@ -172,7 +193,7 @@ body{background:#0d1420;color:#f3f1ec}.app{background:#192331;max-width:520px}.e
 <button class="btn" data-act="confirmlevelup" id="confirmLevelUp" type="button" hidden>Conferma livello 2</button>
 </div>
 </dialog>
-<section aria-label="Tiri salvezza e capacità" class="panel" id="capacita"><div class="section">TIRI SALVEZZA · ELVEN SPELLSWORD <span id="saveLevel">LIVELLO 1</span></div><div class="card"><p class="muted" style="margin:0 0 7px">Valori base ACKS II, bonus razziali inclusi. Con VOL −1, per il dado naturale serve un risultato superiore di 1.</p><div id="saves"></div></div><div class="section">CAPACITÀ DI CLASSE</div><details class="details" open=""><summary>Arcane Magic · Magia arcana</summary><div class="detailbody">Può studiare e lanciare incantesimi arcani dal proprio repertorio. A differenza dei maghi umani, <b>può lanciare incantesimi indossando armature</b>. Lanci giornalieri di 1° livello: <strong id="arcaneDaily">1</strong>.</div></details><details class="details"><summary>Collegiate Wizardry · 11+</summary><div class="detailbody">Riconosce automaticamente simboli, firme magiche e grimori della propria tradizione. Può identificare quelli di altre tradizioni con un tiro di competenza <b>11+</b>; tradizioni rare possono essere più difficili.</div></details><details class="details"><summary>Attunement to Nature · Sensi elfici</summary><div class="detailbody"><b>+1 ai tiri di sorpresa</b> nella natura selvaggia. Con Adventuring ottiene <b>14+</b> invece di 18+ per Searching e Listening, salvo ulteriori modifiche specifiche.</div></details><details class="details"><summary>Connection to Nature · Natura elfica</summary><div class="detailbody">Immunità alle malattie causate dai non morti; bonus <b>+1 ai tiri salvezza Paralysis e Spells</b> già incluso nella progressione razziale. Il bonus +1 al primo tiro di dado vita è già incluso nella scheda.</div></details><details class="details"><summary>Cleave · Eliminazione nemici</summary><div class="detailbody">Può effettuare un attacco aggiuntivo dopo aver abbattuto un avversario idoneo, fino a un massimo di <b><span id="cleaveLimit">1</span> per round</b>.</div></details>
+<section aria-label="Tiri salvezza e capacità" class="panel" id="capacita"><div class="section">TIRI SALVEZZA · ELVEN SPELLSWORD <span id="saveLevel">LIVELLO 1</span></div><div class="card"><p class="muted" style="margin:0 0 7px">Valori base ACKS II, bonus razziali inclusi. Con VOL −1, per il dado naturale serve un risultato superiore di 1.</p><table id="capacityTable"><thead><tr><th scope="col">Salvataggio</th><th scope="col">Dado</th><th scope="col">Base</th></tr></thead><tbody id="saves"></tbody></table></div><div class="section">PROVE FREQUENTI</div><div class="card"><div class="data-row"><span>Ascoltare</span><b>14+</b></div><div class="data-row"><span>Cercare</span><b>14+</b></div><div class="data-row"><span>Sfondare</span><b>14+</b></div><div class="data-row"><span>Collegiate Wizardry</span><b>11+</b></div></div><div class="section">CAPACITÀ DI CLASSE</div><details class="details" open=""><summary>Arcane Magic · Magia arcana</summary><div class="detailbody">Può studiare e lanciare incantesimi arcani dal proprio repertorio. A differenza dei maghi umani, <b>può lanciare incantesimi indossando armature</b>. Lanci giornalieri di 1° livello: <strong id="arcaneDaily">1</strong>.</div></details><details class="details"><summary>Collegiate Wizardry · 11+</summary><div class="detailbody">Riconosce automaticamente simboli, firme magiche e grimori della propria tradizione. Può identificare quelli di altre tradizioni con un tiro di competenza <b>11+</b>; tradizioni rare possono essere più difficili.</div></details><details class="details"><summary>Attunement to Nature · Sensi elfici</summary><div class="detailbody"><b>+1 ai tiri di sorpresa</b> nella natura selvaggia. Con Adventuring ottiene <b>14+</b> invece di 18+ per Searching e Listening, salvo ulteriori modifiche specifiche.</div></details><details class="details"><summary>Connection to Nature · Natura elfica</summary><div class="detailbody">Immunità alle malattie causate dai non morti; bonus <b>+1 ai tiri salvezza Paralysis e Spells</b> già incluso nella progressione razziale. Il bonus +1 al primo tiro di dado vita è già incluso nella scheda.</div></details><details class="details"><summary>Cleave · Eliminazione nemici</summary><div class="detailbody">Può effettuare un attacco aggiuntivo dopo aver abbattuto un avversario idoneo, fino a un massimo di <b><span id="cleaveLimit">1</span> per round</b>.</div></details>
 <div class="section">TEMPLATE SWORDMAGE</div><details class="details" open=""><summary>Battle Magic · Magia in battaglia</summary><div class="detailbody">
 <p><b>+1 all’iniziativa quando lancia un incantesimo.</b> Con DES 8 (−1), il modificatore d’iniziativa di Thalion mentre lancia magie diventa <b>0</b>, salvo altri bonus o penalità.</p>
 <p><b>+1 ai tiri per colpire degli incantesimi che richiedono un Attack Throw.</b> Battle Magic permette normalmente di utilizzare la progressione d’attacco del guerriero; poiché l’Elven Spellsword la utilizza già, Thalion riceve questo ulteriore +1.</p>
@@ -184,13 +205,13 @@ body{background:#0d1420;color:#f3f1ec}.app{background:#192331;max-width:520px}.e
 </ul>
 <p class="muted">Non aumenta danni, slot giornalieri né attacchi con armi comuni. Il bonus all’attacco si applicherà a eventuali futuri incantesimi che richiedano un tiro per colpire. Fonte: ACKS II Revised, p. 107.</p>
 </div></details><details class="details"><summary>Military Strategy · Strategia militare</summary><div class="detailbody">Competenza nella pianificazione e valutazione delle operazioni militari. Sulla scheda cartacea è annotato un <b>tiro 11+</b>.</div></details><details class="details"><summary>Manual of Arms · Conoscenze militari</summary><div class="detailbody">Riconoscimento di equipaggiamento, insegne e organizzazione militare. La scheda cartacea indica <b>11+</b> per i casi che richiedono un tiro.</div></details><div class="section">PROFICIENCY AGGIUNTIVA</div><details class="details"><summary>Intimidation · Intimidazione</summary><div class="detailbody">Competenza annotata sulla scheda. La prova e i relativi modificatori dipendono dalla situazione; sulla scheda compare un bonus annotato (+1), da confermare con il Judge.</div></details><div class="section">AVVENTURING</div><div class="card" id="adventuring"></div><div class="section">LINGUE</div><div class="card"><div class="muted">Trascritte dalla scheda (da confermare con il Master):</div><div class="tags" id="languages"></div></div></section>
-<section aria-label="Inventario, peso e movimento" class="panel" id="inventario"><div class="section">CATALOGO · ARMI E ARMATURE</div><div class="card" id="catalogCard">
+<section aria-label="Inventario, peso e movimento" class="panel" id="inventario"><div class="section">IN USO</div><div class="card" id="inventoryEquipped"></div><div class="section">ARMI E OGGETTI TRASPORTATI</div><div class="card"><div class="thalion-inventory-head thalion-inventory-row"><span>Oggetto</span><span>Quantità</span><span>Peso/u.</span><span></span></div><div id="inventory"></div><button class="btn primary" onclick="addItem()" style="width:100%;margin-top:12px">+ Aggiungi oggetto</button></div><div class="section">ARMATURE E SCUDI TRASPORTATI</div><div class="card"><div id="armorInventory"></div></div><details class="details"><summary>Aggiungi equipaggiamento dal catalogo</summary><div class="card" id="catalogCard">
 
 <label class="label" for="catalogGroup">Categoria</label><select class="field" id="catalogGroup" onchange="renderCatalog()"><option value="weapons">Armi</option><option value="armor">Armature, scudi ed elmi</option><option value="ammunition">Munizioni</option></select>
 <label class="label" for="catalogItem">Oggetto</label><select class="field" id="catalogItem" onchange="renderCatalogInfo()"></select>
 <div class="notice" id="catalogInfo">Scegli un oggetto da aggiungere.</div>
 <button class="btn primary" onclick="addCatalogItem()" style="width:100%;margin-top:10px">+ Aggiungi all’inventario</button>
-</div><div class="section">ARMI E OGGETTI POSSEDUTI</div><div class="card"><div class="thalion-inventory-head thalion-inventory-row"><span>Oggetto</span><span>Quantità</span><span>Peso/u.</span><span></span></div><div id="inventory"></div><button class="btn primary" onclick="addItem()" style="width:100%;margin-top:12px">+ Aggiungi oggetto</button></div><div class="section">ARMATURE E SCUDI POSSEDUTI</div><div class="card"><div id="armorInventory"></div></div><div class="section">EQUIPAGGIAMENTO E INGOMBRO</div><div class="card" style="margin-top:10px"><div class="data-row"><span>Armature e protezioni possedute</span><b id="armorWeight">5 st</b></div><div class="data-row"><span>Di cui scudi posseduti</span><b id="shieldWeight">1 st</b></div><div class="data-row"><span>Altri oggetti trasportati</span><b id="itemsWeight">—</b></div><div class="data-row"><strong>Totale</strong><strong class="gold" id="encGear">—</strong></div></div><div class="section">MOVIMENTO</div><div class="card movement-detail" style="margin-top:9px"><div class="data-row"><span>Movimento combattimento</span><b id="movementCombat">—</b></div><div class="data-row"><span>Corsa</span><b id="movementRun">—</b></div><div class="data-row"><span>Esplorazione</span><b id="movementExplore">—</b></div><div class="data-row"><span>Viaggio</span><b id="movementTravel">—</b></div><p class="muted" style="margin:9px 0 0">Il movimento è calcolato automaticamente in base all’ingombro trasportato.</p></div><div class="section">DENARO PERSONALE</div><div class="card twocol"><label><div class="label">Monete d'oro (GP)</div><input class="field" id="gold" min="0" onchange="update('gold',Math.max(0,+this.value||0))" type="number"/></label><label><div class="label">Monete d'argento (SP)</div><input class="field" id="silver" min="0" onchange="update('silver',Math.max(0,+this.value||0))" type="number"/></label></div><div class="section">DEPOSITO E NOTE INVENTARIO</div><textarea class="field" id="notes" onchange="update('notes',this.value)" placeholder="Oggetti sul mulo, equipaggiamento lasciato al campo, annotazioni..." rows="5"></textarea></section>
+</div></details><div class="section">EQUIPAGGIAMENTO E INGOMBRO</div><div class="card" style="margin-top:10px"><div class="data-row"><span>Armature e protezioni possedute</span><b id="armorWeight">5 st</b></div><div class="data-row"><span>Di cui scudi posseduti</span><b id="shieldWeight">1 st</b></div><div class="data-row"><span>Altri oggetti trasportati</span><b id="itemsWeight">—</b></div><div class="data-row"><strong>Totale</strong><strong class="gold" id="encGear">—</strong></div><p class="muted" id="packThreshold"></p></div><div class="section">MOVIMENTO</div><div class="card movement-detail" style="margin-top:9px"><div class="data-row"><span>Movimento combattimento</span><b id="movementCombat">—</b></div><div class="data-row"><span>Corsa</span><b id="movementRun">—</b></div><div class="data-row"><span>Esplorazione</span><b id="movementExplore">—</b></div><div class="data-row"><span>Viaggio</span><b id="movementTravel">—</b></div><p class="muted" style="margin:9px 0 0">Il movimento è calcolato automaticamente in base all’ingombro trasportato.</p></div><div class="section">DENARO PERSONALE</div><div class="card twocol"><label><div class="label">Monete d'oro (GP)</div><input class="field" id="gold" min="0" onchange="update('gold',Math.max(0,+this.value||0))" type="number"/></label><label><div class="label">Monete d'argento (SP)</div><input class="field" id="silver" min="0" onchange="update('silver',Math.max(0,+this.value||0))" type="number"/></label></div><div class="section">DEPOSITO E NOTE INVENTARIO</div><textarea class="field" id="notes" onchange="update('notes',this.value)" placeholder="Oggetti sul mulo, equipaggiamento lasciato al campo, annotazioni..." rows="5"></textarea></section>
 <section aria-label="Magia arcana" class="panel" id="incantesimi">
 <div class="section">MAGIA ARCANA · ELVEN SPELLSWORD</div>
 <div class="card">
@@ -299,7 +320,8 @@ body{background:#0d1420;color:#f3f1ec}.app{background:#192331;max-width:520px}.e
     <textarea class="field" id="basilioNotes" rows="4" maxlength="4000" placeholder="Avventure, oggetti, ferite, incarichi..."></textarea>
  </div></details>
 </section>
-<section aria-label="Backup dei dati" class="panel" id="backup"><div class="section">BACKUP E DATI</div><div class="card stack"><button class="btn" onclick="exportData()">Esporta backup JSON</button><label class="btn" style="text-align:center">Importa backup JSON<input accept=".json,application/json" onchange="importData(event)" style="display:none" type="file"/></label><button class="btn danger" onclick="resetAll()">Ripristina dati iniziali</button><p class="muted" style="margin:0">Salvataggio automatico sul dispositivo. Il backup include anche i progressi di Basilio e permette di trasferirli tra browser.</p></div><div class="notice">I dati di Thalion rimangono nel browser corrente: prima di cambiare dispositivo o cancellare i dati del sito, esporta una copia JSON.</div></section></main>
+<section aria-label="Backup dei dati" class="panel" id="backup"><div class="section">BACKUP E DATI</div><div class="card stack"><button class="btn" onclick="exportData()">Esporta backup JSON</button><label class="btn" style="text-align:center">Importa backup JSON<input accept=".json,application/json" onchange="importData(event)" style="display:none" type="file"/></label><button class="btn secondary" id="setLevelOneButton" data-act="setlevelone" type="button" hidden>SET LEVEL 1</button><button class="btn danger" onclick="resetAll()">Ripristina dati iniziali</button><p id="thalionDataFeedback" class="muted" role="status"></p><div id="thalionBackupExport" hidden><a id="thalionBackupDownload">Scarica JSON</a><p><label for="thalionBackupText">Oppure copia il backup</label></p><textarea class="field" id="thalionBackupText" readonly rows="4"></textarea></div>
+<details class="details"><summary>Importa da testo</summary><label for="thalionImportText">Incolla il backup JSON</label><textarea class="field" id="thalionImportText" rows="4"></textarea><button class="btn" type="button" onclick="reviewBackup(document.getElementById('thalionImportText').value)">Verifica backup</button></details><p class="muted" style="margin:0">Salvataggio automatico sul dispositivo. Il backup include anche i progressi di Basilio e permette di trasferirli tra browser.</p></div><div class="notice">I dati di Thalion rimangono nel browser corrente: prima di cambiare dispositivo o cancellare i dati del sito, esporta una copia JSON.</div></section><dialog id="thalionConfirm" aria-labelledby="thalionConfirmText" onclose="pendingConfirmation=null"><p id="thalionConfirmText"></p><div class="buttonbar"><button class="btn primary" type="button" onclick="finishConfirmation(true)">Conferma</button> <button class="btn secondary" type="button" onclick="finishConfirmation(false)">Annulla</button></div></dialog></main>
 <nav aria-label="Navigazione scheda Thalion" class="tabs"><button class="active" data-tab="scheda" onclick="showTab('scheda')" type="button"><span class="ico">⚔</span>Scheda</button><button data-tab="capacita" onclick="showTab('capacita')" type="button"><span class="ico">✧</span>Capacità</button><button data-tab="inventario" onclick="showTab('inventario')" type="button"><span class="ico">▣</span>Inventario</button><button data-tab="incantesimi" onclick="showTab('incantesimi')" type="button"><span class="ico">✦</span>Magia</button><button data-tab="basilio" onclick="showTab('basilio')" type="button"><span class="ico">👞</span>Basilio</button><button data-tab="backup" onclick="showTab('backup')" type="button"><span class="ico">⚙</span>Backup</button></nav>
 <script>
 'use strict';
@@ -398,36 +420,39 @@ function parseXPAmount(raw,allowZero){
   return Number.isSafeInteger(n) && (allowZero ? n>=0 : n>0) ? n : null;
 }
 function earnedBonus(n){return Math.floor(n*XP_BONUS_RATE/100)}
-function awardXP(){
-  const raw=prompt('XP assegnati dal Master in questa sessione (senza bonus):','');
-  if(raw===null)return;
-  const earned=parseXPAmount(raw,false);
-  if(earned===null){alert('Inserisci un numero intero di XP maggiore di zero.');return;}
-  const extra=earnedBonus(earned), total=earned+extra;
-  normalizeXP();
-  if(!Number.isSafeInteger(total)||!Number.isSafeInteger(state.xp+total)){
-    alert('Il totale XP supera il limite gestibile.');return;
-  }
-  const msg='Aggiungere '+earned.toLocaleString('it-IT')+' XP base?\nBonus +20%: +'+extra.toLocaleString('it-IT')+' XP\nTotale da aggiungere: +'+total.toLocaleString('it-IT')+' XP';
-  if(!confirm(msg))return;
-  state.xpBase+=earned;
-  state.xpBonusGained+=extra;
-  state.xp=state.xpBase+state.xpBonusGained;
-  save();render();
+let xpMode=null;
+function awardXP(){openXP('add')}
+function setXP(){openXP('set')}
+function openXP(mode){
+ xpMode=mode;
+ $('thalionXPLabel').textContent=mode==='add'?'XP assegnati, senza bonus':'XP totali, bonus già incluso';
+ $('thalionXPAmount').value=mode==='add'?'':String(state.xp);
+ $('thalionXP').hidden=false; previewXP(); $('thalionXPAmount').focus();
 }
-function setXP(){
-  normalizeXP();
-  const raw=prompt('Imposta gli XP TOTALI effettivi (bonus già incluso):',String(state.xp));
-  if(raw===null)return;
-  const amount=parseXPAmount(raw,true);
-  if(amount===null){alert('Inserisci un numero intero di XP maggiore o uguale a zero.');return;}
-  if(amount===state.xp)return;
-  const msg='Correggere gli XP totali da '+state.xp.toLocaleString('it-IT')+' a '+amount.toLocaleString('it-IT')+'?\n\nNon verrà applicato alcun bonus. Il nuovo valore diventerà il saldo di partenza per le prossime sessioni.';
-  if(!confirm(msg))return;
-  state.xp=amount;
-  state.xpBase=amount;
-  state.xpBonusGained=0;
-  save();render();
+function closeXP(){xpMode=null;$('thalionXP').hidden=true}
+function xpDraft(){
+ const adding=xpMode==='add',amount=parseXPAmount($('thalionXPAmount').value,!adding);
+ if(amount===null)return null;
+ const bonus=adding?earnedBonus(amount):0,total=adding?state.xp+amount+bonus:amount;
+ return Number.isSafeInteger(total)?{adding,amount,bonus,total}:null;
+}
+function previewXP(){
+ const draft=xpDraft();
+ $('thalionXPSave').disabled=!draft;
+ $('thalionXPFeedback').textContent=!draft?'Inserisci un numero intero valido.':
+   draft.adding?'Bonus +'+XP_BONUS_RATE+'%: +'+xpText(draft.bonus)+' XP · Nuovo totale: '+xpText(draft.total)+' XP':
+   'Nuovo totale: '+xpText(draft.total)+' XP.';
+}
+function applyXP(event){
+ event.preventDefault();
+ if(!xpMode)return;
+ const draft=xpDraft();
+ if(!draft){previewXP();return;}
+ if(!draft.adding&&draft.total===state.xp){closeXP();return;}
+ const next={...state,xp:draft.total,xpBase:draft.adding?state.xpBase+draft.amount:draft.amount,
+   xpBonusGained:draft.adding?state.xpBonusGained+draft.bonus:0};
+ if(!save(next)){$('thalionXPFeedback').textContent='XP non salvati. Riprova.';return;}
+ state=next;closeXP();render();
 }
 function save(next=state){
  try{localStorage.setItem(KEY,JSON.stringify(next));return true}
@@ -442,8 +467,16 @@ function setGrip(mode){const w=WEAPONS[state.weapon];if(!w||w[4]!=='versatile'||
  state.grip=mode==='two'?'two':'one';if(state.grip==='two')state.offhand='';
  save();render()}
 function adjustHP(x){state.hp=Math.max(0,Math.min(state.hpmax,state.hp+x));save();render()}
-function setHPMax(){let x=prompt('PF massimi:',state.hpmax);if(x!==null&&Number.isFinite(+x)){state.hpmax=Math.max(1,Math.floor(+x));state.hp=Math.min(state.hp,state.hpmax);save();render()}}
-function editNumber(field,label){let x=prompt(label+':',state[field]);if(x!==null&&Number.isFinite(+x)){state[field]=Math.max(field==='level'?1:0,Math.floor(+x));save();render()}}
+function setHPMax(){
+ $('thalionHPAmount').value=state.hpmax;$('thalionHP').hidden=false;$('thalionHPAmount').focus();
+}
+function applyHPMax(event){
+ event.preventDefault();
+ const hpmax=Number($('thalionHPAmount').value);
+ if(!Number.isSafeInteger(hpmax)||hpmax<1)return;
+ if(!save({...state,hpmax,hp:Math.min(state.hp,hpmax)})){$('thalionHPAmount').setCustomValidity('Salvataggio non disponibile');$('thalionHPAmount').reportValidity();$('thalionHPAmount').setCustomValidity('');return;}
+ state.hpmax=hpmax;state.hp=Math.min(state.hp,hpmax);$('thalionHP').hidden=true;render();
+}
 function adjustSlots(n){state.slots=Math.max(0,Math.min(progression().castings,state.slots+n));save();render()}
 function rest(){state.slots=progression().castings;save();render()}
 function weight(){return armorWeightTotal()+(state.items||[]).reduce((a,i)=>a+(Math.max(0,+i.qty||0)*Math.max(0,+i.w||0)),0)}
@@ -462,28 +495,72 @@ const gripAllowed=type==='versatile'&&!!weapon?.[5];$('gripSection').style.displ
 const offSelect=$('offhand');for(const opt of offSelect.options){if(!opt.value)continue;opt.disabled=config.twoHandGrip||!['onehand','versatile'].includes(type)||!weaponOwned(wp)||weaponQty(opt.value)<(opt.value===wp?2:1)}
 offSelect.disabled=config.twoHandGrip||!['onehand','versatile'].includes(type)||!weaponOwned(wp);offSelect.value=config.off||'';
 $('offhandHint').textContent=config.twoHandGrip?'Con entrambe le mani sull’arma principale, la mano secondaria non è disponibile.':twowp?'Due armi: '+weaponNames[wp]+' + '+weaponNames[config.off]+' · +1 a colpire · nessun attacco extra · niente scudo.':!['onehand','versatile'].includes(type)?'Arma incompatibile con la mano secondaria.':!weaponOwned(wp)?'Aggiungi prima un’arma all’inventario.':'Scegli un’altra arma posseduta (o 2 esemplari della stessa).';
-$('attack').textContent=toHit+'+';$('damage').textContent=dmg;$('cleaves').textContent=state.level;
+$('inventoryEquipped').textContent=(state.weapon?weapon[0]:'Nessuna arma')+(config.off?' + '+weaponNames[config.off]:'')+' · '+ARMORS[state.armor][0]+(hasShield?' · Scudo impugnato':'');
+const limit=[5,7,10].findIndex(cap=>w<=cap);
+const speeds=[30,20,10], thresholds=[5,7,10];
+$('packThreshold').textContent=limit>=0?'Oltre '+thresholds[limit]+' st: '+speeds[limit]+'′ per round.':'Fascia di movimento più lenta.';
+$('attack').textContent=state.weapon?toHit+'+':'—';$('damage').textContent=state.weapon?dmg:'—';$('cleaves').textContent=state.level;
 $('combatNotice').textContent=config.twoHandGrip?'Impugnatura a due mani: danni '+damageDie+' + FOR 1 e classe 1. La mano secondaria e lo scudo non sono utilizzabili.':twowp?'Due armi: +1 al tiro per colpire, nessun attacco extra. Scudo non utilizzabile.':isMissile?'Attacco a distanza: DES −1. Portate: '+(weapon[6]||'vedi manuale')+' piedi. '+(weapon[7]||''):'Mischia: FOR +1 e bonus danni di classe +1. '+(weapon?.[7]||'')+(hasShield?' Scudo +1 CA.':'');
 normalizeXP();$('xpVal').textContent=state.xp.toLocaleString('it-IT');$('xpBase').textContent=state.xpBase.toLocaleString('it-IT');$('xpBonus').textContent='+'+state.xpBonusGained.toLocaleString('it-IT');$('xpNext').textContent=xpText(progression().nextXP);$('xpBar').style.width=Math.min(100,state.xp/progression().nextXP*100)+'%';$('lvlTop').textContent=state.level;$('enc').textContent=fmt(w);$('moveQuick').textContent=m[0];$('moveQuickSquares').textContent=(m[0]/5)+' quadretti / round';$('runQuick').textContent=m[0]*3;$('runQuickSquares').textContent=(m[0]*3/5)+' quadretti / round';$('encGear').textContent=fmt(w)+' st';$('armorWeight').textContent=fmt(armorWeightTotal())+' st (armature + protezioni)';$('shieldWeight').textContent=fmt((state.extras.shield||0)+(state.extras.mirror||0))+' st';$('itemsWeight').textContent=fmt(w-armorWeightTotal())+' st';$('move').textContent=w>10?'Sovraccarico elevato':w>7?'Carico pesante':w>5?'Carico medio':'Carico leggero';$('movementCombat').textContent=m[0]+' ft/round ('+(m[0]/5)+' quadretti)';$('movementRun').textContent=(m[0]*3)+' ft/round ('+(m[0]*3/5)+' quadretti)';$('movementExplore').textContent=m[1]+' ft/turn';$('movementTravel').textContent=m[2]+' miglia/giorno';$('slots').textContent=state.slots;$('slotsMax').textContent=progression().castings;renderLevel();$('gold').value=state.gold;$('silver').value=state.silver;if(document.activeElement!==$('notes'))$('notes').value=state.notes||'';
-const attrs=[['FOR',14,'+1'],['DES',8,'−1'],['COS',13,'+1'],['INT',16,'+2'],['VOL',8,'−1'],['CAR',14,'+1']];$('abilities').innerHTML=attrs.map(a=>`<div class="ability"><span>${a[0]}</span><b>${a[1]}</b><span>${a[2]}</span></div>`).join('');const saves=SAVE_NAMES.map((name,i)=>[name,progression().saves[i]]);$('saves').innerHTML=saves.map(([n,v])=>`<div class="statline"><span>${n}</span><b>${v}+ <small class="muted">(VOL −1 → dado ${v+1}+)</small></b></div>`).join('');
+const attrs=[['FOR',14,'+1'],['DES',8,'−1'],['COS',13,'+1'],['INT',16,'+2'],['VOL',8,'−1'],['CAR',14,'+1']];$('abilities').innerHTML=attrs.map(a=>`<div class="ability"><span>${a[0]}</span><b>${a[1]}</b><span>${a[2]}</span></div>`).join('');const saves=SAVE_NAMES.map((name,i)=>[name,progression().saves[i]]);$('saves').innerHTML=saves.map(([n,v])=>`<tr><th scope="row">${n}</th><td>${v+1}+</td><td>${v}+</td></tr>`).join('');
 $('adventuring').innerHTML=[['Climbing','8+'],['Dungeonbashing','14+'],['Listening','14+'],['Searching','14+'],['Trapbreaking','18+']].map(([n,v])=>`<div class="statline"><span>${n}</span><b>${v}</b></div>`).join('')+'<p class="muted">Valori iniziali dalla scheda; le annotazioni poco leggibili restano da verificare.</p>';
 $('languages').innerHTML=['Common','Elven','Gnoll','Hobgoblin','Orc','Classical','Zaharan'].map(l=>`<span class="pill">${l}</span>`).join(''); renderInventory();renderArmorInventory();renderCatalog();}
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function renderInventory(){$('inventory').innerHTML=state.items.map(i=>`<div class="inventoryRow"><input class="field" aria-label="Oggetto" value="${esc(i.name)}" onchange="editItem(${i.id},'name',this.value)"><input class="field" type="number" min="0" step="1" aria-label="Quantità" value="${i.qty}" onchange="editItem(${i.id},'qty',this.value)"><input class="field" type="number" min="0" step="0.1666667" aria-label="Peso stone per unità" value="${Math.round(i.w*10000)/10000}" onchange="editItem(${i.id},'w',this.value)"><button class="btn danger small" aria-label="Elimina oggetto" onclick="removeItem(${i.id})">×</button></div>`).join('');}
 function editItem(id,key,value){let i=state.items.find(a=>a.id===id);if(!i)return;i[key]=key==='name'?String(value):Math.max(0,+value||0);save();render()}
 function addItem(){state.items.push({id:Date.now(),name:'Nuovo oggetto',qty:1,w:0});save();render()}
-function removeItem(id){state.items=state.items.filter(i=>i.id!==id);save();render()}
-function renderArmorInventory(){const x=$('armorInventory');x.innerHTML=Object.entries(state.armors||{}).filter(([id,n])=>+n>0&&ARMORS[id]).map(([id,n])=>`<div class="armor-line"><span>${esc(ARMORS[id][0])} · ${n} pz · ${fmt(ARMORS[id][2]*n)} st ${state.armor===id?'<span class="catalog-badge">Indossata</span>':''}</span><button class="btn secondary" onclick="removeCatalogArmor('${id}')">−1</button></div>`).join('')+Object.entries(state.extras||{}).filter(([id,n])=>+n>0&&EXTRAS[id]).map(([id,n])=>`<div class="armor-line"><span>${esc(EXTRAS[id][0])} · ${n} pz · ${fmt(EXTRAS[id][2]*n)} st</span><button class="btn secondary" onclick="removeCatalogExtra('${id}')">−1</button></div>`).join('')||'<div class="muted">Nessuna protezione posseduta.</div>'}
-function removeCatalogArmor(id){if(!(state.armors[id]>0))return;state.armors[id]--;if(state.armor===id&&state.armors[id]<=0)state.armor='none';save();render()}
-function removeCatalogExtra(id){if(!(state.extras[id]>0))return;state.extras[id]--;if(['shield','mirror'].includes(id)&&!(state.extras.shield>0||state.extras.mirror>0))state.shield=false;save();render()}
+function removeItem(id){const item=state.items.find(i=>i.id===id);if(!item)return;askConfirmation('Rimuovere '+item.name+' dall’inventario?',()=>{state.items=state.items.filter(i=>i.id!==id);save();render()})}
+function renderArmorInventory(){const x=$('armorInventory');x.innerHTML=Object.entries(state.armors||{}).filter(([id,n])=>+n>0&&ARMORS[id]).map(([id,n])=>`<div class="armor-line"><span>${esc(ARMORS[id][0])} · ${n} pz · ${fmt(ARMORS[id][2]*n)} st ${state.armor===id?'<span class="catalog-badge">Indossata</span>':''}</span><button class="btn secondary" onclick="removeCatalogArmor('${id}')">Rimuovi 1</button></div>`).join('')+Object.entries(state.extras||{}).filter(([id,n])=>+n>0&&EXTRAS[id]).map(([id,n])=>`<div class="armor-line"><span>${esc(EXTRAS[id][0])} · ${n} pz · ${fmt(EXTRAS[id][2]*n)} st</span><button class="btn secondary" onclick="removeCatalogExtra('${id}')">Rimuovi 1</button></div>`).join('')||'<div class="muted">Nessuna protezione posseduta.</div>'}
+function removeCatalogArmor(id){if(!(state.armors[id]>0))return;askConfirmation('Rimuovere un esemplare di '+ARMORS[id][0]+'?',()=>{state.armors[id]--;if(state.armor===id&&state.armors[id]<=0)state.armor='none';save();render()})}
+function removeCatalogExtra(id){if(!(state.extras[id]>0))return;askConfirmation('Rimuovere un esemplare di '+EXTRAS[id][0]+'?',()=>{state.extras[id]--;if(['shield','mirror'].includes(id)&&!(state.extras.shield>0||state.extras.mirror>0))state.shield=false;save();render()})}
 function renderCatalog(){const group=$('catalogGroup').value,sel=$('catalogItem'),old=sel.value,entries=group==='weapons'?Object.entries(WEAPONS):group==='ammunition'?Object.entries(AMMO):[...Object.entries(ARMORS).filter(([id])=>id!=='none'),...Object.entries(EXTRAS)];sel.innerHTML=entries.map(([id,x])=>`<option value="${id}">${esc(x[0])}</option>`).join('');if(entries.some(([id])=>id===old))sel.value=old;renderCatalogInfo()}
 function renderCatalogInfo(){const group=$('catalogGroup').value,id=$('catalogItem').value,x=group==='weapons'?WEAPONS[id]:group==='ammunition'?AMMO[id]:ARMORS[id]||EXTRAS[id];if(!x)return;
 $('catalogInfo').textContent=group==='weapons'?`Danno ${x[1]}${x[5]?' / '+x[5]+' a due mani':''} · ${fmt(x[2])} st · ${x[3]} gp${x[6]?' · Portata '+x[6]+' ft':''}${x[7]?' · '+x[7]:''}`:group==='ammunition'?`${fmt(x[1])} st · ${x[2]} gp`: `CA +${x[1]} · ${fmt(x[2])} st · ${x[3]} gp`}
 function addCatalogItem(){let group=$('catalogGroup').value,id=$('catalogItem').value;if(group==='weapons'&&WEAPONS[id]){let x=WEAPONS[id];pushItem(x[0],x[2]);}else if(group==='ammunition'&&AMMO[id]){let x=AMMO[id];pushItem(x[0],x[1]);}else if(group==='armor'){if(ARMORS[id])state.armors[id]=(state.armors[id]||0)+1;else if(EXTRAS[id])state.extras[id]=(state.extras[id]||0)+1;}save();render()}
 function pushItem(name,w){const old=state.items.find(i=>i.name===name&&Math.abs(i.w-w)<0.00001);if(old)old.qty++;else state.items.push({id:Date.now()+Math.floor(Math.random()*10000),name,qty:1,w})}
-function exportData(){let a=document.createElement('a'),blob=new Blob([JSON.stringify({app:'ACKS Thalion',version:'0.5.5',data:state},null,2)],{type:'application/json'});a.href=URL.createObjectURL(blob);a.download='thalion_backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)}
-async function importData(event){let f=event.target.files?.[0];if(!f)return;try{let j=JSON.parse(await f.text()),d=j.data||j;if(!Array.isArray(d.items)||typeof d.hp!=='number')throw Error('Formato non valido');state={...JSON.parse(JSON.stringify(BASE)),...d};normalizeXP();hydrate();ensureBasilio();save();render();renderBasilio();alert('Backup importato')}catch(e){alert('Importazione non riuscita: '+e.message)}event.target.value=''}
-function resetAll(){if(confirm('Ripristinare tutti i dati iniziali di Thalion? Questa operazione cancella le modifiche locali.')){state=JSON.parse(JSON.stringify(BASE));normalizeXP();ensureBasilio();save();render();renderBasilio()}}
+let pendingConfirmation=null,backupURL=null;
+function askConfirmation(message,action){
+ pendingConfirmation=action;$('thalionConfirmText').textContent=message;
+ if(!$('thalionConfirm').open)$('thalionConfirm').showModal();
+}
+function finishConfirmation(accepted){
+ const action=pendingConfirmation;pendingConfirmation=null;$('thalionConfirm').close();
+ if(accepted&&action)action();
+}
+function exportData(){
+ const json=JSON.stringify({app:'ACKS Thalion',version:'0.6.0',data:state},null,2);
+ if(backupURL)URL.revokeObjectURL(backupURL);
+ backupURL=URL.createObjectURL(new Blob([json],{type:'application/json'}));
+ $('thalionBackupDownload').href=backupURL;$('thalionBackupDownload').download='thalion_backup.json';
+ $('thalionBackupText').value=json;$('thalionBackupExport').hidden=false;$('thalionBackupDownload').focus();
+}
+function reviewBackup(raw){
+ try{
+   const parsed=JSON.parse(raw),data=parsed.data||parsed;
+   if(!Array.isArray(data.items)||typeof data.hp!=='number')throw Error();
+   askConfirmation('Sostituire i dati con questo backup?',()=>{
+     const previous=state;
+     try{
+       state={...structuredClone(BASE),...data};normalizeXP();hydrate();ensureBasilio();
+       if(!save())throw Error();
+       levelDraft=['',''];render();renderBasilio();$('thalionDataFeedback').textContent='Backup importato.';
+     }catch(e){state=previous;$('thalionDataFeedback').textContent='Importazione non riuscita.'}
+   });
+ }catch(e){$('thalionDataFeedback').textContent='Backup JSON non valido.'}
+}
+async function importData(event){
+ const input=event.target,file=input.files?.[0];if(!file)return;
+ try{reviewBackup(await file.text())}catch(e){$('thalionDataFeedback').textContent='Impossibile leggere il file JSON.'}
+ input.value='';
+}
+function resetAll(){
+ askConfirmation('Ripristinare i dati iniziali di Thalion? I dati di Basilio saranno conservati.',()=>{
+   const next={...structuredClone(BASE),basilio:state.basilio};
+   if(!save(next)){$('thalionDataFeedback').textContent='Ripristino non salvato.';return;}
+   state=next;levelDraft=['',''];normalizeXP();ensureBasilio();render();renderBasilio();
+   $('thalionDataFeedback').textContent='Valori iniziali di Thalion ripristinati.';
+ });
+}
 function progression(){return SPELLSWORD[state.level===2?2:1]}
 function canLevelUp(){return state.level!==2&&state.xp>=SPELLSWORD[1].nextXP}
 function proposedRoll(){return levelDraft.map(Number)}
@@ -574,7 +651,7 @@ function advancementRows(){
   function withLevelLock(action){
     if(navigator.locks){
       navigator.locks.request(KEY+'-advancement',action).catch(function(){
-        alert('Operazione sul livello non completata. Riprova.');
+        $($('levelUpDialog').open?'levelSaveError':'thalionDataFeedback').textContent='Operazione sul livello non completata. Riprova.';
       });
     }else action();
   }
@@ -600,15 +677,18 @@ function confirmLevelUp(){
    advancement:{roll,date:new Date().toISOString(),previousMax:state.hpmax,newMax:hpmax}});
  if(error){$('levelSaveError').textContent=error;return}
  $('levelUpDialog').close();
- $('setLevelOneButton').focus();
+ $('lvlTop').setAttribute('tabindex','-1');
+ $('lvlTop').focus();
 }
 function setLevelOne(){
  if(state.level!==2)return;
- const hpmax=state.advancement?.previousMax||state.hpmax;
- const hp=Math.max(0,Math.min(hpmax,state.hp+hpmax-state.hpmax));
- if(!confirm('Tornare al livello 1 con '+hp+' / '+hpmax+' PF? Il tiro sarà rimosso. XP, inventario e Basilio saranno conservati.'))return;
- const error=changeLevel({...state,level:1,advancement:null,hpmax,hp,slots:Math.max(0,state.slots-1)});
- if(error)alert(error);
+ askConfirmation('Tornare al livello 1? XP, inventario e Basilio saranno conservati.',()=>withLevelLock(()=>{
+   if(state.level!==2)return;
+   const hpmax=state.advancement?.previousMax||state.hpmax;
+   const hp=Math.max(0,Math.min(hpmax,state.hp+hpmax-state.hpmax));
+   const error=changeLevel({...state,level:1,advancement:null,hpmax,hp,slots:Math.max(0,state.slots-1)});
+   $('thalionDataFeedback').textContent=error||'Thalion è tornato al livello 1.';
+ }));
 }
 const levelActions={
  levelup(){
@@ -625,7 +705,7 @@ const levelActions={
  prevlevelstep(){if(levelStep>1){levelStep--;renderLevelStep(true)}},
  nextlevelstep(){if(levelStep<3&&(levelStep!==2||validLevelRoll(proposedRoll()))){levelStep++;renderLevelStep(true)}},
  confirmlevelup:()=>withLevelLock(confirmLevelUp),
- setlevelone:()=>withLevelLock(setLevelOne)
+ setlevelone:setLevelOne
 };
 document.addEventListener('click',event=>{
  const action=event.target.closest('[data-act]')?.dataset.act;
