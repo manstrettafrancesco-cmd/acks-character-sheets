@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171e2a" name="theme-color"/><title>ACKS · Thalion 0.2.6</title>
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171e2a" name="theme-color"/><title>ACKS · Thalion 0.5.5</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#10141b;color:#f3f0e8;font:15px -apple-system,BlinkMacSystemFont,system-ui,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}button:active{transform:scale(.97)}.app{max-width:520px;margin:auto;min-height:100dvh;background:#191f29;padding:15px 14px 100px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.eyebrow{font-size:10px;letter-spacing:2px;color:#d7bc84}.name{font-family:Georgia,serif;font-size:26px;font-weight:bold;letter-spacing:.5px}.tag{border:1px solid #736445;border-radius:18px;padding:7px 10px;color:#e8d1a0;font-size:12px}.hero{display:grid;grid-template-columns:43% 57%;gap:10px;align-items:stretch}.portrait{width:100%;height:auto;display:block;object-fit:contain;border:1px solid #655437;border-radius:12px;background:#10141b}.stack{display:flex;flex-direction:column;gap:8px}.statcard{background:#303b45;border:1px solid #48515b;border-radius:12px;padding:10px;flex:1;display:flex;flex-direction:column;justify-content:center}.statcard.hp{background:#293f36}.statcard.ac{background:#2e384b}.small{font-size:10px;color:#c4cbd3;letter-spacing:.6px}.big{font-size:29px;font-weight:800;line-height:1.2}.control{display:flex;gap:7px;margin-top:8px}.control button{border:1px solid #768476;background:#425a4d;color:#fff;border-radius:9px;min-height:40px;flex:1;font-size:22px}.meter{height:6px;border-radius:10px;background:#506256;overflow:hidden;margin-top:7px}.fill{height:100%;background:#a7d6b2}.section{font-size:12px;letter-spacing:1.3px;color:#e2c58d;margin:17px 0 9px;font-weight:700}.abilities{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}.ability{text-align:center;background:#303844;border-radius:9px;padding:10px 1px}.ability strong{font-size:21px;display:block}.ability span{font-size:11px;color:#b5d4bd}.card{background:#2b323d;border:1px solid #424b59;border-radius:13px;padding:13px;margin-bottom:10px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}.value{font-size:25px;font-weight:750}.muted{color:#b9c1cb;font-size:12px;line-height:1.5}.gold{color:#e4c88e}.line{border:0;border-top:1px solid #454d58;margin:12px 0}.details{border:1px solid #46505e;border-radius:12px;background:#2b323d;margin:8px 0;overflow:hidden}.details summary{padding:15px;cursor:pointer;font-weight:650;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:50px}.details summary:after{content:'⌄';color:#e4c88e}.details[open] summary:after{content:'⌃'}.detailbody{border-top:1px solid #46505e;padding:12px;font-size:13px;line-height:1.6;color:#e2e5e9}.detailbody p{margin:0 0 9px}.detailbody ul{padding-left:18px;margin:6px 0}.data-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #46505e}.data-row:last-child{border-bottom:0}.data-row strong{color:#e7cd95}.btn{background:#524734;border:1px solid #b39965;color:#fff2d4;border-radius:9px;padding:11px 13px;min-height:44px}.btn.secondary{background:#343e4b;border-color:#566170;color:#fff}.field{background:#1e2630;color:white;border:1px solid #596474;border-radius:9px;padding:11px;width:100%;margin-top:8px;min-height:42px}.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);background:#141a22;border-top:1px solid #4c5460;padding:7px 6px max(9px,env(safe-area-inset-bottom));z-index:20}.tabs button{background:transparent;color:#b6bdc7;border:0;padding:8px 2px;font-size:10px;border-radius:9px;min-height:53px}.tabs button.active{background:#353e4b;color:#f0d393}.tabs .ico{display:block;font-size:21px;margin-bottom:2px}.panel{display:none}.panel.active{display:block}.notice{background:#42382b;border-radius:9px;padding:11px;color:#e8cfa2;font-size:12px;line-height:1.5}.debug{font-size:11px;color:#aeb5c1;margin-top:12px}.weaponoption{width:100%;display:block;text-align:left;margin:7px 0}.pill{font-size:10px;color:#f1dcae;border:1px solid #88734d;padding:4px 7px;border-radius:20px}.buttonbar{display:flex;gap:8px}.buttonbar button{flex:1}.noscript{padding:20px;background:#642c2c;color:#fff} @media(max-width:360px){.app{padding-left:10px;padding-right:10px}.big{font-size:25px}.ability strong{font-size:18px}.statcard{padding:8px}.hero{grid-template-columns:45% 55%}}
 
@@ -113,14 +113,66 @@ body{background:#0d1420;color:#f3f1ec}.app{background:#192331;max-width:520px}.e
 .xp-card-auto .xp-actions{display:grid;grid-template-columns:1.5fr 1fr;gap:8px;margin-top:12px}
 .xp-card-auto .xp-actions .btn{width:100%;min-height:44px}
 @media(max-width:340px){.xp-card-auto .xp-actions{grid-template-columns:1fr}}
-</style></head><body><main class="app"><header class="top"><div><div class="eyebrow">ADVENTURER CONQUEROR KING SYSTEM II</div><div class="name">THALION</div><div class="muted">Elven Spellsword · <span class="gold">Swordmage</span><br/>Arcanist-Guardian · Neutral</div></div><div class="tag">LIVELLO <b id="lvlTop">1</b></div></header>
+#levelUpDialog{width:min(92vw,36rem);max-height:85dvh;overflow:auto;border:1px solid #b18b55;border-radius:16px;background:#1c232d;color:#f3f0e8;padding:18px;box-shadow:0 16px 55px #0009}
+#levelUpDialog::backdrop{background:#070a10ce}
+#levelUpDialog h2{margin:0 0 12px;font-size:23px}
+#levelUpDialog .btn,#levelUpButton{min-height:44px}
+#levelUpButton:disabled{opacity:.6}
+#levelUpButton[hidden],#levelHistory[hidden],#setLevelOneButton[hidden]{display:none}
+#levelUpDialog .muted,#levelHistory p{line-height:1.45}
+#levelUpResult{min-height:1.5em}
+#levelIntro{min-width:0;min-height:140px;border-radius:12px;padding:10px;text-align:center;background:radial-gradient(ellipse at center,#263f56,#151016 74%);color:#f6dfab}
+
+#levelIntro strong{display:block;font:700 clamp(2.6rem,11vw,7rem) Georgia,serif;text-shadow:0 0 34px #92bdd8;animation:warrior-seer-arrival .75s ease-out both}
+#levelPortrait{width:min(100%,12rem);max-height:24dvh;object-fit:contain;justify-self:center;border-radius:8px}
+#levelIntro span{letter-spacing:.22em;font-weight:700}
+@keyframes warrior-seer-arrival{from{opacity:0;transform:scale(.84);filter:blur(6px)}to{opacity:1;transform:scale(1);filter:blur(0)}}
+@media(prefers-reduced-motion:reduce){#levelIntro strong{animation:none}}
+#levelUpDialog:modal{overscroll-behavior:contain}
+#levelUpDialog [hidden]{display:none}
+#levelUpDialog input{width:100%;min-height:44px}
+#levelUpDialog .level-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+#levelUpDialog .level-nav .btn{flex:1 1 7rem}
+#levelIntro:not([hidden]){display:grid;place-content:center;gap:12px}
+</style></head><body><main class="app"><header class="top"><div><div class="eyebrow">ADVENTURER CONQUEROR KING SYSTEM II</div><div class="name">THALION</div><div class="muted">Elven Spellsword · <span class="gold">Swordmage</span><br/><span id="levelTitle">Arcanist-Guardian</span> · Neutral</div></div><div class="tag">LIVELLO <b id="lvlTop">1</b></div></header>
 <section aria-label="Scheda e combattimento" class="panel active" id="scheda"><div class="hero"><div class="stack"><div class="statcard hp hp"><div class="small">PUNTI FERITA</div><div class="big"><span id="hp">8</span> <small>/ <span id="hpmax">8</span></small></div><div class="control"><button onclick="adjustHP(-1)" type="button">−</button><button onclick="adjustHP(1)" type="button">+</button><button class="btn small" onclick="setHPMax()" title="Modifica PF massimi" type="button">Max</button></div></div><div class="statcard ac ac"><div class="small">CLASSE ARMATURA · ACKS II</div><div class="big" id="ac">4</div><div class="muted" id="acDetail">Banded plate, DES −1</div></div><div class="statcard"><div class="small">INIZIATIVA</div><div class="big" id="init">−1</div><div class="muted">1d6 + DES (house rule Master)</div></div></div><div class="portrait-stage" id="portraitStage">
 <img alt="Ritratto di Thalion" class="portrait" id="portraitFallback" src="thalion_portrait.jpg"/>
 <video id="thalionIdle" class="portrait-video" muted autoplay loop playsinline webkit-playsinline preload="metadata" aria-hidden="true"><source src="thalion_idle.mp4" type="video/mp4"/></video>
 <video id="thalionAction" class="portrait-video" muted playsinline webkit-playsinline preload="auto" aria-hidden="true"><source src="thalion_action.mp4" type="video/mp4"/></video>
 <button type="button" class="portrait-tap" id="thalionTap" aria-label="Tocca Thalion per vedere l'incantamento delle spade" title="Tocca per l'incantamento delle spade"></button>
-</div></div><div class="section">CARATTERISTICHE</div><div class="abilities" id="abilities"></div><div class="section">COMBATTIMENTO</div><div class="card stack"><label><div class="label">Arma / configurazione attiva</div><select class="field" id="weapon" onchange="update('weapon',this.value)"><option value="curved">Spada curva</option></select></label><div id="gripSection"><div class="label">Impugnatura dell’arma principale</div><div class="modes" id="gripModes" role="group" aria-label="Impugnatura arma"></div></div><label><div class="label">Mano secondaria · stile a due armi</div><select class="field" id="offhand" onchange="update('offhand',this.value)"><option value="">Nessuna (una sola arma)</option></select><div class="muted" id="offhandHint">Seleziona un'arma diversa dalla principale, presente nell'inventario.</div></label><div class="grid"><div><div class="small">ATTACK THROW</div><div class="big" id="attack">9+</div><div class="muted">contro CA 0</div></div><div><div class="small">DANNI</div><div class="big" id="damage" style="font-size:21px">1d6+2</div></div><div><div class="small">CLEAVES</div><div class="big" id="cleaves">1</div><div class="muted">max / round</div></div></div><div class="notice" id="combatNotice">Il valore Attack Throw include i modificatori dell'arma. Per colpire altre CA, aggiungere la CA bersaglio al valore da raggiungere.</div><div class="row wrap"><span class="muted">Armatura</span><select class="field" id="armor" onchange="update('armor',this.value)" style="width:auto;max-width:70%"><option value="banded">Banded plate</option></select></div><label class="row"><span class="muted">Scudo equipaggiato (se posseduto)</span><input checked="" id="shield" onchange="update('shield',this.checked)" style="width:22px;height:22px" type="checkbox"/></label></div><div class="section">MOVIMENTO E INGOMBRO</div><div class="twocol quick-resources"><div class="card summary-card"><div class="small">MOVIMENTO · COMBATTIMENTO</div><div class="big"><span id="moveQuick">20</span><small> ft</small></div><div class="muted" id="moveQuickSquares">4 quadretti / round</div><div class="quick-run"><div class="small">CORSA</div><div class="big"><span id="runQuick">60</span><small> ft</small></div><div class="muted" id="runQuickSquares">12 quadretti / round</div></div></div><div class="card"><div class="small">INGOMBRO</div><div class="big"><span id="enc">—</span><small> st</small></div><div class="muted" id="move">Movimento calcolato</div></div></div><div class="section">ESPERIENZA</div><div class="card xp-card xp-card-auto"><div class="small">ESPERIENZA</div><div class="xp-summary"><div class="big"><span id="xpVal">180</span><small> / <span id="xpNext">4000</span> XP</small></div><div class="xp-rate" id="xpRate">+20% bonus</div></div><div class="muted xp-breakdown">XP assegnati: <span id="xpBase">180</span> · Bonus accumulato: <span id="xpBonus">+0</span></div><div class="meter"><div class="fill" id="xpBar" style="width:5%"></div></div><div class="xp-actions"><button class="btn" type="button" onclick="awardXP()">＋ Aggiungi XP</button><button class="btn secondary" type="button" onclick="setXP()">Set XP</button></div></div></section>
-<section aria-label="Tiri salvezza e capacità" class="panel" id="capacita"><div class="section">TIRI SALVEZZA · ELVEN SPELLSWORD LIVELLO 1</div><div class="card"><p class="muted" style="margin:0 0 7px">Valori base del livello 1 (ACKS II). Con VOL −1, per il dado naturale serve un risultato superiore di 1.</p><div id="saves"></div></div><div class="section">CAPACITÀ DI CLASSE</div><details class="details" open=""><summary>Arcane Magic · Magia arcana</summary><div class="detailbody">Può studiare e lanciare incantesimi arcani dal proprio repertorio. A differenza dei maghi umani, <b>può lanciare incantesimi indossando armature</b>. Al 1° livello ha 1 lancio giornaliero di livello 1.</div></details><details class="details"><summary>Collegiate Wizardry · 11+</summary><div class="detailbody">Riconosce automaticamente simboli, firme magiche e grimori della propria tradizione. Può identificare quelli di altre tradizioni con un tiro di competenza <b>11+</b>; tradizioni rare possono essere più difficili.</div></details><details class="details"><summary>Attunement to Nature · Sensi elfici</summary><div class="detailbody"><b>+1 ai tiri di sorpresa</b> nella natura selvaggia. Con Adventuring ottiene <b>14+</b> invece di 18+ per Searching e Listening, salvo ulteriori modifiche specifiche.</div></details><details class="details"><summary>Connection to Nature · Natura elfica</summary><div class="detailbody">Immunità alle malattie causate dai non morti; bonus <b>+1 ai tiri salvezza Paralysis e Spells</b> già incluso nella progressione razziale. Il bonus +1 al primo tiro di dado vita è già incluso nella scheda.</div></details><details class="details"><summary>Cleave · Eliminazione nemici</summary><div class="detailbody">Può effettuare un attacco aggiuntivo dopo aver abbattuto un avversario idoneo, fino a un massimo di <b>un Cleave per round al livello 1</b>.</div></details>
+</div></div><div class="section">CARATTERISTICHE</div><div class="abilities" id="abilities"></div><div class="section">COMBATTIMENTO</div><div class="card stack"><label><div class="label">Arma / configurazione attiva</div><select class="field" id="weapon" onchange="update('weapon',this.value)"><option value="curved">Spada curva</option></select></label><div id="gripSection"><div class="label">Impugnatura dell’arma principale</div><div class="modes" id="gripModes" role="group" aria-label="Impugnatura arma"></div></div><label><div class="label">Mano secondaria · stile a due armi</div><select class="field" id="offhand" onchange="update('offhand',this.value)"><option value="">Nessuna (una sola arma)</option></select><div class="muted" id="offhandHint">Seleziona un'arma diversa dalla principale, presente nell'inventario.</div></label><div class="grid"><div><div class="small">ATTACK THROW</div><div class="big" id="attack">9+</div><div class="muted">contro CA 0</div></div><div><div class="small">DANNI</div><div class="big" id="damage" style="font-size:21px">1d6+2</div></div><div><div class="small">CLEAVES</div><div class="big" id="cleaves">1</div><div class="muted">max / round</div></div></div><div class="notice" id="combatNotice">Il valore Attack Throw include i modificatori dell'arma. Per colpire altre CA, aggiungere la CA bersaglio al valore da raggiungere.</div><div class="row wrap"><span class="muted">Armatura</span><select class="field" id="armor" onchange="update('armor',this.value)" style="width:auto;max-width:70%"><option value="banded">Banded plate</option></select></div><label class="row"><span class="muted">Scudo equipaggiato (se posseduto)</span><input checked="" id="shield" onchange="update('shield',this.checked)" style="width:22px;height:22px" type="checkbox"/></label></div><div class="section">MOVIMENTO E INGOMBRO</div><div class="twocol quick-resources"><div class="card summary-card"><div class="small">MOVIMENTO · COMBATTIMENTO</div><div class="big"><span id="moveQuick">20</span><small> ft</small></div><div class="muted" id="moveQuickSquares">4 quadretti / round</div><div class="quick-run"><div class="small">CORSA</div><div class="big"><span id="runQuick">60</span><small> ft</small></div><div class="muted" id="runQuickSquares">12 quadretti / round</div></div></div><div class="card"><div class="small">INGOMBRO</div><div class="big"><span id="enc">—</span><small> st</small></div><div class="muted" id="move">Movimento calcolato</div></div></div><div class="section">ESPERIENZA</div><div class="card xp-card xp-card-auto"><div class="small">ESPERIENZA</div><div class="xp-summary"><div class="big"><span id="xpVal">180</span><small> / <span id="xpNext">4000</span> XP</small></div><div class="xp-rate" id="xpRate">+20% bonus</div></div><div class="muted xp-breakdown">XP assegnati: <span id="xpBase">180</span> · Bonus accumulato: <span id="xpBonus">+0</span></div><div class="meter"><div class="fill" id="xpBar" style="width:5%"></div></div><div class="xp-actions"><button class="btn" type="button" onclick="awardXP()">＋ Aggiungi XP</button><button class="btn secondary" type="button" onclick="setXP()">Set XP</button></div>
+<button class="btn" id="levelUpButton" data-act="levelup" type="button" disabled>LEVEL UP</button>
+<button class="btn secondary" id="setLevelOneButton" data-act="setlevelone" type="button" hidden>SET LEVEL 1</button>
+<p class="muted" id="levelUpHint"></p>
+<details id="levelHistory" class="details" hidden><summary>Cronologia avanzamenti</summary><div class="detailbody" id="levelHistoryEntry"></div></details>
+</div></section>
+<dialog id="levelUpDialog" aria-labelledby="levelUpTitle">
+<p class="muted" id="levelStep" aria-live="polite"></p>
+<h2 id="levelUpTitle" tabindex="-1">Avanzamento</h2>
+<div id="levelIntro" data-level-step="1"><img id="levelPortrait" alt=""><span>Thalion · Elven Spellsword</span><strong>Warrior-Seer</strong><span>Livello 1 → 2</span></div>
+<div data-level-step="2" hidden>
+<p>Con COS 13 (+1) ritiri 2d6 e aggiungi 1 a ogni dado. Il nuovo massimo aumenta di almeno 1 PF.</p>
+<button class="btn secondary" id="rollLevelHP" data-act="rolllevelhp" type="button">Tira 2d6</button>
+<p class="muted">Puoi anche inserire i risultati dei tuoi dadi.</p>
+<div class="twocol">
+<label>Primo d6<input id="levelDie1" class="field" type="number" min="1" max="6" step="1" inputmode="numeric"/></label>
+<label>Secondo d6<input id="levelDie2" class="field" type="number" min="1" max="6" step="1" inputmode="numeric"/></label>
+</div>
+<p id="levelUpResult" role="status"></p>
+</div>
+<div data-level-step="3" hidden>
+<div id="levelUpPreview"></div>
+<p class="muted">Mage Missile, Sharpness e Slumber restano nel repertorio. Il nuovo posto di apprendimento è libero.</p>
+</div>
+<p id="levelSaveError" role="alert"></p>
+<div class="level-nav">
+<button class="btn secondary" data-act="closelevelup" type="button">Chiudi</button>
+<button class="btn secondary" data-act="prevlevelstep" id="prevLevelStep" type="button" hidden>Indietro</button>
+<button class="btn" data-act="nextlevelstep" id="nextLevelStep" type="button">Avanti</button>
+<button class="btn" data-act="confirmlevelup" id="confirmLevelUp" type="button" hidden>Conferma livello 2</button>
+</div>
+</dialog>
+<section aria-label="Tiri salvezza e capacità" class="panel" id="capacita"><div class="section">TIRI SALVEZZA · ELVEN SPELLSWORD <span id="saveLevel">LIVELLO 1</span></div><div class="card"><p class="muted" style="margin:0 0 7px">Valori base ACKS II, bonus razziali inclusi. Con VOL −1, per il dado naturale serve un risultato superiore di 1.</p><div id="saves"></div></div><div class="section">CAPACITÀ DI CLASSE</div><details class="details" open=""><summary>Arcane Magic · Magia arcana</summary><div class="detailbody">Può studiare e lanciare incantesimi arcani dal proprio repertorio. A differenza dei maghi umani, <b>può lanciare incantesimi indossando armature</b>. Lanci giornalieri di 1° livello: <strong id="arcaneDaily">1</strong>.</div></details><details class="details"><summary>Collegiate Wizardry · 11+</summary><div class="detailbody">Riconosce automaticamente simboli, firme magiche e grimori della propria tradizione. Può identificare quelli di altre tradizioni con un tiro di competenza <b>11+</b>; tradizioni rare possono essere più difficili.</div></details><details class="details"><summary>Attunement to Nature · Sensi elfici</summary><div class="detailbody"><b>+1 ai tiri di sorpresa</b> nella natura selvaggia. Con Adventuring ottiene <b>14+</b> invece di 18+ per Searching e Listening, salvo ulteriori modifiche specifiche.</div></details><details class="details"><summary>Connection to Nature · Natura elfica</summary><div class="detailbody">Immunità alle malattie causate dai non morti; bonus <b>+1 ai tiri salvezza Paralysis e Spells</b> già incluso nella progressione razziale. Il bonus +1 al primo tiro di dado vita è già incluso nella scheda.</div></details><details class="details"><summary>Cleave · Eliminazione nemici</summary><div class="detailbody">Può effettuare un attacco aggiuntivo dopo aver abbattuto un avversario idoneo, fino a un massimo di <b><span id="cleaveLimit">1</span> per round</b>.</div></details>
 <div class="section">TEMPLATE SWORDMAGE</div><details class="details" open=""><summary>Battle Magic · Magia in battaglia</summary><div class="detailbody">
 <p><b>+1 all’iniziativa quando lancia un incantesimo.</b> Con DES 8 (−1), il modificatore d’iniziativa di Thalion mentre lancia magie diventa <b>0</b>, salvo altri bonus o penalità.</p>
 <p><b>+1 ai tiri per colpire degli incantesimi che richiedono un Attack Throw.</b> Battle Magic permette normalmente di utilizzare la progressione d’attacco del guerriero; poiché l’Elven Spellsword la utilizza già, Thalion riceve questo ulteriore +1.</p>
@@ -142,14 +194,15 @@ body{background:#0d1420;color:#f3f1ec}.app{background:#192331;max-width:520px}.e
 <section aria-label="Magia arcana" class="panel" id="incantesimi">
 <div class="section">MAGIA ARCANA · ELVEN SPELLSWORD</div>
 <div class="card">
-<div class="muted">INCANTESIMI GIORNALIERI · LIVELLO 1</div>
+<div class="muted">LANCI GIORNALIERI · INCANTESIMI DI 1° LIVELLO</div>
 <div class="twocol" style="margin-top:12px">
 <div class="statcard"><div class="small">LANCI DISPONIBILI</div><div class="big"><span id="slots">1</span> <small>/ <span id="slotsMax">1</span></small></div><div class="muted">Slot di 1° livello</div></div>
-<div class="statcard"><div class="small">REPERTORIO CONOSCIUTO</div><div class="big">3 / 3</div><div class="muted">1 base + 2 INT 16</div></div>
+<div class="statcard"><div class="small">REPERTORIO CONOSCIUTO</div><div class="big" id="repertoireCount">3 / 3</div><div class="muted" id="repertoireCapacity">1 base + 2 INT 16</div></div>
 </div>
 
+<p class="notice" id="freeSpellSlot" hidden><strong>1 posto di apprendimento libero.</strong> Thalion deve acquisire la formula e dedicarle una settimana di studio in gioco.</p>
 <div class="control"><button aria-label="Consuma uno slot" onclick="adjustSlots(-1)">− Slot</button><button aria-label="Restituisci uno slot" onclick="adjustSlots(1)">+ Slot</button></div>
-<button class="btn primary" onclick="rest()" style="width:100%;margin-top:10px">Riposo · recupera lo slot</button>
+<button class="btn primary" onclick="rest()" style="width:100%;margin-top:10px">Riposo · recupera i lanci</button>
 </div>
 <div class="section">INCANTESIMI CONOSCIUTI · 1° LIVELLO</div>
 <details class="details"><summary><span>✧ Mage Missile · Dardo magico<small class="spell-short">Energia arcana · 360 piedi · concentrazione · 1d4 danni per round</small></span></summary><div class="detailbody">
@@ -173,7 +226,7 @@ body{background:#0d1420;color:#f3f1ec}.app{background:#192331;max-width:520px}.e
 <div class="data-row"><span>Livello</span><strong>Arcano 1°</strong></div>
 <div class="data-row"><span>Tipo</span><strong>Enchantment</strong></div>
 <div class="data-row"><span>Gittata</span><strong>180 piedi</strong></div>
-<div class="data-row"><span>Durata</span><strong>1 turno per livello</strong></div>
+<div class="data-row"><span>Durata per Thalion</span><strong id="slumberDuration">1 turno (10 minuti)</strong></div>
 <div class="data-row"><span>Area</span><strong>Sfera di 10 piedi di diametro</strong></div>
 <p style="margin-top:10px">Addormenta creature <strong>viventi con meno di 5 DV</strong> presenti nell'area. Creature con <strong>almeno 2 DV</strong> effettuano un tiro salvezza <strong>Paralysis</strong>; con meno di 2 DV si addormentano senza tiro salvezza. Chi dorme è inerme, cieco, sordo e muto. Attaccarlo, danneggiarlo o spostarlo lo risveglia, mentre i rumori normali no.</p>
 </div></details>
@@ -252,8 +305,14 @@ body{background:#0d1420;color:#f3f1ec}.app{background:#192331;max-width:520px}.e
 'use strict';
 const KEY='acks_thalion_v010';
 const XP_BONUS_RATE=20;
-const XP_LEVEL_2=4000;
-const BASE={level:1,xp:180,xpBase:null,xpBonusGained:null,hp:8,hpmax:8,weapon:'curved',offhand:'',grip:'one',armor:'banded',shield:true,slots:1,gold:14,silver:5,notes:'Spada curva, spada corta, arco corto. Scudo presente sulla scheda cartacea. Controllare con il Master quantità di frecce e collocazione degli oggetti.\nIngombro scritto sulla scheda: 6 2/6 stone (da riconciliare con l’equipaggiamento attuale).',items:[{id:1,name:'Spellbook (3 incantesimi)',qty:1,w:0.5},{id:2,name:'Arco corto',qty:1,w:1/6},{id:3,name:'Spada curva',qty:1,w:1/6},{id:4,name:'Spada corta',qty:1,w:1/6},{id:5,name:'Faretra e frecce',qty:1,w:1/6},{id:6,name:'Otre',qty:1,w:1/6}]};
+// ACKS II Revised, seconda stampa, pp. 16, 90–91, 179–182, 311.
+const SPELLSWORD={
+ 1:{title:'Arcanist-Guardian',nextXP:4000,attack:10,castings:1,saves:[12,14,15,16,16]},
+ 2:{title:'Warrior-Seer',nextXP:8000,attack:9,castings:2,saves:[11,13,14,15,15]}
+};
+const SAVE_NAMES=['Paralysis','Death','Blast','Implements','Spells'];
+let levelStep=1, levelDraft=['',''];
+const BASE={level:1,advancement:null,xp:180,xpBase:null,xpBonusGained:null,hp:8,hpmax:8,weapon:'curved',offhand:'',grip:'one',armor:'banded',shield:true,slots:1,gold:14,silver:5,notes:'Spada curva, spada corta, arco corto. Scudo presente sulla scheda cartacea. Controllare con il Master quantità di frecce e collocazione degli oggetti.\nIngombro scritto sulla scheda: 6 2/6 stone (da riconciliare con l’equipaggiamento attuale).',items:[{id:1,name:'Spellbook (3 incantesimi)',qty:1,w:0.5},{id:2,name:'Arco corto',qty:1,w:1/6},{id:3,name:'Spada curva',qty:1,w:1/6},{id:4,name:'Spada corta',qty:1,w:1/6},{id:5,name:'Faretra e frecce',qty:1,w:1/6},{id:6,name:'Otre',qty:1,w:1/6}]};
 let state;try{state={...structuredClone(BASE),...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){state=JSON.parse(JSON.stringify(BASE))}
 const $=id=>document.getElementById(id), fmt=n=>(Math.round(n*6)/6).toFixed(2).replace(/\.00$/,'');
 // Catalogo conforme alle tabelle ACKS II Revised pp. 126 e 128.
@@ -370,7 +429,10 @@ function setXP(){
   state.xpBonusGained=0;
   save();render();
 }
-function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){console.warn('Salvataggio locale non disponibile',e)}}
+function save(next=state){
+ try{localStorage.setItem(KEY,JSON.stringify(next));return true}
+ catch(e){console.warn('Salvataggio locale non disponibile',e);return false}
+}
 function showTab(tab){if(!document.getElementById(tab)?.matches('section.panel'))return;document.querySelectorAll('section.panel').forEach(e=>e.classList.toggle('active',e.id===tab));document.querySelectorAll('.tabs button').forEach(e=>e.classList.toggle('active',e.dataset.tab===tab));window.scrollTo({top:0,behavior:'instant'})}
 function update(field,val){state[field]=val;
  if(field==='weapon'&&WEAPONS[val]){if(!['onehand','versatile'].includes(WEAPONS[val][4]))state.offhand='';if(WEAPONS[val][4]!=='versatile'||!WEAPONS[val][5])state.grip='one';}
@@ -382,12 +444,13 @@ function setGrip(mode){const w=WEAPONS[state.weapon];if(!w||w[4]!=='versatile'||
 function adjustHP(x){state.hp=Math.max(0,Math.min(state.hpmax,state.hp+x));save();render()}
 function setHPMax(){let x=prompt('PF massimi:',state.hpmax);if(x!==null&&Number.isFinite(+x)){state.hpmax=Math.max(1,Math.floor(+x));state.hp=Math.min(state.hp,state.hpmax);save();render()}}
 function editNumber(field,label){let x=prompt(label+':',state[field]);if(x!==null&&Number.isFinite(+x)){state[field]=Math.max(field==='level'?1:0,Math.floor(+x));save();render()}}
-function adjustSlots(n){state.slots=Math.max(0,Math.min(1,state.slots+n));save();render()}
-function rest(){state.slots=1;save();render()}
+function adjustSlots(n){state.slots=Math.max(0,Math.min(progression().castings,state.slots+n));save();render()}
+function rest(){state.slots=progression().castings;save();render()}
 function weight(){return armorWeightTotal()+(state.items||[]).reduce((a,i)=>a+(Math.max(0,+i.qty||0)*Math.max(0,+i.w||0)),0)}
 function calcMovement(w){if(w<=5)return [40,120,24];if(w<=7)return [30,90,18];if(w<=10)return [20,60,12];return [10,30,6]}
-function render(){hydrate();rebuildChoices();let w=weight(),m=calcMovement(w),config=getCombatConfig(),wp=config.wp,twowp=config.twowp,weapon=WEAPONS[wp],type=weapon?.[4]||'none';
-let str=1,dex=-1,baseAttack=10,isMissile=type==='missile',canShield=(type==='onehand'||type==='versatile'||(isMissile&&/Handy/.test(weapon?.[7]||'')))&&!twowp&&!config.twoHandGrip;
+function render(){hydrate();
+state.level=state.level===2?2:1;state.slots=Math.max(0,Math.min(progression().castings,Math.floor(Number(state.slots)||0)));rebuildChoices();let w=weight(),m=calcMovement(w),config=getCombatConfig(),wp=config.wp,twowp=config.twowp,weapon=WEAPONS[wp],type=weapon?.[4]||'none';
+let str=1,dex=-1,baseAttack=progression().attack,isMissile=type==='missile',canShield=(type==='onehand'||type==='versatile'||(isMissile&&/Handy/.test(weapon?.[7]||'')))&&!twowp&&!config.twoHandGrip;
 let hasShield=!!state.shield&&(state.extras.shield||0)+(state.extras.mirror||0)>0&&canShield;
 let toHit=baseAttack-(isMissile?dex:str)-(twowp?1:0);
 let damageDie=(config.twoHandGrip?weapon?.[5]:weapon?.[1])||'—',dmg=(damageDie==='—'?'—':damageDie+(isMissile?'+1':'+2'));
@@ -401,8 +464,8 @@ offSelect.disabled=config.twoHandGrip||!['onehand','versatile'].includes(type)||
 $('offhandHint').textContent=config.twoHandGrip?'Con entrambe le mani sull’arma principale, la mano secondaria non è disponibile.':twowp?'Due armi: '+weaponNames[wp]+' + '+weaponNames[config.off]+' · +1 a colpire · nessun attacco extra · niente scudo.':!['onehand','versatile'].includes(type)?'Arma incompatibile con la mano secondaria.':!weaponOwned(wp)?'Aggiungi prima un’arma all’inventario.':'Scegli un’altra arma posseduta (o 2 esemplari della stessa).';
 $('attack').textContent=toHit+'+';$('damage').textContent=dmg;$('cleaves').textContent=state.level;
 $('combatNotice').textContent=config.twoHandGrip?'Impugnatura a due mani: danni '+damageDie+' + FOR 1 e classe 1. La mano secondaria e lo scudo non sono utilizzabili.':twowp?'Due armi: +1 al tiro per colpire, nessun attacco extra. Scudo non utilizzabile.':isMissile?'Attacco a distanza: DES −1. Portate: '+(weapon[6]||'vedi manuale')+' piedi. '+(weapon[7]||''):'Mischia: FOR +1 e bonus danni di classe +1. '+(weapon?.[7]||'')+(hasShield?' Scudo +1 CA.':'');
-normalizeXP();$('xpVal').textContent=state.xp.toLocaleString('it-IT');$('xpBase').textContent=state.xpBase.toLocaleString('it-IT');$('xpBonus').textContent='+'+state.xpBonusGained.toLocaleString('it-IT');$('xpNext').textContent=state.level===1?XP_LEVEL_2.toLocaleString('it-IT'):'da aggiornare';$('xpBar').style.width=state.level===1?Math.min(100,state.xp/XP_LEVEL_2*100)+'%':'0%';$('lvlTop').textContent=state.level;$('enc').textContent=fmt(w);$('moveQuick').textContent=m[0];$('moveQuickSquares').textContent=(m[0]/5)+' quadretti / round';$('runQuick').textContent=m[0]*3;$('runQuickSquares').textContent=(m[0]*3/5)+' quadretti / round';$('encGear').textContent=fmt(w)+' st';$('armorWeight').textContent=fmt(armorWeightTotal())+' st (armature + protezioni)';$('shieldWeight').textContent=fmt((state.extras.shield||0)+(state.extras.mirror||0))+' st';$('itemsWeight').textContent=fmt(w-armorWeightTotal())+' st';$('move').textContent=w>10?'Sovraccarico elevato':w>7?'Carico pesante':w>5?'Carico medio':'Carico leggero';$('movementCombat').textContent=m[0]+' ft/round ('+(m[0]/5)+' quadretti)';$('movementRun').textContent=(m[0]*3)+' ft/round ('+(m[0]*3/5)+' quadretti)';$('movementExplore').textContent=m[1]+' ft/turn';$('movementTravel').textContent=m[2]+' miglia/giorno';$('slots').textContent=state.slots;$('slotsMax').textContent='1';$('gold').value=state.gold;$('silver').value=state.silver;if(document.activeElement!==$('notes'))$('notes').value=state.notes||'';
-const attrs=[['FOR',14,'+1'],['DES',8,'−1'],['COS',13,'+1'],['INT',16,'+2'],['VOL',8,'−1'],['CAR',14,'+1']];$('abilities').innerHTML=attrs.map(a=>`<div class="ability"><span>${a[0]}</span><b>${a[1]}</b><span>${a[2]}</span></div>`).join('');let saves=[['Paralysis',12],['Death',14],['Blast',15],['Implements',16],['Spells',16]];$('saves').innerHTML=saves.map(([n,v])=>`<div class="statline"><span>${n}</span><b>${v}+ <small class="muted">(VOL −1 → dado ${v+1}+)</small></b></div>`).join('');
+normalizeXP();$('xpVal').textContent=state.xp.toLocaleString('it-IT');$('xpBase').textContent=state.xpBase.toLocaleString('it-IT');$('xpBonus').textContent='+'+state.xpBonusGained.toLocaleString('it-IT');$('xpNext').textContent=xpText(progression().nextXP);$('xpBar').style.width=Math.min(100,state.xp/progression().nextXP*100)+'%';$('lvlTop').textContent=state.level;$('enc').textContent=fmt(w);$('moveQuick').textContent=m[0];$('moveQuickSquares').textContent=(m[0]/5)+' quadretti / round';$('runQuick').textContent=m[0]*3;$('runQuickSquares').textContent=(m[0]*3/5)+' quadretti / round';$('encGear').textContent=fmt(w)+' st';$('armorWeight').textContent=fmt(armorWeightTotal())+' st (armature + protezioni)';$('shieldWeight').textContent=fmt((state.extras.shield||0)+(state.extras.mirror||0))+' st';$('itemsWeight').textContent=fmt(w-armorWeightTotal())+' st';$('move').textContent=w>10?'Sovraccarico elevato':w>7?'Carico pesante':w>5?'Carico medio':'Carico leggero';$('movementCombat').textContent=m[0]+' ft/round ('+(m[0]/5)+' quadretti)';$('movementRun').textContent=(m[0]*3)+' ft/round ('+(m[0]*3/5)+' quadretti)';$('movementExplore').textContent=m[1]+' ft/turn';$('movementTravel').textContent=m[2]+' miglia/giorno';$('slots').textContent=state.slots;$('slotsMax').textContent=progression().castings;renderLevel();$('gold').value=state.gold;$('silver').value=state.silver;if(document.activeElement!==$('notes'))$('notes').value=state.notes||'';
+const attrs=[['FOR',14,'+1'],['DES',8,'−1'],['COS',13,'+1'],['INT',16,'+2'],['VOL',8,'−1'],['CAR',14,'+1']];$('abilities').innerHTML=attrs.map(a=>`<div class="ability"><span>${a[0]}</span><b>${a[1]}</b><span>${a[2]}</span></div>`).join('');const saves=SAVE_NAMES.map((name,i)=>[name,progression().saves[i]]);$('saves').innerHTML=saves.map(([n,v])=>`<div class="statline"><span>${n}</span><b>${v}+ <small class="muted">(VOL −1 → dado ${v+1}+)</small></b></div>`).join('');
 $('adventuring').innerHTML=[['Climbing','8+'],['Dungeonbashing','14+'],['Listening','14+'],['Searching','14+'],['Trapbreaking','18+']].map(([n,v])=>`<div class="statline"><span>${n}</span><b>${v}</b></div>`).join('')+'<p class="muted">Valori iniziali dalla scheda; le annotazioni poco leggibili restano da verificare.</p>';
 $('languages').innerHTML=['Common','Elven','Gnoll','Hobgoblin','Orc','Classical','Zaharan'].map(l=>`<span class="pill">${l}</span>`).join(''); renderInventory();renderArmorInventory();renderCatalog();}
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -418,9 +481,160 @@ function renderCatalogInfo(){const group=$('catalogGroup').value,id=$('catalogIt
 $('catalogInfo').textContent=group==='weapons'?`Danno ${x[1]}${x[5]?' / '+x[5]+' a due mani':''} · ${fmt(x[2])} st · ${x[3]} gp${x[6]?' · Portata '+x[6]+' ft':''}${x[7]?' · '+x[7]:''}`:group==='ammunition'?`${fmt(x[1])} st · ${x[2]} gp`: `CA +${x[1]} · ${fmt(x[2])} st · ${x[3]} gp`}
 function addCatalogItem(){let group=$('catalogGroup').value,id=$('catalogItem').value;if(group==='weapons'&&WEAPONS[id]){let x=WEAPONS[id];pushItem(x[0],x[2]);}else if(group==='ammunition'&&AMMO[id]){let x=AMMO[id];pushItem(x[0],x[1]);}else if(group==='armor'){if(ARMORS[id])state.armors[id]=(state.armors[id]||0)+1;else if(EXTRAS[id])state.extras[id]=(state.extras[id]||0)+1;}save();render()}
 function pushItem(name,w){const old=state.items.find(i=>i.name===name&&Math.abs(i.w-w)<0.00001);if(old)old.qty++;else state.items.push({id:Date.now()+Math.floor(Math.random()*10000),name,qty:1,w})}
-function exportData(){let a=document.createElement('a'),blob=new Blob([JSON.stringify({app:'ACKS Thalion',version:'0.2.4',data:state},null,2)],{type:'application/json'});a.href=URL.createObjectURL(blob);a.download='thalion_backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)}
+function exportData(){let a=document.createElement('a'),blob=new Blob([JSON.stringify({app:'ACKS Thalion',version:'0.5.5',data:state},null,2)],{type:'application/json'});a.href=URL.createObjectURL(blob);a.download='thalion_backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)}
 async function importData(event){let f=event.target.files?.[0];if(!f)return;try{let j=JSON.parse(await f.text()),d=j.data||j;if(!Array.isArray(d.items)||typeof d.hp!=='number')throw Error('Formato non valido');state={...JSON.parse(JSON.stringify(BASE)),...d};normalizeXP();hydrate();ensureBasilio();save();render();renderBasilio();alert('Backup importato')}catch(e){alert('Importazione non riuscita: '+e.message)}event.target.value=''}
 function resetAll(){if(confirm('Ripristinare tutti i dati iniziali di Thalion? Questa operazione cancella le modifiche locali.')){state=JSON.parse(JSON.stringify(BASE));normalizeXP();ensureBasilio();save();render();renderBasilio()}}
+function progression(){return SPELLSWORD[state.level===2?2:1]}
+function canLevelUp(){return state.level!==2&&state.xp>=SPELLSWORD[1].nextXP}
+function proposedRoll(){return levelDraft.map(Number)}
+function validLevelRoll(roll){return roll.length===2&&roll.every(die=>Number.isInteger(die)&&die>=1&&die<=6)}
+function rolledHP(roll){return roll[0]+roll[1]+2}
+function newMaxHP(roll){return Math.max(state.hpmax+1,rolledHP(roll))}
+function renderLevel(){
+ const stats=progression(), second=state.level===2, last=state.advancement;
+ $('levelTitle').textContent=stats.title;
+ $('saveLevel').textContent='LIVELLO '+state.level;
+ $('arcaneDaily').textContent=stats.castings;
+ $('cleaveLimit').textContent=state.level;
+ $('repertoireCount').textContent='3 / '+(stats.castings+2);
+ $('repertoireCapacity').textContent=stats.castings+' base + 2 INT 16';
+ $('freeSpellSlot').hidden=!second;
+ $('slumberDuration').textContent=second?'2 turni (20 minuti)':'1 turno (10 minuti)';
+ $('levelUpButton').hidden=second;
+ $('levelUpButton').disabled=!canLevelUp();
+ $('setLevelOneButton').hidden=!second;
+ $('levelUpHint').textContent=second?'Livello 3 a 8.000 XP.':
+   canLevelUp()?'Puoi avanzare al livello 2.':'Mancano '+xpText(SPELLSWORD[1].nextXP-state.xp)+' XP al livello 2.';
+ $('levelHistory').hidden=!second||!last;
+ if(second&&last&&Array.isArray(last.roll)){
+   const date=new Date(last.date);
+   const when=Number.isFinite(date.getTime())?date.toLocaleString('it-IT')+' · ':'';
+   $('levelHistoryEntry').textContent=when+'Liv. 1 → 2 · d6: '+last.roll.join(' e ')+' · PF massimi: '+last.previousMax+' → '+last.newMax;
+ }
+}
+function advancementRows(){
+ const first=SPELLSWORD[1],second=SPELLSWORD[2];
+ return [
+   ['Dadi Vita','1d6 + 1 razziale → 2d6'],
+   ['Attack Throw base','10+ → 9+'],
+   ['Cleave per round','1 → 2'],
+   ['Lanci al giorno','1 → 2'],
+   ['Lanci disponibili',state.slots+' → '+(state.slots+1)],
+   ['Repertorio','3/3 → 3/4'],
+   ['Slumber','1 → 2 turni']
+ ].concat(SAVE_NAMES.map((name,i)=>[name,first.saves[i]+'+ → '+second.saves[i]+'+']));
+}
+  function xpText(xp){return xp.toLocaleString('it-IT',{useGrouping:'always'});}
+  function levelRows(rows){
+    return rows.map(function(row){
+      return '<div class="data-row"><span>'+row[0]+'</span><strong>'+row[1]+'</strong></div>';
+    }).join('');
+  }
+  function renderLevelStep(moveFocus){
+    var titles=['Avanzamento','Punti ferita','Conferma avanzamento'];
+    var roll=proposedRoll(), valid=validLevelRoll(roll);
+    $('levelStep').textContent='Passo '+levelStep+' di 3';
+    $('levelUpTitle').textContent=titles[levelStep-1];
+    document.querySelectorAll('[data-level-step]').forEach(function(panel){
+      panel.hidden=Number(panel.dataset.levelStep)!==levelStep;
+    });
+    $('prevLevelStep').hidden=levelStep===1;
+    $('nextLevelStep').hidden=levelStep===3;
+    $('nextLevelStep').disabled=levelStep===2&&!valid;
+    $('confirmLevelUp').hidden=levelStep!==3;
+    $('confirmLevelUp').disabled=!valid||!canLevelUp();
+    $('levelSaveError').textContent='';
+    $('levelUpResult').textContent=valid?'Tiro: '+roll.join(' + ')+' + 2 = '+rolledHP(roll)+
+      ' · Nuovo massimo: '+newMaxHP(roll)+' PF':'Inserisci due risultati interi da 1 a 6.';
+    if(levelStep===3&&valid){
+      var nextHP=newMaxHP(roll);
+      $('levelUpPreview').innerHTML=levelRows([
+        ['Thalion · Elven Spellsword','1 · Arcanist-Guardian → 2 · Warrior-Seer'],
+        ['Tiro 2d6 + COS',roll.join(' + ')+' + 2 = '+rolledHP(roll)],
+        ['PF massimi',state.hpmax+' → '+nextHP],
+        ['PF attuali',state.hp+' → '+(state.hp+nextHP-state.hpmax)]
+      ].concat(advancementRows(),[['Prossima soglia',xpText(SPELLSWORD[2].nextXP)+' XP']]));
+    }
+    if(moveFocus)$('levelUpTitle').focus();
+  }
+  function fillLevelDice(){
+    $('levelDie1').value=levelDraft[0];
+    $('levelDie2').value=levelDraft[1];
+  }
+  function rollLevelHP(){
+    if(!canLevelUp()||levelStep!==2)return;
+    var byte=new Uint8Array(1);
+    levelDraft=[0,0].map(function(){
+      do{crypto.getRandomValues(byte);}while(byte[0]>=252);
+      return String(byte[0]%6+1);
+    });
+    fillLevelDice();
+    renderLevelStep(false);
+  }
+  function withLevelLock(action){
+    if(navigator.locks){
+      navigator.locks.request(KEY+'-advancement',action).catch(function(){
+        alert('Operazione sul livello non completata. Riprova.');
+      });
+    }else action();
+  }
+function changeLevel(next){
+ try{
+   const raw=localStorage.getItem(KEY), saved=raw?JSON.parse(raw):state;
+   if((saved.level===2?2:1)!==state.level||
+      JSON.stringify(saved.advancement||null)!==JSON.stringify(state.advancement)){
+     return 'Il livello è cambiato in un’altra scheda. Ricarica la pagina.';
+   }
+   if(!save(next))return 'Salvataggio non disponibile. Riprova.';
+   state=next;
+   levelDraft=['',''];
+   render();
+ }catch(e){return 'Salvataggio non disponibile. Riprova.'}
+ return '';
+}
+function confirmLevelUp(){
+ const roll=proposedRoll();
+ if(!canLevelUp()||!$('levelUpDialog').open||levelStep!==3||!validLevelRoll(roll))return;
+ const hpmax=newMaxHP(roll);
+ const error=changeLevel({...state,level:2,hpmax,hp:state.hp+hpmax-state.hpmax,slots:state.slots+1,
+   advancement:{roll,date:new Date().toISOString(),previousMax:state.hpmax,newMax:hpmax}});
+ if(error){$('levelSaveError').textContent=error;return}
+ $('levelUpDialog').close();
+ $('setLevelOneButton').focus();
+}
+function setLevelOne(){
+ if(state.level!==2)return;
+ const hpmax=state.advancement?.previousMax||state.hpmax;
+ const hp=Math.max(0,Math.min(hpmax,state.hp+hpmax-state.hpmax));
+ if(!confirm('Tornare al livello 1 con '+hp+' / '+hpmax+' PF? Il tiro sarà rimosso. XP, inventario e Basilio saranno conservati.'))return;
+ const error=changeLevel({...state,level:1,advancement:null,hpmax,hp,slots:Math.max(0,state.slots-1)});
+ if(error)alert(error);
+}
+const levelActions={
+ levelup(){
+   if(!canLevelUp())return;
+   levelStep=1;
+   $('levelPortrait').src=$('portraitFallback').src;
+   fillLevelDice();
+   renderLevelStep(false);
+   $('levelUpDialog').showModal();
+   $('levelUpTitle').focus();
+ },
+ rolllevelhp:rollLevelHP,
+ closelevelup:()=>$('levelUpDialog').close(),
+ prevlevelstep(){if(levelStep>1){levelStep--;renderLevelStep(true)}},
+ nextlevelstep(){if(levelStep<3&&(levelStep!==2||validLevelRoll(proposedRoll()))){levelStep++;renderLevelStep(true)}},
+ confirmlevelup:()=>withLevelLock(confirmLevelUp),
+ setlevelone:()=>withLevelLock(setLevelOne)
+};
+document.addEventListener('click',event=>{
+ const action=event.target.closest('[data-act]')?.dataset.act;
+ if(action&&Object.hasOwn(levelActions,action))levelActions[action]();
+});
+['levelDie1','levelDie2'].forEach((id,i)=>{
+ $(id).addEventListener('input',event=>{levelDraft[i]=event.target.value;renderLevelStep(false)});
+});
+
 render();
 </script>
 
