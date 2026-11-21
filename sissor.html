@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171c23" name="theme-color"/><title>ACKS &middot; Sissor 0.5.2</title><style>
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#171c23" name="theme-color"/><title>ACKS &middot; Sissor 0.6.0</title><style>
 *{box-sizing:border-box}body{margin:0;background:#171016;color:#f6e9dc;font:15px -apple-system,BlinkMacSystemFont,system-ui,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}button:active{transform:scale(.97)}.app{max-width:520px;margin:auto;min-height:100dvh;background:#211820;padding:15px 14px 100px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.eyebrow{font-size:10px;letter-spacing:2px;color:#d7bc84}.name{font-family:Georgia,serif;font-size:26px;font-weight:bold;letter-spacing:.5px}.tag{border:1px solid #736445;border-radius:18px;padding:7px 10px;color:#e8d1a0;font-size:12px}.hero{display:grid;grid-template-columns:43% 57%;gap:10px;align-items:stretch}.portrait{width:100%;height:auto;display:block;object-fit:contain;border:1px solid #655437;border-radius:12px;background:#10141b}.stack{display:flex;flex-direction:column;gap:8px}.statcard{background:#303b45;border:1px solid #48515b;border-radius:12px;padding:10px;flex:1;display:flex;flex-direction:column;justify-content:center}.statcard.hp{background:#293f36}.statcard.ac{background:#2e384b}.small{font-size:10px;color:#c4cbd3;letter-spacing:.6px}.big{font-size:29px;font-weight:800;line-height:1.2}.control{display:flex;gap:7px;margin-top:8px}.control button{border:1px solid #768476;background:#425a4d;color:#fff;border-radius:9px;min-height:40px;flex:1;font-size:22px}.meter{height:6px;border-radius:10px;background:#506256;overflow:hidden;margin-top:7px}.fill{height:100%;background:#a7d6b2}.section{font-size:12px;letter-spacing:1.3px;color:#e2c58d;margin:17px 0 9px;font-weight:700}.abilities{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}.ability{text-align:center;background:#303844;border-radius:9px;padding:10px 1px}.ability strong{font-size:21px;display:block}.ability span{font-size:11px;color:#b5d4bd}.card{background:#2b323d;border:1px solid #424b59;border-radius:13px;padding:13px;margin-bottom:10px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}.value{font-size:25px;font-weight:750}.muted{color:#b9c1cb;font-size:12px;line-height:1.5}.gold{color:#e4c88e}.line{border:0;border-top:1px solid #454d58;margin:12px 0}.details{border:1px solid #46505e;border-radius:12px;background:#2b323d;margin:8px 0;overflow:hidden}.details summary{padding:15px;cursor:pointer;font-weight:650;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:50px}.details summary:after{content:'⌄';color:#e4c88e}.details[open] summary:after{content:'⌃'}.detailbody{border-top:1px solid #46505e;padding:12px;font-size:13px;line-height:1.6;color:#e2e5e9}.detailbody p{margin:0 0 9px}.detailbody ul{padding-left:18px;margin:6px 0}.data-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #46505e}.data-row:last-child{border-bottom:0}.data-row strong{color:#e7cd95}.btn{background:#524734;border:1px solid #b39965;color:#fff2d4;border-radius:9px;padding:11px 13px;min-height:44px}.btn.secondary{background:#343e4b;border-color:#566170;color:#fff}.field{background:#1e2630;color:white;border:1px solid #596474;border-radius:9px;padding:11px;width:100%;margin-top:8px;min-height:42px}.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);background:#141a22;border-top:1px solid #4c5460;padding:7px 6px max(9px,env(safe-area-inset-bottom));z-index:20}.tabs button{background:transparent;color:#b6bdc7;border:0;padding:8px 2px;font-size:10px;border-radius:9px;min-height:53px}.tabs button.active{background:#353e4b;color:#f0d393}.tabs .ico{display:block;font-size:21px;margin-bottom:2px}.panel{display:none}.panel.active{display:block}.notice{background:#42382b;border-radius:9px;padding:11px;color:#e8cfa2;font-size:12px;line-height:1.5}.debug{font-size:11px;color:#aeb5c1;margin-top:12px}.weaponoption{width:100%;display:block;text-align:left;margin:7px 0}.pill{font-size:10px;color:#f1dcae;border:1px solid #88734d;padding:4px 7px;border-radius:20px}.buttonbar{display:flex;gap:8px}.buttonbar button{flex:1}.noscript{padding:20px;background:#642c2c;color:#fff} @media(max-width:360px){.app{padding-left:10px;padding-right:10px}.big{font-size:25px}.ability strong{font-size:18px}.statcard{padding:8px}.hero{grid-template-columns:45% 55%}}
 
 /* Modulo equipaggiamento v0.2.3 */
@@ -59,20 +59,60 @@ body{background:#111719}
 #levelUpDialog .level-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 #levelUpDialog .level-nav .btn{flex:1 1 7rem}
 #levelIntro:not([hidden]){display:grid;place-content:center;gap:12px}
+/* Scheda da tavolo */
+#scheda .hero{grid-template-columns:minmax(0,4fr) minmax(0,5fr);gap:10px}
+#scheda .small,#scheda .tag,#scheda .tabs button{font-size:12px}
+#scheda .muted{font-size:13px}
+#scheda .big,#scheda .value,#scheda #xpdisplay,#scheda #xpTarget{font-variant-numeric:tabular-nums}
+#scheda .statcard{background:#262d37}
+#scheda .statcard.hp{background:#263b33}
+#scheda .statcard.ac{background:#293645}
+.combat-card{border-color:#716043;background:#2a3039}
+.combat-card .value{font-size:clamp(26px,7vw,36px)}
+.combat-card .modes{margin:8px 0}
+.combat-card .btn{margin-top:8px}
+#scheda .mode{min-height:44px}
+.quick-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}
+.quick-stats .card{margin:0}
+.quick-stats .value{font-size:22px}
+.weapon-details summary{cursor:pointer;min-height:44px;align-content:center}
+.weapon-details[hidden],#weaponCharge[hidden]{display:none}
+.save-table{width:100%;border-collapse:collapse;text-align:left}
+.save-table th,.save-table td{padding:9px 5px;border-bottom:1px solid #47505d}
+.save-table td:nth-child(2){font-weight:750;color:var(--brass)}
+.inventory-entry select{min-height:44px;max-width:100%;font:inherit}
+.inventory-entry select:focus,.btn:focus-visible,.mode:focus-visible,summary:focus-visible{outline:2px solid #e2c58d;outline-offset:2px}
+.inventory-entry .entryactions{flex-wrap:wrap}
+#catalogTools .card{margin:0 0 12px}
+#signalingNotes{margin-top:5px}
+@media(max-width:380px){#scheda .abilities{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.removeConfirm[hidden],.entryactions button[hidden]{display:none}
+#xpForm[hidden],#dataConfirmation[hidden],#exportPanel[hidden]{display:none} #xpInput{font-size:16px}
+#capacita .save-table td:nth-child(2){color:#e2c58d}
+#scheda .hero{grid-template-columns:minmax(0,4fr) minmax(0,5fr)}
+#scheda .combat-card .modes{margin-bottom:8px}
+#backup #dataFeedback:empty,#inventario #inventoryFeedback:empty{display:none}
 </style></head><body><noscript><div class="noscript">JavaScript &egrave; disattivato in questo visualizzatore: apri la scheda da un sito HTTPS in Safari per usare i pulsanti.</div></noscript><main class="app"><header class="top"><div><div class="eyebrow">ACKS II &middot; CHARACTER SHEET</div><div class="name">SISSOR</div><div class="muted">Assassino &middot; Assassin-for-Hire</div></div><div class="tag" id="levelBadge">LIVELLO 1</div></header>
 <section class="panel active" id="scheda"><div class="hero"><div class="stack"><div class="statcard hp"><div class="small">&hearts; PUNTI FERITA</div><div class="big"><span id="hp">5</span><span style="font-size:14px;color:#bbd3c4"> / <span id="hpMax">5</span></span></div><div class="control"><button aria-label="Riduci HP" data-act="hpminus" type="button">&minus;</button><button aria-label="Aumenta HP" data-act="hpplus" type="button">+</button></div><div class="meter"><div class="fill" id="hpfill" style="width:100%"></div></div></div><div class="statcard ac"><div class="small">⬡ ARMOUR CLASS</div><div class="big" id="ac">4</div><div class="muted" id="acnote">Armatura di cuoio + DES</div></div><div class="statcard"><div class="small">INIZIATIVA</div><div class="big">+2</div><div class="muted">DES 16</div></div></div><div class="portrait-stage" id="portraitStage"><img alt="Ritratto di Sissor" class="portrait" id="portraitFallback" src="sissor_portrait.jpg"/>
 <video id="sissorIdle" class="portrait-video" muted autoplay loop playsinline webkit-playsinline preload="metadata" aria-hidden="true"><source src="sissor_idle.mp4" type="video/mp4"></video>
 <video id="sissorAction" class="portrait-video" muted playsinline webkit-playsinline preload="auto" aria-hidden="true"><source src="sissor_action.mp4" type="video/mp4"></video>
 <button type="button" class="portrait-tap" id="sissorTap" aria-label="Tocca Sissor per vedere il gesto minaccioso con il pugnale" title="Tocca per l'animazione speciale"></button>
 </div></div>
+<div class="section">COMBATTIMENTO</div><div class="card combat-card"><div class="row"><strong class="gold" id="weaponname">BALESTRA PESANTE · A DISTANZA</strong></div><hr class="line"/><div class="twocol"><div><div class="small">ATTACCO CONTRO CA 0</div><div class="value" id="attack">8+</div><div class="muted" id="attacknote">10+ base · DES +2</div></div><div><div class="small">DANNI</div><div class="value" id="damage">1d8+1</div><div class="muted" id="damagenote">classe +1</div></div></div>  <div class="small spaced">MODALITÀ DI UTILIZZO</div><div class="modes" id="gripmodes" role="group" aria-label="Modalità di utilizzo dell'arma"></div>
+<p class="muted" id="quickShield"></p><div class="notice" id="weapontraits">Cleave 2, Handy, Slow</div><div class="row" id="weaponCharge"><span class="muted">Danni in carica (se applicabile)</span><strong id="chargedamage">—</strong></div><button class="btn secondary" data-act="openinventory" type="button">⚔ Cambia arma / equipaggiamento</button><p class="muted" style="font-size:12px">Backstabbing: +4 al tiro e +1 dado di danno contro bersagli vulnerabili a gittata corta, solo con armatura leggera o inferiore.</p></div>
+<div class="quick-stats"><div class="card"><div class="small">MOVIMENTO PER ROUND</div><div class="value" id="summaryspeedcombat">30′</div><div class="muted"><span id="summaryweight">7 st</span> · <span id="quickThreshold">oltre 7 st rallenti</span></div></div><div class="card"><div class="small">CLEAVE PER ROUND</div><div class="value" id="quickCleave">1</div><div class="muted">Attacchi aggiuntivi</div></div></div>
 <div class="section">CARATTERISTICHE</div><div class="abilities"><div class="ability"><div class="small">FOR</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">DES</div><strong>16</strong><span>+2</span></div><div class="ability"><div class="small">COS</div><strong>9</strong><span>0</span></div><div class="ability"><div class="small">INT</div><strong>8</strong><span>−1</span></div><div class="ability"><div class="small">VOL</div><strong>12</strong><span>0</span></div><div class="ability"><div class="small">CAR</div><strong>13</strong><span>+1</span></div></div>
-<div class="section">COMBATTIMENTO</div><div class="card"><div class="row"><strong class="gold" id="weaponname">BALESTRA PESANTE · A DISTANZA</strong><span class="pill">Equipaggiata</span></div><hr class="line"/><div class="twocol"><div><div class="small">ATTACK THROW</div><div class="value" id="attack">8+</div><div class="muted" id="attacknote">10+ base · DES +2</div></div><div><div class="small">DANNI</div><div class="value" id="damage">1d8+1</div><div class="muted" id="damagenote">classe +1</div></div></div><div class="notice" id="weapontraits">Cleave 2, Handy, Slow</div><div class="row"><span class="muted">Danni in carica (se applicabile)</span><strong id="chargedamage">—</strong></div><button class="btn secondary" data-act="openinventory" type="button">⚔ Cambia arma / equipaggiamento</button><p class="muted" style="font-size:12px">Backstabbing: +4 al tiro e +1 dado di danno contro bersagli vulnerabili a gittata corta, solo con armatura leggera o inferiore.</p></div>
-<div class="twocol"><div class="card"><div class="small">MOVIMENTO</div><div class="value" id="summaryspeedcombat">40′</div><div class="muted">per round</div></div><div class="card"><div class="small">INGOMBRO</div><div class="value" id="summaryweight">6⅓ st</div><div class="muted">equipaggiamento trasportato</div></div></div><div class="card xp-card-auto"><div class="small">ESPERIENZA</div>
+<div class="card xp-card-auto"><div class="small">ESPERIENZA</div>
 <div class="xp-summary"><strong><span id="xpdisplay">105</span> / <span id="xpTarget">1.750</span> XP</strong><strong class="gold" id="xpRate">+5% bonus</strong></div>
 <div class="muted xp-breakdown">XP assegnati: <span id="xpBase">105</span> · Bonus accumulato: <span id="xpBonus">+0</span></div>
 <div class="xp-actions"><button class="btn" data-act="xpadd" type="button">＋ Aggiungi XP</button><button class="btn secondary" data-act="xpset" type="button">Set XP</button></div>
+<form id="xpForm" hidden>
+<label for="xpInput" id="xpLabel">XP</label>
+<input class="field" id="xpInput" type="text" inputmode="numeric" autocomplete="off" aria-describedby="xpFeedback">
+<p id="xpFeedback" class="muted" role="status"></p>
+<div class="xp-actions"><button class="btn" type="submit" id="xpApply">Salva XP</button><button class="btn secondary" data-act="cancelxp" type="button">Annulla</button></div>
+</form>
 <button class="btn" id="levelUpButton" data-act="levelup" type="button" disabled>LEVEL UP</button>
-<button class="btn secondary" id="setLevelOneButton" data-act="setlevelone" type="button" hidden>SET LEVEL 1</button>
 <p class="muted" id="levelUpHint"></p>
 <details id="levelHistory" class="details" hidden><summary>Cronologia avanzamenti</summary><div class="detailbody" id="levelHistoryEntry"></div></details>
 </div></section>
@@ -108,7 +148,8 @@ body{background:#111719}
 </dialog>
 <section class="panel" id="capacita">
 <div class="section">TIRI SALVEZZA · ASSASSINO <span id="saveLevel">LIVELLO 1</span></div><div class="card">
-<div class="data-row"><span>Morte / Death</span><strong id="saveDeath">14+</strong></div><div class="data-row"><span>Paralisi / Paralysis</span><strong id="saveParalysis">13+</strong></div><div class="data-row"><span>Soffio / Blast</span><strong id="saveBlast">15+</strong></div><div class="data-row"><span>Oggetti / Implements</span><strong id="saveImplements">16+</strong></div><div class="data-row"><span>Incantesimi / Spells</span><strong id="saveSpells">17+</strong></div></div>
+<table class="save-table"><thead><tr><th scope="col">Salvataggio</th><th scope="col">Dado (VOL +0)</th></tr></thead><tbody><tr><th scope="row">Morte / Death</th><td id="saveDeath">14+</td></tr><tr><th scope="row">Paralisi / Paralysis</th><td id="saveParalysis">13+</td></tr><tr><th scope="row">Soffio / Blast</th><td id="saveBlast">15+</td></tr><tr><th scope="row">Oggetti / Implements</th><td id="saveImplements">16+</td></tr><tr><th scope="row">Incantesimi / Spells</th><td id="saveSpells">17+</td></tr></tbody></table></div>
+<div class="section">PROVE FREQUENTI</div><div class="card"><div class="data-row"><span>Nascondersi</span><strong id="quickHiding">19+</strong></div><div class="data-row"><span>Muoversi in silenzio</span><strong id="quickSneaking">17+</strong></div><div class="data-row"><span>Malavita fuori città</span><strong>11+</strong></div></div>
 <div class="section">POTERI INNATI DELL'ASSASSINO</div>
 <div id="stealtharmorwarning" class="stealth-armor-warning" role="status" aria-live="polite" hidden></div>
 <details class="details stealth-power" data-stealth-power="Backstabbing" open><summary>Backstabbing · Attacco a tradimento</summary><div class="detailbody"><p>Contro un avversario <b>vulnerabile</b>, ottiene <b>+4 al tiro per colpire</b> e <b>+1 dado di danno</b> se colpisce. Funziona in mischia oppure con un'arma a distanza <b>alla gittata corta</b>, non a gittata media o lunga. Richiede armatura leggera o inferiore.</p></div></details>
@@ -125,35 +166,25 @@ body{background:#111719}
 <div class="section">ANNOTAZIONI</div><textarea class="field" id="abilityNotes" rows="4" placeholder="Note sulle capacità e condizioni..."></textarea>
 </section>
 <section class="panel" id="inventario">
-<div class="section">ARMI E SCUDO · INVENTARIO DINAMICO</div>
-<div class="card">
-  <div class="notice">Armi consentite all’Assassino: tutte le armi, incluse le armi grandi. Aggiungere un'arma significa portarla con sé: il suo peso viene conteggiato immediatamente.</div>
-  <label class="small" for="catalog">AGGIUNGI ARMA DAL MANUALE</label><select class="field" id="catalog"></select>
-  <div class="row compact"><label class="small" for="newmagic">BONUS MAGICO</label><select class="field shortfield" id="newmagic"><option value="0">+0</option><option value="1">+1</option><option value="2">+2</option><option value="3">+3</option><option value="4">+4</option><option value="5">+5</option></select><button class="btn" data-act="addweapon" type="button">+ Aggiungi</button></div>
-  <hr class="line"><div class="small">ARMI POSSEDUTE</div><div id="ownedweapons"></div>
-  <hr class="line"><div class="small">CONFIGURAZIONE ATTUALE</div>
-  <div class="equipped-info"><div class="small">ARMA EQUIPAGGIATA</div><strong id="equippedname">—</strong></div>
-  <div class="small spaced">MODALITÀ DI UTILIZZO</div><div class="modes" id="gripmodes" role="group" aria-label="Modalità di utilizzo dell'arma"></div>
+<div class="section">IN USO</div><div class="card">
+<div class="data-row"><span>Arma</span><strong id="equippedname">—</strong></div>
+<div class="data-row"><span>Armatura</span><strong id="equippedarmor">—</strong></div><p class="muted" id="armordetail"></p>
   <div class="small spaced">ARMA NELLA MANO SECONDARIA</div>
   <select class="field" id="offhand" aria-label="Arma nella mano secondaria"></select>
   <div class="muted" id="offhandhint">Due armi: +1 al tiro per colpire in mischia, non un secondo attacco.</div>
   <div class="row shieldrow"><label for="shieldon">Scudo impugnato</label><input id="shieldon" type="checkbox"><span class="muted" id="shieldhint">Scudo +1 CA</span></div>
-  <div class="row shieldrow"><label for="shieldcarried">Scudo trasportato</label><input id="shieldcarried" type="checkbox"><span class="muted">Conteggiato nel carico se selezionato</span></div>
-  <div class="notice" id="equipmentsummary"></div>
-</div>
-<div class="section">ARMATURE · RESTRIZIONI DI CLASSE</div><div class="notice">L’Assassino è competente nelle armature leggere e medie e può utilizzare lo scudo. La CA tiene conto di armatura, DES e scudo effettivamente impugnato.</div>
-<div class="card">
-  <label class="small" for="armorcatalog">AGGIUNGI ARMATURA DAL MANUALE</label><select class="field" id="armorcatalog"></select>
+<label><input id="shieldcarried" type="checkbox"> Scudo trasportato</label>
+<p class="muted" id="equipmentsummary"></p></div>
+<div class="section">TRASPORTATO</div><p id="inventoryFeedback" class="muted" role="status"></p><div class="card" id="ownedweapons" tabindex="-1"></div>
+<details class="details" id="catalogTools"><summary>Aggiungi equipaggiamento</summary><div class="detailbody">
+<div class="card">  <label class="small" for="catalog">AGGIUNGI ARMA DAL MANUALE</label><select class="field" id="catalog"></select>
+  <div class="row compact"><label class="small" for="newmagic">BONUS MAGICO</label><select class="field shortfield" id="newmagic"><option value="0">+0</option><option value="1">+1</option><option value="2">+2</option><option value="3">+3</option><option value="4">+4</option><option value="5">+5</option></select><button class="btn" data-act="addweapon" type="button">+ Aggiungi</button></div>
+</div><div class="card">  <label class="small" for="armorcatalog">ARMATURE E SCUDI</label><select class="field" id="armorcatalog"></select>
   <div class="row compact"><label class="small" for="armormagic">BONUS MAGICO</label><select class="field shortfield" id="armormagic"><option value="0">+0</option><option value="1">+1</option><option value="2">+2</option><option value="3">+3</option><option value="4">+4</option><option value="5">+5</option></select><button class="btn" type="button" data-act="addarmor">+ Aggiungi</button></div>
-  <hr class="line"><div class="small">ARMATURE POSSEDUTE</div><div id="ownedarmors"></div>
-  <div class="equipped-info"><div class="small">ARMATURA INDOSSATA</div><strong id="equippedarmor">—</strong><span class="muted" id="armordetail"></span></div>
-</div>
-<div class="section">ALTRO EQUIPAGGIAMENTO</div>
-<div class="card"><div class="muted">Inserisci liberamente oggetti e peso in stone: ad esempio <b>1/6</b>, <b>1/2</b>, <b>1</b> oppure <b>0,25</b>. Gli oggetti vengono aggiunti al carico personale.</div>
-  <label class="small spaced" for="itemname">NOME OGGETTO</label><input class="field" id="itemname" type="text" placeholder="Es. corda, torcia, pozione…" maxlength="90">
+</div><div class="card">  <label class="small spaced" for="itemname">NOME OGGETTO</label><input class="field" id="itemname" type="text" placeholder="Es. corda, torcia, pozione…" maxlength="90"><p class="muted" id="itemFeedback" role="status"></p>
   <div class="row compact"><label class="small" for="itemweight">PESO (ST)</label><input class="field weightfield" id="itemweight" type="text" inputmode="decimal" value="1/6" placeholder="1/6"><button class="btn" type="button" data-act="additem">+ Aggiungi</button></div>
-  <div id="owneditems"></div>
 </div>
+</div></details>
 <div class="section">EQUIPAGGIAMENTO E INGOMBRO</div>
 <div class="card">
   <div class="data-row"><span>Armature trasportate</span><strong id="armorweight">—</strong></div>
@@ -161,7 +192,7 @@ body{background:#111719}
   <div class="data-row"><span>Armi trasportate</span><strong id="weaponweight">—</strong></div>
   <div class="data-row"><span>Altro equipaggiamento</span><strong id="itemstotalweight">—</strong></div>
   <div class="data-row totalrow"><b>TOTALE TRASPORTATO</b><strong id="totalweight">—</strong></div>
-  <div class="row"><div class="muted" id="weightdetail"></div><strong class="gold" id="weightstatus"></strong></div>
+  <div class="row"><div class="muted" id="weightdetail"></div><strong class="gold" id="weightstatus"></strong></div><p id="loadThreshold" class="muted"></p>
   <div class="weightbar"><div id="weightfill"></div></div>
   <p class="muted">Il carico comprende gli oggetti contrassegnati come Trasportati, incluse le armi non impugnate. Gli altri oggetti rimangono registrati, ma non incidono sul peso.</p>
 </div>
@@ -181,7 +212,14 @@ body{background:#111719}
 <div class="section">DENARO PERSONALE</div><div class="card"><div class="small">DENARO PERSONALE · modificabile</div><div class="row"><div class="value gold"><span id="coins">9</span> MO</div><div class="buttonbar"><button class="btn secondary" data-act="coinminus" type="button">−</button><button class="btn secondary" data-act="coinplus" type="button">+</button></div></div><div class="muted">Registra qui le monete d’oro; le altre denominazioni possono essere annotate nelle note inventario.</div></div>
 <div class="section">NOTE INVENTARIO</div><textarea class="field" id="inventoryNotes" rows="4" placeholder="Oggetti trovati, tesori, promemoria…"></textarea>
 </section>
-<section class="panel" id="backup"><div class="section">BACKUP E DIAGNOSTICA</div><div class="card"><p class="muted">Le modifiche vengono salvate nel browser quando il salvataggio locale &egrave; disponibile. Conserva anche un backup JSON.</p><div class="buttonbar"><button class="btn" data-act="export" type="button">Esporta JSON</button><button class="btn secondary" data-act="import" type="button">Importa JSON</button></div><input accept=".json,application/json" id="importfile" style="display:none" type="file"/><hr class="line"/><button class="btn secondary" data-act="reset" type="button">Ripristina valori iniziali</button><p class="debug" id="status"></p></div><div class="notice"></div></section>
+<section class="panel" id="backup"><div class="section">DATI E BACKUP</div><div class="card"><p class="muted">Le modifiche vengono salvate nel browser quando il salvataggio locale &egrave; disponibile. Conserva anche un backup JSON.</p><div class="buttonbar"><button class="btn" data-act="export" type="button">Esporta JSON</button><button class="btn secondary" data-act="import" type="button">Importa JSON</button></div><input accept=".json,application/json" id="importfile" style="display:none" type="file"/><hr class="line"/><button class="btn secondary" data-act="reset" type="button">Ripristina valori iniziali</button><button class="btn secondary" id="setLevelOneButton" data-act="setlevelone" type="button" hidden>SET LEVEL 1</button>
+<div id="dataConfirmation" hidden>
+<p id="dataQuestion"></p><div class="buttonbar"><button class="btn" type="button" data-act="confirmdata">Conferma</button><button class="btn secondary" type="button" data-act="canceldata">Annulla</button></div>
+</div>
+<p class="muted" id="dataFeedback" role="status"></p>
+<div id="exportPanel" hidden><a id="backupDownload">Scarica il file JSON</a><p><label for="backupText">Oppure copia il backup</label></p><textarea id="backupText" class="field" rows="4" readonly></textarea></div>
+<details class="details"><summary>Importa da testo</summary><label for="importText">Incolla il backup JSON</label><textarea id="importText" class="field" rows="4"></textarea><button class="btn" type="button" data-act="importtext">Verifica backup</button></details>
+<p class="debug" id="status"></p></div><div class="notice"></div></section>
 
 <section class="panel" id="uxentio">
  <div class="section">GREGARIO · TRAGHETTATORE · NEUTRALE</div>
@@ -236,7 +274,7 @@ body{background:#111719}
   <label class="small" for="uxnotes">NOTE DEL GREGARIO</label><textarea class="field" id="uxnotes" rows="3" placeholder="Eventi, ferite, equipaggiamento, ordini..."></textarea>
  </div></details>
 </section>
-</main><nav aria-label="Navigazione" class="tabs"><button class="active" data-tab="scheda" type="button"><span class="ico">⚔</span>Scheda</button><button data-tab="capacita" type="button"><span class="ico">✦</span>Capacit&agrave;</button><button data-tab="inventario" type="button"><span class="ico">▣</span>Inventario</button><button data-tab="uxentio" type="button"><span class="ico">⚓</span>Uxentio</button><button data-tab="backup" type="button"><span class="ico">⚙</span>Backup</button></nav>
+</main><nav aria-label="Navigazione" class="tabs"><button class="active" data-tab="scheda" type="button"><span class="ico">⚔</span>Scheda</button><button data-tab="capacita" type="button"><span class="ico">✦</span>Capacit&agrave;</button><button data-tab="inventario" type="button"><span class="ico">▣</span>Inventario</button><button data-tab="uxentio" type="button"><span class="ico">⚓</span>Uxentio</button><button data-tab="backup" type="button"><span class="ico">⚙</span>Dati</button></nav>
 <script>
 (function () {
   'use strict';
@@ -359,7 +397,7 @@ body{background:#111719}
     return Number.isFinite(n)&&n>=0&&n<=100?n:NaN;
   }
   function nextUID(){var u=Date.now(); while(data.weapons.concat(data.armors,data.items).some(function(x){return String(x.uid)===String(u);}))u++;return u;}
-  function getOwnedWeapon(){return data.weapons.find(function(x){return String(x.uid)===String(data.equipped)&&loc(x)==='carried';})||data.weapons.find(function(x){return loc(x)==='carried';})||null;}
+  function getOwnedWeapon(){if(data.equipped===null)return null;return data.weapons.find(function(x){return String(x.uid)===String(data.equipped)&&loc(x)==='carried';})||data.weapons.find(function(x){return loc(x)==='carried';})||null;}
   function getOffhand(main){
     if(!main || main.ranged || main.hands || data.grip==='throw')return null;
     var o=data.weapons.find(function(x){return String(x.uid)===String(data.offhand)&&loc(x)==='carried'&&String(x.uid)!==String(main.o.uid);});
@@ -367,7 +405,7 @@ body{background:#111719}
     var w=fw(o.id);
     return w && w.type!=='large' && w.type!=='missile' ? {o:o,w:w,mag:Number(o.magic)||0}:null;
   }
-  function getOwnedArmor(){return data.armors.find(function(x){return String(x.uid)===String(data.equippedArmor)&&loc(x)==='carried';})||data.armors.find(function(x){return loc(x)==='carried';})||null;}
+  function getOwnedArmor(){if(data.equippedArmor===null)return null;return data.armors.find(function(x){return String(x.uid)===String(data.equippedArmor)&&loc(x)==='carried';})||data.armors.find(function(x){return loc(x)==='carried';})||null;}
   function hasThrown(w){return w.traits.indexOf('Thrown')>=0;}
   function hasHandy(w){return w.traits.indexOf('Handy')>=0;}
   function modes(w){
@@ -435,37 +473,54 @@ body{background:#111719}
     var amount=Number(cleaned);
     return Number.isSafeInteger(amount)&&(allowZero?amount>=0:amount>0)?amount:null;
   }
-  function awardXP(){
-    var raw=prompt('XP assegnati dal Master in questa sessione (senza bonus):','');
-    if(raw===null)return;
-    var earned=parseXPAmount(raw,false);
-    if(earned===null){alert('Inserisci una quantità intera di XP maggiore di zero.');return;}
-    var extra=earnedBonus(earned), total=earned+extra;
-    normalizeXP();
-    if(!Number.isSafeInteger(total)||!Number.isSafeInteger(data.xp+total)){
-      alert('Il totale XP supera il limite gestibile.');return;
+  var xpMode=null;
+  function xpDraft(){
+    var adding=xpMode==='add',amount=parseXPAmount(el('xpInput').value,!adding);
+    if(amount===null)return null;
+    var extra=adding?earnedBonus(amount):0;
+    var next=adding?data.xp+amount+extra:amount;
+    return Number.isSafeInteger(next)?{amount:amount,extra:extra,next:next}:null;
+  }
+  function previewXP(){
+    var draft=xpDraft(),adding=xpMode==='add';
+    el('xpApply').disabled=!draft;
+    el('xpFeedback').textContent=!draft?'Inserisci un numero intero '+(adding?'maggiore di zero.':'non negativo.'):
+      adding?'Bonus +'+XP_BONUS_RATE+'%: +'+xpText(draft.extra)+' XP · Nuovo totale: '+xpText(draft.next)+' XP':
+      'Nuovo totale: '+xpText(draft.next)+' XP. Il bonus è già incluso.';
+  }
+  function openXP(mode){
+    xpMode=mode;
+    el('xpLabel').textContent=mode==='add'?'XP assegnati dal Master, senza bonus':'XP totali, bonus già incluso';
+    el('xpInput').value=mode==='add'?'':String(data.xp);
+    el('xpForm').hidden=false;
+    previewXP();
+    el('xpInput').focus();
+  }
+  function closeXP(){
+    var button=document.querySelector('[data-act="'+(xpMode==='add'?'xpadd':'xpset')+'"]');
+    xpMode=null;
+    el('xpForm').hidden=true;
+    if(button)button.focus();
+  }
+  el('xpInput').addEventListener('input',previewXP);
+  el('xpForm').addEventListener('submit',function(event){
+    event.preventDefault();
+    if(!xpMode)return;
+    var draft=xpDraft();
+    if(!draft){previewXP();return;}
+    if(xpMode==='set'&&draft.next===data.xp){closeXP();return;}
+    var adding=xpMode==='add';
+    var next=Object.assign({},data,{xp:draft.next,
+      xpBase:adding?data.xpBase+draft.amount:draft.amount,
+      xpBonusGained:adding?data.xpBonusGained+draft.extra:0});
+    if(!save(next)){
+      el('xpFeedback').textContent='XP non salvati. Verifica i permessi di salvataggio del browser.';
+      return;
     }
-    var msg='Aggiungere '+earned.toLocaleString('it-IT')+' XP base?\nBonus +5%: +'+extra.toLocaleString('it-IT')+' XP\nTotale da aggiungere: +'+total.toLocaleString('it-IT')+' XP';
-    if(!confirm(msg))return;
-    data.xpBase+=earned;
-    data.xpBonusGained+=extra;
-    data.xp=data.xpBase+data.xpBonusGained;
-    save();render();
-  }
-  function setXP(){
-    normalizeXP();
-    var raw=prompt('Imposta gli XP TOTALI effettivi (bonus già incluso):',String(data.xp));
-    if(raw===null)return;
-    var amount=parseXPAmount(raw,true);
-    if(amount===null){alert('Inserisci un numero intero di XP maggiore o uguale a zero.');return;}
-    if(amount===data.xp)return;
-    var msg='Correggere gli XP totali da '+data.xp.toLocaleString('it-IT')+' a '+amount.toLocaleString('it-IT')+'?\n\nNon verrà applicato alcun bonus. Il nuovo valore diventerà il saldo di partenza per le prossime sessioni.';
-    if(!confirm(msg))return;
-    data.xp=amount;
-    data.xpBase=amount;
-    data.xpBonusGained=0;
-    save();render();
-  }
+    data=next;
+    closeXP();
+    render();
+  });
   function save(state,replace){
     if(!replace&&!savedLevelMatches())return false;
     try{localStorage.setItem(KEY,JSON.stringify(state||data));return true;}
@@ -530,21 +585,32 @@ body{background:#111719}
     normalize();
   }
   function optionHTML(list,prev){var html=list.map(function(v){return '<option value="'+safe(v.id)+'">'+safe(v.name)+'</option>';}).join('');return html;}
-  function itemButtons(type,o,location){
+  function itemButtons(type,o){
     var uid=safe(o.uid),buttons='';
-    if(location==='carried'&&(type==='weapon'||type==='armor'))buttons+='<button type="button" class="btn" data-equip-type="'+type+'" data-equip-id="'+uid+'">Equipaggia</button>';
-    buttons+='<label class="carried-choice"><input type="checkbox" data-carried-type="'+type+'" data-carried-id="'+uid+'" '+(location==='carried'?'checked':'')+'> Trasportato</label>';
-    buttons+='<button type="button" class="btn secondary" data-remove-type="'+type+'" data-remove-id="'+uid+'">Rimuovi</button>';
+    if(type==='weapon'||type==='armor')buttons+='<button type="button" class="btn" data-equip-type="'+type+'" data-equip-id="'+uid+'">Equipaggia</button>';
+    buttons+='<button type="button" class="btn secondary" data-remove-type="'+type+'" data-remove-id="'+uid+'">Rimuovi</button>' +
+      '<span class="removeConfirm" hidden><button type="button" class="btn" data-confirm-remove>Conferma rimozione</button> <button type="button" class="btn secondary" data-cancel-remove>Annulla</button></span>';
     return '<div class="entryactions">'+buttons+'</div>';
   }
   function renderLists(){
-    function badge(o){return loc(o)==='carried'?'':' <span class="notcarried-badge">· Non trasportato</span>';}
-    var weapons=data.weapons;
-    el('ownedweapons').innerHTML=weapons.length?weapons.map(function(o){var w=fw(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(w.name)+(o.magic?' +'+o.magic:'')+(loc(o)==='carried'&&String(data.equipped)===String(o.uid)?' · <b class="gold">Equipaggiata</b>':'')+badge(o)+'</span><span class="entryweight">'+weightString(w.weight)+'</span></div>'+itemButtons('weapon',o,loc(o))+'</div>';}).join(''):'<p class="muted">Nessuna arma registrata.</p>';
-    var armors=data.armors;
-    el('ownedarmors').innerHTML=armors.length?armors.map(function(o){var a=fa(o.id);return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(a.name)+(o.magic?' +'+o.magic:'')+(loc(o)==='carried'&&String(data.equippedArmor)===String(o.uid)?' · <b class="gold">Indossata</b>':'')+badge(o)+'</span><span class="entryweight">'+weightString(armorWeight(o))+'</span></div>'+itemButtons('armor',o,loc(o))+'</div>';}).join(''):'<p class="muted">Nessuna armatura registrata.</p>';
-    var items=data.items;
-    el('owneditems').innerHTML=items.length?'<hr class="line"><div class="small">OGGETTI REGISTRATI</div>'+items.map(function(o){return '<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(o.name)+badge(o)+'</span><span class="entryweight">'+weightString(o.weight)+'</span></div>'+itemButtons('item',o,loc(o))+'</div>';}).join(''):'<p class="muted">Nessun altro oggetto registrato.</p>';
+    var carried=[];
+    function add(type,o,name,weight,active){
+      if(loc(o)!=='carried')return;
+      carried.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">'+safe(name)+
+        (active?' · <b class="gold">'+active+'</b>':'')+'</span><span class="entryweight">'+weightString(weight)+
+        '</span></div>'+itemButtons(type,o)+'</div>');
+    }
+    data.weapons.forEach(function(o){
+      var w=fw(o.id),active=String(data.equipped)===String(o.uid)?'Principale':String(data.offhand)===String(o.uid)?'Secondaria':'';
+      add('weapon',o,w.name+(o.magic?' +'+o.magic:''),w.weight,loc(o)==='carried'?active:'');
+    });
+    data.armors.forEach(function(o){
+      var a=fa(o.id);
+      add('armor',o,a.name+(o.magic?' +'+o.magic:''),armorWeight(o),loc(o)==='carried'&&String(data.equippedArmor)===String(o.uid)?'Indossata':'');
+    });
+    data.items.forEach(function(o){add('item',o,o.name,o.weight,'');});
+    if(data.shieldLocation==='carried')carried.push('<div class="inventory-entry"><div class="entrytop"><span class="entryname">Scudo di legno</span><span class="entryweight">1 st</span></div>'+itemButtons('shield',{uid:'shield'})+'</div>');
+    el('ownedweapons').innerHTML=carried.length?carried.join(''):'<p class="muted">Nessun oggetto trasportato.</p>';
   }
   function uxWeight(){
     var u=data.uxentio;
@@ -579,6 +645,7 @@ body{background:#111719}
     var stats=progression(), advanced=data.advancement;
     el('levelBadge').textContent='LIVELLO '+level()+' · '+stats.title;
     el('hpMax').textContent=maxHP();
+    el('quickCleave').textContent=stats.cleave;
     el('saveLevel').textContent='LIVELLO '+level();
     el('hidingThrow').textContent=stats.hiding+'+';
     el('sneakingThrow').textContent=stats.sneaking+'+';
@@ -664,7 +731,7 @@ body{background:#111719}
   function withLevelLock(action){
     if(navigator.locks){
       navigator.locks.request(KEY+'-advancement',action).catch(function(){
-        alert('Operazione sul livello non completata. Riprova.');
+        el(el('levelUpDialog').open?'levelSaveError':'dataFeedback').textContent='Operazione sul livello non completata. Riprova.';
       });
     }else action();
   }
@@ -693,21 +760,36 @@ body{background:#111719}
     levelDraft=['',''];
     el('levelUpDialog').close();
     render();
-    el('setLevelOneButton').focus();
+    el('levelBadge').setAttribute('tabindex','-1');
+    el('levelBadge').focus();
+  }
+  var pendingDataAction=null;
+  function askData(question,action){
+    pendingDataAction=action;
+    el('dataQuestion').textContent=question;
+    el('dataFeedback').textContent='';
+    el('dataConfirmation').hidden=false;
+    el('dataQuestion').setAttribute('tabindex','-1');
+    el('dataQuestion').focus();
+  }
+  function finishData(accept){
+    var action=pendingDataAction;
+    pendingDataAction=null;
+    el('dataConfirmation').hidden=true;
+    if(accept&&action)action();
   }
   function setLevelOne(){
     if(level()!==2)return;
     var hp=Math.max(0,data.hp-(maxHP()-START_HP));
-    if(!savedLevelMatches()){alert('Il livello è cambiato in un’altra scheda del browser. Ricarica la pagina.');return;}
-    if(!confirm('Tornare al livello 1 con '+hp+' / '+START_HP+' PF? Il tiro e la voce in cronologia saranno rimossi. XP, inventario e note saranno conservati.'))return;
-    var next=Object.assign({},data,{hp:hp,advancement:null});
-    if(!save(next)){
-      alert('Ripristino non salvato. Riprova con la memoria del browser abilitata.');
-      return;
-    }
-    data=next;
-    levelDraft=['',''];
-    render();
+    askData('Tornare al livello 1 con '+hp+' / '+START_HP+' PF? Il tiro e la voce in cronologia saranno rimossi. XP, inventario e note saranno conservati.',function(){
+      if(level()!==2)return;
+      var next=Object.assign({},data,{hp:Math.max(0,data.hp-(maxHP()-START_HP)),advancement:null});
+      if(!save(next)){el('dataFeedback').textContent='Ripristino non salvato. Riprova.';return;}
+      data=next;
+      levelDraft=['',''];
+      render();
+      el('dataFeedback').textContent='Sissor è tornato al livello 1.';
+    });
   }
   function render(){
     renderLevel();
@@ -757,6 +839,13 @@ body{background:#111719}
       el('attack').textContent='—';el('attacknote').textContent='Nessuna arma impugnata';
       el('damagenote').textContent='—';el('weapontraits').textContent='Seleziona un’arma posseduta';el('chargedamage').textContent='—';
     }
+    el('weaponCharge').hidden=!c||c.charge==='—';
+    el('quickShield').textContent=data.shieldLocation!=='carried'?'Scudo non trasportato':
+      c&&(c.hands||c.offhand)?'Scudo trasportato · mano occupata':
+      shieldEffective?'Scudo impugnato · +1 CA':'Scudo trasportato · non impugnato';
+    ['quickHiding','quickSneaking'].forEach(function(id){
+      el(id).textContent=stealthAllowed?(id==='quickHiding'?progression().hiding:progression().sneaking)+'+':'Sospeso dall’armatura';
+    });
     var shieldToggle=el('shieldon');
     shieldToggle.disabled=Boolean(c&&(c.hands||c.offhand))||data.shieldLocation!=='carried';
     shieldToggle.checked=shieldEffective;
@@ -777,8 +866,9 @@ body{background:#111719}
     var oldWeapon=el('catalog').value,oldArmor=el('armorcatalog').value;
     el('catalog').innerHTML=W.map(function(w){return '<option value="'+w.id+'">'+safe(w.name)+' · '+(w.die||'speciale')+' · '+weightString(w.weight)+'</option>';}).join('');
     if(W.some(function(w){return w.id===oldWeapon;}))el('catalog').value=oldWeapon;
-    el('armorcatalog').innerHTML=A.map(function(a){return '<option value="'+a.id+'">'+safe(a.name)+' · CA '+a.ac+' · '+weightString(a.weight)+'</option>';}).join('');
-    if(A.some(function(a){return a.id===oldArmor;}))el('armorcatalog').value=oldArmor;
+    el('armorcatalog').innerHTML='<optgroup label="Armature">'+A.map(function(a){return '<option value="'+a.id+'">'+safe(a.name)+' · CA '+a.ac+' · '+weightString(a.weight)+'</option>';}).join('')+'</optgroup><optgroup label="Scudi"><option value="shield">Scudo di legno · +1 CA · 1 st</option></optgroup>';
+    if(oldArmor==='shield'||A.some(function(a){return a.id===oldArmor;}))el('armorcatalog').value=oldArmor;
+    updateArmorCatalog();
     renderLists();
     el('armorweight').textContent=weightString(wt.armor);
     el('shieldweight').textContent=weightString(wt.shield);
@@ -793,6 +883,10 @@ body{background:#111719}
     el('speedcombat').textContent=sp.combat+'′ ('+(sp.combat/5)+' quadretti)';
     el('summaryspeedcombat').textContent=sp.combat+'′ ('+(sp.combat/5)+' quadretti)';
     el('summaryweight').textContent=weightString(wt.total);
+    var nextSpeed=SPEEDS[idx+1];
+    el('quickThreshold').textContent=idx<0?'sovraccarico':'limite fascia '+SPEEDS[idx].max+' st';
+    el('loadThreshold').textContent=idx<0?'Carico oltre 19 st.':nextSpeed?
+      'Oltre '+SPEEDS[idx].max+' st: '+nextSpeed.combat+'′ per round.':'Oltre 19 st: sovraccarico.';
     el('speedrun').textContent=sp.run+'′ ('+(sp.run/5)+' quadretti)';
     el('speedtravel').textContent=sp.travel;
     el('weightstatus').textContent=idx<0?'Sovraccarico':idx===0?'Leggero':idx===1?'Normale':idx===2?'Appesantito':'Molto pesante';
@@ -803,6 +897,17 @@ body{background:#111719}
   function tab(name){document.querySelectorAll('.panel').forEach(function(x){x.classList.toggle('active',x.id===name);});document.querySelectorAll('[data-tab]').forEach(function(x){x.classList.toggle('active',x.getAttribute('data-tab')===name);});window.scrollTo(0,0);}
   function entry(type,uid){var list=type==='weapon'?data.weapons:type==='armor'?data.armors:data.items;return list.find(function(o){return String(o.uid)===String(uid);});}
   function itemAction(type,uid,act){
+    if(type==='shield'&&act==='remove'){
+      var next=Object.assign({},data,{shield:false,shieldLocation:'notcarried'});
+      if(!save(next)){
+        el('inventoryFeedback').textContent='Rimozione non salvata. Riprova.';
+        return;
+      }
+      data=next;
+      render();
+      el('inventoryFeedback').textContent='Scudo rimosso dall’inventario.';
+      return;
+    }
     var o=entry(type,uid);if(!o)return;
     if(act==='equip'){
       if(loc(o)!=='carried')return;
@@ -810,23 +915,55 @@ body{background:#111719}
       if(type==='armor')data.equippedArmor=o.uid;
     }
     if(act==='remove'){
-      if(!confirm('Rimuovere definitivamente questo oggetto?'))return;
+      if(loc(o)!=='carried')return;
       var list=type==='weapon'?data.weapons:type==='armor'?data.armors:data.items;
       var index=list.indexOf(o);if(index>=0)list.splice(index,1);
+      if(type==='weapon'&&String(data.equipped)===String(o.uid))data.equipped=null;
+      if(type==='armor'&&String(data.equippedArmor)===String(o.uid))data.equippedArmor=null;
+      if(type==='weapon'&&String(data.offhand)===String(o.uid))data.offhand=null;
     }
     save();render();
   }
   function addItem(){
     var nameEl=el('itemname'),weightEl=el('itemweight');
     var name=nameEl.value.trim(),weight=parsedWeight(weightEl.value);
-    if(!name){alert('Inserisci il nome dell’oggetto.');nameEl.focus();return;}
-    if(!Number.isFinite(weight)){alert('Peso non valido. Usa ad esempio 1/6, 1/2, 1, 2 oppure 0,25.');weightEl.focus();return;}
+    if(!name){el('itemFeedback').textContent='Inserisci il nome dell’oggetto.';nameEl.focus();return;}
+    if(!Number.isFinite(weight)){el('itemFeedback').textContent='Peso non valido. Usa ad esempio 1/6, 1/2, 1, 2 oppure 0,25.';weightEl.focus();return;}
     data.items.push({uid:nextUID(),name:name.slice(0,90),weight:weight,location:'carried'});
-    nameEl.value='';weightEl.value='1/6';save();render();
+    nameEl.value='';weightEl.value='1/6';el('itemFeedback').textContent='Oggetto aggiunto.';save();render();
   }
+  var backupURL=null;
   function download(){
-    var b=new Blob([JSON.stringify({character:'Sissor',version:'0.5.2',data:data},null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');
-    a.href=url;a.download='Sissor-backup-v052.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);
+    var json=JSON.stringify({character:'Sissor',version:'0.6.0',data:data},null,2);
+    el('backupText').value=json;
+    if(backupURL)URL.revokeObjectURL(backupURL);
+    backupURL=URL.createObjectURL(new Blob([json],{type:'application/json'}));
+    var link=el('backupDownload');
+    link.href=backupURL;
+    link.download='Sissor-backup-v060.json';
+    el('exportPanel').hidden=false;
+    link.focus();
+  }
+  function reviewBackup(raw){
+    finishData(false);
+    try{
+      var v=JSON.parse(raw);if(v.character!=='Sissor'||!v.data||typeof v.data!=='object'||Array.isArray(v.data))throw new Error('Backup non valido');
+      askData('Sostituire i dati della scheda con questo backup?',function(){
+        var previous=data;
+        try{
+          data=initial();Object.keys(data).forEach(function(k){if(v.data[k]!==undefined)data[k]=v.data[k];});if(v.data.muleNotes)data.muleNotes=v.data.muleNotes;
+          if(!v.data.armors)data.armors=initial().armors;
+          if(Array.isArray(v.data.weapons)&&!v.data.weapons.some(function(x){return x.location;})){
+            data.weapons=v.data.weapons.map(function(x){return Object.assign({},x,{location:String(x.uid)==='2'&&x.id==='warhammer'&&String(v.data.equipped)!=='2'?'mule':'carried'});});
+          }
+          normalize();
+          if(!save(data,true))throw new Error('Salvataggio non disponibile');
+        }catch(err){data=previous;el('dataFeedback').textContent='Importazione non riuscita: '+err.message;return;}
+        levelDraft=['',''];
+        render();
+        el('dataFeedback').textContent='Backup importato.';
+      });
+    }catch(err){el('dataFeedback').textContent='Backup JSON non valido.';}
   }
   el('uxweapon').addEventListener('change',function(){data.uxentio.weapon=this.value;save();render();});
   el('uxarmor').addEventListener('change',function(){data.uxentio.armor=this.value;save();render();});
@@ -858,26 +995,49 @@ body{background:#111719}
     var t=e.target.closest('[data-tab]');if(t){tab(t.getAttribute('data-tab'));return;}
     var mode=e.target.closest('[data-grip]');if(mode){data.grip=mode.getAttribute('data-grip');save();render();return;}
     var eq=e.target.closest('[data-equip-id]');if(eq){itemAction(eq.getAttribute('data-equip-type'),eq.getAttribute('data-equip-id'),'equip');return;}
-    var rem=e.target.closest('[data-remove-id]');if(rem){itemAction(rem.getAttribute('data-remove-type'),rem.getAttribute('data-remove-id'),'remove');return;}
+    var remove=e.target.closest('[data-remove-id], [data-confirm-remove], [data-cancel-remove]');
+    if(remove){
+      var row=remove.closest('.inventory-entry');
+      var trigger=row.querySelector('[data-remove-id]');
+      var controls=row.querySelector('.removeConfirm');
+      if(remove.hasAttribute('data-confirm-remove')){
+        itemAction(trigger.dataset.removeType,trigger.dataset.removeId,'remove');
+        el('ownedweapons').focus();
+      }else{
+        var opening=remove===trigger;
+        trigger.hidden=opening;
+        controls.hidden=!opening;
+        (opening?controls.querySelector('[data-cancel-remove]'):trigger).focus();
+      }
+      return;
+    }
     var b=e.target.closest('[data-act]');if(!b)return;
     var act=b.getAttribute('data-act');
     if(act==='openinventory'){tab('inventario');return;}
     if(act==='addweapon'){
       var id=el('catalog').value,mag=Number(el('newmagic').value)||0;
       if(!fw(id))return;
-      var uid=nextUID();data.weapons.push({uid:uid,id:id,magic:mag,location:'carried'});data.equipped=uid;data.grip='one';save();render();return;
+      var uid=nextUID();data.weapons.push({uid:uid,id:id,magic:mag,location:'carried'});save();render();return;
     }
     if(act==='addarmor'){
       var armorId=el('armorcatalog').value,armorMag=Number(el('armormagic').value)||0;
+      if(armorId==='shield'){
+        if(data.shieldLocation==='carried'){el('inventoryFeedback').textContent='Lo scudo è già nell’inventario.';return;}
+        var next=Object.assign({},data,{shieldLocation:'carried',shield:false});
+        if(!save(next)){el('inventoryFeedback').textContent='Scudo non salvato. Riprova.';return;}
+        data=next;render();
+        el('inventoryFeedback').textContent='Scudo aggiunto. Per usarlo, seleziona Scudo impugnato.';
+        return;
+      }
       if(!fa(armorId))return;
-      var armorUid=nextUID();data.armors.push({uid:armorUid,id:armorId,magic:armorMag,location:'carried'});data.equippedArmor=armorUid;save();render();return;
+      var armorUid=nextUID();data.armors.push({uid:armorUid,id:armorId,magic:armorMag,location:'carried'});save();render();return;
     }
     if(act==='additem'){addItem();return;}
     if(act==='hpminus')data.hp=Math.max(0,data.hp-1);
     if(act==='hpplus')data.hp=Math.min(maxHP(),data.hp+1);
     if(act==='coinminus')data.coins=Math.max(0,data.coins-1);
     if(act==='coinplus')data.coins++;
-    if(act==='setlevelone'){withLevelLock(setLevelOne);return;}
+    if(act==='setlevelone'){setLevelOne();return;}
     if(act==='levelup'){
       if(canLevelUp()){
         levelStep=1;
@@ -897,47 +1057,40 @@ body{background:#111719}
       return;
     }
     if(act==='confirmlevelup'){withLevelLock(confirmLevelUp);return;}
-    if(act==='xpadd'){awardXP();return;}
-    if(act==='xpset'){setXP();return;}
+    if(act==='xpadd'){openXP('add');return;}
+    if(act==='xpset'){openXP('set');return;}
+    if(act==='cancelxp'){closeXP();return;}
     if(act==='export'){download();return;}
     if(act==='import'){el('importfile').click();return;}
+    if(act==='confirmdata'){withLevelLock(function(){finishData(true);});return;}
+    if(act==='canceldata'){finishData(false);return;}
+    if(act==='importtext'){reviewBackup(el('importText').value);return;}
     if(act==='reset'){
-      if(!confirm('Ripristinare livello, cronologia, HP, XP, denaro, armi, armature, inventario e note?'))return;
-      localStorage.removeItem(KEY);levelDraft=['',''];data=initial();save();render();return;
+      askData('Ripristinare livello, cronologia, PF, XP, denaro, equipaggiamento e note ai valori iniziali?',function(){
+        var next=Object.assign(initial(),{uxentio:data.uxentio});
+        if(!save(next,true)){el('dataFeedback').textContent='Ripristino non salvato. Riprova.';return;}
+        data=next;levelDraft=['',''];render();el('dataFeedback').textContent='Valori iniziali ripristinati.';
+      });
+      return;
     }
     save();render();
   });
   el('shieldon').addEventListener('change',function(){data.shield=this.checked&&data.shieldLocation==='carried';save();render();});
   el('shieldcarried').addEventListener('change',function(){data.shieldLocation=this.checked?'carried':'notcarried';if(!this.checked)data.shield=false;save();render();});
-  document.addEventListener('change',function(e){
-    var x=e.target.closest('[data-carried-id]');if(!x)return;
-    var o=entry(x.getAttribute('data-carried-type'),x.getAttribute('data-carried-id'));if(!o)return;
-    o.location=x.checked?'carried':'notcarried';
-    if(x.checked){if(x.getAttribute('data-carried-type')==='weapon'){data.equipped=o.uid;data.grip='one';}if(x.getAttribute('data-carried-type')==='armor')data.equippedArmor=o.uid;}
-    save();render();
-  });
+  function updateArmorCatalog(){el('armormagic').disabled=el('armorcatalog').value==='shield';}
+  el('armorcatalog').addEventListener('change',updateArmorCatalog);
   ['abilityNotes','inventoryNotes'].forEach(function(id){el(id).addEventListener('input',function(){data[id]=this.value;save();});});
   ['levelDie1','levelDie2'].forEach(function(id,i){
     el(id).addEventListener('input',function(){levelDraft[i]=this.value;renderLevelStep(false);});
   });
   el('importfile').addEventListener('change',function(e){
     var f=e.target.files[0];if(!f)return;
-    var reader=new FileReader();reader.onload=function(){
-      var previous=data;
-      try{
-        var v=JSON.parse(reader.result);if(v.character!=='Sissor'||!v.data)throw new Error('Backup non valido');
-        if(!confirm('Sostituire i dati con il backup?'))return;
-        levelDraft=['',''];data=initial();Object.keys(data).forEach(function(k){if(v.data[k]!==undefined)data[k]=v.data[k];});if(typeof v.data.muleNotes==='string')data.muleNotes=v.data.muleNotes;
-        if(!v.data.armors)data.armors=initial().armors;
-        if(Array.isArray(v.data.weapons)&&!v.data.weapons.some(function(x){return x.location;})){
-          data.weapons=v.data.weapons.map(function(x){return Object.assign({},x,{location:String(x.uid)==='2'&&x.id==='warhammer'&&String(v.data.equipped)!=='2'?'mule':'carried'});});
-        }
-        normalize();if(!save(data,true))throw new Error('Salvataggio non disponibile');render();alert('Backup importato correttamente.');
-      }catch(err){data=previous;render();alert('Errore: '+err.message);}
-    };
+    var reader=new FileReader();
+    reader.onload=function(){reviewBackup(reader.result);};
+    reader.onerror=function(){el('dataFeedback').textContent='Impossibile leggere il file. Puoi incollare il JSON in Importa da testo.';};
     reader.readAsText(f);e.target.value='';
   });
-  try{load();render();el('status').textContent='v0.5.2 · Sissor Level Up e Uxentio';}
+  try{load();render();el('status').textContent='v0.6.0 · Sissor Level Up e Uxentio';}
   catch(err){el('status').textContent='Errore di avvio: '+err.message;}
 })();
 
